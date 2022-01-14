@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>丘海东</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 15 Jan 2022 03:01:26 +0800</pubDate>
+    <lastBuildDate>Sat, 15 Jan 2022 03:01:26 +0800</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>really hard</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+sudo apt install ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+and then
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+rvm install ruby 2.7.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+killing me
+</description>
+        <pubDate>Sat, 15 Jan 2022 02:48:34 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/15/fucking-hard/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/15/fucking-hard/</guid>
+        
+        <category>rough</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>生命不息，折腾不止</title>
+        <description>强迫症发作&lt;br /&gt;
+Ubuntu&lt;br /&gt;
+20.04  21.10  12.04  16.04  18.04  20.04&lt;br /&gt;
+Ocotpress&lt;br /&gt;
+2.0  3.0&lt;br /&gt;
+jekyll&lt;br /&gt;
+theme&lt;br /&gt;
+折腾了好几天，没日没夜，不眠不休，吃喝不管，性格使然&lt;br /&gt;
+好了，好好吃个早餐，睡觉&lt;br /&gt;
+买票，回家&lt;br /&gt;
+过年&lt;br /&gt;
+又一年
+
+&lt;img src=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF4SNHNw/TmEUgtj9EK6.7V8ajmQrED*vOD1GW9P6z*YHWzdix5ugnQZhaqS7C.z080deNWFg4xOMjEHv1aasu8tzxYvAtb1t9yau2Mq4OpNK*fQIgtU!/r&quot; alt=&quot;qq&quot; /&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEBBt8qnK74UlxjsyjJazHjsofXQG0rneEceE2fxJ0iYoev1qV8XUkGa4f3zBfsnMgFIYBE1jz*MnTX.pIZ3Q*vM!/r&quot;&gt;1&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMvM6fKWWIQv6JDPdRrBOJqFS4uUzBy0m8XBjGOIoiZXMSoI.HdGAy.rkrSc5UI8Z*ysJrYVi0R.4DY*u*OrPQE!/r&quot;&gt;2&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEAw6qMrx.DeMqYhYPoEnryZ2mTrcAJOnMc9Xx2iSdXrgYHFg4sZN5ZGinn5jCvWIvCcJjldvIixNDk52hLvjZn8!/r&quot;&gt;3&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEG.2u5LO7ccw90DKotmv7RsLQgumBc.mg5E5KTLsM.Fg99Fhnb9DK0Ses.zLtoernJRx3brpcsyNMPD0RVJRaq8!/r&quot;&gt;4&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEFlB5ERIdlKsfngVuoiz21Qj4tdrizVtkIJ0ua4Xq9SfOVPBzKif3gRqpfZEbyjsP3R8CwlHEt.Xm8iJyuz2nGw!/r&quot;&gt;5&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMUFcGm9g7XE9f.fwXhEjR30nG7aiswalxP6Ywg3gXL0M95PSB.m8xx8UpxlTcm.R*BBTWREfGkrCrcndSaspsQ!/r&quot;&gt;6&lt;/a&gt;
+
+&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEDw6.pSwRjPoCMVPlKqnitgykgEcoUEE0NkZ2XKCIsiXTx9gMTxcD2J6wujiIkfLV6RfO4AVxca.yqf9IyAzHzk!/r&quot;&gt;7&lt;/a&gt;
+</description>
+        <pubDate>Thu, 13 Jan 2022 07:45:02 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/13/zhe-teng/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/13/zhe-teng/</guid>
+        
+        <category>rough</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>jekyll theme octopress 博客的具体配置</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.7.0  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+_config.yml&lt;br /&gt;
+gemfile&lt;br /&gt;
+gemfile.lock
+
+一些问题看手机图片,在空间
+
+</description>
+        <pubDate>Thu, 13 Jan 2022 00:58:31 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/13/jekyll-theme-config/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/13/jekyll-theme-config/</guid>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>新博客</title>
+        <description>&lt;h2 id=&quot;旧blog&quot;&gt;&lt;a href=&quot;https://qiuhaidong.github.io/&quot;&gt;旧Blog&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;热爱生活&quot;&gt;热爱生活&lt;/h3&gt;
+折腾了好几天，终于迁移好了
+
+&lt;a href=&quot;https://gaohaoyang.github.io/&quot;&gt;这是主题作者的Blog&lt;/a&gt;
+
+&lt;a href=&quot;https://github.com/Gaohaoyang&quot;&gt;这是他的Github&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/Gaohaoyang/gaohaoyang.github.io&quot;&gt;仓库&lt;/a&gt;
+</description>
+        <pubDate>Wed, 12 Jan 2022 23:56:02 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/12/new-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/12/new-blog/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</title>
+        <description>&lt;a href=&quot;https://blog.csdn.net/qq_41988167/article/details/106202868&quot;&gt;No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6;;Error running requirements_debian_libs_install libssl1.0-dev&lt;/a&gt;
+
+原博内容：
+
+rvm安装低版本ruby报错Error running ‘requirements_debian_libs_install libssl1.0-dev’,Requirements installation failed with status: 100.
+
+由于参与的一个项目在用2.3.1版本的ruby，所以想用rvm来安装ruby2.3.1。运行报错，需要libssl1.0-dev.&lt;br /&gt;
+解决办法：
+
+&lt;ul&gt;
+  &lt;li&gt;运行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gedit /etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/apt/sources.list&lt;/code&gt; 中添加下载源 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deb http://security.ubuntu.com/ubuntu bionic-security main&lt;/code&gt;。保存退出。
+
+&lt;ul&gt;
+  &lt;li&gt;更新&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-cache policy libssl1.0-dev  #（这步我没有做，先不做）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+然后再安装&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rvm install 2.2.6&lt;/code&gt;
+
+————————————————&lt;br /&gt;
+版权声明：本文为CSDN博主「会打滚的咸鱼」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_41988167/article/details/106202868
+</description>
+        <pubDate>Wed, 12 Jan 2022 19:03:01 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>好记性不如烂笔头</title>
+        <description>很多以前做过的事，细节步骤都不记得了，多写字吧，详细地记录下来，以后也有个回忆。
+</description>
+        <pubDate>Wed, 12 Jan 2022 00:37:26 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/12/write-them-all/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/12/write-them-all/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>octopress 自动打开文件 插入本地图片 程序</title>
+        <description>&lt;a href=&quot;http://blog.lessfun.com/blog/2013/12/05/config-the-octopress-blog-after-deployed/&quot;&gt;教程&lt;/a&gt;
+
+&lt;h3 id=&quot;添加功能自动打开文件编辑&quot;&gt;添加功能：自动打开文件编辑&lt;/h3&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake new_post[&quot;file name&quot;]&lt;/code&gt; 后自动打开博客文件&lt;br /&gt;
+编辑&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt;文件，上面位置，添加定义：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	editor = &quot;gedit&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+然后在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;new_post&lt;/code&gt;命令后面添加：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if #{editor}
+  system &quot;#{editor} #{filename}&quot;
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;插入本地图片&quot;&gt;插入本地图片&lt;/h3&gt;
+将图片放到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress/source/images/&lt;/code&gt;下，然后在Markdown文件中可直接引用，用法：
+
+&lt;img src=&quot;https://qiuhaidong.github.io/images/%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80-%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87-%E7%A8%8B%E5%BA%8F.png&quot; alt=&quot;语法冲突，不能显示正确代码，看图片&quot; /&gt;
+
+&lt;img src=&quot;https://qiuhaidong.github.io/images/%E9%BA%A6%E8%BF%AA%E7%A7%91%E6%AF%94.jpg&quot; alt=&quot;kobi t-mac&quot; /&gt;
+
+&lt;h4 id=&quot;前后行3个显示代码且有显示行数&quot;&gt;前后行3个```显示代码，且有显示行数&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;c++
+int main()
+{
+	cout&amp;lt;&amp;lt;&quot;hello world&quot;&amp;lt;&amp;lt;endl;
+};
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Tue, 11 Jan 2022 22:42:33 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/11/octopress-new-post-auto-open/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/11/octopress-new-post-auto-open/</guid>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>octopress 2.0 test on ubuntu 20.04</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install 2.3.1  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+失败&lt;br /&gt;
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd octopress
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.7.0
+ 	Required ruby-2.7.0 is not installed.
+ 	To install do: 'rvm install &quot;ruby-2.7.0&quot;'  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;记得是用270&quot;&gt;记得是用2.7.0&lt;/h1&gt;
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ rvm install &quot;ruby-2.7.0&quot;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ rake generate
+Could not find rake-10.5.0 in any of the sources
+Run `bundle install` to install missing gems.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ bundle install
+Traceback (most recent call last):
+4: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/ruby_executable_hooks:22:in `&amp;lt;main&amp;gt;'
+3: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/ruby_executable_hooks:22:in `eval'
+2: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/bundle:23:in `&amp;lt;main&amp;gt;'
+1: from /home/dong/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:294:in `activate_bin_path'
+/home/dong/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': Could not find 'bundler' (1.17.3) required by your /home/dong/octopress/Gemfile.lock. (Gem::GemNotFoundException)
+To update to the latest version installed on your system, run `bundle update --bundler`.
+To install the missing version, run `gem install bundler:1.17.3`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ gem install bundler:1.17.3
+Fetching bundler-1.17.3.gem
+Successfully installed bundler-1.17.3
+Parsing documentation for bundler-1.17.3
+Installing ri documentation for bundler-1.17.3
+Done installing documentation for bundler after 3 seconds
+1 gem installed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ rake generate
+Could not find rake-10.5.0 in any of the sources
+Run `bundle install` to install missing gems.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$ rake generate
+rake aborted!
+Gem::LoadError: You have already activated rake 13.0.1, but your Gemfile requires rake 10.5.0. Prepending `bundle exec` to your command may solve this.
+/home/dong/octopress/Rakefile:2:in `&amp;lt;top (required)&amp;gt;'
+(See full trace by running task with --trace)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+提示失败，&lt;br /&gt;
+但是可以加上&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec&lt;/code&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~/octopress$bundle exec rake generate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+很多警告，但是成了，&lt;br /&gt;
+下面也一样：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec rake preview
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 11 Jan 2022 07:52:12 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/</guid>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>ubuntu 安装后wifi无法使用</title>
+        <description>&lt;h3 id=&quot;原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容&quot;&gt;原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容&lt;/h3&gt;
+首先利用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rfkill&lt;/code&gt;命令查看目前无线传输设备的状态，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rfkill&lt;/code&gt;是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。
+
+rfkill的常用方法为:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rfkill list all
+#  获得设备列表
+
+rfkill block [index|type]
+#  通过索引或类型禁用设备
+
+rfkill unblock [index|type]
+#  通过索引或类型启用设备
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+当前设备状态如下：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rfkill list all
+输出：
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: yes
+1: acer-wireless: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+通过rfkill启用/禁用设备无法对硬件阻塞产生作用。
+
+由于笔记本只有一个无线网卡，这两个模块应该是有冲突
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;使用命令lsmod&lt;/td&gt;
+      &lt;td&gt;grep acer可以看出系统启动了acer_wmi模块&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+通过查找资料后，解决方法为禁用acer_wmi模块。
+</description>
+        <pubDate>Tue, 11 Jan 2022 04:38:50 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/11/ubuntu-wifi-do-not-work/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/11/ubuntu-wifi-do-not-work/</guid>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>ubuntu 16.04 install octopress 2.0</title>
+        <description>ubuntu20.04安装了几次2.0都失败&lt;br /&gt;
+ubuntu12.04已经无法安装系统本身的更新了，更别说安装其他软件&lt;br /&gt;
+强迫症发作，于是有了这次：
+
+&lt;h3 id=&quot;列出大致步骤吧主要是有些error要如何解决&quot;&gt;列出大致步骤吧，主要是有些error要如何解决&lt;/h3&gt;
+
+&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+&lt;h3 id=&quot;install-git&quot;&gt;install git&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
+sudo apt install git
+git --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;set-up-git&quot;&gt;set up git&lt;/h3&gt;
+
+&lt;h4 id=&quot;username&quot;&gt;Username&lt;/h4&gt;
+github用户名
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name &quot;qiuhaidong&quot;
+#or haydnyau
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;email&quot;&gt;Email&lt;/h4&gt;
+github登录帐号邮箱名
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.email &quot;690982322@qq.com&quot;
+#or 1148891016@qq.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Password caching
+
+To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global credential.helper cache
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;添加-ssh-keys&quot;&gt;添加 SSH Keys&lt;/h3&gt;
+&lt;h4 id=&quot;step-1-check-for-ssh-keys&quot;&gt;Step 1: Check for SSH keys&lt;/h4&gt;
+First, we need to check for existing ssh keys on your computer. Open up Terminal and run:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ~/.ssh
+# Checks to see if there is a directory named &quot;.ssh&quot; in your user directory
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+If it says “No such file or directory” go to step 2. Otherwise, you already have an existing keypair, and you can skip to step 3.
+
+&lt;strong&gt;最好就是把 .shh 这个文件夹删除了，做step 2&lt;/strong&gt;
+
+&lt;h4 id=&quot;step-2-generate-a-new-ssh-key&quot;&gt;Step 2: Generate a new SSH key&lt;/h4&gt;
+
+To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, &lt;strong&gt;just press enter&lt;/strong&gt;.不要输入文件名
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+我的就是：ssh-keygen -t rsa -C &quot;690982322@qq.com&quot;
+#or 1148891016@qq.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Now you need to enter a passphrase.设置密码。（有人是密码都不要的，再按两下enter就行了）
+
+Which should give you something like this:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Your identification has been saved in /home/you/.ssh/id_rsa.
+Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-3-add-your-ssh-key-to-github&quot;&gt;Step 3: Add your SSH key to GitHub&lt;/h3&gt;
+ctrl+h，显示隐藏文件，这里其实可以打开这个&lt;strong&gt;id_rsa.pub&lt;/strong&gt;文件，直接复制，不用安装下面的软件
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install xclip
+# Downloads and installs xclip.
+
+xclip -sel clip &amp;lt; ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;add-your-ssh-key-to-github&quot;&gt;Add your SSH key to GitHub&lt;/h4&gt;
+
+到github网站，登陆，头像，设置，SSH and GPG keys，把旧的SSH keys删除，添加新的，title不用管，粘贴到key就行了
+
+&lt;h3 id=&quot;step-4-test&quot;&gt;Step 4: Test&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+这里可能会还要按照提示做一下，不难，看英文做
+
+如果看到：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hi qiuhaidong! You've successfully authenticated, but GitHub does not provide shell access.
+# or haydnyau
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+If that username is correct, you’ve successfully set up your SSH key. Don’t worry about the shell access thing, you don’t want that anyway.
+
+If you see “&lt;strong&gt;access denied&lt;/strong&gt;” please consider using HTTPS instead of SSH. If you need SSH start at these instructions for diagnosing the issue.
+
+&lt;h4 id=&quot;如果不成功用https的认证方式代替ssh因为github觉得ssh不安全认证方式有时会改变&quot;&gt;如果不成功，用https的认证方式代替ssh，因为github觉得ssh不安全，认证方式有时会改变&lt;/h4&gt;
+
+&lt;h2 id=&quot;rvm&quot;&gt;RVM&lt;/h2&gt;
+看官网命令
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm --version
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+会显示失败，先不管它&lt;br /&gt;
+Install RVM：命令
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+如下：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~$ curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: 于 2021年01月16日 星期六 02时46分22秒 CST 创建的签名，使用 RSA，钥匙号 39499BDB
+gpg: 无法检查签名：没有公钥
+GPG signature verification failed for '/home/dong/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
+    gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+or if it fails:
+    command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+这个提示错误，并且给出了解决方法：&lt;br /&gt;
+运行：&lt;br /&gt;
+命令1：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+命令2：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+再运行上一条命令安装rvm：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -L https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+输出：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  * To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+安装成功，按照提示运行：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source /home/dong/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+测试：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm --version
+git --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+安装ruby2.2.6（1.9.3太久了，无法安装）
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install 2.2.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+会提示输入本机密码
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.2.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;setup-octopress&quot;&gt;Setup Octopress&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+# 或者 git clone git://github.com/imathis/octopress.git octopress
+# octopress  2.0 原码
+cd octopress
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-dependencies&quot;&gt;install dependencies&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;会提示失败按提示加上版本号安装适合本系统的&quot;&gt;会提示失败，按提示加上版本号，安装适合本系统的&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-the-default-octopress-theme&quot;&gt;Install the default Octopress theme&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;deploying-to-github-pages&quot;&gt;Deploying to Github Pages&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake setup_github_pages
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+这里可能会要输入链接等，ssh，https
+
+The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository &lt;br /&gt;
+(e.g. git@github.com:username/username.github.io.git) &lt;br /&gt;
+git@github.com:qiuhaidong/qiuhaidong.github.com.git&lt;br /&gt;
+https://github.com/qiuhaidong/qiuhaidong.github.com.git&lt;br /&gt;
+or&lt;br /&gt;
+git@github.com:haydnyau/haydnyau.github.io.git&lt;br /&gt;
+https://github.com/haydnyau/haydnyau.github.io.git&lt;br /&gt;
+and paste it in as a response.
+
+This will:
+
+&lt;ol&gt;
+  &lt;li&gt;Ask for and store your Github Pages repository url.&lt;/li&gt;
+  &lt;li&gt;Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’&lt;/li&gt;
+  &lt;li&gt;Add your Github Pages repository as the default origin remote.&lt;/li&gt;
+  &lt;li&gt;Switch the active branch from master to source.&lt;/li&gt;
+  &lt;li&gt;Configure your blog’s url according to your repository.&lt;/li&gt;
+  &lt;li&gt;Setup a master branch in the _deploy directory for deployment.&lt;/li&gt;
+&lt;/ol&gt;
+
+Next run:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake generate
+rake deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+This will generate your blog, copy the generated files into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_deploy/&lt;/code&gt;, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.
+
+&lt;h2&gt;=======================================================&lt;/h2&gt;
+
+来自官网&lt;br /&gt;
+&lt;strong&gt;下面这个不知道要不要做：&lt;/strong&gt;&lt;br /&gt;
+Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog. After you set up a repository for your blog source, add it as the origin remote.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin (your repo url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+Now push your changes and you’ll be all set.&lt;br /&gt;
+&lt;strong&gt;上面这个不知道要不要做：&lt;/strong&gt;&lt;br /&gt;
+来自官网
+
+&lt;h2 id=&quot;-1&quot;&gt;========================================================&lt;/h2&gt;
+
+&lt;strong&gt;Don’t forget&lt;/strong&gt; to commit the source for your blog.
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add .
+git commit -m 'update'
+git push origin source
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;configuring-octopress&quot;&gt;Configuring Octopress&lt;/h3&gt;
+
+&lt;h4 id=&quot;edit-_configyml&quot;&gt;edit _config.yml&lt;/h4&gt;
+</description>
+        <pubDate>Tue, 11 Jan 2022 00:17:21 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/11/ubuntu-16.04-install-octopress-2.0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/11/ubuntu-16.04-install-octopress-2.0/</guid>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+  </channel>
+</rss>

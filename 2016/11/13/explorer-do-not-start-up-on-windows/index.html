@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>windows本地浏览器没有启动 explorer do not start up on windows</title>
+    <meta name="description" content="原帖DG works：打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2016/11/13/explorer-do-not-start-up-on-windows/">
+    <link rel="alternate" type="application/rss+xml" title="丘海东" href="http://localhost:4000/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">丘海东</a>
+        <small>Haydn Yau</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>windows本地浏览器没有启动 explorer do not start up on windows</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2016-11-13
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <p><a href="https://zhidao.baidu.com/question/588254618.html">原帖</a><br />
+<strong>DG works：</strong><br />
+<strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong></p>
+
+<p>关于explorer.exe加载不了 无法显示任务栏与桌面解决办法<br />
+Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.exe。说明系统启动时候没有加载Explorer.exe。(explorer是Windows程序管理器或者Windows资源管理器，它用于管理Windows图形壳，包括开始菜单、任务栏、桌面和文件管理。删除该程序会导致Windows图形界面无法适用。)<br />
+点击“Windows任务管理器”–&gt;“文件”–&gt;“新建任务（运行……）”敲入Explorer.exe看看是否能够执行，如果不能执行说明系统的winnt目录下没有Explorer.exe这个文件或者Explorer.exe文件损坏。<br />
+首先尝试下面的方法：<br />
+1<br />
+<strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong><br />
+2<br />
+打开注册表，找到子键“HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer”，新建“DWORD”值“NoDesktop”，其值为“1”。（这个是我在网上搜索的方法，为什么要使用这个健值我不清楚。）再检查注册表….HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell 
+看是否为explorer.exe，不是的话自己改.</p>
+
+<p>第一个，把Explorer加入进程：<br />
+开始菜单→运行→输入“regedit”，回车→打开注册表内的HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\项，在该项下新建一个名称为“Explorer.exe”的新字符串值，编辑该值，数据为你系统中Explorer.exe的位置。<br />
+第二个，取消开机项目<br />
+开始菜单→运行→输入“msconfig”，回车→在『启动』选项卡中，找到那个安装程序的对应的值（如果不知道就把一些没有必要的全部去掉），去掉前面的“√”，保存，退出。<br />
+重启电脑。</p>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+            
+        
+            
+            
+                
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2016/11/13/sql-edit-more-than-200-item/">SQL: edit more than 200 item</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2016/11/19/halfwidth-and-fullwidth-forms/">Halfwidth and Fullwidth Forms</a></p>
+        
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+           
+                    
+
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             读书写字 热爱生活 
+        </p>
+        <p class="contact">
+             
+            <a href="https://github.com/haydnyau/haydnyau.github.io" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>         
+        </p>
+        <p>
+             
+        </p>
+        <p class="power">
+
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
