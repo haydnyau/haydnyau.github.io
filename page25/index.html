@@ -136,6 +136,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -148,6 +150,190 @@
         <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/08/23/gfw-bundle-install/">GFW rubygems bundle install</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-08-23
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2022-01-05:最新网址：https://gems.ruby-china.com/<br />
+<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong><br />
+封网，rubygems.org 不行了<br />
+<code class="language-plaintext highlighter-rouge">bundle install</code>  自然也不行<br />
+点算？<br />
+https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网<br />
+用法：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --remove https://rubygems.org/
+gem sources -a https://gems.ruby-china.com/
+gem sources -l
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** CURRENT SOURCES ***  
+
+https://gems.ruby-china.com  
+</code></pre></div></div>
+
+<p>确保只有 https://gems.ruby-china.com/</p>
+
+<p>###但是这样也不行，还得到octopress文件夹，打开Gemfile文件，编辑：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    source "https://gems.ruby-china.com"
+</code></pre></div></div>
+
+<p>Ubuntu 14.04，安装octopress,执行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>一直提示缺少各种 gem 包，例如：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+Gem::RemoteFetcher::FetchError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/gems/safe_yaml-1.0.4.gem)
+An error occurred while installing safe_yaml (1.0.4), and Bundler cannot continue.
+Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
+
+```
+</code></pre></div></div>
+
+<p>按提示输入命令 <code class="language-plaintext highlighter-rouge">gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
+
+<p>解决方法：</p>
+
+<p>修改octopress文件夹里的Gemfile文件：</p>
+
+<p>把：<br />
+<code class="language-plaintext highlighter-rouge">source "https://rubygems.org"</code><br />
+改为：<br />
+<code class="language-plaintext highlighter-rouge">source "https://gems.ruby-china.com"</code><br />
+再执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>完美通过。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/08/23/gfw-bundle-install/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/07/20/keyboard-configuration/">更改键盘布局</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-07-20
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>键盘布局出错，想打‘#’，却出现一个类似‘f’的符号，打‘|’却出现‘~’。<br />
+run：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo dpkg-reconfigure keyboard-configuration
+</code></pre></div></div>
+
+<p>会出现图形界面用以设置。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/07/20/keyboard-configuration/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -412,222 +598,6 @@ https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/03/06/goagent/">GoAgent</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-03-06
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>2016-01-09  goagent的github仓库已经全部删除，it’s gone.</p>
-
-<p><a href="https://github.com/goagent/goagent">新网址</a><br />
-<a href="http://git.io/goa">压缩包下载地址</a><br />
-<a href="https://github.com/goagent/goagent/blob/wiki/SimpleGuide.md">简易教程</a></p>
-
-<p><strong>部署</strong></p>
-
-<ol>
-  <li>申请 Google Appengine 并创建 appid。</li>
-  <li>下载 <a href="https://github.com/goagent/goagent">goagent</a></li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>修改 local\proxy.ini 中的 [gae] 下的 appid = 你的appid(多appid请用</td>
-          <td>隔开)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>运行 uploader.bat 或 uploader.py 开始上传, 成功后即可使用了。</li>
-</ol>
-
-<p><strong>使用</strong></p>
-
-<ul>
-  <li>Windows 用户推荐使用 goagent.exe 托盘图标设置 IE 代理(对其它浏览器也有效)。</li>
-  <li>Chrome/Opera 请安装 SwitchyOmega 插件(下载到本地然后拖放文件到扩展设置)，导入 SwitchyOptions.bak</li>
-  <li>Firefox 请安装 FoxyProxy ，Firefox需要导入证书，方法请见 FAQ</li>
-  <li>出现连接不上的情况可以尝试使用 gscan 或 GoGo Tester 测速。</li>
-</ul>
-
-<p><a href="https://github.com/goagent/goagent/blob/wiki/InstallGuide.md">图文教程</a></p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/03/06/goagent/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/">TCPServer Error: Address already in use - bind(2)</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-03-05
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在执行命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake preview
-</code></pre></div></div>
-
-<p>时，输出：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake preview  
-Starting to watch source with Jekyll and Compass. Starting Rack on port 4000  
-&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.  
-Configuration file: /home/dong/octopress/_config.yml  
-[2015-03-05 13:22:19] INFO  WEBrick 1.3.1  
-[2015-03-05 13:22:19] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]  
-[2015-03-05 13:22:19] WARN  TCPServer Error: Address already in use - bind(2)  
-/home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `new'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `block in create_listeners'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `each'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `create_listeners'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:82:in `listen'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:70:in `initialize'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:45:in `initialize'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `new'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `run'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:286:in `start'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:147:in `start'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/bin/rackup:4:in `&lt;top (required)&gt;'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `load'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `&lt;main&gt;'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
-        Source: source
-   Destination: public
-      Generating... 
-                done.
-    write public/stylesheets/screen.css
- Auto-regeneration: enabled for 'source'
-</code></pre></div></div>
-
-<p>解决方法：<br />
-执行：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
-</code></pre></div></div>
-
-<p>得到：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
-[sudo] password for dong: 
-tcp        0      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      2889/rackup  
-</code></pre></div></div>
-
-<p>执行：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kill -9 2889
-</code></pre></div></div>
-
-<p>得到：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ kill -9 2889
-dong@Ubuntu:~/octopress$
-</code></pre></div></div>
-
-<p>done.</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -638,10 +608,10 @@ dong@Ubuntu:~/octopress$
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page24" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">25/29</span>
+          <span class="page_number ">25/30</span>
           
             <a href="/page26" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page29" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page30" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -654,6 +624,10 @@ dong@Ubuntu:~/octopress$
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/01/15/done-tired/">really hard</a></li>
+                    
+                        <li><a href="/2022/01/15/model/">model</a></li>
                     
                         <li><a href="/2022/01/15/fucking-hard/">really hard</a></li>
                     
@@ -671,10 +645,6 @@ dong@Ubuntu:~/octopress$
                     
                         <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
                     
-                        <li><a href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a></li>
-                    
-                        <li><a href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a></li>
-                    
                 </ul>
             </div>
 
@@ -691,7 +661,7 @@ dong@Ubuntu:~/octopress$
                             <span class="name">
                                 tech
                             </span>
-                            <span class="badge">60</span>
+                            <span class="badge">62</span>
                         </a>
                     </li>
                     
@@ -709,7 +679,7 @@ dong@Ubuntu:~/octopress$
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">9</span>
+                            <span class="badge">10</span>
                         </a>
                     </li>
                     
