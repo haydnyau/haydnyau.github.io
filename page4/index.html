@@ -138,6 +138,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -147,9 +149,673 @@
         <div class="page clearfix" index>
     <div class="left">
         <h1>行止由心</h1>
-        <h1>热爱生活</h1>
+        <h1>际遇随缘</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>ubuntu20.04安装了几次2.0都失败<br />
+ubuntu12.04已经无法安装系统本身的更新了，更别说安装其他软件<br />
+强迫症发作，于是有了这次：</p>
+
+<h3 id="列出大致步骤吧主要是有些error要如何解决">列出大致步骤吧，主要是有些error要如何解决</h3>
+
+<h2 id="git">git</h2>
+<h3 id="install-git">install git</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+sudo apt install git
+git --version
+</code></pre></div></div>
+
+<h3 id="set-up-git">set up git</h3>
+
+<h4 id="username">Username</h4>
+<p>github用户名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "qiuhaidong"
+#or haydnyau
+</code></pre></div></div>
+
+<h4 id="email">Email</h4>
+<p>github登录帐号邮箱名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.email "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
+
+<p>Password caching</p>
+
+<p>To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global credential.helper cache
+</code></pre></div></div>
+
+<h3 id="添加-ssh-keys">添加 SSH Keys</h3>
+<h4 id="step-1-check-for-ssh-keys">Step 1: Check for SSH keys</h4>
+<p>First, we need to check for existing ssh keys on your computer. Open up Terminal and run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.ssh
+# Checks to see if there is a directory named ".ssh" in your user directory
+</code></pre></div></div>
+
+<p>If it says “No such file or directory” go to step 2. Otherwise, you already have an existing keypair, and you can skip to step 3.</p>
+
+<p><strong>最好就是把 .shh 这个文件夹删除了，做step 2</strong></p>
+
+<h4 id="step-2-generate-a-new-ssh-key">Step 2: Generate a new SSH key</h4>
+
+<p>To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, <strong>just press enter</strong>.不要输入文件名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "your_email@example.com"
+我的就是：ssh-keygen -t rsa -C "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
+
+<p>Now you need to enter a passphrase.设置密码。（有人是密码都不要的，再按两下enter就行了）</p>
+
+<p>Which should give you something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /home/you/.ssh/id_rsa.
+Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+</code></pre></div></div>
+
+<h3 id="step-3-add-your-ssh-key-to-github">Step 3: Add your SSH key to GitHub</h3>
+<p>ctrl+h，显示隐藏文件，这里其实可以打开这个<strong>id_rsa.pub</strong>文件，直接复制，不用安装下面的软件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install xclip
+# Downloads and installs xclip.
+
+xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
+</code></pre></div></div>
+
+<h4 id="add-your-ssh-key-to-github">Add your SSH key to GitHub</h4>
+
+<p>到github网站，登陆，头像，设置，SSH and GPG keys，把旧的SSH keys删除，添加新的，title不用管，粘贴到key就行了</p>
+
+<h3 id="step-4-test">Step 4: Test</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+
+<p>这里可能会还要按照提示做一下，不难，看英文做</p>
+
+<p>如果看到：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi qiuhaidong! You've successfully authenticated, but GitHub does not provide shell access.
+# or haydnyau
+</code></pre></div></div>
+
+<p>If that username is correct, you’ve successfully set up your SSH key. Don’t worry about the shell access thing, you don’t want that anyway.</p>
+
+<p>If you see “<strong>access denied</strong>” please consider using HTTPS instead of SSH. If you need SSH start at these instructions for diagnosing the issue.</p>
+
+<h4 id="如果不成功用https的认证方式代替ssh因为github觉得ssh不安全认证方式有时会改变">如果不成功，用https的认证方式代替ssh，因为github觉得ssh不安全，认证方式有时会改变</h4>
+
+<h2 id="rvm">RVM</h2>
+<p>看官网命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div></div>
+
+<p>会显示失败，先不管它<br />
+Install RVM：命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: 于 2021年01月16日 星期六 02时46分22秒 CST 创建的签名，使用 RSA，钥匙号 39499BDB
+gpg: 无法检查签名：没有公钥
+GPG signature verification failed for '/home/dong/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
+    gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+or if it fails:
+    command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+</code></pre></div></div>
+
+<p>这个提示错误，并且给出了解决方法：<br />
+运行：<br />
+命令1：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>命令2：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>再运行上一条命令安装rvm：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  * To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+</code></pre></div></div>
+
+<p>安装成功，按照提示运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/dong/.rvm/scripts/rvm
+</code></pre></div></div>
+
+<p>测试：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+git --version
+</code></pre></div></div>
+
+<p>安装ruby2.2.6（1.9.3太久了，无法安装）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.2.6
+</code></pre></div></div>
+
+<p>会提示输入本机密码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.2.6
+</code></pre></div></div>
+
+<h3 id="setup-octopress">Setup Octopress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+# 或者 git clone git://github.com/imathis/octopress.git octopress
+# octopress  2.0 原码
+cd octopress
+</code></pre></div></div>
+
+<h4 id="install-dependencies">install dependencies</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+
+<h4 id="会提示失败按提示加上版本号安装适合本系统的">会提示失败，按提示加上版本号，安装适合本系统的</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<h4 id="install-the-default-octopress-theme">Install the default Octopress theme</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake install
+</code></pre></div></div>
+
+<h4 id="deploying-to-github-pages">Deploying to Github Pages</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake setup_github_pages
+</code></pre></div></div>
+
+<p>这里可能会要输入链接等，ssh，https</p>
+
+<p>The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository <br />
+(e.g. git@github.com:username/username.github.io.git) <br />
+git@github.com:qiuhaidong/qiuhaidong.github.com.git<br />
+https://github.com/qiuhaidong/qiuhaidong.github.com.git<br />
+or<br />
+git@github.com:haydnyau/haydnyau.github.io.git<br />
+https://github.com/haydnyau/haydnyau.github.io.git<br />
+and paste it in as a response.</p>
+
+<p>This will:</p>
+
+<ol>
+  <li>Ask for and store your Github Pages repository url.</li>
+  <li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+  <li>Add your Github Pages repository as the default origin remote.</li>
+  <li>Switch the active branch from master to source.</li>
+  <li>Configure your blog’s url according to your repository.</li>
+  <li>Setup a master branch in the _deploy directory for deployment.</li>
+</ol>
+
+<p>Next run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+rake deploy
+</code></pre></div></div>
+
+<p>This will generate your blog, copy the generated files into <code class="language-plaintext highlighter-rouge">_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.</p>
+
+<h2>=======================================================</h2>
+
+<p>来自官网<br />
+<strong>下面这个不知道要不要做：</strong><br />
+Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog. After you set up a repository for your blog source, add it as the origin remote.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin (your repo url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+</code></pre></div></div>
+
+<p>Now push your changes and you’ll be all set.<br />
+<strong>上面这个不知道要不要做：</strong><br />
+来自官网</p>
+
+<h2 id="-1">========================================================</h2>
+
+<p><strong>Don’t forget</strong> to commit the source for your blog.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m 'update'
+git push origin source
+</code></pre></div></div>
+
+<h3 id="configuring-octopress">Configuring Octopress</h3>
+
+<h4 id="edit-_configyml">edit _config.yml</h4>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="三步">三步</h3>
+
+<h2 id="step-1">Step 1</h2>
+
+<h3 id="添加-category_list-插件">添加 <code class="language-plaintext highlighter-rouge">category_list</code> 插件</h3>
+
+<p>在 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Jekyll
+  class CategoryListTag &lt; Liquid::Tag
+    def render(context)
+      html = ""
+      categories = context.registers[:site].categories.keys
+      categories.sort.each do |category|
+        posts_in_category = context.registers[:site].categories[category].size
+ 	       category_dir = context.registers[:site].config['category_dir']
+        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
+    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
+      end
+      html
+    end
+  end
+end
+
+Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
+</code></pre></div></div>
+
+<p>这个插件会向<code class="language-plaintext highlighter-rouge">liquid</code>注册一个名为<code class="language-plaintext highlighter-rouge">category_list</code>的<code class="language-plaintext highlighter-rouge">tag</code>，该<code class="language-plaintext highlighter-rouge">tag</code>就是以<code class="language-plaintext highlighter-rouge">li</code>的形式将站点所有的<code class="language-plaintext highlighter-rouge">category</code>组织起来。如果要将<code class="language-plaintext highlighter-rouge">category</code>加入到侧边导航栏，需要增加一个<code class="language-plaintext highlighter-rouge">aside</code>。</p>
+
+<h2 id="step-2">Step 2</h2>
+
+<h3 id="增加-aside">增加 <code class="language-plaintext highlighter-rouge">aside</code></h3>
+
+<p>在 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list.html</code> 。并粘贴下面的代码：</p>
+
+<p><strong>注意</strong>： 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的2个 <code class="language-plaintext highlighter-rouge">\</code><br />
+这里如果不加上<code class="language-plaintext highlighter-rouge">\</code>，markdown格式会显示<code class="language-plaintext highlighter-rouge">category_list</code>的内容。我是为了正确显示代码才加上的</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
+  &lt;h1&gt;Categories&lt;/h1&gt;
+  &lt;ul id="categories"&gt;
+    {\% category_list \%}
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/add-category/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>代码如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ git push origin source
+
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>打开文件~/octopress/.git/config，查看</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[remote "origin"]
+	url = git@github.com:haydnyau/haydnyau.github.io.git
+</code></pre></div></div>
+
+<p>我是改了几次，com.git和io.git搞错了</p>
+
+<p><a href="https://blog.csdn.net/weixin_40886892/article/details/80725071">和我同样问题的网友</a></p>
+
+<p><a href="https://blog.csdn.net/meng_lemon/article/details/88963157">另一个网友的类似问题</a></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/can-not-push/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>preview.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build #生成
+jekyll serve
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>deploy.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+octopress deploy
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+mv _posts/ _site/
+octopress deploy
+mv _site/_posts/ .
+</code></pre></div></div>
+
+<p>注意这个点 “.”
+<code class="language-plaintext highlighter-rouge">.</code> 或者 <code class="language-plaintext highlighter-rouge">./</code> 表示当前目录</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>更改了/home/dong/haydnyau/_templates/post
+增加了：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>categories: 
+</code></pre></div></div>
+
+<h3 id="ps-里面有代码">ps: {}里面有代码:</h3>
+
+<p>categories: {{ categories }}<br />
+因为格式问题没有显示，参见原文件</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/change-templates-post-if-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -191,6 +857,8 @@
 <span class="pageTag">
   <i class="fa fa-tags"></i>
   
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -391,368 +1059,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/02/basketball-in-the-zone/">篮球境界</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-02
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>今晚<br />
-并不是说命中率最高、速度最快，而是心态最好，进入境界。<br />
-就像麦迪说的，35秒13分并不是他的最好，他的最好是进入了“in the zone”的境界。<br />
-我今晚也一样。<br />
-具体这样说吧：<br />
-心跳如常，不为任何情况所动，该怎样怎样。<br />
-<strong>进攻</strong>：<br />
-该跑跑，该停停，该切切，该快快，该慢慢。<br />
-该投投，不犹豫。<br />
-该晃晃，该突突，该传传，该断断。<br />
-<strong>防守</strong>：<br />
-该紧紧，该松松。<br />
-被背打就被背打，不懊恼。<br />
-能帽帽，不喜不惧。<br />
-<strong>其他</strong>：<br />
-投不进就不进，不懊恼，不可惜，继续。<br />
-失误就失误，继续。<br />
-开场还是抢七，该怎样怎样。<br />
-不怕强劲的对手，不怕拖累队友。<br />
-心态控制体能，微汗。<br />
-如李小龙说的：<strong>从心所欲,一心一意，表达自己</strong>。<br />
-<strong>心态如常，张弛有道，不为所动</strong>。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/02/basketball-in-the-zone/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/31/my-2021/">我的2021</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-31
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>这一年，三件事：到京东<strong>打工</strong>，学<strong>做饭</strong>，耳朵<strong>生病</strong>。<br />
-<strong>打工</strong><br />
-是做苦力，卖力气，很丢人，但，荒废了两年，终于动了。具体的，以前写过，不重复。<br />
-<strong>做饭</strong><br />
-很有门道，比如炒青菜，刚下锅，有的马上熟了，有的还没炒到，心慌。淡定，正常翻炒，就行了。还有先炒猪肉，再放面去炒，再放青菜，看起来一大锅，怕青菜在上面炒不熟，慌了。淡定，正常翻炒，就行了。<br />
-淡定，正常地做，就行了。<br />
-<strong>生病</strong><br />
-对自己太狠。秋冬，连续俩月通宵夜班，噪声大，有压力，情绪不稳定，早上洗冷水澡，重糖，重淀粉（米面主食），重油，重盐，吃辣椒，估计血糖高，血脂高，血压高，血粘稠，睡眠严重不足，內耳供血不足，听觉神经长期疲累不堪。免疫力下降，感冒，鼻塞，咽鼓管之类的不通畅。<br />
-种种原因，祸不单行，差点聋了。<br />
-就这三件事。<br />
-吸取教训，放下执念，放过自己，好好生活。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/31/my-2021/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/15/jd3/">京東3</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>day 68<br />
-今天休假<br />
-昨天耳朵又听到低沉的发动机的轰隆隆的声音，我以为是耳鸣，现在基本可以确定，这就是附近道路晚上泥头车汽車发动机或者工廠機器運转的声音。<br />
-在京东时也常常听到。<br />
-我<strong>感冒鼻塞</strong>时，耳朵<strong>对这些声音特别敏感</strong>。<br />
-就这样。<br />
-昨天上班时，没搞清情况，情绪又崩溃了……<br />
-<strong><em>補充</em></strong>：<br />
-工作沒勁頭，好想打電話給媽，和她坦白這一切，想讓她接受我的平庸，我的失敗，我的不婚，想發泄所有的不安、恐懼、負面情緒。<br />
-幸好，我還懂得衝動憤怒情緒不穩定時，別做決定，別做事。<br />
-休息了一天，現在知道不是耳鳴，是感冒鼻塞或者咽鼓管堵塞或者其他的聽力系統的某一部分出了問題，而引起的狀況，感冒好了，整個聽力系統自然就沒事了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/15/jd3/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/07/grateful/">感恩</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>此一時彼一時，我又回京東上班了。<br />
-總不能閒着不做事，沒有收入是不行的。<br />
-不過我有保護自己，現在上日班，一天只需要工作6小時，活也不是很忙，挺好的。<br />
-<strong>保護自己</strong>呀，一定要！</p>
-<h3 id="感恩">感恩</h3>
-<p>很多時候，挺多人，都對我很好的。很照顧我，甚至我不要臉地說，他們有時簡直是寵我。<br />
-比如老大喻胡龍，人手足夠時，叫我不用幹活，讓別人做了我的那份工作，他會罵別人，但是不會說我我。還有他老婆，給東西我吃。<br />
-比如潤峯大哥，旁邊的人工作比我更忙，但是他卻是幫我。<br />
-比如？韋亦凡？（音譯，不知道是不是這個名字），其實不是很熟悉，但是京東發的小零食，他經常給我吃。<br />
-還有大劉，老李，光頭大哥，光頭二哥，肥佬，肥仔老楊，胖子……還有很多我不知道名字的人。<br />
-所以：<br />
-<strong>越努力越幸運</strong>。<br />
-我是個認真做事的人，別人看在眼裏，自然在條件允許時幫助我。<br />
--別人幫我，是證明了別人是好人，自己<strong>別得瑟</strong>，<strong>得意不忘形</strong>。<br />
-一直以來，都是很多人幫助我，加油吧，中年人，<strong>別辜負了那麼多的善意</strong>。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/07/grateful/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-11-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="劳逸结合">劳逸结合</h3>
-<p>何同学说的：你通过熬夜，不规律的生活，随意而为得来的东西，总有一天，要<strong>连本带利</strong>还回去</p>
-
-<p>我倒是没有熬夜，生活也挺规律的，也没有随意，但就是<strong>对自己太狠了</strong>，<strong>过犹不及</strong>，可能我的躯体受得了繁重的体力劳动，我的意志也顶得住冬日早晨的冷水澡，但是我的<strong>血管</strong>，我的<strong>眼睛</strong>，<strong>耳朵</strong>，这些柔弱的，脆弱的，<strong>不能修复的</strong>，不行呀</p>
-<h3 id="身体健康">身体健康</h3>
-<h3 id="好好生活">好好生活</h3>
-<h3 id="饮鸩止渴">饮鸩止渴</h3>
-<h3 id="当断则断">当断则断</h3>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/11/26/I-AM-GOOD/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -763,14 +1069,17 @@ git add .
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page3" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">4/30</span>
+          <span class="page_number ">4/31</span>
           
             <a href="/page5" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page30" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page31" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+    
+    
+    
     <div class="right">
         <div class="wrap">
             <div class="side">
@@ -780,15 +1089,25 @@ git add .
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博客详情页增加侧边栏Recent Posts</a></li>
+                    
+                        <li><a href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a></li>
+                    
+                        <li><a href="/2022/02/18/life-is-pity/">生命悲凉</a></li>
+                    
+                        <li><a href="/2022/02/16/myself/">做自己，就…只…做自己</a></li>
+                    
+                        <li><a href="/2022/01/20/leave/">穷山恶水，离开吧</a></li>
+                    
                         <li><a href="/2022/01/15/ubuntu-cannot-boot-windows/">ubuntu2022年无法添加引导windows，官方禁用OS Prober</a></li>
                     
                         <li><a href="/2022/01/15/sougou-is-xiugou/">搜狗输入法</a></li>
                     
                         <li><a href="/2022/01/15/done-tired/">ok 好累</a></li>
                     
-                        <li><a href="/2022/01/15/model/">model</a></li>
+                        <li><a href="/2022/01/15/model/">post文件模板</a></li>
                     
-                        <li><a href="/2022/01/15/fucking-hard/">好艰难</a></li>
+                        <li><a href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a></li>
                     
                         <li><a href="/2022/01/13/zhe-teng/">生命不息，折腾不止</a></li>
                     
@@ -799,6 +1118,36 @@ git add .
                         <li><a href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a></li>
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
+                    
+                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">octopress 自动打开文件 插入本地图片 程序</a></li>
+                    
+                        <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
+                    
+                        <li><a href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a></li>
+                    
+                        <li><a href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a></li>
+                    
+                        <li><a href="/2022/01/10/add-category/">侧边栏增加分类 category</a></li>
+                    
+                        <li><a href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a></li>
+                    
+                        <li><a href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a></li>
+                    
+                        <li><a href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a></li>
+                    
+                        <li><a href="/2022/01/07/octopress3-0/">创建octopress3.0简单说明</a></li>
+                    
+                        <li><a href="/2022/01/02/basketball-in-the-zone/">篮球境界</a></li>
+                    
+                        <li><a href="/2021/12/31/my-2021/">我的2021</a></li>
+                    
+                        <li><a href="/2021/12/15/jd3/">京東3</a></li>
+                    
+                        <li><a href="/2021/12/07/grateful/">感恩</a></li>
+                    
+                        <li><a href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a></li>
+                    
+                        <li><a href="/2021/11/23/JD2/">我的耳鸣，我爸的腿伤——京东打工后续</a></li>
                     
                 </ul>
             </div>
@@ -825,7 +1174,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">100</span>
+                            <span class="badge">103</span>
                         </a>
                     </li>
                     
@@ -834,7 +1183,7 @@ git add .
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">10</span>
+                            <span class="badge">12</span>
                         </a>
                     </li>
                     
@@ -878,14 +1227,35 @@ git add .
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 18pt; color: #000;">rough</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 18pt; color: #000;">octopress3.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#ubnuntu" style="font-size: 9pt; color: #999;">ubnuntu</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
                       
                       

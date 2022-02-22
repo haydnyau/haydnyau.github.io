@@ -5,9 +5,121 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Jan 2022 15:39:39 +0800</pubDate>
-    <lastBuildDate>Sat, 15 Jan 2022 15:39:39 +0800</lastBuildDate>
+    <pubDate>Wed, 23 Feb 2022 07:09:32 +0800</pubDate>
+    <lastBuildDate>Wed, 23 Feb 2022 07:09:32 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>博客详情页增加侧边栏Recent Posts</title>
+        <description>博客根目录，文件&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;，找到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Recent Posts&lt;/code&gt;这一大段内容，复制，打开&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts/post.html&lt;/code&gt;，找到：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;lt;div class=&quot;right&quot;&amp;gt;
+        &amp;lt;div class=&quot;wrap&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+复制到其后面
+</description>
+        <pubDate>Mon, 21 Feb 2022 21:43:06 +0800</pubDate>
+        <link>http://localhost:4000/2022/02/21/post-html-add-sidebar-about-recent-posts/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/21/post-html-add-sidebar-about-recent-posts/</guid>
+        
+        <category>octopress3.0</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>新建post文件的“头文件”</title>
+        <description>在根目录新建一文件夹&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_templates&lt;/code&gt;，文件夹里建一个文件&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt;，无后缀，内容是：&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;注意，格式问题，显示有问题，参见原文件&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+—&lt;br /&gt;
+layout: &lt;br /&gt;
+title: “”&lt;br /&gt;
+date: &lt;br /&gt;
+tags: &lt;br /&gt;
+comments: true&lt;br /&gt;
+categories: &lt;br /&gt;
+—
+</description>
+        <pubDate>Mon, 21 Feb 2022 04:39:45 +0800</pubDate>
+        <link>http://localhost:4000/2022/02/21/template-of-new-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/21/template-of-new-post/</guid>
+        
+        <category>octopress3.0</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>生命悲凉</title>
+        <description>农历正月十八&lt;br /&gt;
+有时雨，有时雾&lt;br /&gt;
+破烂的旧房子&lt;br /&gt;
+天花板不时剥落残渣&lt;br /&gt;
+雨水漏下，打在铁谷柜上，在这寂静中，尤为响动
+
+我父亲是可怜的&lt;br /&gt;
+我母亲是可怜的&lt;br /&gt;
+时代给他们的无知&lt;br /&gt;
+身处巨大变革而无能为力&lt;br /&gt;
+求而不得&lt;br /&gt;
+我是可怜可悲的&lt;br /&gt;
+这是时代的安排&lt;br /&gt;
+宿命的印记&lt;br /&gt;
+是知识见闻和无能的无奈和残酷&lt;br /&gt;
+如果我是一样的无知就好了&lt;br /&gt;
+只可惜我的另一个区域的无知和无能&lt;br /&gt;
+如果我没那么的无能就好了&lt;br /&gt;
+如果我……&lt;br /&gt;
+深深的无力
+</description>
+        <pubDate>Fri, 18 Feb 2022 18:09:40 +0800</pubDate>
+        <link>http://localhost:4000/2022/02/18/life-is-pity/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/18/life-is-pity/</guid>
+        
+        <category>octopress3.0</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>做自己，就…只…做自己</title>
+        <description>&lt;h3 id=&quot;别被其他一切因素影响&quot;&gt;别被其他一切因素影响&lt;/h3&gt;
+</description>
+        <pubDate>Wed, 16 Feb 2022 00:30:51 +0800</pubDate>
+        <link>http://localhost:4000/2022/02/16/myself/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/02/16/myself/</guid>
+        
+        <category>octopress3.0</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
+        <title>穷山恶水，离开吧</title>
+        <description>刚才父亲又因山林补贴争吵。&lt;br /&gt;
+风险太大。&lt;br /&gt;
+官场黑暗。邻里纷争。&lt;br /&gt;
+穷山恶水。&lt;br /&gt;
+走吧，早走为上。&lt;br /&gt;
+君子不立危墙之下。
+</description>
+        <pubDate>Thu, 20 Jan 2022 18:40:25 +0800</pubDate>
+        <link>http://localhost:4000/2022/01/20/leave/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/01/20/leave/</guid>
+        
+        <category>octopress3.0</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>ubuntu2022年无法添加引导windows，官方禁用OS Prober</title>
@@ -32,9 +144,11 @@ Ubuntu 团队考虑的其他解决方案包括：创建一个新的 GRUB 模块�
         <link>http://localhost:4000/2022/01/15/ubuntu-cannot-boot-windows/</link>
         <guid isPermaLink="true">http://localhost:4000/2022/01/15/ubuntu-cannot-boot-windows/</guid>
         
-        <category>ubnuntu</category>
+        <category>ubuntu</category>
         
         <category>windows</category>
+        
+        <category>octopress3.0</category>
         
         
         <category>tech</category>
@@ -48,6 +162,8 @@ Ubuntu 团队考虑的其他解决方案包括：创建一个新的 GRUB 模块�
         <pubDate>Sat, 15 Jan 2022 14:51:13 +0800</pubDate>
         <link>http://localhost:4000/2022/01/15/sougou-is-xiugou/</link>
         <guid isPermaLink="true">http://localhost:4000/2022/01/15/sougou-is-xiugou/</guid>
+        
+        <category>octopress3.0</category>
         
         
         <category>tech</category>
@@ -64,17 +180,20 @@ Ubuntu 团队考虑的其他解决方案包括：创建一个新的 GRUB 模块�
         
         <category>rough</category>
         
+        <category>octopress3.0</category>
+        
         
         <category>tech</category>
         
       </item>
     
       <item>
-        <title>model</title>
+        <title>post文件模板</title>
         <description>layout: post&lt;br /&gt;
 title: &lt;br /&gt;
 date: &lt;br /&gt;
 tags: &lt;br /&gt;
+author: 丘海东&lt;br /&gt;
 comments: &lt;br /&gt;
 categories:
 
@@ -85,13 +204,15 @@ categories:
         
         <category>rough</category>
         
+        <category>octopress3.0</category>
+        
         
         <category>tech</category>
         
       </item>
     
       <item>
-        <title>好艰难</title>
+        <title>好艰难---把Gemfile和Gemfile.lock文件删除</title>
         <description>怎么都不行&lt;br /&gt;
 用octopress3.0创建theme blog，可能因为
 &lt;h2 id=&quot;网络不行&quot;&gt;网络不行？&lt;/h2&gt;
@@ -115,151 +236,10 @@ categories:
         
         <category>rough</category>
         
-        
-        <category>tech-octopress</category>
-        
-      </item>
-    
-      <item>
-        <title>生命不息，折腾不止</title>
-        <description>强迫症发作&lt;br /&gt;
-Ubuntu&lt;br /&gt;
-20.04  21.10  12.04  16.04  18.04  20.04&lt;br /&gt;
-Ocotpress&lt;br /&gt;
-2.0  3.0&lt;br /&gt;
-jekyll&lt;br /&gt;
-theme&lt;br /&gt;
-折腾了好几天，没日没夜，不眠不休，吃喝不管，性格使然&lt;br /&gt;
-好了，好好吃个早餐，睡觉&lt;br /&gt;
-买票，回家&lt;br /&gt;
-过年&lt;br /&gt;
-又一年
-
-&lt;img src=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF4SNHNw/TmEUgtj9EK6.7V8ajmQrED*vOD1GW9P6z*YHWzdix5ugnQZhaqS7C.z080deNWFg4xOMjEHv1aasu8tzxYvAtb1t9yau2Mq4OpNK*fQIgtU!/r&quot; alt=&quot;qq&quot; /&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEBBt8qnK74UlxjsyjJazHjsofXQG0rneEceE2fxJ0iYoev1qV8XUkGa4f3zBfsnMgFIYBE1jz*MnTX.pIZ3Q*vM!/r&quot;&gt;1&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMvM6fKWWIQv6JDPdRrBOJqFS4uUzBy0m8XBjGOIoiZXMSoI.HdGAy.rkrSc5UI8Z*ysJrYVi0R.4DY*u*OrPQE!/r&quot;&gt;2&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEAw6qMrx.DeMqYhYPoEnryZ2mTrcAJOnMc9Xx2iSdXrgYHFg4sZN5ZGinn5jCvWIvCcJjldvIixNDk52hLvjZn8!/r&quot;&gt;3&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEG.2u5LO7ccw90DKotmv7RsLQgumBc.mg5E5KTLsM.Fg99Fhnb9DK0Ses.zLtoernJRx3brpcsyNMPD0RVJRaq8!/r&quot;&gt;4&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEFlB5ERIdlKsfngVuoiz21Qj4tdrizVtkIJ0ua4Xq9SfOVPBzKif3gRqpfZEbyjsP3R8CwlHEt.Xm8iJyuz2nGw!/r&quot;&gt;5&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMUFcGm9g7XE9f.fwXhEjR30nG7aiswalxP6Ywg3gXL0M95PSB.m8xx8UpxlTcm.R*BBTWREfGkrCrcndSaspsQ!/r&quot;&gt;6&lt;/a&gt;
-
-&lt;a href=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEDw6.pSwRjPoCMVPlKqnitgykgEcoUEE0NkZ2XKCIsiXTx9gMTxcD2J6wujiIkfLV6RfO4AVxca.yqf9IyAzHzk!/r&quot;&gt;7&lt;/a&gt;
-</description>
-        <pubDate>Thu, 13 Jan 2022 07:45:02 +0800</pubDate>
-        <link>http://localhost:4000/2022/01/13/zhe-teng/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/13/zhe-teng/</guid>
-        
-        <category>rough</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>jekyll theme octopress 博客的具体配置</title>
-        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.7.0  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-_config.yml&lt;br /&gt;
-gemfile&lt;br /&gt;
-gemfile.lock
-
-一些问题看手机图片,在空间
-
-</description>
-        <pubDate>Thu, 13 Jan 2022 00:58:31 +0800</pubDate>
-        <link>http://localhost:4000/2022/01/13/jekyll-theme-config/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/13/jekyll-theme-config/</guid>
+        <category>octopress3.0</category>
         
         
         <category>tech-octopress</category>
-        
-      </item>
-    
-      <item>
-        <title>新博客</title>
-        <description>&lt;h2 id=&quot;旧blog&quot;&gt;&lt;a href=&quot;https://qiuhaidong.github.io/&quot;&gt;旧Blog&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;热爱生活&quot;&gt;热爱生活&lt;/h3&gt;
-折腾了好几天，终于迁移好了
-
-&lt;a href=&quot;https://gaohaoyang.github.io/&quot;&gt;这是主题作者的Blog&lt;/a&gt;
-
-&lt;a href=&quot;https://github.com/Gaohaoyang&quot;&gt;这是他的Github&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/Gaohaoyang/gaohaoyang.github.io&quot;&gt;仓库&lt;/a&gt;
-</description>
-        <pubDate>Wed, 12 Jan 2022 23:56:02 +0800</pubDate>
-        <link>http://localhost:4000/2022/01/12/new-blog/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/12/new-blog/</guid>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</title>
-        <description>&lt;a href=&quot;https://blog.csdn.net/qq_41988167/article/details/106202868&quot;&gt;No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6;;Error running requirements_debian_libs_install libssl1.0-dev&lt;/a&gt;
-
-原博内容：
-
-rvm安装低版本ruby报错Error running ‘requirements_debian_libs_install libssl1.0-dev’,Requirements installation failed with status: 100.
-
-由于参与的一个项目在用2.3.1版本的ruby，所以想用rvm来安装ruby2.3.1。运行报错，需要libssl1.0-dev.&lt;br /&gt;
-解决办法：
-
-&lt;ul&gt;
-  &lt;li&gt;运行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gedit /etc/apt/sources.list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/apt/sources.list&lt;/code&gt; 中添加下载源 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deb http://security.ubuntu.com/ubuntu bionic-security main&lt;/code&gt;。保存退出。
-
-&lt;ul&gt;
-  &lt;li&gt;更新&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;安装&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-cache policy libssl1.0-dev  #（这步我没有做，先不做）
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-然后再安装&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rvm install 2.2.6&lt;/code&gt;
-
-————————————————&lt;br /&gt;
-版权声明：本文为CSDN博主「会打滚的咸鱼」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/qq_41988167/article/details/106202868
-</description>
-        <pubDate>Wed, 12 Jan 2022 19:03:01 +0800</pubDate>
-        <link>http://localhost:4000/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/</guid>
-        
-        
-        <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>好记性不如烂笔头</title>
-        <description>很多以前做过的事，细节步骤都不记得了，多写字吧，详细地记录下来，以后也有个回忆。
-</description>
-        <pubDate>Wed, 12 Jan 2022 00:37:26 +0800</pubDate>
-        <link>http://localhost:4000/2022/01/12/write-them-all/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/01/12/write-them-all/</guid>
-        
-        
-        <category>personal</category>
         
       </item>
     
