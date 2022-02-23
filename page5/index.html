@@ -140,6 +140,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -152,6 +154,490 @@
         <h1>际遇随缘</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>代码如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ git push origin source
+
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>打开文件~/octopress/.git/config，查看</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[remote "origin"]
+	url = git@github.com:haydnyau/haydnyau.github.io.git
+</code></pre></div></div>
+
+<p>我是改了几次，com.git和io.git搞错了</p>
+
+<p><a href="https://blog.csdn.net/weixin_40886892/article/details/80725071">和我同样问题的网友</a></p>
+
+<p><a href="https://blog.csdn.net/meng_lemon/article/details/88963157">另一个网友的类似问题</a></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/can-not-push/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>preview.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build #生成
+jekyll serve
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>deploy.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+octopress deploy
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+mv _posts/ _site/
+octopress deploy
+mv _site/_posts/ .
+</code></pre></div></div>
+
+<p>注意这个点 “.”
+<code class="language-plaintext highlighter-rouge">.</code> 或者 <code class="language-plaintext highlighter-rouge">./</code> 表示当前目录</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>更改了/home/dong/haydnyau/_templates/post
+增加了：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>categories: 
+</code></pre></div></div>
+
+<h3 id="ps-里面有代码">ps: {}里面有代码:</h3>
+
+<p>categories: {{ categories }}<br />
+因为格式问题没有显示，参见原文件</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/change-templates-post-if-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress3-0/">创建octopress3.0简单说明</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="注意下面的有些步骤不适合">注意，下面的有些步骤不适合</h3>
+<h4 id="先到jekyll官网用它的方法安装好本地博客再看几个octopress30的教程比如官方github的和博文1octopress-3-arrives-to-make-blog-generation-crazy-simple--安装octopress用它来上传blog结合下面的前面几步gitrvmrubybundlerbundle-installor-bundle">先到jekyll官网，用它的方法安装好本地博客，再看几个octopress3.0的教程，比如官方github的和<a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a>  ，安装octopress，用它来上传blog，结合下面的前面几步，git，rvm，ruby，bundler，bundle install(or bundle)</h4>
+
+<p>重装octopress 2.0 博客失败<br />
+很多新旧的软件，依赖，都不兼容了<br />
+算了，世界在发展，有的旧事物必然被淘汰<br />
+毕竟连作者都不维护了<br />
+而且连3.0都不维护了</p>
+
+<p>============================</p>
+
+<p><a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a></p>
+
+<p><a href="https://jingsam.github.io/2015/10/21/blogging-with-octopress-3-0.html">博文2，Octopress 3.0博客搭建教程</a></p>
+
+<p>安装git<br />
+设置好用户名，email等等，参见之前的blog<br />
+添加ssh钥匙到github<br />
+安装rvm<br />
+安装ruby 2.7.0,好像默认就是<br />
+<a href="https://blog.csdn.net/qq_41988167/article/details/106202868">修复安装2.2.6失败的教程</a><br />
+安装octopress</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install octopress
+</code></pre></div></div>
+
+<p>创建博客的主文件夹</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new haydnyau #名字自取
+</code></pre></div></div>
+
+<p>新建一篇blog</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new post hello world
+</code></pre></div></div>
+
+<p>生成网页</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
+
+<p>为避免下面的错误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
+</code></pre></div></div>
+
+<p>本地预览</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+</code></pre></div></div>
+
+<h3 id="可能会报错参见此blog"><a href="https://github.com/jekyll/jekyll/issues/8523">可能会报错,参见此blog</a></h3>
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEOrm72ctF5gw0aqWv21aZeNSASWKMfjZMh4q6GkEqIeM78CkO7o4O*iqGXdxCboPoKIKO9drAx052jTS2quUV58!/r" alt="jekyll serve, cannot load such file -- webrick (LoadError)" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle exec jekyll serve
+Configuration file: /home/dong/haydnyau/_config.yml
+            Source: /home/dong/haydnyau
+       Destination: /home/dong/haydnyau/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.398 seconds.
+ Auto-regeneration: enabled for '/home/dong/haydnyau'
+                    ------------------------------------------------
+      Jekyll 4.2.1   Please append `--trace` to the `serve` command 
+                     for any additional information or backtrace. 
+                    ------------------------------------------------
+/home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `require_relative'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `setup'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:100:in `process'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/exe/jekyll:15:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `load'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `eval'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;'
+dong@Ubuntu:~/haydnyau$ 
+</code></pre></div></div>
+
+<p>原因：</p>
+<h3 id="回答1">回答1：</h3>
+
+<p>This happens because webrick is no longer a bundled gem in Ruby 3.0. From https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/:</p>
+
+<blockquote>
+  <ul>
+    <li>The following libraries are no longer bundled gems or standard libraries. Install the corresponding gems to use these features.</li>
+    <li>sdbm</li>
+    <li>webrick</li>
+    <li>net-telnet</li>
+    <li>xmlrpc</li>
+  </ul>
+</blockquote>
+
+<p>Adding <code class="language-plaintext highlighter-rouge">gem "webrick"</code> to my Gemfile solves the problem, but Jekyll should include it in its gemspec.</p>
+
+<h2 id="回答2">回答2：</h2>
+
+<p>I think you want run: <code class="language-plaintext highlighter-rouge">bundle add webrick</code>.</p>
+
+<p>我运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
+</code></pre></div></div>
+
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEBN4rGxoHZRJvba1HYTQq27ffRKlLPwSuElBnQsx8myUeNz3PvYmrJfIi3*2TZPi9OuuBIJmyilHvC5IQwNqaYw!/r" alt="sudo bundle add webrick" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle add webrick
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Using public_suffix 4.0.6
+Using bundler 2.3.4
+Using colorator 1.1.0
+Using concurrent-ruby 1.1.9
+Using eventmachine 1.2.7
+Using http_parser.rb 0.8.0
+Using ffi 1.15.4
+Using forwardable-extended 2.6.0
+Using rb-fsevent 0.11.0
+Using rexml 3.2.5
+Using liquid 4.0.3
+Using mercenary 0.4.0
+Using rouge 3.27.0
+Using safe_yaml 1.0.5
+Using unicode-display_width 1.8.0
+Using webrick 1.7.0
+Using addressable 2.8.0
+Using sassc 2.4.0
+Using rb-inotify 0.10.1
+Using kramdown 2.3.1
+Using terminal-table 2.0.0
+Using listen 3.7.0
+Using kramdown-parser-gfm 1.1.0
+Using jekyll-sass-converter 2.1.0
+Using pathutil 0.16.2
+Using em-websocket 0.5.3
+Using i18n 1.8.11
+Using jekyll-watch 2.2.1
+Using jekyll 4.2.1
+Using jekyll-feed 0.16.0
+Using jekyll-seo-tag 2.7.1
+Using minima 2.5.1
+dong@Ubuntu:~/haydnyau$ 
+</code></pre></div></div>
+
+<p>问题解决</p>
+
+<p>解决前后的Gemfile文件：<br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEJRCIzYAaW3bXX8u6*IVJZ.XtCdPn6AvRrMkapg1VV.CqGful*eQepRFyH0ztMqVtAXon32yueiaIigulllP3VI!/r" alt="Genfile，前" /><br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrECtxM1XJmWMiuXm2sA41EdXEaIr2GF1uWWNzSBr7KU5QsmUQqXrNTxgBvdf2nvM66ZFdRT4*rwlgIb3LIswYiAo!/r" alt="Genfile，后" /></p>
+
+<p>生成发布配置文件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
+</code></pre></div></div>
+
+<p>发布</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy
+</code></pre></div></div>
+
+<p>git上传</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git add .
+</code></pre></div></div>
+
+<p>还有的以后琢磨<br />
+买个早餐，吃饱，睡觉</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress3-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -304,289 +790,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/15/jd3/">京東3</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>day 68<br />
-今天休假<br />
-昨天耳朵又听到低沉的发动机的轰隆隆的声音，我以为是耳鸣，现在基本可以确定，这就是附近道路晚上泥头车汽車发动机或者工廠機器運转的声音。<br />
-在京东时也常常听到。<br />
-我<strong>感冒鼻塞</strong>时，耳朵<strong>对这些声音特别敏感</strong>。<br />
-就这样。<br />
-昨天上班时，没搞清情况，情绪又崩溃了……<br />
-<strong><em>補充</em></strong>：<br />
-工作沒勁頭，好想打電話給媽，和她坦白這一切，想讓她接受我的平庸，我的失敗，我的不婚，想發泄所有的不安、恐懼、負面情緒。<br />
-幸好，我還懂得衝動憤怒情緒不穩定時，別做決定，別做事。<br />
-休息了一天，現在知道不是耳鳴，是感冒鼻塞或者咽鼓管堵塞或者其他的聽力系統的某一部分出了問題，而引起的狀況，感冒好了，整個聽力系統自然就沒事了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/15/jd3/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/07/grateful/">感恩</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>此一時彼一時，我又回京東上班了。<br />
-總不能閒着不做事，沒有收入是不行的。<br />
-不過我有保護自己，現在上日班，一天只需要工作6小時，活也不是很忙，挺好的。<br />
-<strong>保護自己</strong>呀，一定要！</p>
-<h3 id="感恩">感恩</h3>
-<p>很多時候，挺多人，都對我很好的。很照顧我，甚至我不要臉地說，他們有時簡直是寵我。<br />
-比如老大喻胡龍，人手足夠時，叫我不用幹活，讓別人做了我的那份工作，他會罵別人，但是不會說我我。還有他老婆，給東西我吃。<br />
-比如潤峯大哥，旁邊的人工作比我更忙，但是他卻是幫我。<br />
-比如？韋亦凡？（音譯，不知道是不是這個名字），其實不是很熟悉，但是京東發的小零食，他經常給我吃。<br />
-還有大劉，老李，光頭大哥，光頭二哥，肥佬，肥仔老楊，胖子……還有很多我不知道名字的人。<br />
-所以：<br />
-<strong>越努力越幸運</strong>。<br />
-我是個認真做事的人，別人看在眼裏，自然在條件允許時幫助我。<br />
--別人幫我，是證明了別人是好人，自己<strong>別得瑟</strong>，<strong>得意不忘形</strong>。<br />
-一直以來，都是很多人幫助我，加油吧，中年人，<strong>別辜負了那麼多的善意</strong>。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/07/grateful/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-11-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="劳逸结合">劳逸结合</h3>
-<p>何同学说的：你通过熬夜，不规律的生活，随意而为得来的东西，总有一天，要<strong>连本带利</strong>还回去</p>
-
-<p>我倒是没有熬夜，生活也挺规律的，也没有随意，但就是<strong>对自己太狠了</strong>，<strong>过犹不及</strong>，可能我的躯体受得了繁重的体力劳动，我的意志也顶得住冬日早晨的冷水澡，但是我的<strong>血管</strong>，我的<strong>眼睛</strong>，<strong>耳朵</strong>，这些柔弱的，脆弱的，<strong>不能修复的</strong>，不行呀</p>
-<h3 id="身体健康">身体健康</h3>
-<h3 id="好好生活">好好生活</h3>
-<h3 id="饮鸩止渴">饮鸩止渴</h3>
-<h3 id="当断则断">当断则断</h3>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/11/26/I-AM-GOOD/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/11/23/JD2/">我的耳鸣，我爸的腿伤——京东打工后续</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-11-23
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在我小的时候，爸工作受伤，被木头狠狠地撞到腿，<strong>直到现在，一条腿都是严重的静脉曲张，惨不忍睹.</strong><br />
-<strong>那时他是什么年纪？不到40岁吧。</strong><br />
-我那时还小，记不清了。那时我上小学了没？一二年级？<br />
-<strong>记不清了，只记得有次我跟在他后面，到小学旁的山上路边挖草根，药材，熬药治疗。</strong><br />
-<strong>那时他应该和我现在耳鸣耳聋一样的彷徨无助吧？</strong><br />
-<strong>或者更无助。</strong><br />
-<strong>一个农村中年男人，没有知识，太多东西都不懂，还背负着一个家庭的担子。受了伤，没有人能给他支持，帮助，解答，得不到妥善的处理。</strong><br />
-我想这次我也会永远失去一部分的听力吧，如同爸爸再也没有那条完整的腿。这是我们的宿命吗？<br />
-还是说这是我们的父子缘？<br />
-无怨不成夫妇，无仇不成父子。我总是抱怨爸没有知识，脾气差，性格差，很多东西都不懂，很多事情处理得一塌糊涂，给我带来巨大的阻碍。<br />
-唉，<strong>他那个时代，注定</strong>很多人就是没有知识的，有什么办法呢？<br />
-<strong>他能成家，养大三个儿女，供书教学，已是他的能力极限了。现在我都做不到他能做到的，我没有资格抱怨他。</strong><br />
-<strong>人生苦短，好好把握吧，中年人。</strong></p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/11/23/JD2/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -597,10 +800,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page4" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">5/31</span>
+          <span class="page_number ">5/32</span>
           
             <a href="/page6" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page31" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page32" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -617,7 +820,15 @@
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博客详情页增加侧边栏Recent Posts</a></li>
+                        <li><a href="/2022/02/24/cat-catch/">被貓抓了一下</a></li>
+                    
+                        <li><a href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a></li>
+                    
+                        <li><a href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a></li>
+                    
+                        <li><a href="/2022/02/24/what-really-matter/">什麼才是重要的</a></li>
+                    
+                        <li><a href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a></li>
                     
                         <li><a href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a></li>
                     
@@ -647,7 +858,7 @@
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
                     
-                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">octopress 自动打开文件 插入本地图片 程序</a></li>
+                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a></li>
                     
                         <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
                     
@@ -668,14 +879,6 @@
                         <li><a href="/2022/01/02/basketball-in-the-zone/">篮球境界</a></li>
                     
                         <li><a href="/2021/12/31/my-2021/">我的2021</a></li>
-                    
-                        <li><a href="/2021/12/15/jd3/">京東3</a></li>
-                    
-                        <li><a href="/2021/12/07/grateful/">感恩</a></li>
-                    
-                        <li><a href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a></li>
-                    
-                        <li><a href="/2021/11/23/JD2/">我的耳鸣，我爸的腿伤——京东打工后续</a></li>
                     
                 </ul>
             </div>
@@ -702,7 +905,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">103</span>
+                            <span class="badge">105</span>
                         </a>
                     </li>
                     
@@ -711,7 +914,7 @@
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">12</span>
+                            <span class="badge">14</span>
                         </a>
                     </li>
                     
@@ -776,7 +979,7 @@
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #888;">rough</a>
                     
                       
                       

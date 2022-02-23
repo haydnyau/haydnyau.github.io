@@ -140,6 +140,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -152,6 +154,311 @@
         <h1>际遇随缘</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">windows10和Ubuntu双系统，时间不对</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
+
+<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+utc=yes 改成 utc=no
+</code></pre></div></div>
+
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
+后来谷歌了半天找到了一个完美解决办法：<br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>然后将时间更新到硬件上：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
+</code></pre></div></div>
+
+<p>重新进入windows10，发现时间恢复正常了！</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/10/time-stuff-between-windows-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/10/Voltage-change/">voltage change</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>MACHINE: fish hunting<br />
+black pan: GND<br />
+red pan:<br />
+A: co1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press 100
+	voltage change from 3.36V to almost 0V,and then come back to 3.36V
+  	PRESS 10
+	3.36V,0.9V,3.36V
+</code></pre></div></div>
+
+<p>B: HP</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	3.2V, 1.8V,3.2V
+</code></pre></div></div>
+
+<p>C: SSR</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	5.0V, 0.48V, 5.0V
+</code></pre></div></div>
+
+<p>D: TF</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	3.2V, 0V, 3.2V
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/10/Voltage-change/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/10/failed-when-gem-install-therubyracer/">failed when: gem install therubyracer</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>运行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ gem install therubyracer  
+</code></pre></div></div>
+
+<p>报错</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing therubyracer:
+	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
+</code></pre></div></div>
+
+<p>corrupt:broken<br />
+the package is broken<br />
+so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem<br />
+then redownload and reinstall<br />
+successed.</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/10/failed-when-gem-install-therubyracer/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/10/31/bad-night/">bad night</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-10-31
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>Got a lot of nightmares on those days.<br />
+So many bad things,bad days.<br />
+Got to carry on.</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/10/31/bad-night/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -340,253 +647,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/28/zai-lai-liu-pan-shui/">come liupanshui again</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>世事难料。<br />
-坚守本心。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/28/zai-lai-liu-pan-shui/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/05/display-icon-error/">icon display error</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-05
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>控制面板，显示，更改大小，应用，注销，再把大小改回来。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/05/display-icon-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/04/business-trip-to-liupanshui/">出差六盘水</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-04
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>8月1号出发，9月7号回来。<br />
-第一次出差。<br />
-第一次坐火车超过24小时。<br />
-第一次住宾馆超过一个月。<br />
-第一次可以说是真正意义上的去外省。<br />
-我以前在广西工作，但离广东不到10公里，当然如果你说广西不是外省，中国移动会坚决反对！</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/04/business-trip-to-liupanshui/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/03/extract/">解压 Extract</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-03
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install rar unrar p7zip-full p7zip-rar
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/03/extract/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -597,10 +657,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page16" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">17/31</span>
+          <span class="page_number ">17/32</span>
           
             <a href="/page18" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page31" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page32" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -617,7 +677,15 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博客详情页增加侧边栏Recent Posts</a></li>
+                        <li><a href="/2022/02/24/cat-catch/">被貓抓了一下</a></li>
+                    
+                        <li><a href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a></li>
+                    
+                        <li><a href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a></li>
+                    
+                        <li><a href="/2022/02/24/what-really-matter/">什麼才是重要的</a></li>
+                    
+                        <li><a href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a></li>
                     
                         <li><a href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a></li>
                     
@@ -647,7 +715,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
                     
-                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">octopress 自动打开文件 插入本地图片 程序</a></li>
+                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a></li>
                     
                         <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
                     
@@ -668,14 +736,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                         <li><a href="/2022/01/02/basketball-in-the-zone/">篮球境界</a></li>
                     
                         <li><a href="/2021/12/31/my-2021/">我的2021</a></li>
-                    
-                        <li><a href="/2021/12/15/jd3/">京東3</a></li>
-                    
-                        <li><a href="/2021/12/07/grateful/">感恩</a></li>
-                    
-                        <li><a href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a></li>
-                    
-                        <li><a href="/2021/11/23/JD2/">我的耳鸣，我爸的腿伤——京东打工后续</a></li>
                     
                 </ul>
             </div>
@@ -702,7 +762,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">103</span>
+                            <span class="badge">105</span>
                         </a>
                     </li>
                     
@@ -711,7 +771,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">12</span>
+                            <span class="badge">14</span>
                         </a>
                     </li>
                     
@@ -776,7 +836,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #888;">rough</a>
                     
                       
                       
