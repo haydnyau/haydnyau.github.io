@@ -150,10 +150,108 @@
 
         <div class="page clearfix" index>
     <div class="left">
-        <h1>行止由心</h1>
-        <h1>际遇随缘</h1>
+        <h1>读书写字</h1>
+        <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-12
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress" title="Tag: octopress" rel="tag">octopress</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://blog.csdn.net/qq_41988167/article/details/106202868">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6;;Error running requirements_debian_libs_install libssl1.0-dev</a></p>
+
+<p>原博内容：</p>
+
+<p>rvm安装低版本ruby报错Error running ‘requirements_debian_libs_install libssl1.0-dev’,Requirements installation failed with status: 100.</p>
+
+<p>由于参与的一个项目在用2.3.1版本的ruby，所以想用rvm来安装ruby2.3.1。运行报错，需要libssl1.0-dev.<br />
+解决办法：</p>
+
+<ul>
+  <li>运行</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/apt/sources.list
+</code></pre></div></div>
+
+<p>在<code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> 中添加下载源 <code class="language-plaintext highlighter-rouge">deb http://security.ubuntu.com/ubuntu bionic-security main</code>。保存退出。</p>
+
+<ul>
+  <li>更新</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+</code></pre></div></div>
+
+<ul>
+  <li>安装</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cache policy libssl1.0-dev  #（这步我没有做，先不做）
+</code></pre></div></div>
+
+<p>然后再安装<code class="language-plaintext highlighter-rouge">rvm install 2.2.6</code></p>
+
+<p>————————————————<br />
+版权声明：本文为CSDN博主「会打滚的咸鱼」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_41988167/article/details/106202868</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -877,112 +975,6 @@ git push origin source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="三步">三步</h3>
-
-<h2 id="step-1">Step 1</h2>
-
-<h3 id="添加-category_list-插件">添加 <code class="language-plaintext highlighter-rouge">category_list</code> 插件</h3>
-
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Jekyll
-  class CategoryListTag &lt; Liquid::Tag
-    def render(context)
-      html = ""
-      categories = context.registers[:site].categories.keys
-      categories.sort.each do |category|
-        posts_in_category = context.registers[:site].categories[category].size
- 	       category_dir = context.registers[:site].config['category_dir']
-        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
-    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
-      end
-      html
-    end
-  end
-end
-
-Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
-</code></pre></div></div>
-
-<p>这个插件会向<code class="language-plaintext highlighter-rouge">liquid</code>注册一个名为<code class="language-plaintext highlighter-rouge">category_list</code>的<code class="language-plaintext highlighter-rouge">tag</code>，该<code class="language-plaintext highlighter-rouge">tag</code>就是以<code class="language-plaintext highlighter-rouge">li</code>的形式将站点所有的<code class="language-plaintext highlighter-rouge">category</code>组织起来。如果要将<code class="language-plaintext highlighter-rouge">category</code>加入到侧边导航栏，需要增加一个<code class="language-plaintext highlighter-rouge">aside</code>。</p>
-
-<h2 id="step-2">Step 2</h2>
-
-<h3 id="增加-aside">增加 <code class="language-plaintext highlighter-rouge">aside</code></h3>
-
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list.html</code> 。并粘贴下面的代码：</p>
-
-<p><strong>注意</strong>： 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的2个 <code class="language-plaintext highlighter-rouge">\</code><br />
-这里如果不加上<code class="language-plaintext highlighter-rouge">\</code>，markdown格式会显示<code class="language-plaintext highlighter-rouge">category_list</code>的内容。我是为了正确显示代码才加上的</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
-  &lt;h1&gt;Categories&lt;/h1&gt;
-  &lt;ul id="categories"&gt;
-    {\% category_list \%}
-  &lt;/ul&gt;
-&lt;/section&gt;
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/10/add-category/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1012,6 +1004,8 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/02/24/octopress-3-0-is-faster-than-2-0/">Octopress3.0訪問速度比2.0快太多了</a></li>
                     
                         <li><a href="/2022/02/24/cat-catch/">被貓抓了一下</a></li>
                     
@@ -1071,8 +1065,6 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     
                         <li><a href="/2022/01/02/basketball-in-the-zone/">篮球境界</a></li>
                     
-                        <li><a href="/2021/12/31/my-2021/">我的2021</a></li>
-                    
                 </ul>
             </div>
 
@@ -1107,7 +1099,7 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">14</span>
+                            <span class="badge">15</span>
                         </a>
                     </li>
                     
@@ -1213,7 +1205,7 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
     <div class="wrapper">
 
         <p class="description">
-             读书写字 热爱生活 
+             行止由心 际遇随缘 
         </p>
         <p class="contact">
              
