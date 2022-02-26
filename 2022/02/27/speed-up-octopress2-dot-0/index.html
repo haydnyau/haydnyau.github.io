@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>家人</title>
-    <meta name="description" content="在我没钱的时候，我的家人们用最短的时间赶我走哈哈哈哈哈哈哈哈">
+    <title>加速Octopress2.0，太慢了</title>
+    <meta name="description" content="原博清理没用的服务以下修改均修改_config.yml,以下可以根据自己的需要进行去除。去除Disqus评论打开文件找到Disqus Comments，按照下面在每一行前面加#注释掉即可# Disqus Comments#disqus_short_name: #disqus_show_comment_count:...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2020/08/21/famaly/">
+    <link rel="canonical" href="/2022/02/27/speed-up-octopress2-dot-0/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -148,11 +148,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>家人</h1>
+        <h1>加速Octopress2.0，太慢了</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2020-08-21
+                <i class="fa fa-calendar"></i>2022-02-27
             </div>
 
             <div class="label-card">
@@ -172,7 +172,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -201,22 +201,80 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>在我没钱的时候，我的家人们用最短的时间赶我走<br />
-哈哈哈哈哈哈哈哈<br />
-<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/family.jpg" alt="family" /></p>
+        <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
+<h3 id="清理没用的服务">清理没用的服务</h3>
+<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
+<h3 id="去除disqus评论">去除Disqus评论</h3>
+<p>打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
+#disqus_short_name: 
+#disqus_show_comment_count: true
+</code></pre></div></div>
+
+<h3 id="去掉github仓库展示">去掉Github仓库展示</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
+#github_user: 
+#github_repo_count: 
+#github_show_profile_link: true
+#github_skip_forks: true
+</code></pre></div></div>
+
+<h3 id="去除twitter按钮">去除Twitter按钮</h3>
+<h3 id="去除google相关">去除Google+相关</h3>
+<h3 id="去除pinboard服务">去除Pinboard服务</h3>
+<h3 id="去除delicious评论去除后可能没有评论系统">去除Delicious评论,去除后可能没有评论系统</h3>
+<h3 id="去除facebook-like">去除Facebook Like</h3>
+
+<h3 id="替换快速的请求资源">替换快速的请求资源</h3>
+<p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
+
+<h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
+<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
+参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
+
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src='http://droidyue-tools.qiniudn.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+   &lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
+<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
+修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
+&lt;link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+&lt;link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+</code></pre></div></div>
+
+<h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
+<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))&lt;/script&gt;
+&lt;script src="/javascripts/octopress.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="總結">總結</h3>
+
+<p>导致网站慢的原因其实是加载Google的资源，当然我们不能怨Google.经过测试，使用数字公司的解决方法之后，国内国外访问速度都是可以的。这里还是推荐以下数字公司的这个解决方案http://libs.useso.com/</p>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2020/07/12/ren-xing-de-ruo-dian/">人性的弱点</a></p>
+        <p><strong>上一篇</strong> <a href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/">ubuntu20.04 octopress2.0</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2020/09/09/dying/">崩溃</a></p>
         
     </div>
 </div>

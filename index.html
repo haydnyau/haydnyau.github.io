@@ -155,6 +155,128 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
+<h3 id="清理没用的服务">清理没用的服务</h3>
+<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
+<h3 id="去除disqus评论">去除Disqus评论</h3>
+<p>打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
+#disqus_short_name: 
+#disqus_show_comment_count: true
+</code></pre></div></div>
+
+<h3 id="去掉github仓库展示">去掉Github仓库展示</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
+#github_user: 
+#github_repo_count: 
+#github_show_profile_link: true
+#github_skip_forks: true
+</code></pre></div></div>
+
+<h3 id="去除twitter按钮">去除Twitter按钮</h3>
+<h3 id="去除google相关">去除Google+相关</h3>
+<h3 id="去除pinboard服务">去除Pinboard服务</h3>
+<h3 id="去除delicious评论去除后可能没有评论系统">去除Delicious评论,去除后可能没有评论系统</h3>
+<h3 id="去除facebook-like">去除Facebook Like</h3>
+
+<h3 id="替换快速的请求资源">替换快速的请求资源</h3>
+<p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
+
+<h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
+<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
+参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
+
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src='http://droidyue-tools.qiniudn.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+   &lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
+<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
+修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
+&lt;link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+&lt;link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+</code></pre></div></div>
+
+<h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
+<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))&lt;/script&gt;
+&lt;script src="/javascripts/octopress.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="總結">總結</h3>
+
+<p>导致网站慢的原因其实是加载Google的资源，当然我们不能怨Google.经过测试，使用数字公司的解决方法之后，国内国外访问速度都是可以的。这里还是推荐以下数字公司的这个解决方案http://libs.useso.com/</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/speed-up-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/">ubuntu20.04 octopress2.0</a>
                 </h2>
                 <div class="label">
@@ -533,97 +655,6 @@ origin/master
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-24
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
-
-<h2 id="jekyll-paginate-依赖缺失">jekyll-paginate 依赖缺失</h2>
-
-<p>因为 jekyll 3 中默认安装已经没有这个分页组件了，官方把这个分页组件插件化了，因此要独立安装。详情见 <a href="https://jekyllrb.com/docs/pagination/">https://jekyllrb.com/docs/pagination/</a>。</p>
-
-<h3 id="错误呈现">错误呈现</h3>
-
-<p>在启动 jekyll 服务的时候出现以下错误：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
-Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
-  Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-paginate' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
-jekyll 3.1.2 | Error:  jekyll-paginate
-</code></pre></div></div>
-
-<h3 id="解决方法">解决方法</h3>
-
-<p>我们安装这个插件到本地即可。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-paginate
-Fetching: jekyll-paginate-1.1.0.gem (100%)
-Successfully installed jekyll-paginate-1.1.0
-Parsing documentation for jekyll-paginate-1.1.0
-Installing ri documentation for jekyll-paginate-1.1.0
-Done installing documentation for jekyll-paginate after 3 seconds
-1 gem installed
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/24/error-jekyll-paginate/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -653,6 +684,8 @@ Done installing documentation for jekyll-paginate after 3 seconds
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a></li>
                     
                         <li><a href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/">ubuntu20.04 octopress2.0</a></li>
                     
@@ -712,8 +745,6 @@ Done installing documentation for jekyll-paginate after 3 seconds
                     
                         <li><a href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a></li>
                     
-                        <li><a href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a></li>
-                    
                 </ul>
             </div>
 
@@ -748,7 +779,7 @@ Done installing documentation for jekyll-paginate after 3 seconds
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">16</span>
+                            <span class="badge">17</span>
                         </a>
                     </li>
                     

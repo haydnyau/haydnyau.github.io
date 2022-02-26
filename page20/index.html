@@ -157,6 +157,84 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/08/24/dia-on-linux/">dia on linux</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-08-24
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>DIA,流程图绘制软件<br />
+install:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install dia
+</code></pre></div></div>
+
+<p>关于输入中文:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /usr/bin/dia
+</code></pre></div></div>
+
+<p>把<code class="language-plaintext highlighter-rouge">dia-normal --integrated "$@"</code>注释掉，在前面加<code class="language-plaintext highlighter-rouge">#</code></p>
+
+<p>在下面添加:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dia-normal "$@"
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/dia.png" alt="dia" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/08/24/dia-on-linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/08/23/system-about-ds/">德胜系统</a>
                 </h2>
                 <div class="label">
@@ -524,91 +602,6 @@ win+r：shell:startup
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/06/28/c-plus-plus-under-linux/">c++ on linux</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-06-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>编译：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ -o hello hello.cpp
-</code></pre></div></div>
-
-<p>或：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ hello.cpp -o hello
-</code></pre></div></div>
-
-<p>或：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ hello.cpp
-</code></pre></div></div>
-
-<p>生成hello或a.out</p>
-
-<p>运行：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hello
-</code></pre></div></div>
-
-<p>或：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./a.out
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/06/28/c-plus-plus-under-linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -638,6 +631,8 @@ win+r：shell:startup
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a></li>
                     
                         <li><a href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/">ubuntu20.04 octopress2.0</a></li>
                     
@@ -697,8 +692,6 @@ win+r：shell:startup
                     
                         <li><a href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a></li>
                     
-                        <li><a href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a></li>
-                    
                 </ul>
             </div>
 
@@ -733,7 +726,7 @@ win+r：shell:startup
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">16</span>
+                            <span class="badge">17</span>
                         </a>
                     </li>
                     
