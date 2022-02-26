@@ -3,10 +3,10 @@
   <channel>
     <title>丘海东</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Feb 2022 23:58:06 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Feb 2022 23:58:06 +0800</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 27 Feb 2022 00:02:18 +0800</pubDate>
+    <lastBuildDate>Sun, 27 Feb 2022 00:02:18 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -22,8 +22,8 @@ test:&lt;br /&gt;
 &lt;h3 id=&quot;0123456789-69&quot;&gt;0123456789 69&lt;/h3&gt;
 </description>
         <pubDate>Sat, 26 Feb 2022 18:31:18 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/</guid>
+        <link>/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/</link>
+        <guid isPermaLink="true">/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/</guid>
         
         <category>octopress3.0</category>
         
@@ -49,8 +49,8 @@ test:&lt;br /&gt;
 每個人都有他的優缺點，要懂得，要放下，和自己和解。
 </description>
         <pubDate>Sat, 26 Feb 2022 16:00:01 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/26/be-a-good-man/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/26/be-a-good-man/</guid>
+        <link>/2022/02/26/be-a-good-man/</link>
+        <guid isPermaLink="true">/2022/02/26/be-a-good-man/</guid>
         
         <category>octopress3.0</category>
         
@@ -64,8 +64,8 @@ test:&lt;br /&gt;
         <description>真是快太多了，完全不是一個級別的，2.0有時候根本就訪問不了
 </description>
         <pubDate>Thu, 24 Feb 2022 16:53:49 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/24/octopress-3-0-is-faster-than-2-0/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/24/octopress-3-0-is-faster-than-2-0/</guid>
+        <link>/2022/02/24/octopress-3-0-is-faster-than-2-0/</link>
+        <guid isPermaLink="true">/2022/02/24/octopress-3-0-is-faster-than-2-0/</guid>
         
         <category>octopress3.0</category>
         
@@ -84,8 +84,8 @@ test:&lt;br /&gt;
 有風險。
 </description>
         <pubDate>Thu, 24 Feb 2022 04:20:49 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/24/cat-catch/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/24/cat-catch/</guid>
+        <link>/2022/02/24/cat-catch/</link>
+        <guid isPermaLink="true">/2022/02/24/cat-catch/</guid>
         
         <category>octopress3.0</category>
         
@@ -139,8 +139,8 @@ origin/master
 就好了。。。
 </description>
         <pubDate>Thu, 24 Feb 2022 04:08:51 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/24/git-clone-not-master-branch/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/24/git-clone-not-master-branch/</guid>
+        <link>/2022/02/24/git-clone-not-master-branch/</link>
+        <guid isPermaLink="true">/2022/02/24/git-clone-not-master-branch/</guid>
         
         <category>octopress3.0</category>
         
@@ -182,8 +182,8 @@ Done installing documentation for jekyll-paginate after 3 seconds
 
 </description>
         <pubDate>Thu, 24 Feb 2022 04:02:35 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/24/error-jekyll-paginate/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/24/error-jekyll-paginate/</guid>
+        <link>/2022/02/24/error-jekyll-paginate/</link>
+        <guid isPermaLink="true">/2022/02/24/error-jekyll-paginate/</guid>
         
         <category>octopress3.0</category>
         
@@ -201,8 +201,8 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要&lt;br /&gt;
 
 </description>
         <pubDate>Thu, 24 Feb 2022 00:45:30 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/24/what-really-matter/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/24/what-really-matter/</guid>
+        <link>/2022/02/24/what-really-matter/</link>
+        <guid isPermaLink="true">/2022/02/24/what-really-matter/</guid>
         
         <category>octopress3.0</category>
         
@@ -223,8 +223,8 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要&lt;br /&gt;
 &lt;h1&gt;🤪😀&lt;/h1&gt;
 </description>
         <pubDate>Mon, 21 Feb 2022 21:43:06 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/21/post-html-add-sidebar-about-recent-posts/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/21/post-html-add-sidebar-about-recent-posts/</guid>
+        <link>/2022/02/21/post-html-add-sidebar-about-recent-posts/</link>
+        <guid isPermaLink="true">/2022/02/21/post-html-add-sidebar-about-recent-posts/</guid>
         
         <category>octopress3.0</category>
         
@@ -247,8 +247,8 @@ categories: &lt;br /&gt;
 —
 </description>
         <pubDate>Mon, 21 Feb 2022 04:39:45 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/21/template-of-new-post/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/21/template-of-new-post/</guid>
+        <link>/2022/02/21/template-of-new-post/</link>
+        <guid isPermaLink="true">/2022/02/21/template-of-new-post/</guid>
         
         <category>octopress3.0</category>
         
@@ -281,8 +281,8 @@ categories: &lt;br /&gt;
 深深的无力
 </description>
         <pubDate>Fri, 18 Feb 2022 18:09:40 +0800</pubDate>
-        <link>http://localhost:4000/2022/02/18/life-is-pity/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/02/18/life-is-pity/</guid>
+        <link>/2022/02/18/life-is-pity/</link>
+        <guid isPermaLink="true">/2022/02/18/life-is-pity/</guid>
         
         <category>octopress3.0</category>
         
