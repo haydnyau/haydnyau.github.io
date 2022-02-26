@@ -157,6 +157,124 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/10/29/config-dot-yml/">config.yml</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-10-29
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>.# ———————– #<br />
+.#      Main Configs       #<br />
+.# ———————– #</p>
+
+<p>url: https://qiuhaidong.github.io<br />
+title: Haydn Yau<br />
+subtitle:<br />
+author: 丘海东<br />
+simple_search: https://www.google.com/search<br />
+description:</p>
+
+<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)<br />
+.# You can customize the format as defined in<br />
+.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime<br />
+.# Additionally, %o will give you the ordinal representation of the day<br />
+date_format: “ordinal”</p>
+
+<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)<br />
+subscribe_rss: /atom.xml<br />
+subscribe_email:<br />
+.# RSS feeds can list your email address if you like<br />
+email:</p>
+
+<p>.# ———————– #<br />
+.#    Jekyll &amp; Plugins     #<br />
+.# ———————– #</p>
+
+<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’<br />
+root: /<br />
+permalink: /blog/:year/:month/:day/:title/<br />
+source: source<br />
+destination: public<br />
+plugins: plugins<br />
+code_dir: downloads/code<br />
+category_dir: blog/categories<br />
+markdown: rdiscount<br />
+rdiscount:<br />
+  extensions:<br />
+    - autolink<br />
+    - footnotes<br />
+    - smart<br />
+highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
+
+<p>paginate: 5                     # Posts per page on the blog index<br />
+paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/<br />
+recent_posts: 5               # Posts in the sidebar Recent Posts section<br />
+excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles<br />
+excerpt_separator: “<!--more-->”</p>
+
+<p>titlecase: true       # Converts page and post titles to titlecase</p>
+
+<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.<br />
+.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’<br />
+default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]<br />
+.#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
+
+<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below<br />
+.# and add an array with the asides you want to use.<br />
+.# blog_index_asides:<br />
+.# post_asides:<br />
+.# page_asides:</p>
+
+<p>.# ———————– #<br />
+.#   3rd Party Settings    #<br />
+.# ———————– #</p>
+
+<p>.# Github repositories<br />
+github_user: qiuhaidong<br />
+github_repo_count: 0<br />
+github_show_profile_link: true<br />
+github_skip_forks: true</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/10/29/config-dot-yml/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/10/28/install-again/">install again</a>
                 </h2>
                 <div class="label">
@@ -471,74 +589,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/03/sql2000-install-hang-up/">SQL2000:某个程序安装已在安装计算机上创建挂起的文件操作</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-03
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ol>
-  <li>在添加/删除程序中彻底删除sql server</li>
-  <li>将没有删除的sql server目录也删除掉</li>
-  <li>打开注册表编辑器，在HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager中找到PendingFileRenameOperations项目，并删除它。这样就可以清除安装暂挂项目</li>
-  <li>删除注册表中跟sql server相关的键</li>
-</ol>
-
-<p><em>或者使用:SQL安装挂起解决工具免安装版.exe</em><br />
-<strong>DG：在安装盘C或D，搜索sql，会看到一个关于sql的编辑注册表项——SQL2000安装挂起.reg</strong></p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/03/sql2000-install-hang-up/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -568,6 +618,8 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/02/26/be-a-good-man/">男人要有比欲望更高級的興趣愛好，和作為</a></li>
                     
                         <li><a href="/2022/02/24/octopress-3-0-is-faster-than-2-0/">Octopress3.0訪問速度比2.0快太多了</a></li>
                     
@@ -627,8 +679,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2022/01/07/octopress3-0/">创建octopress3.0简单说明</a></li>
                     
-                        <li><a href="/2022/01/02/basketball-in-the-zone/">篮球境界</a></li>
-                    
                 </ul>
             </div>
 
@@ -654,7 +704,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">105</span>
+                            <span class="badge">106</span>
                         </a>
                     </li>
                     
