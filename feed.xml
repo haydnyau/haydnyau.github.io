@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Feb 2022 23:49:35 +0800</pubDate>
-    <lastBuildDate>Sun, 27 Feb 2022 23:49:35 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2022 14:35:32 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2022 14:35:32 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>有時間絕望，還不如吃點好吃的然後睡個覺</title>
+        <description>&lt;h3 id=&quot;日劇非自然死亡石原里美的經典台詞&quot;&gt;日劇《非自然死亡》，石原里美的經典台詞：&lt;/h3&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEPMAzCkpOgy5tCy3tTQ3OyKRNUeV6.9vL0xbD4ehX3kSfXse0GFc5y1t4paxnyymqnq24kw..dtLIAjvznsA7ts!/r&quot; alt=&quot;1&quot; /&gt;
+
+</description>
+        <pubDate>Wed, 02 Mar 2022 21:26:11 +0800</pubDate>
+        <link>/2022/03/02/no-good-thing-ever-dies/</link>
+        <guid isPermaLink="true">/2022/03/02/no-good-thing-ever-dies/</guid>
+        
+        <category>rough</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>back to top返回頂部按鈕</title>
@@ -263,49 +280,6 @@ origin/master
         <pubDate>Thu, 24 Feb 2022 04:08:51 +0800</pubDate>
         <link>/2022/02/24/git-clone-not-master-branch/</link>
         <guid isPermaLink="true">/2022/02/24/git-clone-not-master-branch/</guid>
-        
-        <category>octopress3.0</category>
-        
-        
-        <category>tech-octopress</category>
-        
-      </item>
-    
-      <item>
-        <title>Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</title>
-        <description>&lt;h2 id=&quot;原博&quot;&gt;&lt;a href=&quot;https://gaohaoyang.github.io/&quot;&gt;原博：&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;jekyll-paginate-依赖缺失&quot;&gt;jekyll-paginate 依赖缺失&lt;/h2&gt;
-
-因为 jekyll 3 中默认安装已经没有这个分页组件了，官方把这个分页组件插件化了，因此要独立安装。详情见 &lt;a href=&quot;https://jekyllrb.com/docs/pagination/&quot;&gt;https://jekyllrb.com/docs/pagination/&lt;/a&gt;。
-
-&lt;h3 id=&quot;错误呈现&quot;&gt;错误呈现&lt;/h3&gt;
-
-在启动 jekyll 服务的时候出现以下错误：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve
-Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
-  Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-paginate' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
-jekyll 3.1.2 | Error:  jekyll-paginate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;解决方法&quot;&gt;解决方法&lt;/h3&gt;
-
-我们安装这个插件到本地即可。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll-paginate
-Fetching: jekyll-paginate-1.1.0.gem (100%)
-Successfully installed jekyll-paginate-1.1.0
-Parsing documentation for jekyll-paginate-1.1.0
-Installing ri documentation for jekyll-paginate-1.1.0
-Done installing documentation for jekyll-paginate after 3 seconds
-1 gem installed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Thu, 24 Feb 2022 04:02:35 +0800</pubDate>
-        <link>/2022/02/24/error-jekyll-paginate/</link>
-        <guid isPermaLink="true">/2022/02/24/error-jekyll-paginate/</guid>
         
         <category>octopress3.0</category>
         

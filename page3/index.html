@@ -159,6 +159,76 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-21
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>博客根目录，文件<code class="language-plaintext highlighter-rouge">index.html</code>，找到<code class="language-plaintext highlighter-rouge">Recent Posts</code>这一大段内容，复制，打开<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>，找到：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="right"&gt;
+        &lt;div class="wrap"&gt;
+</code></pre></div></div>
+<p>复制到其后面。</p>
+
+<p>因为只复制一段老是有错，现在我是把<code class="language-plaintext highlighter-rouge">index.html</code>的<code class="language-plaintext highlighter-rouge">&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>右边栏一直到最后的内容。</p>
+<h1>🤪😀</h1>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/21/post-html-add-sidebar-about-recent-posts/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a>
                 </h2>
                 <div class="label">
@@ -521,68 +591,6 @@ categories: <br />
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/sougou-is-xiugou/">搜狗输入法</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>就是个坑，有时安装了就能用，有时搞到所有的输入法都用不了，要卸载了才能恢复之前的输入法</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/sougou-is-xiugou/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -612,6 +620,8 @@ categories: <br />
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/02/no-good-thing-ever-dies/">有時間絕望，還不如吃點好吃的然後睡個覺</a></li>
                     
                         <li><a href="/2022/02/27/back-to-top/">back to top返回頂部按鈕</a></li>
                     
@@ -671,8 +681,6 @@ categories: <br />
                     
                         <li><a href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a></li>
                     
-                        <li><a href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a></li>
-                    
                 </ul>
             </div>
 
@@ -698,7 +706,7 @@ categories: <br />
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">106</span>
+                            <span class="badge">107</span>
                         </a>
                     </li>
                     
@@ -772,7 +780,7 @@ categories: <br />
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #888;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
                       
                       
