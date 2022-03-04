@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Mar 2022 16:45:39 +0800</pubDate>
-    <lastBuildDate>Fri, 04 Mar 2022 16:45:39 +0800</lastBuildDate>
+    <pubDate>Fri, 04 Mar 2022 16:56:04 +0800</pubDate>
+    <lastBuildDate>Fri, 04 Mar 2022 16:56:04 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -164,7 +164,7 @@ bug提醒：如果post文件中有上面这一行代码（没有\号），blog�
 
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake generate&lt;/code&gt; 出现问题：
 
-&lt;img src=&quot;http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211427887.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r&quot; alt=&quot;Alt text&quot; /&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -197,11 +197,11 @@ end
 
 出现另一警告：
 
-&lt;img src=&quot;http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211894282.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r&quot; alt=&quot;Alt text&quot; /&gt;
 
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake preview&lt;/code&gt; ，标签云成功添加:
 
-&lt;img src=&quot;http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211997018.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r&quot; alt=&quot;Alt text&quot; /&gt;
 
 &lt;h3 id=&quot;解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题&quot;&gt;解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题&lt;/h3&gt;
 
