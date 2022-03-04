@@ -272,8 +272,77 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="https://www.jianshu.com/p/fe0e089a985c">1</a><br />
-<a href="https://www.cnblogs.com/biglucky/p/4148867.html">2</a></p>
+                    <p><a href="https://www.jianshu.com/p/fe0e089a985c">教程1</a><br />
+<a href="https://www.cnblogs.com/biglucky/p/4148867.html">教程2</a></p>
+
+<h3 id="实现返回按钮功能">实现返回按钮功能</h3>
+<p>首先创建<code class="language-plaintext highlighter-rouge">source/javascripts/top.js</code>，添加如下代码实现滑动返回顶部效果:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">goTop</span><span class="p">(</span><span class="nx">acceleration</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="nx">acceleration</span> <span class="o">=</span> <span class="nx">acceleration</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">//加速度</span>
+        <span class="nx">time</span> <span class="o">=</span> <span class="nx">time</span> <span class="o">||</span> <span class="mi">16</span><span class="p">;</span>  <span class="c1">//时间间隔 (毫秒)</span>
+
+        <span class="kd">var</span> <span class="nx">x1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">x2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">x3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="nx">x1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="nx">y1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="nx">x2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="nx">y2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">x3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollX</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">y3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+        
+        <span class="c1">// 滚动条到页面顶部的水平距离</span>
+        <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x1</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x2</span><span class="p">,</span> <span class="nx">x3</span><span class="p">));</span>
+        <span class="c1">// 滚动条到页面顶部的垂直距离</span>
+        <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">y1</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">y2</span><span class="p">,</span> <span class="nx">y3</span><span class="p">));</span>
+
+        <span class="c1">// 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小</span>
+        <span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">;</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span> <span class="o">/</span> <span class="nx">speed</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">y</span> <span class="o">/</span> <span class="nx">speed</span><span class="p">));</span>
+
+        <span class="c1">// 如果距离不为零, 继续调用迭代本函数</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">invokeFunction</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">goTop(</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">acceleration</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">time</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">)</span><span class="dl">"</span><span class="p">;</span>
+                <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">invokeFunction</span><span class="p">,</span> <span class="nx">time</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="自定义返回按钮格式">自定义返回按钮格式</h3>
+<p>创建<code class="language-plaintext highlighter-rouge">source/_includes/custom/totop.html</code>，设置返回顶部按钮样式和位置<br />
+其中的<code class="language-plaintext highlighter-rouge">width、height、right、bottom</code>为图片在网页中的位置，可根据图片大小自行设定，示例代码如下：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--返回顶部开始--&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"full"</span> <span class="na">style=</span><span class="s">"width:30px; height:30px; position:fixed; right:13px; bottom:13px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"goTop();return false;"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/images/top.png"</span> <span class="na">border=</span><span class="s">0</span> <span class="na">alt=</span><span class="s">"返回顶部"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/top.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!--返回顶部结束--&gt;</span>
+</code></pre></div></div>
+
+<h3 id="选择按钮图片">选择按钮图片</h3>
+<p>找到自己喜爱的返回按钮图片，命名为<code class="language-plaintext highlighter-rouge">top.png</code>后添加到<code class="language-plaintext highlighter-rouge">source/images</code>目录中（或修改<code class="language-plaintext highlighter-rouge">totop.html</code>中图片的路径），文件名和<code class="language-plaintext highlighter-rouge">totop.html</code>中的一致就可以了，可以自己命名。</p>
+
+<p>然后把<code class="language-plaintext highlighter-rouge">totop.html</code> 引入到文件中，考虑到进到具体每一篇blog里面也有这个功能，我们把这个文件在<code class="language-plaintext highlighter-rouge">foot.html</code>中引入，修改:<code class="language-plaintext highlighter-rouge">octopress/source/_includes/custom/footer.html</code>，添加一行：<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMHNMi9RBV8SPCiQjrpiIVqTO0oBBa1zGSTDwX1cxXY1I0xQDhEyJNc9d2jqFOe5QAet0C9GvAgWzpRjxvDQ7Sc!/r" alt="octopress/source/_includes/custom/footer.html" /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {\% include custom/totop.html \%}  //记得去除两个\号
+</code></pre></div></div>
+
+<p>bug提醒：如果post文件中有上面这一行代码（没有\号），blog网站首页和这篇博文页，会有返回按钮图片错误</p>
 
                 </div>
                 <div class="read-all">
@@ -385,11 +454,95 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a><br />
-[参考2](http://pangyi.github.io/blog/20150125/rang-octopresszhi-chi-biao-qian-(tag)<br />
-<a href="https://blog.csdn.net/github_35160620/article/details/52793772?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-22-52793772.pc_agg_new_rank&amp;utm_term=atom+%E4%BE%A7%E8%BE%B9%E6%A0%8F&amp;spm=1000.2123.3001.4430">参考3</a><br />
-<a href="https://www.jianshu.com/p/fe0e089a985c">参考4</a></p>
+                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a></p>
 
+<h3 id="下载">下载</h3>
+
+<p>首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。</p>
+
+<h3 id="octopress-tag-pages">octopress-tag-pages</h3>
+
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+
+<h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
+
+<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+
+<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
+<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
+  &lt;h1&gt;Tags&lt;/h1&gt;
+  &lt;ul id="tag-cloud"&gt;
+    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre></div></div>
+
+<p>解释：</p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+
+<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre></div></div>
+
+<p>博文写标签：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+
+<p><img src="http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211427887.png" alt="Alt text" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre></div></div>
+
+<h3 id="解决">解决</h3>
+
+<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if @limit &gt; 0 and @sort != 'rand'
+    # sort the tag pairs by frequency in descending order
+    weighted.sort! { |a,b| b[1] &lt;=&gt; a[1] }
+    # then slice off the top @limit tag pairs
+    weighted = weighted[0,@limit]
+end
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+
+<p>修改第74行为:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      if @limit &gt; 0 and @sort != 'rand' and @limit &lt; weighted.length
+</code></pre></div></div>
+
+<p>修改第95行为:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if @limit &gt; 0 and @limit &lt; weighted.length
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+
+<p>出现另一警告：</p>
+
+<p><img src="http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211894282.png" alt="Alt text" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+
+<p><img src="http://www.aobosir.com/images/2016-10-12-octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/1476211997018.png" alt="Alt text" /></p>
+
+<h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
+
+<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+</code></pre></div></div>
+
+<h2 id="搞定">搞定</h2>
 
                 </div>
                 <div class="read-all">
