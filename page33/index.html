@@ -159,6 +159,164 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2013/10/13/error-utf-8/">Error: UTF-8 无效字符</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2013-10-13
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h4 id="1dconf-editor">1.dconf-editor</h4>
+
+<h4 id="2首次安装尽量要做这几步">2.首次安装尽量要做这几步：</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake setup_github_pages
+rake generate
+rake deploy
+git add . 
+git commit -m 'your message'
+git push origin source
+</code></pre></div></div>
+
+<h4 id="3然后再edit-_configyml及添加按钮等等">3.然后再edit _config.yml及添加按钮等等</h4>
+
+<h4 id="4做完3后rake-generate-可能又会有utf-8问题因为之前编辑的文件可能又变了再打开看一次纠错">4.做完3后，rake generate ,可能又会有utf-8问题，因为之前编辑的文件可能又变了，再打开看一次，纠错</h4>
+
+<h4 id="5多试多看几遍也可在命令后加-trace-追踪查看">5.多试多看几遍，也可在命令后加 –trace 追踪查看</h4>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2013/10/13/error-utf-8/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2013/10/07/error-could-not-find-expected/">Error: could not find expected ':'</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2013-10-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h4 id="出现错误要先看提示代码知道错在哪里如">出现错误要先看提示代码，知道错在哪里，如：</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ rake generate
+## Generating Site with Jekyll
+identical source/stylesheets/screen.css 
+/home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:203:in `parse': (/home/dong/octopress/_config.yml): could not find expected ':' while scanning a simple key at line 10 column 1 (Psych::SyntaxError)
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:203:in `parse_stream'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:151:in `parse'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:127:in `load'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `block in load_file'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `open'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `load_file'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/gems/jekyll-0.12.0/lib/jekyll.rb:130:in `configuration'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/gems/jekyll-0.12.0/bin/jekyll:221:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/jekyll:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/jekyll:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+</code></pre></div></div>
+
+<p>代码已经说得很清楚了，就是<strong><em>/home/dong/octopress/_config.yml</em></strong>，这个文件，<strong><em>could not find expected ‘:’</em></strong> while scanning a simple key <strong><em>at line 10 column 1</em></strong> (Psych::SyntaxError)<br />
+<strong>就是’：’后面忘了加空格</strong></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2013/10/07/error-could-not-find-expected/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2013/10/07/error-Could-not-find-syntax-1.0.0-in-any-of-the-sources/">Error: Could not find syntax-1.0.0 in any of the sources</a>
                 </h2>
                 <div class="label">
@@ -696,6 +854,8 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2022/03/09/do-not-be-worthless/">do not be worthless</a></li>
+                    
                         <li><a href="/2022/03/02/no-good-thing-ever-dies/">有時間絕望，還不如吃點好吃的然後睡個覺</a></li>
                     
                         <li><a href="/2022/02/27/back-to-top/">back to top返回頂部按鈕</a></li>
@@ -754,8 +914,6 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                     
                         <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
                     
-                        <li><a href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a></li>
-                    
                 </ul>
             </div>
 
@@ -781,7 +939,7 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">107</span>
+                            <span class="badge">109</span>
                         </a>
                     </li>
                     
@@ -855,7 +1013,7 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
                     
                       
                       

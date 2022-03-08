@@ -157,6 +157,69 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/03/09/do-not-be-worthless/">do not be worthless</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-03-09
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>沒有人願意去扶持一個毫無價值的人，千萬別讓自己一文不值。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/03/09/do-not-be-worthless/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/03/02/no-good-thing-ever-dies/">有時間絕望，還不如吃點好吃的然後睡個覺</a>
                 </h2>
                 <div class="label">
@@ -471,12 +534,12 @@
 <p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
 <strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
-  &lt;h1&gt;Tags&lt;/h1&gt;
-  &lt;ul id="tag-cloud"&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
     {\% tag_cloud font-size: 120-160%, limit: 20 \%}
-  &lt;/ul&gt;
-&lt;/section&gt;
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
 </code></pre></div></div>
 
 <p>解释：</p>
@@ -503,24 +566,24 @@
 
 <p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if @limit &gt; 0 and @sort != 'rand'
-    # sort the tag pairs by frequency in descending order
-    weighted.sort! { |a,b| b[1] &lt;=&gt; a[1] }
-    # then slice off the top @limit tag pairs
-    weighted = weighted[0,@limit]
-end
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
+    <span class="c1"># sort the tag pairs by frequency in descending order</span>
+    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
+    <span class="c1"># then slice off the top @limit tag pairs</span>
+    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
+<span class="k">end</span>
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
 
 <p>修改第74行为:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      if @limit &gt; 0 and @sort != 'rand' and @limit &lt; weighted.length
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
 </code></pre></div></div>
 
 <p>修改第95行为:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if @limit &gt; 0 and @limit &lt; weighted.length
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
@@ -638,31 +701,31 @@ layout: null
 <p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
 参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
 
  (function() {
  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
  ga.src='http://droidyue-tools.qiniudn.com/ga.js';
  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
  })();
-   &lt;/script&gt;
+   <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
 <h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
 <p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
 修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
-&lt;link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
-&lt;link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
 <h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
 <p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))&lt;/script&gt;
-&lt;script src="/javascripts/octopress.js" type="text/javascript"&gt;&lt;/script&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">&amp;&amp;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">unescape</span><span class="p">(</span><span class="dl">'</span><span class="s1">%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E</span><span class="dl">'</span><span class="p">))</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/octopress.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div></div>
 
 <h3 id="總結">總結</h3>
@@ -672,77 +735,6 @@ layout: null
                 </div>
                 <div class="read-all">
                     <a  href="/2022/02/27/speed-up-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/">ubuntu20.04 octopress2.0</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-26
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>有時候報錯，記得把<code class="language-plaintext highlighter-rouge">Gemfile.lock</code>文件刪除<br />
-Ubuntu20.04自帶3版本的python，不兼容Octopress2.0的依賴。故安裝2版本</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.2.6
-sudo apt install python2
-</code></pre></div></div>
-<p>test:<br />
-0123456789<br />
-010203040506070809 69</p>
-<h3 id="0123456789-69">0123456789 69</h3>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/26/ubuntu20-dot-04-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -776,6 +768,8 @@ sudo apt install python2
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/09/do-not-be-worthless/">do not be worthless</a></li>
                     
                         <li><a href="/2022/03/02/no-good-thing-ever-dies/">有時間絕望，還不如吃點好吃的然後睡個覺</a></li>
                     
@@ -835,8 +829,6 @@ sudo apt install python2
                     
                         <li><a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></li>
                     
-                        <li><a href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a></li>
-                    
                 </ul>
             </div>
 
@@ -862,7 +854,7 @@ sudo apt install python2
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">107</span>
+                            <span class="badge">109</span>
                         </a>
                     </li>
                     
@@ -936,7 +928,7 @@ sudo apt install python2
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
                     
                       
                       
