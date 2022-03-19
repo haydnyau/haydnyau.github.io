@@ -144,6 +144,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -156,6 +158,155 @@
         <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/27/add-tags/">添加tags，導航欄，側邊欄</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a></p>
+
+<h3 id="下载">下载</h3>
+
+<p>首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。</p>
+
+<h3 id="octopress-tag-pages">octopress-tag-pages</h3>
+
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+
+<h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
+
+<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+
+<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
+<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
+    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>解释：</p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+
+<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre></div></div>
+
+<p>博文写标签：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r" alt="Alt text" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre></div></div>
+
+<h3 id="解决">解决</h3>
+
+<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
+    <span class="c1"># sort the tag pairs by frequency in descending order</span>
+    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
+    <span class="c1"># then slice off the top @limit tag pairs</span>
+    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+
+<p>修改第74行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p>修改第95行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+
+<p>出现另一警告：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r" alt="Alt text" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r" alt="Alt text" /></p>
+
+<h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
+
+<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+</code></pre></div></div>
+
+<h2 id="搞定">搞定</h2>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/add-tags/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -559,109 +710,6 @@ sudo apt install python2
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-24
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
-
-<h2 id="问题描述">问题描述</h2>
-
-<p>我们每次使用命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
-</code></pre></div></div>
-
-<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="language-plaintext highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
-
-<p><img src="https://ooo.0o0.ooo/2016/07/07/577e349ab42ed.png" alt="7f07c8f6deef169ef6be5103bbd3e932f8676bb1.png" /></p>
-
-<h2 id="解决方法">解决方法</h2>
-
-<p>直接使用命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -r #查看远程分支
-</code></pre></div></div>
-<p>或</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -a #查看所有分支
-</code></pre></div></div>
-
-<p>会显示</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin/HEAD -&gt; origin/master
-origin/daily/1.2.2
-origin/daily/1.3.0
-origin/daily/1.4.1
-origin/develop
-origin/feature/daily-1.0.0
-origin/master
-</code></pre></div></div>
-
-<p>然后直接</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout origin/daily/1.4.1
-</code></pre></div></div>
-
-<p>就好了。。。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/24/git-clone-not-master-branch/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -672,10 +720,10 @@ origin/master
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">2/33</span>
+          <span class="page_number ">2/34</span>
           
             <a href="/page3" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page33" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page34" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -691,6 +739,8 @@ origin/master
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/19/live-well/">好好生活</a></li>
                     
                         <li><a href="/2022/03/16/my-faith/">一個人的信念</a></li>
                     
@@ -750,8 +800,6 @@ origin/master
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
                     
-                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a></li>
-                    
                 </ul>
             </div>
 
@@ -808,6 +856,15 @@ origin/master
                         </a>
                     </li>
                     
+                    <li>
+                        <a href="/category/#pwesonal" class="categories-list-item" cate="pwesonal">
+                            <span class="name">
+                                pwesonal
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -851,7 +908,7 @@ origin/master
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11.5pt; color: #666;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 12pt; color: #666;">rough</a>
                     
                       
                       

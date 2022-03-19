@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Mar 2022 17:53:26 +0800</pubDate>
-    <lastBuildDate>Fri, 18 Mar 2022 17:53:26 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Mar 2022 20:34:51 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Mar 2022 20:34:51 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>好好生活</title>
+        <description>这几天父亲腰椎间盘之类的问题，股骨疼痛。&lt;br /&gt;
+我这些天也是晚上睡不着觉，生活作息混乱糟糕。&lt;br /&gt;
+好好生活，注意身体。
+</description>
+        <pubDate>Sat, 19 Mar 2022 20:05:33 +0800</pubDate>
+        <link>/2022/03/19/live-well/</link>
+        <guid isPermaLink="true">/2022/03/19/live-well/</guid>
+        
+        <category>rough</category>
+        
+        
+        <category>pwesonal</category>
+        
+      </item>
     
       <item>
         <title>一個人的信念</title>
@@ -377,22 +394,6 @@ test:
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Octopress3.0訪問速度比2.0快太多了</title>
-        <description>真是快太多了，完全不是一個級別的，2.0有時候根本就訪問不了&lt;br /&gt;
-&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/02/27/speed-up-octopress2-dot-0/&quot;&gt;加速Octopress2.0&lt;/a&gt;
-</description>
-        <pubDate>Thu, 24 Feb 2022 16:53:49 +0800</pubDate>
-        <link>/2022/02/24/octopress-3-0-is-faster-than-2-0/</link>
-        <guid isPermaLink="true">/2022/02/24/octopress-3-0-is-faster-than-2-0/</guid>
-        
-        <category>octopress3.0</category>
-        
-        
-        <category>tech-octopress</category>
         
       </item>
     

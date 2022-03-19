@@ -144,6 +144,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -156,6 +158,85 @@
         <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-15
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>怎么都不行<br />
+用octopress3.0创建theme blog，可能因为</p>
+<h2 id="网络不行">网络不行？</h2>
+
+<p>一直卡在那里，一动不动<br />
+<code class="language-plaintext highlighter-rouge">bundle</code> 和 <code class="language-plaintext highlighter-rouge">bundle install</code> 也是一动不动<br />
+这是没有成功的，后面会报错<br />
+重复，直到ok</p>
+
+<h2 id="对了我把gemfile和gemfilelock文件删除就没报错了">对了，我把Gemfile和Gemfile.lock文件删除，就没报错了</h2>
+
+<p>正常来说，rvm安装ruby就行了，如果还不行，再用<code class="language-plaintext highlighter-rouge">apt</code> ubuntu官方源安装一次</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ruby
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/15/fucking-hard/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -544,95 +625,6 @@ gemfile.lock</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-11
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><a href="http://blog.lessfun.com/blog/2013/12/05/config-the-octopress-blog-after-deployed/">教程</a></p>
-
-<h3 id="添加功能自动打开文件编辑">添加功能：自动打开文件编辑</h3>
-<p><code class="language-plaintext highlighter-rouge">rake new_post["file name"]</code> 后自动打开博客文件<br />
-编辑<code class="language-plaintext highlighter-rouge">Rakefile</code>文件，上面位置，添加定义：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	editor = "gedit"
-</code></pre></div></div>
-<p>然后在<code class="language-plaintext highlighter-rouge">new_post</code>命令后面添加：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if #{editor}
-  system "#{editor} #{filename}"
-end
-</code></pre></div></div>
-
-<h3 id="插入本地图片">插入本地图片</h3>
-<p>将图片放到<code class="language-plaintext highlighter-rouge">octopress/source/images/</code>下，然后在Markdown文件中可直接引用，用法：</p>
-
-<p><img src="https://qiuhaidong.github.io/images/%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80-%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87-%E7%A8%8B%E5%BA%8F.png" alt="语法冲突，不能显示正确代码，看图片" /></p>
-
-<p><img src="https://qiuhaidong.github.io/images/%E9%BA%A6%E8%BF%AA%E7%A7%91%E6%AF%94.jpg" alt="kobi t-mac" /></p>
-
-<h4 id="前后行3个显示代码且有显示行数">前后行3个```显示代码，且有显示行数</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c++
-int main()
-{
-	cout&lt;&lt;"hello world"&lt;&lt;endl;
-};
-
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/11/octopress-new-post-auto-open/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -643,10 +635,10 @@ int main()
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page4" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">5/33</span>
+          <span class="page_number ">5/34</span>
           
             <a href="/page6" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page33" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page34" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -662,6 +654,8 @@ int main()
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/19/live-well/">好好生活</a></li>
                     
                         <li><a href="/2022/03/16/my-faith/">一個人的信念</a></li>
                     
@@ -721,8 +715,6 @@ int main()
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
                     
-                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a></li>
-                    
                 </ul>
             </div>
 
@@ -779,6 +771,15 @@ int main()
                         </a>
                     </li>
                     
+                    <li>
+                        <a href="/category/#pwesonal" class="categories-list-item" cate="pwesonal">
+                            <span class="name">
+                                pwesonal
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -822,7 +823,7 @@ int main()
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11.5pt; color: #666;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 12pt; color: #666;">rough</a>
                     
                       
                       

@@ -144,6 +144,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -156,6 +158,99 @@
         <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>preview.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build #生成
+jekyll serve
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>deploy.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+octopress deploy
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+mv _posts/ _site/
+octopress deploy
+mv _site/_posts/ .
+</code></pre></div></div>
+
+<p>注意这个点 “.”
+<code class="language-plaintext highlighter-rouge">.</code> 或者 <code class="language-plaintext highlighter-rouge">./</code> 表示当前目录</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -689,80 +784,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/07/grateful/">感恩</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>此一時彼一時，我又回京東上班了。<br />
-總不能閒着不做事，沒有收入是不行的。<br />
-不過我有保護自己，現在上日班，一天只需要工作6小時，活也不是很忙，挺好的。<br />
-<strong>保護自己</strong>呀，一定要！</p>
-<h3 id="感恩">感恩</h3>
-<p>很多時候，挺多人，都對我很好的。很照顧我，甚至我不要臉地說，他們有時簡直是寵我。<br />
-比如老大喻胡龍，人手足夠時，叫我不用幹活，讓別人做了我的那份工作，他會罵別人，但是不會說我我。還有他老婆，給東西我吃。<br />
-比如潤峯大哥，旁邊的人工作比我更忙，但是他卻是幫我。<br />
-比如？韋亦凡？（音譯，不知道是不是這個名字），其實不是很熟悉，但是京東發的小零食，他經常給我吃。<br />
-還有大劉，老李，光頭大哥，光頭二哥，肥佬，肥仔老楊，胖子……還有很多我不知道名字的人。<br />
-所以：<br />
-<strong>越努力越幸運</strong>。<br />
-我是個認真做事的人，別人看在眼裏，自然在條件允許時幫助我。<br />
--別人幫我，是證明了別人是好人，自己<strong>別得瑟</strong>，<strong>得意不忘形</strong>。<br />
-一直以來，都是很多人幫助我，加油吧，中年人，<strong>別辜負了那麼多的善意</strong>。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/07/grateful/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -773,10 +794,10 @@ git add .
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page6" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">7/33</span>
+          <span class="page_number ">7/34</span>
           
             <a href="/page8" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page33" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page34" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -792,6 +813,8 @@ git add .
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/19/live-well/">好好生活</a></li>
                     
                         <li><a href="/2022/03/16/my-faith/">一個人的信念</a></li>
                     
@@ -851,8 +874,6 @@ git add .
                     
                         <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
                     
-                        <li><a href="/2022/01/11/octopress-new-post-auto-open/">Octopress2.0 自动打开文件 插入本地图片 程序</a></li>
-                    
                 </ul>
             </div>
 
@@ -909,6 +930,15 @@ git add .
                         </a>
                     </li>
                     
+                    <li>
+                        <a href="/category/#pwesonal" class="categories-list-item" cate="pwesonal">
+                            <span class="name">
+                                pwesonal
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -952,7 +982,7 @@ git add .
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11.5pt; color: #666;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 12pt; color: #666;">rough</a>
                     
                       
                       
