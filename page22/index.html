@@ -161,6 +161,82 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull push: not read from remote repository. correct access rights and the repository exists.</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-08-22
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">SSH KEYS认证方式改动</a>
+关于<code class="language-plaintext highlighter-rouge">git pull origin source</code>or<code class="language-plaintext highlighter-rouge">git push origin source</code>,若出错：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: Could not read from remote repository. 
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>SSH keys不用动</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
+</code></pre></div></div>
+
+<p>把<code class="language-plaintext highlighter-rouge">url = git@github.com:qiuhaidong/qiuhaidong.github.com.git</code><br />
+改为<code class="language-plaintext highlighter-rouge">url = https://github.com/qiuhaidong/qiuhaidong.github.com.git</code><br />
+<a href="http://bbs.csdn.net/topics/390909877">参见此Blog，9楼</a><br />
+done.<br />
+<code class="language-plaintext highlighter-rouge">pull</code>or<code class="language-plaintext highlighter-rouge">push</code>时或会报错，但不影响功能，多用几次就好了。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/08/20/C-on-Linux/">C# on Linux</a>
                 </h2>
                 <div class="label">
@@ -553,117 +629,6 @@ int main()
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/05/24/vim/">vim</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-05-24
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="终端执行命令">终端执行命令：</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vimtutor
-</code></pre></div></div>
-
-<p>查看《VIM教程》</p>
-
-<h3 id="基本操作">基本操作：</h3>
-
-<p>光标移动：</p>
-
-<p>h：左<br />
-j：下<br />
-k：上<br />
-l：右</p>
-
-<h3 id="正常模式输入模式">正常模式==&gt;输入模式：</h3>
-
-<p>i：左边输入<br />
-I：行首输入（In the front）<br />
-a：右边输入（after）<br />
-A：行尾输入（After）<br />
-o：下面输入一新行<br />
-O：上面输入一新行<br />
-s：删除字符再输入<br />
-S：删除行再输入</p>
-
-<h3 id="其他模式正常模式">其他模式==&gt;正常模式：</h3>
-
-<p>Esc</p>
-
-<h3 id="正常模式命令模式">正常模式==&gt;命令模式：</h3>
-
-<p>:</p>
-
-<p>(shift加分号，英文输入法下)</p>
-
-<h3 id="正常模式可视模式">正常模式==&gt;可视模式：</h3>
-
-<p>v：可视模式<br />
-V:可视块模式</p>
-
-<h3 id="常用命令">常用命令：</h3>
-
-<p>:w<enter> 保存</enter></p>
-
-<p>:q<enter> 退出</enter></p>
-
-<p>:wq<enter> 保存后退出</enter></p>
-
-<p>:q!<enter> 不保存，强制退出</enter></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/05/24/vim/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -693,6 +658,8 @@ V:可视块模式</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/20/kex-exchange-identification-read-connection-reset-by-peer/">kex_exchange_identification: read: Connection reset by peer</a></li>
                     
                         <li><a href="/2022/03/19/live-well/">好好生活 | 自制力</a></li>
                     
@@ -752,8 +719,6 @@ V:可视块模式</p>
                     
                         <li><a href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a></li>
                     
-                        <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
-                    
                 </ul>
             </div>
 
@@ -788,7 +753,7 @@ V:可视块模式</p>
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">19</span>
+                            <span class="badge">20</span>
                         </a>
                     </li>
                     
@@ -868,6 +833,13 @@ V:可视块模式</p>
                       
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                 </div>
             </div>

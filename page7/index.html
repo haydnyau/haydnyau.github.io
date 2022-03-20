@@ -161,6 +161,86 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>代码如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ git push origin source
+
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>打开文件~/octopress/.git/config，查看</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[remote "origin"]
+	url = git@github.com:haydnyau/haydnyau.github.io.git
+</code></pre></div></div>
+
+<p>我是改了几次，com.git和io.git搞错了</p>
+
+<p><a href="https://blog.csdn.net/weixin_40886892/article/details/80725071">和我同样问题的网友</a></p>
+
+<p><a href="https://blog.csdn.net/meng_lemon/article/details/88963157">另一个网友的类似问题</a></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/can-not-push/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
                 </h2>
                 <div class="label">
@@ -714,76 +794,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/15/jd3/">京東3</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>day 68<br />
-今天休假<br />
-昨天耳朵又听到低沉的发动机的轰隆隆的声音，我以为是耳鸣，现在基本可以确定，这就是附近道路晚上泥头车汽車发动机或者工廠機器運转的声音。<br />
-在京东时也常常听到。<br />
-我<strong>感冒鼻塞</strong>时，耳朵<strong>对这些声音特别敏感</strong>。<br />
-就这样。<br />
-昨天上班时，没搞清情况，情绪又崩溃了……<br />
-<strong><em>補充</em></strong>：<br />
-工作沒勁頭，好想打電話給媽，和她坦白這一切，想讓她接受我的平庸，我的失敗，我的不婚，想發泄所有的不安、恐懼、負面情緒。<br />
-幸好，我還懂得衝動憤怒情緒不穩定時，別做決定，別做事。<br />
-休息了一天，現在知道不是耳鳴，是感冒鼻塞或者咽鼓管堵塞或者其他的聽力系統的某一部分出了問題，而引起的狀況，感冒好了，整個聽力系統自然就沒事了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/15/jd3/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -813,6 +823,8 @@ git add .
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/20/kex-exchange-identification-read-connection-reset-by-peer/">kex_exchange_identification: read: Connection reset by peer</a></li>
                     
                         <li><a href="/2022/03/19/live-well/">好好生活 | 自制力</a></li>
                     
@@ -872,8 +884,6 @@ git add .
                     
                         <li><a href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a></li>
                     
-                        <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
-                    
                 </ul>
             </div>
 
@@ -908,7 +918,7 @@ git add .
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">19</span>
+                            <span class="badge">20</span>
                         </a>
                     </li>
                     
@@ -988,6 +998,13 @@ git add .
                       
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                 </div>
             </div>

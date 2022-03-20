@@ -161,6 +161,67 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2015/09/13/plan/">计划</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-09-13
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>早早就必须计划好所有事情，所有细节。<br />
+拖延症害死人。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/09/13/plan/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2015/09/08/be-good/">好好生活</a>
                 </h2>
                 <div class="label">
@@ -543,123 +604,6 @@ git push origin source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/08/23/gfw-bundle-install/">GFW rubygems bundle install</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-08-23
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>2022-01-05:最新网址：https://gems.ruby-china.com/<br />
-<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong><br />
-封网，rubygems.org 不行了<br />
-<code class="language-plaintext highlighter-rouge">bundle install</code>  自然也不行<br />
-点算？<br />
-https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网<br />
-用法：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --remove https://rubygems.org/
-gem sources -a https://gems.ruby-china.com/
-gem sources -l
-</code></pre></div></div>
-
-<p>输出：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** CURRENT SOURCES ***  
-
-https://gems.ruby-china.com  
-</code></pre></div></div>
-
-<p>确保只有 https://gems.ruby-china.com/</p>
-
-<p>###但是这样也不行，还得到octopress文件夹，打开Gemfile文件，编辑：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    source "https://gems.ruby-china.com"
-</code></pre></div></div>
-
-<p>Ubuntu 14.04，安装octopress,执行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
-
-<p>一直提示缺少各种 gem 包，例如：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
-Gem::RemoteFetcher::FetchError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/gems/safe_yaml-1.0.4.gem)
-An error occurred while installing safe_yaml (1.0.4), and Bundler cannot continue.
-Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
-
-```
-</code></pre></div></div>
-
-<p>按提示输入命令 <code class="language-plaintext highlighter-rouge">gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
-
-<p>解决方法：</p>
-
-<p>修改octopress文件夹里的Gemfile文件：</p>
-
-<p>把：<br />
-<code class="language-plaintext highlighter-rouge">source "https://rubygems.org"</code><br />
-改为：<br />
-<code class="language-plaintext highlighter-rouge">source "https://gems.ruby-china.com"</code><br />
-再执行：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
-
-<p>完美通过。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/08/23/gfw-bundle-install/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -689,6 +633,8 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/20/kex-exchange-identification-read-connection-reset-by-peer/">kex_exchange_identification: read: Connection reset by peer</a></li>
                     
                         <li><a href="/2022/03/19/live-well/">好好生活 | 自制力</a></li>
                     
@@ -748,8 +694,6 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     
                         <li><a href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a></li>
                     
-                        <li><a href="/2022/01/12/write-them-all/">好记性不如烂笔头</a></li>
-                    
                 </ul>
             </div>
 
@@ -784,7 +728,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">19</span>
+                            <span class="badge">20</span>
                         </a>
                     </li>
                     
@@ -864,6 +808,13 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                 </div>
             </div>
