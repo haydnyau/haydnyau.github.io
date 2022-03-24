@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Mar 2022 01:09:55 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Mar 2022 01:09:55 +0800</lastBuildDate>
+    <pubDate>Fri, 25 Mar 2022 00:03:31 +0800</pubDate>
+    <lastBuildDate>Fri, 25 Mar 2022 00:03:31 +0800</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>志氣</title>
+        <description>日常的平淡，能殺滅所有的志氣。&lt;br /&gt;
+做難事必有所得，做自己沒有做過的事。&lt;br /&gt;
+不被平淡淹沒。&lt;br /&gt;
+自我挑戰。&lt;br /&gt;
+生命在過程中綻放。
+</description>
+        <pubDate>Thu, 24 Mar 2022 23:37:06 +0800</pubDate>
+        <link>/2022/03/24/dont-pick-the-easy-path/</link>
+        <guid isPermaLink="true">/2022/03/24/dont-pick-the-easy-path/</guid>
+        
+        <category>rough</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>人生无常</title>
@@ -235,107 +254,6 @@ bug提醒：如果post文件中有上面这一行代码（没有\号），blog�
         <link>/2022/02/27/read-on/</link>
         <guid isPermaLink="true">/2022/02/27/read-on/</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>添加tags，導航欄，側邊欄</title>
-        <description>&lt;a href=&quot;http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/&quot;&gt;参考1&lt;/a&gt;
-
-&lt;h3 id=&quot;下载&quot;&gt;下载&lt;/h3&gt;
-
-首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。
-
-&lt;h3 id=&quot;octopress-tag-pages&quot;&gt;octopress-tag-pages&lt;/h3&gt;
-
-把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt;文件先不用管
-
-&lt;h3 id=&quot;octopress-tag-cloud&quot;&gt;octopress-tag-cloud&lt;/h3&gt;
-
-&lt;strong&gt;1 .&lt;/strong&gt; 将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress-tag-cloud\plugins&lt;/code&gt;  路径里面的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag_cloud.rb&lt;/code&gt;  文件复制到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress\plugins\&lt;/code&gt;  文件夹里面。
-
-&lt;strong&gt;2 .&lt;/strong&gt; 将下面的代码复制到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress\source\_includes\custom\asides\tags.html&lt;/code&gt;。（这个文件需要自己新建。）
-&lt;strong&gt;注意：&lt;/strong&gt; 去掉 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; 前面的反斜杠&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;。
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Tags&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tag-cloud&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-解释：
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag_cloud&lt;/code&gt; 的参数中， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-size&lt;/code&gt; 指定 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag&lt;/code&gt; 的大小范围；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;limit&lt;/code&gt; 限定 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20&lt;/code&gt; 个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag&lt;/code&gt; 。
-
-&lt;strong&gt;3 .&lt;/strong&gt; 在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress\_config.yml&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default_asides&lt;/code&gt; 中添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;custom/asides/tags.html&lt;/code&gt;，注意相应的位置。
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;default_asides: [custom/asides/tags.html, .....]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-博文写标签：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tags: [tag1, tag2, tag3]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake generate&lt;/code&gt; 出现问题：
-
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r&quot; alt=&quot;Alt text&quot; /&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;解决&quot;&gt;解决&lt;/h3&gt;
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress\plugins\tag_cloud.rb&lt;/code&gt; 第74行:
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@sort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rand'&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# sort the tag pairs by frequency in descending order&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;weighted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sort!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# then slice off the top @limit tag pairs&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;weighted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weighted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;weighted = weighted[0,@limit]&lt;/code&gt; 应该是取指定数目的标签。如果标签数量少于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@limit&lt;/code&gt; ，会报错。
-
-修改第74行为:
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@sort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rand'&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weighted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-修改第95行为:
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@limit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weighted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake generate&lt;/code&gt; ，不再出现错误
-
-出现另一警告：
-
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r&quot; alt=&quot;Alt text&quot; /&gt;
-
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake preview&lt;/code&gt; ，标签云成功添加:
-
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r&quot; alt=&quot;Alt text&quot; /&gt;
-
-&lt;h3 id=&quot;解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题&quot;&gt;解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题&lt;/h3&gt;
-
-将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;octopress\source\_includes\custom\tag_feed.xml&lt;/code&gt; 文件里面 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt; 改为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; ：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: null
----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;搞定&quot;&gt;搞定&lt;/h2&gt;
-</description>
-        <pubDate>Sun, 27 Feb 2022 16:34:34 +0800</pubDate>
-        <link>/2022/02/27/add-tags/</link>
-        <guid isPermaLink="true">/2022/02/27/add-tags/</guid>
-        
-        
-        <category>tech-octopress</category>
         
       </item>
     
