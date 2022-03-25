@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2022 02:47:45 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2022 02:47:45 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2022 02:50:05 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2022 02:50:05 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -52,10 +52,10 @@
         <link>/2022/03/26/how-to-use-rvm/</link>
         <guid isPermaLink="true">/2022/03/26/how-to-use-rvm/</guid>
         
-        <category>rvm用法</category>
+        <category>rvm</category>
         
         
-        <category>rvm用法</category>
+        <category>rvm</category>
         
       </item>
     
