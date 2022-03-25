@@ -135,6 +135,79 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2014/04/26/install-chrome/">install chrome</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2014-04-26
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>在tweak里安装，chromium偶尔有问题，还是用 chrome stable好</p>
+
+<p>2015.3.6</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+sudo dpkg -i google-chrome-stable_current_i386.deb
+</code></pre></div></div>
+
+<p>如果提示缺失依赖包，执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install -f
+</code></pre></div></div>
+
+<p>done.</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2014/04/26/install-chrome/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2014/04/26/install-dropbox/">install dropbox</a>
                 </h2>
                 <div class="label">
@@ -859,88 +932,6 @@ git push origin source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2013/10/07/error-could-not-find-expected/">Error: could not find expected ':'</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2013-10-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h4 id="出现错误要先看提示代码知道错在哪里如">出现错误要先看提示代码，知道错在哪里，如：</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ rake generate
-## Generating Site with Jekyll
-identical source/stylesheets/screen.css 
-/home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:203:in `parse': (/home/dong/octopress/_config.yml): could not find expected ':' while scanning a simple key at line 10 column 1 (Psych::SyntaxError)
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:203:in `parse_stream'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:151:in `parse'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:127:in `load'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `block in load_file'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `open'
-	from /home/dong/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/psych.rb:297:in `load_file'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/gems/jekyll-0.12.0/lib/jekyll.rb:130:in `configuration'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/gems/jekyll-0.12.0/bin/jekyll:221:in `&lt;top (required)&gt;'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/jekyll:23:in `load'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/jekyll:23:in `&lt;main&gt;'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `eval'
-	from /home/dong/.rvm/gems/ruby-1.9.3-p448/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
-</code></pre></div></div>
-
-<p>代码已经说得很清楚了，就是<strong><em>/home/dong/octopress/_config.yml</em></strong>，这个文件，<strong><em>could not find expected ‘:’</em></strong> while scanning a simple key <strong><em>at line 10 column 1</em></strong> (Psych::SyntaxError)<br />
-<strong>就是’：’后面忘了加空格</strong></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2013/10/07/error-could-not-find-expected/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -970,6 +961,8 @@ identical source/stylesheets/screen.css
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">You can use the sass-convert command to automatically fix most cases---Ruby 2.3.1</a></li>
                     
                         <li><a href="/2022/03/24/dont-pick-the-easy-path/">志氣</a></li>
                     
@@ -1029,8 +1022,6 @@ identical source/stylesheets/screen.css
                     
                         <li><a href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a></li>
                     
-                        <li><a href="/2022/01/13/zhe-teng/">生命不息，折腾不止</a></li>
-                    
                 </ul>
             </div>
 
@@ -1047,7 +1038,7 @@ identical source/stylesheets/screen.css
                             <span class="name">
                                 tech
                             </span>
-                            <span class="badge">64</span>
+                            <span class="badge">65</span>
                         </a>
                     </li>
                     
@@ -1152,6 +1143,13 @@ identical source/stylesheets/screen.css
                       
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
                 </div>
             </div>
