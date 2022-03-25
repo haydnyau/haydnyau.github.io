@@ -120,32 +120,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -161,11 +135,304 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/12/04/my-nba/">小谈 NBA</a>
+                  <a class="post-link" href="/2015/08/25/how-to-git-octopress/">how to ‘git’ Octopress</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-12-04
+                        <i class="fa fa-calendar"></i>2015-08-25
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>如何为已经存在于Github上的Octopress搭建本地环境<br />
+大部分步骤和全新搭建时差不多，这里只列出不同的那几步<br />
+···安装其他···<br />
+clone <code class="language-plaintext highlighter-rouge">source</code> 分支：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:username/repositoryname.git octopress
+</code></pre></div></div>
+
+<p>换成我的具体命令就是:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+</code></pre></div></div>
+
+<p>clone <code class="language-plaintext highlighter-rouge">master</code> 分支：<br />
+<code class="language-plaintext highlighter-rouge">master</code> 分支存放在 <code class="language-plaintext highlighter-rouge">_deploy</code>目录</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+git clone git@github.com:username/repositoryname.git _deploy
+</code></pre></div></div>
+
+<p>具体命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
+</code></pre></div></div>
+
+<p>if<br />
+<a href="https://qiuhaidong.github.io/blog/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull Push</a><br />
+fix it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
+git https://github.com/qiuhaidong/qiuhaidong.github.com.git _deploy
+</code></pre></div></div>
+
+<p>···其他步骤···<br />
+另个重要命令：<br />
+拉取：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+git pull origin source
+cd _deploy
+git pull origin master
+</code></pre></div></div>
+
+<p>推送：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+git add .
+git commit -m 'my message'
+git push origin source
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/08/25/how-to-git-octopress/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/08/23/gfw-bundle-install/">GFW rubygems bundle install</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-08-23
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2022-01-05:最新网址：https://gems.ruby-china.com/<br />
+<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong><br />
+封网，rubygems.org 不行了<br />
+<code class="language-plaintext highlighter-rouge">bundle install</code>  自然也不行<br />
+点算？<br />
+https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网<br />
+用法：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --remove https://rubygems.org/
+gem sources -a https://gems.ruby-china.com/
+gem sources -l
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** CURRENT SOURCES ***  
+
+https://gems.ruby-china.com  
+</code></pre></div></div>
+
+<p>确保只有 https://gems.ruby-china.com/</p>
+
+<p>###但是这样也不行，还得到octopress文件夹，打开Gemfile文件，编辑：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    source "https://gems.ruby-china.com"
+</code></pre></div></div>
+
+<p>Ubuntu 14.04，安装octopress,执行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>一直提示缺少各种 gem 包，例如：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+Gem::RemoteFetcher::FetchError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/gems/safe_yaml-1.0.4.gem)
+An error occurred while installing safe_yaml (1.0.4), and Bundler cannot continue.
+Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
+
+```
+</code></pre></div></div>
+
+<p>按提示输入命令 <code class="language-plaintext highlighter-rouge">gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
+
+<p>解决方法：</p>
+
+<p>修改octopress文件夹里的Gemfile文件：</p>
+
+<p>把：<br />
+<code class="language-plaintext highlighter-rouge">source "https://rubygems.org"</code><br />
+改为：<br />
+<code class="language-plaintext highlighter-rouge">source "https://gems.ruby-china.com"</code><br />
+再执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>完美通过。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/08/23/gfw-bundle-install/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/07/20/keyboard-configuration/">更改键盘布局</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-07-20
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>键盘布局出错，想打‘#’，却出现一个类似‘f’的符号，打‘|’却出现‘~’。<br />
+run：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo dpkg-reconfigure keyboard-configuration
+</code></pre></div></div>
+
+<p>会出现图形界面用以设置。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/07/20/keyboard-configuration/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/07/19/in-the-wind/">人在风里</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-07-19
                     </div>
                     <div class="label-card">
                         
@@ -210,31 +477,24 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>想说说nba。<br />
-不可免俗地和大多数国人一样，我关注nba，也是受姚明的影响，诚然，有自己人在就有些许参与感代入感，这很重要。不过很遗憾的是，鉴于我来自偏远的地方，小学中学时期我都没能看nba，上大学了，有条件有机会看比赛了，姚麦却相相因伤病而接连地赛季报销，而我的兴趣就这样提不起来了。并且那时候我对如日中天的铁科大黄等等亦不感冒，因此姚麦，科比加嫂，大黄韦德，那时的精彩我都错过了。真tm的可惜！<br />
-可以说我真正看nba，是从14-15赛季的季后赛，火箭vs快船，经典的第六场开始。错过了麦迪的35秒，我有幸看到这场可以说神奇也可以说神经刀的比赛。应了nba的那句话：where amazing happens！<br />
-火迷和火黑都一直骂火箭，但火箭有比赛，火迷火黑都会看，科迷科黑詹迷詹黑亦如是，所谓情到深处自然黑，我想这就是很多人还一直看火箭的原因，赞你骂你，皆因心中有你。大家都清楚，这样的牌面，火箭99.9%拿不了戒指，但是有35秒有G6,已足够。如同我一直记得上个赛季的一个球，只剩19秒，落后3分，阿里扎中场左边发球给右边的大胡子，胡子传给底线的黑贝，黑贝突破到篮下跃起，空中转身分球弧顶的扎扎，扎扎调整一步，3分入网，追平，入加时！<br />
-今年6月大黄1-3落后的大逆转，我也幸运地看到了。<br />
-这两天看一些贴子，神追那些年的帮主，ok组合，答案，怀念而不感伤，还是那句话，nba永远有奇迹。<br />
-<img src="http://ww4.sinaimg.cn/large/780bc50fgw1fae582h60tj216o16oh2n.jpg" alt="Allen Iverson" />
-<img src="http://ww4.sinaimg.cn/large/780bc50fgw1faf1kb4fhjj20s00i2grk.jpg" alt="麦迪科比" /><br />
-<img src="http://ww4.sinaimg.cn/large/780bc50fgw1faf2tqb9luj21kw2dcwyh.jpg" alt="35秒" /><br />
-<img src="http://ww3.sinaimg.cn/large/780bc50fgw1faf2ntxtxjj21400p0jz7.jpg" alt="科比绝杀" /></p>
+                    <p>那一段我仅有的青春。<br />
+很短，很简单。<br />
+如果你有类似的经历，会很有共鸣，很有意思。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/12/04/my-nba/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/07/19/in-the-wind/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/29/brave/">brave</a>
+                  <a class="post-link" href="/2015/07/09/kindle-screenshot/">kindle screenshot</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-29
+                        <i class="fa fa-calendar"></i>2015-07-09
                     </div>
                     <div class="label-card">
                         
@@ -279,100 +539,25 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>勇敢走出去，会有新天地！</p>
+                    <p>kindle可以截屏，同时按屏幕对角即可。<br />
+但Amazon没宣传这功能。</p>
+<h4 id="定位">定位</h4>
+<p>专注阅读。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/29/brave/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/07/09/kindle-screenshot/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/25/win10-can-not-install-mbr-gpt/">Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘</a>
+                  <a class="post-link" href="/2015/06/18/my-cat/">我家的猫</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-25
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><a href="http://blog.sina.cn/dpool/blog/s/blog_a6079ee00101mlfv.html?vt=4">原博</a><br />
-安装win7或win8经常会出现这种提示：Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘。<br />
-前几天装系统的时候，遇到一个问题：官方下载的windows 8 pro中文版镜像，使用UltraISO写进U盘后，使用U盘启动安装方式安装系统，当安装到选择磁盘的地方时，点一下步，竟然出现以下提示“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘。“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表”的处理X<br />
-<img src="http://s2.sinaimg.cn/bmiddle/a6079ee0gx6BJOK4LHb71&amp;690" alt="mbr" /><br />
-出现这种情况主要是因为U盘启动时，默认使用EFI引导启动，而不是常见的MBR引导，所以会发生这种情况。这种情况常常出现在原来安装32位系统、现在改安64位系统的过程中。<br />
-解决方法一：出现上述问题后，直接把U盘拔掉插到其它电脑，把U盘里的efi文件夹和bootmgr.efi文件删掉，问题就搞定了，然后，再用这个U盘启动盘去装系统，就不会出现这种问题了。<br />
-删掉这两个文件夹跟文件的原因是因为从U盘安装会默认使用efi引导启动，删掉之后没有efi，就默认用mbr启动了。<br />
-另外，我之前用光盘刻录过win8，给朋友安装的时候，也一样出现这种问题，但是问题是我的光盘是一次读写的，无法像U盘一样进去把那两个文件夹删掉，所以对于光盘我也不知道怎样弄。但是，奇怪的是，我自己的电脑也是用U盘安装的windows 8 pro，却没出现上述问题，我个人觉得是因为我的电脑比较老（09年底买的），不支持EFI启动的原因。什么是EFI呢？这是一种很重要的技术，统治电脑20多年的BIOS启动技术将来会被EFI代替，那时，在BIOS设置界面（严格来说应该是EFI界面）装可以使用鼠标，也可以是中文，不再是晦涩难懂的英文，也不再是只能使用键盘操作了。<br />
-<img src="http://s14.sinaimg.cn/bmiddle/6db312f1gd1cb40b9337d&amp;690" alt="2" /><br />
-“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表”的处理<br />
-解决方法二：非预装win8机型出厂时，硬盘默认为MBR分区表格式，而UEFI模式仅支持在GPT分区表的硬盘上安装系统。<br />
-如果系统安装光盘中包含了UEFI信息，启动时可能会自动加载并进入UEFI模式，因此便会出现“ windows无法安装到这个磁盘，选中的磁盘具有MBR分区表，在EFI系统上，windows只能安装到GFT磁盘”的提示。<br />
-建议您尝试以下方法：<br />
-开机按ESC键，会显示两个光驱或者U盘的选项，选择光驱名称前没有UEFI的选项启动，即可正常把系统安装在MBR分区表硬盘上。<br />
-解决方法三：进入主板选择启动的项目、比如F8、F11之类、u盘启动里有2项、一个是EFI启动、一个是普通启动、安装64位系统、选了EFI启动，就会出错，应该选普通启动。如果光盘安装，进BIOS看看， EFI进入bios看到UEFI状态时，Enabled 如果是启用状态，那么把他禁用掉看看（改为disabled），保存重启，选择光驱启动。但不能选择第uefi的光驱模式。<br />
-<img src="http://www.45it.com/picture/allimg/130123/1449462291-1.jpg" alt="3" /><br />
-<img src="http://www.45it.com/picture/allimg/130123/14494Ac2-2.jpg" alt="4" /><br />
-<img src="http://www.45it.com/picture/allimg/130123/1449464146-3.jpg" alt="5" /><br />
-解决方法四：使用windows8 的分区工具来重分区安装。或者用diskgenius最新版的来建立GPT分区。提示，使用这种方法前请把硬盘数据进行拷贝，以免造成损失。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/25/win10-can-not-install-mbr-gpt/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/11/23/i-ran-the-red-light/">我闯了红灯</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-23
+                        <i class="fa fa-calendar"></i>2015-06-18
                     </div>
                     <div class="label-card">
                         
@@ -417,27 +602,26 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <h3 id="太危险">太危险！</h3>
-<h3 id="为了自己为了开车的人">为了自己，为了开车的人！</h3>
-<h3 id="愚蠢">愚蠢！</h3>
-<h3 id="永远别闯红灯">永远别闯红灯!</h3>
-<h1 id="11-24">11-24</h1>
-<h1 id="昨天刚说完今天就有星力的人出车祸了">昨天刚说完，今天就有星力的人出车祸了！</h1>
+                    <p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/cat/20130921_182719-2.jpeg" alt="1" />
+<img src="http://r.photo.store.qq.com/psb?/V13NDf2z0alMfY/uiVkcIrOT9PpqKqwVD62LFyFoO7HjMkIYVKb2XZJaxg!/r/dP.w6W4rNwAA" alt="02" />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/cat/2014-07-27.jpeg" alt="2" />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/cat/2014-12-21-2.jpeg" alt="3" />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/cat/2014-12-21.jpeg" alt="4" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/23/i-ran-the-red-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/06/18/my-cat/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/20/uninstall-and-update-command/">uninstall and update command</a>
+                  <a class="post-link" href="/2015/03/19/add-image/">add image</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-20
+                        <i class="fa fa-calendar"></i>2015-03-19
                     </div>
                     <div class="label-card">
                         
@@ -482,29 +666,36 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get purge ***
-sudo apt-get remove ***
-sudo apt-get autoremove
-sudo apt-get clean
-sudo apt-get update
-sudo apt list --upgradable
-sudo apt upgrade
+                    <p>方法略繁复<br />
+把图像复制到/……/octopress/source/images目录下。（也可再建立子文件夹）<br />
+把图片上传到github repository托管</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .           # don't forget the "."
+git commit -m 'your message'
+git push origin source
 </code></pre></div></div>
+
+<p>进入github抓取图片链接地址（先打开图片，然后鼠标右击图片，在新标签页中打开图片=或者=查看图片）<br />
+示例地址：<br />
+https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/123.png<br />
+使用 ![描述](图片链接地址) 插入图像<br />
+示例：<br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/123.png" alt="image test" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/20/uninstall-and-update-command/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/03/19/add-image/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/19/screen-light/">屏幕亮度调节 Ubuntu13.04和16.04 screen light</a>
+                  <a class="post-link" href="/2015/03/06/goagent/">GoAgent</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-19
+                        <i class="fa fa-calendar"></i>2015-03-06
                     </div>
                     <div class="label-card">
                         
@@ -549,25 +740,305 @@ sudo apt upgrade
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>参见另一篇博文</p>
+                    <p>2016-01-09  goagent的github仓库已经全部删除，it’s gone.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/grub
-</code></pre></div></div>
+<p><a href="https://github.com/goagent/goagent">新网址</a><br />
+<a href="http://git.io/goa">压缩包下载地址</a><br />
+<a href="https://github.com/goagent/goagent/blob/wiki/SimpleGuide.md">简易教程</a></p>
 
-<p>更改为：(斜黑体部分)</p>
+<p><strong>部署</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
-GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"  
-</code></pre></div></div>
+<ol>
+  <li>申请 Google Appengine 并创建 appid。</li>
+  <li>下载 <a href="https://github.com/goagent/goagent">goagent</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>修改 local\proxy.ini 中的 [gae] 下的 appid = 你的appid(多appid请用</td>
+          <td>隔开)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>运行 uploader.bat 或 uploader.py 开始上传, 成功后即可使用了。</li>
+</ol>
 
-<p>(东哥：13.04、16.04按Fn有效调节)</p>
+<p><strong>使用</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-grub
-</code></pre></div></div>
+<ul>
+  <li>Windows 用户推荐使用 goagent.exe 托盘图标设置 IE 代理(对其它浏览器也有效)。</li>
+  <li>Chrome/Opera 请安装 SwitchyOmega 插件(下载到本地然后拖放文件到扩展设置)，导入 SwitchyOptions.bak</li>
+  <li>Firefox 请安装 FoxyProxy ，Firefox需要导入证书，方法请见 FAQ</li>
+  <li>出现连接不上的情况可以尝试使用 gscan 或 GoGo Tester 测速。</li>
+</ul>
+
+<p><a href="https://github.com/goagent/goagent/blob/wiki/InstallGuide.md">图文教程</a></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/11/19/screen-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2015/03/06/goagent/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/">TCPServer Error: Address already in use - bind(2)</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>在执行命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake preview
+</code></pre></div></div>
+
+<p>时，输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake preview  
+Starting to watch source with Jekyll and Compass. Starting Rack on port 4000  
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.  
+Configuration file: /home/dong/octopress/_config.yml  
+[2015-03-05 13:22:19] INFO  WEBrick 1.3.1  
+[2015-03-05 13:22:19] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]  
+[2015-03-05 13:22:19] WARN  TCPServer Error: Address already in use - bind(2)  
+/home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `new'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `block in create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `each'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:82:in `listen'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:70:in `initialize'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:45:in `initialize'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `new'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `run'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:286:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:147:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/bin/rackup:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+        Source: source
+   Destination: public
+      Generating... 
+                done.
+    write public/stylesheets/screen.css
+ Auto-regeneration: enabled for 'source'
+</code></pre></div></div>
+
+<p>解决方法：<br />
+执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
+</code></pre></div></div>
+
+<p>得到：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
+[sudo] password for dong: 
+tcp        0      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      2889/rackup  
+</code></pre></div></div>
+
+<p>执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kill -9 2889
+</code></pre></div></div>
+
+<p>得到：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ kill -9 2889
+dong@Ubuntu:~/octopress$
+</code></pre></div></div>
+
+<p>done.</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/05/could-not-find-a-javascript-runtime/">Could not find a JavaScript runtime</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>以下是两条命令的输出结果：<br />
+第一条：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake generate
+## Generating Site with Jekyll
+	write source/stylesheets/screen.css
+/home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:5:in `&lt;module:ExecJS&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `block in gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `each'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll.rb:166:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+</code></pre></div></div>
+
+<p>第二条：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake preview
+Starting to watch source with Jekyll and Compass. Starting Rack on port 4000
+/home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:5:in `&lt;module:ExecJS&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `block in gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `each'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll.rb:166:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.
+[2015-03-05 12:32:30] INFO  WEBrick 1.3.1
+[2015-03-05 12:32:30] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]
+[2015-03-05 12:32:30] INFO  WEBrick::HTTPServer#start: pid=2889 port=4000
+ 		write public/stylesheets/screen.css
+127.0.0.1 - - [05/Mar/2015:12:32:49 +0800] "GET / HTTP/1.1" 404 - 0.0610
+127.0.0.1 - - [05/Mar/2015:12:32:50 +0800] "GET /favicon.ico HTTP/1.1" 404 - 0.0015
+127.0.0.1 - - [05/Mar/2015:12:32:53 +0800] "GET / HTTP/1.1" 404 - 0.0013
+127.0.0.1 - - [05/Mar/2015:12:37:50 +0800] "GET / HTTP/1.1" 404 - 0.0007
+127.0.0.1 - - [05/Mar/2015:12:37:51 +0800] "GET / HTTP/1.1" 404 - 0.0007
+^Z
+[1]+  已停止               rake preview
+</code></pre></div></div>
+
+<p>解决方法：<br />
+执行命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install execjs
+gem install therubyracer
+</code></pre></div></div>
+
+<p>may fail,<a href="http://stackoverflow.com/questions/20888318/error-install-rubyracer-with-error-invalid-gem-package-is-corrupt">check this</a> ,<a href="https://qiuhaidong.github.io/blog/2016/11/10/failed-when-gem-install-therubyracer/">or</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install nodejs
+</code></pre></div></div>
+
+<p>done.</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/05/could-not-find-a-javascript-runtime/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -582,10 +1053,10 @@ GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page17" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">18/34</span>
+          <span class="page_number ">18/21</span>
           
             <a href="/page19" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page34" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page21" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
