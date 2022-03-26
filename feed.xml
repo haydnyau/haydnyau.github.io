@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Mar 2022 03:12:20 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Mar 2022 03:12:20 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Mar 2022 16:24:50 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Mar 2022 16:24:50 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -60,9 +60,17 @@
       </item>
     
       <item>
-        <title>You can use the sass-convert command to automatically fix most cases---Ruby 2.3.1</title>
+        <title>You can use the sass-convert command to automatically fix most cases---Ruby 不同版本</title>
         <description>octopress-2.0，ruby-&lt;strong&gt;2.3.1&lt;/strong&gt;，ubuntu20.04，可以运行（修改这blog后）&lt;br /&gt;
 octopress-2.0，ruby-&lt;strong&gt;2.5.9&lt;/strong&gt;，ubuntu20.04，可以运行（修改这blog后）&lt;br /&gt;
+octopress-2.0，ruby-&lt;strong&gt;2.6.9&lt;/strong&gt;，ubuntu20.04，可以运行（修改这blog后）&lt;br /&gt;
+octopress-&lt;strong&gt;3.0&lt;/strong&gt;，ruby-&lt;strong&gt;2.5.9&lt;/strong&gt;，ubuntu20.04，可以运行（無需修改）&lt;br /&gt;
+octopress-&lt;strong&gt;3.0&lt;/strong&gt;，ruby-&lt;strong&gt;2.6.9&lt;/strong&gt;，ubuntu20.04，可以运行（無需修改）&lt;br /&gt;
+換了版本要重新安裝octopress3.0：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install octopress
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;a href=&quot;https://stackoverflow.com/questions/35949660/compass-sass-deprecation-warning&quot;&gt;原网页&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;http://cache.baiducontent.com/c?m=Xxdd763vX7YjRNeeOiILGLerW1Lrc_ceIQ3hCNMB9gwdzDHZoy_PikcN75GYpR9DFB3vxBUcejQkaSvlN3gZEfAPpNN-08FVQIDyZHTNJgPwSgoB3NKL4_GS4nx_XrCC-BUaRNwAuECMpWgq8wxzkIpLErbpEqlwK68Qi6soQwepLTgid54lohbxMlnl6PQpNH2t__da7lDpAsRwCb6EY-y40SooyRN5jX-9ufBiajUS0lec_A47rZ0vRgOYP12W&amp;amp;p=8d7d8e0285cc43dd08e297780f568f&amp;amp;newp=c273c00586cc42a95aa9c7710f408f231610db2151d3da146b82c825d7331b001c3bbfb42220150ed3c6796204af4259e8f033783d0923a3dda5c91d9fb4c57479cc&amp;amp;s=2a38a4a9316c49e5&amp;amp;user=baidu&amp;amp;fm=sc&amp;amp;query=You+can+use+the+sass%2Dconvert+command+to+automatically+fix+most+cases%2E&amp;amp;qid=c0e3498b0000d650&amp;amp;p1=1&quot;&gt;百度缓存网页&lt;/a&gt;
 
