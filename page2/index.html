@@ -133,6 +133,70 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/03/09/do-not-be-worthless/">don't be worthless</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-03-09
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>沒有人願意去扶持一個毫無價值的人，千萬別讓自己一文不值。<br />
+<img src="http://r.photo.store.qq.com/psc?/V13NDf2z0er9V4/TmEUgtj9EK6.7V8ajmQrEBV5rT1fUzPY1kDqenVtnUecpxHZp3rt.W.B0sTA58l*YZBJltakoO5A31uhvEwKsrtc2izqI4BI5SMec*e3buE!/r" alt="肖申克的救赎" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/03/09/do-not-be-worthless/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/03/02/no-good-thing-ever-dies/">有時間絕望，還不如吃點好吃的然後睡個覺</a>
                 </h2>
                 <div class="label">
@@ -928,109 +992,6 @@ sudo apt install python2
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-24
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
-
-<h2 id="问题描述">问题描述</h2>
-
-<p>我们每次使用命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
-</code></pre></div></div>
-
-<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="language-plaintext highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
-
-<p><img src="https://ooo.0o0.ooo/2016/07/07/577e349ab42ed.png" alt="7f07c8f6deef169ef6be5103bbd3e932f8676bb1.png" /></p>
-
-<h2 id="解决方法">解决方法</h2>
-
-<p>直接使用命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -r #查看远程分支
-</code></pre></div></div>
-<p>或</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -a #查看所有分支
-</code></pre></div></div>
-
-<p>会显示</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin/HEAD -&gt; origin/master
-origin/daily/1.2.2
-origin/daily/1.3.0
-origin/daily/1.4.1
-origin/develop
-origin/feature/daily-1.0.0
-origin/master
-</code></pre></div></div>
-
-<p>然后直接</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout origin/daily/1.4.1
-</code></pre></div></div>
-
-<p>就好了。。。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/24/git-clone-not-master-branch/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1060,6 +1021,8 @@ origin/master
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/03/29/houston-rockets/">还记得火箭的发带帮吗？</a></li>
                     
                         <li><a href="/2022/03/29/mo-fa-man-wu/">魔法满屋</a></li>
                     
@@ -1119,8 +1082,6 @@ origin/master
                     
                         <li><a href="/2022/01/15/sougou-is-xiugou/">搜狗输入法</a></li>
                     
-                        <li><a href="/2022/01/15/done-tired/">ok 好累</a></li>
-                    
                 </ul>
             </div>
 
@@ -1146,7 +1107,7 @@ origin/master
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">114</span>
+                            <span class="badge">115</span>
                         </a>
                     </li>
                     
@@ -1229,7 +1190,7 @@ origin/master
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 13.5pt; color: #444;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 14pt; color: #444;">rough</a>
                     
                       
                       
