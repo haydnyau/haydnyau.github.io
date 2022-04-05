@@ -118,6 +118,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -130,6 +132,220 @@
         <h1>热爱生活</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/">安装ruby2.6.9,Error running __rvm_make -j4</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-04-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.6.9
+</code></pre></div></div>
+<p>提示错误：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+</code></pre></div></div>
+
+<p><strong>解决：</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/04/05/octopress2-on-ubuntu-22-dot-04/">Ubuntu 22.04安装Octopress 2.0</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-04-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+sudo apt install git
+</code></pre></div></div>
+<p>然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名，<code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code>，ok</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python2 --version
+sudo apt install python2
+
+ruby --version
+</code></pre></div></div>
+<p>没有<br />
+到rvm官网</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command 'gpg2' not found, but can be installed with:
+sudo apt install gnupg2
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install gnupg2
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command 'curl' not found, but can be installed with:
+sudo apt install curl
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+</code></pre></div></div>
+<p>解决：<br />
+<a href="https://blog.csdn.net/u014375643/article/details/115826506">Failed to connect to raw.githubusercontent.com</a><br />
+到这个网址：<code class="language-plaintext highlighter-rouge">https://www.ipaddress.com/</code>，输入：<code class="language-plaintext highlighter-rouge">raw.githubusercontent.com</code>，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：<code class="language-plaintext highlighter-rouge">185.199.108.133 raw.githubusercontent.com</code>，重试，不行就重启再试。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+Thanks for installing RVM
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/dong/.rvm/scripts/rvm
+</code></pre></div></div>
+<p>重启命令行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+rvm install 2.6.9
+</code></pre></div></div>
+<p>提示错误：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+</code></pre></div></div>
+
+<p><strong>解决：</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby --version
+rvm use 2.6.9 --default
+
+gem install bundler
+bundle install
+</code></pre></div></div>
+<p><a href="https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">更改sass-convert</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+......
+</code></pre></div></div>
+<p>之后的常规操作。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/04/05/octopress2-on-ubuntu-22-dot-04/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -792,136 +1008,6 @@ You can use the sass-convert command to automatically fix most cases.
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/03/22/life-is-impermanent/">人生无常</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-03-22
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>2022年3月21日下午，一架飞机在广西梧州滕县失事，132人，惨烈。<br />
-飞行数据显示，MU5735航班从昆明机场起飞后，一直在约8869米高度进行巡航。下午2点19分，飞机突然从巡航高度下降，同时飞行速度从约每小时845公里开始下降。机头垂直向下，2点21分，MU5735航班丢失ADS-B雷达信号，同地面失联。<br />
-人生无常，真的是，你永远不知道明天和意外谁先到来。<br />
-生死面前，都是小事。<br />
-珍惜。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/03/22/life-is-impermanent/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/03/21/limitless/">不設限</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-03-21
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>人生不設限，不念過往，不畏開始，不懼未來。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/03/21/limitless/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -932,10 +1018,10 @@ You can use the sass-convert command to automatically fix most cases.
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1/21</span>
+          <span class="page_number ">1/22</span>
           
             <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page21" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page22" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -951,6 +1037,10 @@ You can use the sass-convert command to automatically fix most cases.
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/">安装ruby2.6.9,Error running __rvm_make -j4</a></li>
+                    
+                        <li><a href="/2022/04/05/octopress2-on-ubuntu-22-dot-04/">Ubuntu 22.04安装Octopress 2.0</a></li>
                     
                         <li><a href="/2022/04/01/action-confident-gratitude/">行动 自信 感恩</a></li>
                     
@@ -1008,10 +1098,6 @@ You can use the sass-convert command to automatically fix most cases.
                     
                         <li><a href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a></li>
                     
-                        <li><a href="/2022/02/18/life-is-pity/">生命悲凉</a></li>
-                    
-                        <li><a href="/2022/02/16/myself/">做自己，就…只…做自己</a></li>
-                    
                 </ul>
             </div>
 
@@ -1046,7 +1132,7 @@ You can use the sass-convert command to automatically fix most cases.
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">20</span>
+                            <span class="badge">22</span>
                         </a>
                     </li>
                     
@@ -1106,7 +1192,7 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 10.5pt; color: #888;">octopress2.0</a>
                     
                       
                       

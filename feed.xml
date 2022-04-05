@@ -5,9 +5,127 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Apr 2022 21:41:30 +0800</pubDate>
-    <lastBuildDate>Fri, 01 Apr 2022 21:41:30 +0800</lastBuildDate>
-    <generator>Jekyll v3.9.0</generator>
+    <pubDate>Tue, 05 Apr 2022 22:50:44 +0800</pubDate>
+    <lastBuildDate>Tue, 05 Apr 2022 22:50:44 +0800</lastBuildDate>
+    <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>安装ruby2.6.9,Error running __rvm_make -j4</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install 2.6.9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示错误：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;strong&gt;解决：&lt;/strong&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 05 Apr 2022 22:22:58 +0800</pubDate>
+        <link>/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</link>
+        <guid isPermaLink="true">/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</guid>
+        
+        <category>octopress2.0</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu 22.04安装Octopress 2.0</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
+sudo apt install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -T git@github.com&lt;/code&gt;，ok
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python2 --version
+sudo apt install python2
+
+ruby --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+没有&lt;br /&gt;
+到rvm官网
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command 'gpg2' not found, but can be installed with:
+sudo apt install gnupg2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install gnupg2
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command 'curl' not found, but can be installed with:
+sudo apt install curl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+解决：&lt;br /&gt;
+&lt;a href=&quot;https://blog.csdn.net/u014375643/article/details/115826506&quot;&gt;Failed to connect to raw.githubusercontent.com&lt;/a&gt;&lt;br /&gt;
+到这个网址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.ipaddress.com/&lt;/code&gt;，输入：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raw.githubusercontent.com&lt;/code&gt;，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;185.199.108.133 raw.githubusercontent.com&lt;/code&gt;，重试，不行就重启再试。
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+Thanks for installing RVM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source /home/dong/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+重启命令行
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm --version
+rvm install 2.6.9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示错误：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;strong&gt;解决：&lt;/strong&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby --version
+rvm use 2.6.9 --default
+
+gem install bundler
+bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/&quot;&gt;更改sass-convert&lt;/a&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake generate
+......
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+之后的常规操作。
+</description>
+        <pubDate>Tue, 05 Apr 2022 22:03:16 +0800</pubDate>
+        <link>/2022/04/05/octopress2-on-ubuntu-22-dot-04/</link>
+        <guid isPermaLink="true">/2022/04/05/octopress2-on-ubuntu-22-dot-04/</guid>
+        
+        <category>octopress2.0</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
     
       <item>
         <title>行动 自信 感恩</title>
@@ -278,40 +396,6 @@ The file can be found at your &lt;strong&gt;/home/dong/.rvm/gems/ruby-2.3.1/gems
         <pubDate>Thu, 24 Mar 2022 23:37:06 +0800</pubDate>
         <link>/2022/03/24/dont-pick-the-easy-path/</link>
         <guid isPermaLink="true">/2022/03/24/dont-pick-the-easy-path/</guid>
-        
-        <category>rough</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>人生无常</title>
-        <description>2022年3月21日下午，一架飞机在广西梧州滕县失事，132人，惨烈。&lt;br /&gt;
-飞行数据显示，MU5735航班从昆明机场起飞后，一直在约8869米高度进行巡航。下午2点19分，飞机突然从巡航高度下降，同时飞行速度从约每小时845公里开始下降。机头垂直向下，2点21分，MU5735航班丢失ADS-B雷达信号，同地面失联。&lt;br /&gt;
-人生无常，真的是，你永远不知道明天和意外谁先到来。&lt;br /&gt;
-生死面前，都是小事。&lt;br /&gt;
-珍惜。
-</description>
-        <pubDate>Tue, 22 Mar 2022 00:32:43 +0800</pubDate>
-        <link>/2022/03/22/life-is-impermanent/</link>
-        <guid isPermaLink="true">/2022/03/22/life-is-impermanent/</guid>
-        
-        <category>rough</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>不設限</title>
-        <description>人生不設限，不念過往，不畏開始，不懼未來。
-</description>
-        <pubDate>Mon, 21 Mar 2022 04:16:04 +0800</pubDate>
-        <link>/2022/03/21/limitless/</link>
-        <guid isPermaLink="true">/2022/03/21/limitless/</guid>
         
         <category>rough</category>
         
