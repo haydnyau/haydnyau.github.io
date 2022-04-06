@@ -190,14 +190,17 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
 sudo apt install git
 </code></pre></div></div>
-<p>然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名，<code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code>，ok</p>
+<p>然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+<p>ok</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python2 --version
 sudo apt install python2
 
 ruby --version
 </code></pre></div></div>
 <p>没有<br />
-到rvm官网</p>
+到rvm官网(下面的命令可能有更新，看官网)</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 </code></pre></div></div>
 <p>提示：</p>
@@ -243,7 +246,8 @@ There has been an error while running make. Halting the installation.
 ......
 </code></pre></div></div>
 
-<p><strong>解决：</strong></p>
+<p><strong>解决：</strong><br />
+<a href="https://github.com/rvm/rvm/issues/4370">Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 </a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
 rvm remove 2.6.9
@@ -255,7 +259,7 @@ rvm use 2.6.9 --default
 gem install bundler
 bundle install
 </code></pre></div></div>
-<p><a href="https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">更改sass-convert</a></p>
+<p><a href="https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">更改：You can use the sass-convert command to automatically fix most cases.</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
 ......

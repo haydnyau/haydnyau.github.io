@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Apr 2022 23:06:52 +0800</pubDate>
-    <lastBuildDate>Tue, 05 Apr 2022 23:06:52 +0800</lastBuildDate>
+    <pubDate>Wed, 06 Apr 2022 15:31:56 +0800</pubDate>
+    <lastBuildDate>Wed, 06 Apr 2022 15:31:56 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -20,7 +20,7 @@ please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
 There has been an error while running make. Halting the installation.
 ......
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
+&lt;a href=&quot;https://github.com/rvm/rvm/issues/4370&quot;&gt;Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 &lt;/a&gt;&lt;br /&gt;
 &lt;strong&gt;解决：&lt;/strong&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
@@ -46,14 +46,17 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
 sudo apt install git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -T git@github.com&lt;/code&gt;，ok
+然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ok
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python2 --version
 sudo apt install python2
 
 ruby --version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 没有&lt;br /&gt;
-到rvm官网
+到rvm官网(下面的命令可能有更新，看官网)
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 提示：
@@ -99,7 +102,8 @@ There has been an error while running make. Halting the installation.
 ......
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;strong&gt;解决：&lt;/strong&gt;
+&lt;strong&gt;解决：&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/rvm/rvm/issues/4370&quot;&gt;Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 &lt;/a&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
 rvm remove 2.6.9
@@ -111,7 +115,7 @@ rvm use 2.6.9 --default
 gem install bundler
 bundle install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/&quot;&gt;更改sass-convert&lt;/a&gt;
+&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/&quot;&gt;更改：You can use the sass-convert command to automatically fix most cases.&lt;/a&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake generate
 ......
