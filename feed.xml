@@ -5,9 +5,23 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Apr 2022 15:38:34 +0800</pubDate>
-    <lastBuildDate>Sun, 17 Apr 2022 15:38:34 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2022 01:14:55 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2022 01:14:55 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>成年人</title>
+        <description>拆穿一个人多没意思，年纪大了就喜欢看别人演戏，精彩的地方还可以鼓鼓掌&lt;br /&gt;
+不拆穿但会远离，不动声色地淘汰你，成年人的世界只做选择，从不教育，你有你的立场，我有我的底线，你出局了，在悄无声息之中
+</description>
+        <pubDate>Fri, 22 Apr 2022 01:07:13 +0800</pubDate>
+        <link>/2022/04/22/grow-up/</link>
+        <guid isPermaLink="true">/2022/04/22/grow-up/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>人无远虑，必有近忧</title>
@@ -331,76 +345,6 @@ my step becomes lighter
         
         
         <category>rvm</category>
-        
-      </item>
-    
-      <item>
-        <title>You can use the sass-convert command to automatically fix most cases---Ruby 不同版本</title>
-        <description>octopress-2.0，ruby-&lt;strong&gt;2.3.1&lt;/strong&gt;，ubuntu20.04，可以运行（修改这里后）&lt;br /&gt;
-octopress-2.0，ruby-&lt;strong&gt;2.5.9&lt;/strong&gt;，ubuntu20.04，可以运行（修改这里后）&lt;br /&gt;
-octopress-2.0，ruby-&lt;strong&gt;2.6.9&lt;/strong&gt;，ubuntu20.04，可以运行（修改这里后）&lt;br /&gt;
-octopress-&lt;strong&gt;3.0&lt;/strong&gt;，ruby-&lt;strong&gt;2.5.9&lt;/strong&gt;，ubuntu20.04，可以运行（無需修改）&lt;br /&gt;
-octopress-&lt;strong&gt;3.0&lt;/strong&gt;，ruby-&lt;strong&gt;2.6.9&lt;/strong&gt;，ubuntu20.04，可以运行（無需修改）
-
-換了版本要重新安裝octopress3.0：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install octopress
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-octopress-2.0-3.0，ruby-&lt;strong&gt;3.1.1&lt;/strong&gt;，ubuntu20.04，都無法运行。
-
-&lt;a href=&quot;https://stackoverflow.com/questions/35949660/compass-sass-deprecation-warning&quot;&gt;原网页&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://cache.baiducontent.com/c?m=Xxdd763vX7YjRNeeOiILGLerW1Lrc_ceIQ3hCNMB9gwdzDHZoy_PikcN75GYpR9DFB3vxBUcejQkaSvlN3gZEfAPpNN-08FVQIDyZHTNJgPwSgoB3NKL4_GS4nx_XrCC-BUaRNwAuECMpWgq8wxzkIpLErbpEqlwK68Qi6soQwepLTgid54lohbxMlnl6PQpNH2t__da7lDpAsRwCb6EY-y40SooyRN5jX-9ufBiajUS0lec_A47rZ0vRgOYP12W&amp;amp;p=8d7d8e0285cc43dd08e297780f568f&amp;amp;newp=c273c00586cc42a95aa9c7710f408f231610db2151d3da146b82c825d7331b001c3bbfb42220150ed3c6796204af4259e8f033783d0923a3dda5c91d9fb4c57479cc&amp;amp;s=2a38a4a9316c49e5&amp;amp;user=baidu&amp;amp;fm=sc&amp;amp;query=You+can+use+the+sass%2Dconvert+command+to+automatically+fix+most+cases%2E&amp;amp;qid=c0e3498b0000d650&amp;amp;p1=1&quot;&gt;百度缓存网页&lt;/a&gt;
-
-I just installed and Compass &amp;amp; Sass as described here.
-
-I got the following warning when I ran &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compass watch&lt;/code&gt; for the first time. What exactly does it mean? What should I do to fix it, do I need to do anything?
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ (master) compass watch
-&amp;gt;&amp;gt;&amp;gt; Compass is watching for changes. Press Ctrl-C to Stop.
-DEPRECATION WARNING on line 87 of /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss: #{} interpolation near operators will be simplified
-in a future version of Sass. To preserve the current behavior, use quotes:
-
-  unquote('&quot;$moz-&quot;#{$experimental-support-for-mozilla} &quot;$webkit-&quot;#{$experimental-support-for-webkit} &quot;$opera-&quot;#{$experimental-support-for-opera} &quot;$microsoft-&quot;#{$experimental-support-for-microsoft} &quot;$khtml-&quot;#{$experimental-support-for-khtml}')
-
-You can use the sass-convert command to automatically fix most cases.
-
-DEPRECATION WARNING on line 92 of /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss: #{} interpolation near operators will be simplified
-in a future version of Sass. To preserve the current behavior, use quotes:
-
-  unquote('&quot;$ie6-&quot;#{$legacy-support-for-ie6} &quot;$ie7-&quot;#{$legacy-support-for-ie7} &quot;$ie8-&quot;#{$legacy-support-for-ie8}')
-
-You can use the sass-convert command to automatically fix most cases.
-
-    write css/styles.css
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;1-answer-&quot;&gt;1 Answer :&lt;/h4&gt;
-
-To fix the error message, just change the &lt;strong&gt;&lt;em&gt;line 87&lt;/em&gt;&lt;/strong&gt; from your “&lt;strong&gt;_deprecated-support.scss&lt;/strong&gt;” file to this:
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    // A debug tool for checking browser support
-@mixin debug-support-matrix($experimental: true, $ie: true) {
-    @debug '#{&quot;$moz-&quot;}$experimental-support-for-mozilla'
-                 '#{&quot;$webkit-&quot;}$experimental-support-for-webkit'
-                 '#{&quot;$opera-&quot;}$experimental-support-for-opera'
-                 '#{&quot;$microsoft-&quot;}$experimental-support-for-microsoft'
-                 '#{&quot;$khtml-&quot;}$experimental-support-for-khtml';
-    @debug '#{&quot;$ie6-&quot;}$legacy-support-for-ie6'
-                 '#{&quot;$ie7-&quot;}$legacy-support-for-ie7'
-                 '#{&quot;$ie8-&quot;}$legacy-support-for-ie8';
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-The file can be found at your &lt;strong&gt;/home/dong/.rvm/gems/ruby-2.3.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss&lt;/strong&gt;
-</description>
-        <pubDate>Sat, 26 Mar 2022 01:05:55 +0800</pubDate>
-        <link>/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/</link>
-        <guid isPermaLink="true">/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/</guid>
-        
-        <category>ruby2.3.1</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
