@@ -226,6 +226,21 @@ Configuration file: /home/dong/octopress/_config.yml
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
 </code></pre></div></div>
 
+<p>如果提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo: netstat：找不到命令
+</code></pre></div></div>
+<p>运行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -tulpn |grep 4000
+</code></pre></div></div>
+<p>然后：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ netstat -tulpn |grep 4000
+Command 'netstat' not found, but can be installed with:
+sudo apt install net-tools
+dong@Ubuntu:~/octopress$ sudo apt install net-tools
+</code></pre></div></div>
+<p>再运行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
+</code></pre></div></div>
 <p>得到：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
@@ -279,6 +294,8 @@ dong@Ubuntu:~/octopress$
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></li>
                     
                         <li><a href="/2022/04/22/grow-up/">成年人</a></li>
                     
@@ -338,8 +355,6 @@ dong@Ubuntu:~/octopress$
                     
                         <li><a href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a></li>
                     
-                        <li><a href="/2022/02/24/what-really-matter/">什麼才是重要的</a></li>
-                    
                 </ul>
             </div>
 
@@ -374,7 +389,7 @@ dong@Ubuntu:~/octopress$
                             <span class="name">
                                 tech-octopress
                             </span>
-                            <span class="badge">22</span>
+                            <span class="badge">23</span>
                         </a>
                     </li>
                     

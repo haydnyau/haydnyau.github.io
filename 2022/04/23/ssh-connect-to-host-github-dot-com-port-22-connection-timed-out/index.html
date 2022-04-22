@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>做自己，就…只…做自己</title>
-    <meta name="description" content="别被其他一切因素影响">
+    <title>ssh: connect to host github.com port 22: Connection timed out</title>
+    <meta name="description" content="dong@Ubuntu:~$ ssh -T git@github.comssh: connect to host github.com port 22: Connection timed out解决 ssh: connect to host github.com port 22: Connection timed...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2022/02/16/myself/">
+    <link rel="canonical" href="/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -128,14 +128,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>做自己，就…只…做自己</h1>
+        <h1>ssh: connect to host github.com port 22: Connection timed out</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-02-16
+                <i class="fa fa-calendar"></i>2022-04-23
             </div>
 
             <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
                 
             </div>
 
@@ -152,7 +153,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -169,9 +170,6 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a-->
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
   
 
 </span>
@@ -184,20 +182,56 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h3 id="别被其他一切因素影响">别被其他一切因素影响</h3>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ ssh -T git@github.com
+ssh: connect to host github.com port 22: Connection timed out
+</code></pre></div></div>
+<p><a href="https://segmentfault.com/a/1190000040896781">解决 ssh: connect to host github.com port 22: Connection timed out</a></p>
+
+<p><a href="https://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out">ssh: connect to host github.com port 22: Connection timed out</a></p>
+
+<p>如果你电脑上的git能在大部分地方进行同步，但是在某处地方的网络下无法同步，并且运行git pull或git push长久没有反映，最后出现ssh: connect to host github.com port 22: Connection timed out，很可能是你的网络供应商（比如广电网）在出口防火墙上屏蔽了22端口，这意味着你将无法访问其他主机的22端口。<br />
+对此，github提供了一种解决方案，允许你使用443端口进行ssh连接，因为443端口是访问https网站所必须的，大部分防火墙都会允许通过，但如果使用代理服务器可能产生干扰。如果连443端口都被屏蔽，那你应该无法浏览这篇文章。<br />
+运行这段命令，看看是否有成功提示，如果成功，则可以使用这个解决方案。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T -p 443 git@ssh.github.com
+</code></pre></div></div>
+<p>简单地配置一下，让你每次ssh连接github都通过443端口。如果你使用Linux，在<code class="language-plaintext highlighter-rouge">~/.ssh/config</code>内(新建config文件，无后缀)，添加这些内容，指明ssh连接git@github.com或git@ssh.github.com走443端口。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host github.com
+Hostname ssh.github.com
+Port 443
+User git #这行可能不需要也行
+</code></pre></div></div>
+
+<p>或者这一段：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host github.com
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+User git
+
+Host gitlab.com
+Hostname altssh.gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+User git
+</code></pre></div></div>
+
+<p>我的：把<code class="language-plaintext highlighter-rouge">config</code>文件复制到.ssh2和.ssh3文件夹<br />
+改ssh2-3文件夹名，测试：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/01/20/leave/">穷山恶水，离开吧</a></p>
+        <p><strong>上一篇</strong> <a href="/2022/04/22/grow-up/">成年人</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2022/02/18/life-is-pity/">生命悲凉</a></p>
         
     </div>
 </div>

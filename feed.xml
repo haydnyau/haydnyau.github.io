@@ -5,9 +5,60 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Apr 2022 00:19:43 +0800</pubDate>
-    <lastBuildDate>Sat, 23 Apr 2022 00:19:43 +0800</lastBuildDate>
+    <pubDate>Sat, 23 Apr 2022 02:30:27 +0800</pubDate>
+    <lastBuildDate>Sat, 23 Apr 2022 02:30:27 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>ssh: connect to host github.com port 22: Connection timed out</title>
+        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~$ ssh -T git@github.com
+ssh: connect to host github.com port 22: Connection timed out
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;a href=&quot;https://segmentfault.com/a/1190000040896781&quot;&gt;解决 ssh: connect to host github.com port 22: Connection timed out&lt;/a&gt;
+
+&lt;a href=&quot;https://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out&quot;&gt;ssh: connect to host github.com port 22: Connection timed out&lt;/a&gt;
+
+如果你电脑上的git能在大部分地方进行同步，但是在某处地方的网络下无法同步，并且运行git pull或git push长久没有反映，最后出现ssh: connect to host github.com port 22: Connection timed out，很可能是你的网络供应商（比如广电网）在出口防火墙上屏蔽了22端口，这意味着你将无法访问其他主机的22端口。&lt;br /&gt;
+对此，github提供了一种解决方案，允许你使用443端口进行ssh连接，因为443端口是访问https网站所必须的，大部分防火墙都会允许通过，但如果使用代理服务器可能产生干扰。如果连443端口都被屏蔽，那你应该无法浏览这篇文章。&lt;br /&gt;
+运行这段命令，看看是否有成功提示，如果成功，则可以使用这个解决方案。
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T -p 443 git@ssh.github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+简单地配置一下，让你每次ssh连接github都通过443端口。如果你使用Linux，在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.ssh/config&lt;/code&gt;内(新建config文件，无后缀)，添加这些内容，指明ssh连接git@github.com或git@ssh.github.com走443端口。
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host github.com
+Hostname ssh.github.com
+Port 443
+User git #这行可能不需要也行
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+或者这一段：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host github.com
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+User git
+
+Host gitlab.com
+Hostname altssh.gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+User git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+我的：把&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt;文件复制到.ssh2和.ssh3文件夹&lt;br /&gt;
+改ssh2-3文件夹名，测试：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 23 Apr 2022 01:55:21 +0800</pubDate>
+        <link>/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/</link>
+        <guid isPermaLink="true">/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/</guid>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
     
       <item>
         <title>成年人</title>
@@ -302,56 +353,6 @@ my step becomes lighter
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>RVM用法</title>
-        <description>&lt;a href=&quot;https://cloud.tencent.com/developer/ask/34591&quot;&gt;原文&lt;/a&gt;&lt;br /&gt;
-列出可用的ruby版本以安装类型：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm list known
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-然后从已知的列表中安装，输入：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install VERSION_NUMBER
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-然后使用你已经安装的ruby版本：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use VERSION_NUMBER
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-你可以使一个特定的ruby版本成为你的默认系统版本：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use VERSION_NUMBER --default
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-要删除gem版本，保持gemsets：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm uninstall VERSION_NUMBER
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-删除ruby等：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm remove VERSION_NUMBER
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-要了解你的ruby环境以及它们的安装位置/别名：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm info
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 26 Mar 2022 02:37:09 +0800</pubDate>
-        <link>/2022/03/26/how-to-use-rvm/</link>
-        <guid isPermaLink="true">/2022/03/26/how-to-use-rvm/</guid>
-        
-        <category>rvm</category>
-        
-        
-        <category>rvm</category>
         
       </item>
     
