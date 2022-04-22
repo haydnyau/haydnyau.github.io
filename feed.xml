@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Apr 2022 18:21:15 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Apr 2022 18:21:15 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2022 18:31:48 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2022 18:31:48 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -137,7 +137,11 @@ rvm remove 2.6.9
 rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby --version
-rvm use 2.6.9 --default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;记得终端-首选项-未命名-命令-勾选以登陆shell方式运行命令重启所有终端&quot;&gt;记得：终端-首选项-未命名-命令-勾选‘以登陆shell方式运行命令’，重启所有终端&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.6.9 --default
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 把 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/octopress/Gemfile&lt;/code&gt; 文件里的源改回最初的：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source &quot;https://rubygems.org/&quot;&lt;/code&gt;
