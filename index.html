@@ -458,8 +458,11 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby --version
 rvm use 2.6.9 --default
+</code></pre></div></div>
 
-gem install bundler
+<p>把 <code class="language-plaintext highlighter-rouge">/octopress/Gemfile</code> 文件里的源改回最初的：<code class="language-plaintext highlighter-rouge">source "https://rubygems.org/"</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
 bundle install
 </code></pre></div></div>
 <p><a href="https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">更改：You can use the sass-convert command to automatically fix most cases.</a></p>
