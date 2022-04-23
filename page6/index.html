@@ -135,6 +135,323 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>ubuntu20.04安装了几次2.0都失败<br />
+ubuntu12.04已经无法安装系统本身的更新了，更别说安装其他软件<br />
+强迫症发作，于是有了这次：</p>
+
+<h3 id="列出大致步骤吧主要是有些error要如何解决">列出大致步骤吧，主要是有些error要如何解决</h3>
+
+<h2 id="git">git</h2>
+<h3 id="install-git">install git</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+sudo apt install git
+git --version
+</code></pre></div></div>
+
+<h3 id="set-up-git">set up git</h3>
+
+<h4 id="username">Username</h4>
+<p>github用户名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "qiuhaidong"
+#or haydnyau
+</code></pre></div></div>
+
+<h4 id="email">Email</h4>
+<p>github登录帐号邮箱名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.email "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
+
+<p>Password caching</p>
+
+<p>To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global credential.helper cache
+</code></pre></div></div>
+
+<h3 id="添加-ssh-keys">添加 SSH Keys</h3>
+<h4 id="step-1-check-for-ssh-keys">Step 1: Check for SSH keys</h4>
+<p>First, we need to check for existing ssh keys on your computer. Open up Terminal and run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.ssh
+# Checks to see if there is a directory named ".ssh" in your user directory
+</code></pre></div></div>
+
+<p>If it says “No such file or directory” go to step 2. Otherwise, you already have an existing keypair, and you can skip to step 3.</p>
+
+<p><strong>最好就是把 .shh 这个文件夹删除了，做step 2</strong></p>
+
+<h4 id="step-2-generate-a-new-ssh-key">Step 2: Generate a new SSH key</h4>
+
+<p>To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, <strong>just press enter</strong>.不要输入文件名</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "your_email@example.com"
+我的就是：ssh-keygen -t rsa -C "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
+
+<p>Now you need to enter a passphrase.设置密码。（有人是密码都不要的，再按两下enter就行了）</p>
+
+<p>Which should give you something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /home/you/.ssh/id_rsa.
+Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+</code></pre></div></div>
+
+<h3 id="step-3-add-your-ssh-key-to-github">Step 3: Add your SSH key to GitHub</h3>
+<p>ctrl+h，显示隐藏文件，这里其实可以打开这个<strong>id_rsa.pub</strong>文件，直接复制，不用安装下面的软件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install xclip
+# Downloads and installs xclip.
+
+xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
+</code></pre></div></div>
+
+<h4 id="add-your-ssh-key-to-github">Add your SSH key to GitHub</h4>
+
+<p>到github网站，登陆，头像，设置，SSH and GPG keys，把旧的SSH keys删除，添加新的，title不用管，粘贴到key就行了</p>
+
+<h3 id="step-4-test">Step 4: Test</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+
+<p>这里可能会还要按照提示做一下，不难，看英文做</p>
+
+<p>如果看到：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi qiuhaidong! You've successfully authenticated, but GitHub does not provide shell access.
+# or haydnyau
+</code></pre></div></div>
+
+<p>If that username is correct, you’ve successfully set up your SSH key. Don’t worry about the shell access thing, you don’t want that anyway.</p>
+
+<p>If you see “<strong>access denied</strong>” please consider using HTTPS instead of SSH. If you need SSH start at these instructions for diagnosing the issue.</p>
+
+<h4 id="如果不成功用https的认证方式代替ssh因为github觉得ssh不安全认证方式有时会改变">如果不成功，用https的认证方式代替ssh，因为github觉得ssh不安全，认证方式有时会改变</h4>
+
+<h2 id="rvm">RVM</h2>
+<p>看官网命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div></div>
+
+<p>会显示失败，先不管它<br />
+Install RVM：命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: 于 2021年01月16日 星期六 02时46分22秒 CST 创建的签名，使用 RSA，钥匙号 39499BDB
+gpg: 无法检查签名：没有公钥
+GPG signature verification failed for '/home/dong/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
+    gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+or if it fails:
+    command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+</code></pre></div></div>
+
+<p>这个提示错误，并且给出了解决方法：<br />
+运行：<br />
+命令1：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>命令2：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>再运行上一条命令安装rvm：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  * To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+</code></pre></div></div>
+
+<p>安装成功，按照提示运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/dong/.rvm/scripts/rvm
+</code></pre></div></div>
+
+<p>测试：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+git --version
+</code></pre></div></div>
+
+<p>安装ruby2.2.6（1.9.3太久了，无法安装）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.2.6
+</code></pre></div></div>
+
+<p>会提示输入本机密码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.2.6
+</code></pre></div></div>
+
+<h3 id="setup-octopress">Setup Octopress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+# 或者 git clone git://github.com/imathis/octopress.git octopress
+# octopress  2.0 原码
+cd octopress
+</code></pre></div></div>
+
+<h4 id="install-dependencies">install dependencies</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+
+<h4 id="会提示失败按提示加上版本号安装适合本系统的">会提示失败，按提示加上版本号，安装适合本系统的</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<h4 id="install-the-default-octopress-theme">Install the default Octopress theme</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake install
+</code></pre></div></div>
+
+<h4 id="deploying-to-github-pages">Deploying to Github Pages</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake setup_github_pages
+</code></pre></div></div>
+
+<p>这里可能会要输入链接等，ssh，https</p>
+
+<p>The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository <br />
+(e.g. git@github.com:username/username.github.io.git) <br />
+git@github.com:qiuhaidong/qiuhaidong.github.com.git<br />
+https://github.com/qiuhaidong/qiuhaidong.github.com.git<br />
+or<br />
+git@github.com:haydnyau/haydnyau.github.io.git<br />
+https://github.com/haydnyau/haydnyau.github.io.git<br />
+and paste it in as a response.</p>
+
+<p>This will:</p>
+
+<ol>
+  <li>Ask for and store your Github Pages repository url.</li>
+  <li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+  <li>Add your Github Pages repository as the default origin remote.</li>
+  <li>Switch the active branch from master to source.</li>
+  <li>Configure your blog’s url according to your repository.</li>
+  <li>Setup a master branch in the _deploy directory for deployment.</li>
+</ol>
+
+<p>Next run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+rake deploy
+</code></pre></div></div>
+
+<p>This will generate your blog, copy the generated files into <code class="language-plaintext highlighter-rouge">_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.</p>
+
+<h2>=======================================================</h2>
+
+<p>来自官网<br />
+<strong>下面这个不知道要不要做：</strong><br />
+Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog. After you set up a repository for your blog source, add it as the origin remote.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin (your repo url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+</code></pre></div></div>
+
+<p>Now push your changes and you’ll be all set.<br />
+<strong>上面这个不知道要不要做：</strong><br />
+来自官网</p>
+
+<h2 id="-1">========================================================</h2>
+
+<p><strong>Don’t forget</strong> to commit the source for your blog.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m 'update'
+git push origin source
+</code></pre></div></div>
+
+<h3 id="configuring-octopress">Configuring Octopress</h3>
+
+<h4 id="edit-_configyml">edit _config.yml</h4>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
                 </h2>
                 <div class="label">
@@ -1020,73 +1337,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/11/26/I-AM-GOOD/">耳朵好了|饮鸩止渴|当断则断</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-11-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="劳逸结合">劳逸结合</h3>
-<p>何同学说的：你通过熬夜，不规律的生活，随意而为得来的东西，总有一天，要<strong>连本带利</strong>还回去</p>
-
-<p>我倒是没有熬夜，生活也挺规律的，也没有随意，但就是<strong>对自己太狠了</strong>，<strong>过犹不及</strong>，可能我的躯体受得了繁重的体力劳动，我的意志也顶得住冬日早晨的冷水澡，但是我的<strong>血管</strong>，我的<strong>眼睛</strong>，<strong>耳朵</strong>，这些柔弱的，脆弱的，<strong>不能修复的</strong>，不行呀</p>
-<h3 id="身体健康">身体健康</h3>
-<h3 id="好好生活">好好生活</h3>
-<h3 id="饮鸩止渴">饮鸩止渴</h3>
-<h3 id="当断则断">当断则断</h3>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/11/26/I-AM-GOOD/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1116,6 +1366,8 @@ git add .
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/04/23/man/">一些负能量又真实的</a></li>
                     
                         <li><a href="/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></li>
                     
@@ -1175,8 +1427,6 @@ git add .
                     
                         <li><a href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a></li>
                     
-                        <li><a href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a></li>
-                    
                 </ul>
             </div>
 
@@ -1202,7 +1452,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">120</span>
+                            <span class="badge">121</span>
                         </a>
                     </li>
                     
