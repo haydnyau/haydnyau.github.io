@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ubuntu 安装后wifi无法使用</title>
-    <meta name="description" content="原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容首先利用rfkill命令查看目前无线传输设备的状态，rfkill是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。rfkill的常用方法为:rfkill li...">
+    <title>日记2022-05-01，目标</title>
+    <meta name="description" content="1、按时作息：11点半睡觉，8点起床。2、合理饮食：戒糖戒可乐，定时定量吃饭。">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2022/01/11/ubuntu-wifi-do-not-work/">
+    <link rel="canonical" href="/2022/05/01/daily/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -128,14 +128,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>ubuntu 安装后wifi无法使用</h1>
+        <h1>日记2022-05-01，目标</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-01-11
+                <i class="fa fa-calendar"></i>2022-05-01
             </div>
 
             <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
                 
             </div>
 
@@ -152,7 +153,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
     
   
 
@@ -181,84 +182,19 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h3 id="原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容">原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容</h3>
-<p>首先利用<code class="language-plaintext highlighter-rouge">rfkill</code>命令查看目前无线传输设备的状态，<code class="language-plaintext highlighter-rouge">rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
-
-<p>rfkill的常用方法为:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
-#  获得设备列表
-
-rfkill block [index|type]
-#  通过索引或类型禁用设备
-
-rfkill unblock [index|type]
-#  通过索引或类型启用设备
-</code></pre></div></div>
-
-<p>当前设备状态如下：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
-输出：
-0: phy0: Wireless LAN
-	Soft blocked: no
-	Hard blocked: yes
-1: acer-wireless: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
-</code></pre></div></div>
-
-<p>通过rfkill启用/禁用设备无法对硬件阻塞产生作用。</p>
-
-<p>由于笔记本只有一个无线网卡，这两个模块应该是有冲突</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>使用命令lsmod</td>
-      <td>grep acer可以看出系统启动了acer_wmi模块</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>通过查找资料后，解决方法为禁用acer_wmi模块。</p>
-
-<p>解决方法：</p>
-
-<p>通过在/etc/modprobe.d/文件夹下，编辑blacklist.conf文件，最后一行添加内容：  <code class="language-plaintext highlighter-rouge">blacklist acer_wmi</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/modprobe.d/blacklist.conf
-</code></pre></div></div>
-
-<p>重启<br />
-wifi自动为打开状态，此时rfkill list all命令结果如下:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
-
-0: phy0: Wireless LAN
-Soft blocked: no
-Hard blocked: no
-</code></pre></div></div>
-
-<p>版权声明：本文为CSDN博主「Monkey_D_Shuai」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/ls12165/article/details/68189943</p>
-
-<p><a href="https://blog.csdn.net/ls12165/article/details/68189943?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;utm_relevant_index=2">原文链接</a></p>
-
-<p><a href="https://blog.csdn.net/weixin_34305091/article/details/116951261?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;utm_relevant_index=2">另一篇博文</a></p>
+        <p>1、按时作息：11点半睡觉，8点起床。<br />
+2、合理饮食：戒糖戒可乐，定时定量吃饭。</p>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a></p>
+        <p><strong>上一篇</strong> <a href="/2022/04/30/daily/">日记2022-04-30</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a></p>
         
     </div>
 </div>

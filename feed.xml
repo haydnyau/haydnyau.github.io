@@ -5,9 +5,23 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Apr 2022 16:11:50 +0800</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2022 16:11:50 +0800</lastBuildDate>
+    <pubDate>Sun, 01 May 2022 01:41:44 +0800</pubDate>
+    <lastBuildDate>Sun, 01 May 2022 01:41:44 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>日记2022-05-01，目标</title>
+        <description>1、按时作息：11点半睡觉，8点起床。&lt;br /&gt;
+2、合理饮食：戒糖戒可乐，定时定量吃饭。
+</description>
+        <pubDate>Sun, 01 May 2022 01:37:02 +0800</pubDate>
+        <link>/2022/05/01/daily/</link>
+        <guid isPermaLink="true">/2022/05/01/daily/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>日记2022-04-30</title>
@@ -198,108 +212,6 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
         <pubDate>Tue, 05 Apr 2022 22:22:58 +0800</pubDate>
         <link>/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</link>
         <guid isPermaLink="true">/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</guid>
-        
-        <category>octopress2.0</category>
-        
-        
-        <category>tech-octopress</category>
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu 22.04安装Octopress 2.0和3.0</title>
-        <description>以后重装系统，记得把octopress、haydnyau、ssh2、ssh3文件夹、.gitconfig，打包备份，并上传网盘。
-&lt;h3 id=&quot;octopress-20&quot;&gt;Octopress 2.0&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git --version
-sudo apt install git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-ok
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python2 --version
-sudo apt install python2
-
-ruby --version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-没有&lt;br /&gt;
-到rvm官网(下面的命令可能有更新，看官网)
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command 'gpg2' not found, but can be installed with:
-sudo apt install gnupg2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install gnupg2
-gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-
-curl -sSL https://get.rvm.io | bash -s stable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Command 'curl' not found, but can be installed with:
-sudo apt install curl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl
-curl -sSL https://get.rvm.io | bash -s stable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-解决：&lt;br /&gt;
-&lt;a href=&quot;https://blog.csdn.net/u014375643/article/details/115826506&quot;&gt;Failed to connect to raw.githubusercontent.com&lt;/a&gt;&lt;br /&gt;
-到这个网址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.ipaddress.com/&lt;/code&gt;，输入：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raw.githubusercontent.com&lt;/code&gt;，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;185.199.108.133 raw.githubusercontent.com&lt;/code&gt;，重试，不行就重启再试。
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl -sSL https://get.rvm.io | bash -s stable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
-    in all your open shell windows, in rare cases you need to reopen all shell windows.
-Thanks for installing RVM
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source /home/dong/.rvm/scripts/rvm
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-重启命令行
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm --version
-rvm install 2.6.9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示错误：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error running '__rvm_make -j4',
-please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
-
-There has been an error while running make. Halting the installation.
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;strong&gt;解决：&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://github.com/rvm/rvm/issues/4370&quot;&gt;Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 &lt;/a&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
-rvm remove 2.6.9
-rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby --version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;记得终端-首选项-未命名-命令-勾选以登陆shell方式运行命令重启所有终端&quot;&gt;记得：终端-首选项-未命名-命令-勾选‘以登陆shell方式运行命令’，重启所有终端&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm use 2.6.9 --default
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-把 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/octopress/Gemfile&lt;/code&gt; 文件里的源改回最初的：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source &quot;https://rubygems.org/&quot;&lt;/code&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
-bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/&quot;&gt;更改：You can use the sass-convert command to automatically fix most cases.&lt;/a&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake generate
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-之后就都是常规操作。
-
-</description>
-        <pubDate>Tue, 05 Apr 2022 22:03:16 +0800</pubDate>
-        <link>/2022/04/05/octopress2-on-ubuntu-22-dot-04/</link>
-        <guid isPermaLink="true">/2022/04/05/octopress2-on-ubuntu-22-dot-04/</guid>
         
         <category>octopress2.0</category>
         
