@@ -5,9 +5,22 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2022 22:32:42 +0800</pubDate>
-    <lastBuildDate>Sun, 01 May 2022 22:32:42 +0800</lastBuildDate>
+    <pubDate>Mon, 02 May 2022 02:37:11 +0800</pubDate>
+    <lastBuildDate>Mon, 02 May 2022 02:37:11 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>日记2022-05-02，失眠</title>
+        <description>失眠，因对明天不安
+</description>
+        <pubDate>Mon, 02 May 2022 02:33:25 +0800</pubDate>
+        <link>/2022/05/02/daily/</link>
+        <guid isPermaLink="true">/2022/05/02/daily/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>日记2022-05-01，目标</title>
@@ -202,36 +215,6 @@ User git
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>安装Ruby2.6.9，Error running '__rvm_make -j4'</title>
-        <description>&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm install 2.6.9
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-提示错误：
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error running '__rvm_make -j4',
-please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
-
-There has been an error while running make. Halting the installation.
-......
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;a href=&quot;https://github.com/rvm/rvm/issues/4370&quot;&gt;Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 &lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;解决：&lt;/strong&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rvm pkg install openssl
-rvm remove 2.6.9
-rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</description>
-        <pubDate>Tue, 05 Apr 2022 22:22:58 +0800</pubDate>
-        <link>/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</link>
-        <guid isPermaLink="true">/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/</guid>
-        
-        <category>octopress2.0</category>
-        
-        
-        <category>tech-octopress</category>
         
       </item>
     
