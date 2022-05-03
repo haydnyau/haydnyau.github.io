@@ -5,9 +5,22 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 May 2022 16:03:54 +0800</pubDate>
-    <lastBuildDate>Mon, 02 May 2022 16:03:54 +0800</lastBuildDate>
+    <pubDate>Tue, 03 May 2022 08:39:41 +0800</pubDate>
+    <lastBuildDate>Tue, 03 May 2022 08:39:41 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>日记2022-05-03，卸载抖音</title>
+        <description>tmd，太毁控制力了
+</description>
+        <pubDate>Tue, 03 May 2022 08:36:39 +0800</pubDate>
+        <link>/2022/05/03/daily/</link>
+        <guid isPermaLink="true">/2022/05/03/daily/</guid>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>日记2022-05-02，失眠</title>
@@ -216,19 +229,6 @@ User git
         <pubDate>Fri, 22 Apr 2022 01:07:13 +0800</pubDate>
         <link>/2022/04/22/grow-up/</link>
         <guid isPermaLink="true">/2022/04/22/grow-up/</guid>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>人无远虑，必有近忧</title>
-        <description>别纠结那些琐事
-</description>
-        <pubDate>Sun, 17 Apr 2022 15:29:00 +0800</pubDate>
-        <link>/2022/04/17/bigger-picture/</link>
-        <guid isPermaLink="true">/2022/04/17/bigger-picture/</guid>
         
         
         <category>personal</category>
