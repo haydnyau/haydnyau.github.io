@@ -5,9 +5,25 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 May 2022 22:50:34 +0800</pubDate>
-    <lastBuildDate>Sat, 07 May 2022 22:50:34 +0800</lastBuildDate>
+    <pubDate>Sun, 08 May 2022 16:45:27 +0800</pubDate>
+    <lastBuildDate>Sun, 08 May 2022 16:45:27 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2022-05-08</title>
+        <description>什么时候拼，什么时候量力而行，度&lt;br /&gt;
+刚柔并济
+</description>
+        <pubDate>Sun, 08 May 2022 16:42:52 +0800</pubDate>
+        <link>/2022/05/08/daily/</link>
+        <guid isPermaLink="true">/2022/05/08/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>daily，2022-05-07，强者之道</title>
@@ -185,21 +201,6 @@
         <pubDate>Sun, 01 May 2022 01:37:02 +0800</pubDate>
         <link>/2022/05/01/daily/</link>
         <guid isPermaLink="true">/2022/05/01/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-04-30，接受</title>
-        <description>李健：接受缺点，接受不完美，因为你是人
-</description>
-        <pubDate>Sat, 30 Apr 2022 14:32:44 +0800</pubDate>
-        <link>/2022/04/30/daily/</link>
-        <guid isPermaLink="true">/2022/04/30/daily/</guid>
         
         <category>daily</category>
         
