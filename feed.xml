@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 May 2022 20:44:07 +0800</pubDate>
-    <lastBuildDate>Sun, 08 May 2022 20:44:07 +0800</lastBuildDate>
+    <pubDate>Sun, 08 May 2022 20:50:59 +0800</pubDate>
+    <lastBuildDate>Sun, 08 May 2022 20:50:59 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2022-05-08，V2</title>
+        <description>读书不是为了记住，而是为了让人干净。
+
+一本书可能读了就忘，就像竹篮打水，但你一直读下去，竹篮就一次次被放进水里，时间长了，竹篮就变得干净。看似空空，内在的快乐不足为外人道也。
+
+—— 范雨素 ​​​​
+</description>
+        <pubDate>Sun, 08 May 2022 20:49:24 +0800</pubDate>
+        <link>/2022/05/08/daily-v2/</link>
+        <guid isPermaLink="true">/2022/05/08/daily-v2/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>daily，2022-05-08</title>
@@ -25,25 +44,6 @@
         <pubDate>Sun, 08 May 2022 16:42:52 +0800</pubDate>
         <link>/2022/05/08/daily/</link>
         <guid isPermaLink="true">/2022/05/08/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-05-08，V2</title>
-        <description>读书不是为了记住，而是为了让人干净。
-
-一本书可能读了就忘，就像竹篮打水，但你一直读下去，竹篮就一次次被放进水里，时间长了，竹篮就变得干净。看似空空，内在的快乐不足为外人道也。
-
-—— 范雨素 ​​​​
-</description>
-        <pubDate>Sun, 08 May 2022 16:42:52 +0800</pubDate>
-        <link>/2022/05/08/daily-v2/</link>
-        <guid isPermaLink="true">/2022/05/08/daily-v2/</guid>
         
         <category>daily</category>
         
