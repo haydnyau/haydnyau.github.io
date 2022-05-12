@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 May 2022 17:00:17 +0800</pubDate>
-    <lastBuildDate>Thu, 12 May 2022 17:00:17 +0800</lastBuildDate>
+    <pubDate>Thu, 12 May 2022 17:14:18 +0800</pubDate>
+    <lastBuildDate>Thu, 12 May 2022 17:14:18 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2022-05-12</title>
+        <description>和世界交手这么多年，你是否光彩依旧，兴趣盎然？
+</description>
+        <pubDate>Thu, 12 May 2022 17:03:26 +0800</pubDate>
+        <link>/2022/05/12/daily/</link>
+        <guid isPermaLink="true">/2022/05/12/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Think Different 不同凡响</title>
@@ -197,21 +212,6 @@ Because the people who are crazy enough to think that they can change the world,
         <pubDate>Sun, 01 May 2022 01:37:02 +0800</pubDate>
         <link>/2022/05/01/daily/</link>
         <guid isPermaLink="true">/2022/05/01/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-04-30，接受</title>
-        <description>李健：接受缺点，接受不完美，因为你是人
-</description>
-        <pubDate>Sat, 30 Apr 2022 14:32:44 +0800</pubDate>
-        <link>/2022/04/30/daily/</link>
-        <guid isPermaLink="true">/2022/04/30/daily/</guid>
         
         <category>daily</category>
         
