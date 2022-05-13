@@ -122,6 +122,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -134,6 +136,280 @@
         <h1>⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/27/add-tags/">添加tags，導航欄，側邊欄</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a></p>
+
+<h3 id="下载">下载</h3>
+
+<p>首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。</p>
+
+<h3 id="octopress-tag-pages">octopress-tag-pages</h3>
+
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+
+<h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
+
+<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+
+<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
+<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
+    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>解释：</p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+
+<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre></div></div>
+
+<p>博文写标签：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r" alt="Alt text" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre></div></div>
+
+<h3 id="解决">解决</h3>
+
+<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
+    <span class="c1"># sort the tag pairs by frequency in descending order</span>
+    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
+    <span class="c1"># then slice off the top @limit tag pairs</span>
+    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+
+<p>修改第74行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p>修改第95行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+
+<p>出现另一警告：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r" alt="Alt text" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r" alt="Alt text" /></p>
+
+<h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
+
+<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+</code></pre></div></div>
+
+<h2 id="搞定">搞定</h2>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/add-tags/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
+<h2 id="清理没用的服务">清理没用的服务</h2>
+<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
+
+<p><strong>去除Disqus评论</strong><br />
+打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
+#disqus_short_name: 
+#disqus_show_comment_count: true
+</code></pre></div></div>
+
+<p><strong>去掉Github仓库展示</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
+#github_user: 
+#github_repo_count: 
+#github_show_profile_link: true
+#github_skip_forks: true
+</code></pre></div></div>
+
+<p><strong>去除Twitter按钮</strong><br />
+<strong>去除Google+相关</strong><br />
+<strong>去除Pinboard服务</strong><br />
+<strong>去除Delicious评论，去除后可能没有评论系统</strong><br />
+<strong>去除Facebook Like</strong></p>
+
+<h2 id="替换快速的请求资源">替换快速的请求资源</h2>
+<p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
+
+<h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
+<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
+参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
+
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src='http://droidyue-tools.qiniudn.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+   <span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
+<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
+修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
+<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">&amp;&amp;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">unescape</span><span class="p">(</span><span class="dl">'</span><span class="s1">%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E</span><span class="dl">'</span><span class="p">))</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/octopress.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="總結">總結</h3>
+
+<p>导致网站慢的原因其实是加载Google的资源，当然我们不能怨Google.经过测试，使用数字公司的解决方法之后，国内国外访问速度都是可以的。这里还是推荐以下数字公司的这个解决方案http://libs.useso.com/</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/speed-up-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -743,160 +1019,6 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要<br />
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-21
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在根目录新建一文件夹<code class="language-plaintext highlighter-rouge">_templates</code>，文件夹里建一个文件<code class="language-plaintext highlighter-rouge">post</code>，无后缀，内容是：<br />
-<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong><br />
-—<br />
-layout: <br />
-title: “”<br />
-date: <br />
-author:<br />
-tags: <br />
-comments: true<br />
-categories: <br />
-—</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/21/template-of-new-post/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/18/life-is-pity/">生命悲凉</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-18
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>农历正月十八<br />
-有时雨，有时雾<br />
-破烂的旧房子<br />
-天花板不时剥落残渣<br />
-雨水漏下，打在铁谷柜上，在这寂静中，尤为响动</p>
-
-<p>我父亲是可怜的<br />
-我母亲是可怜的<br />
-时代给他们的无知<br />
-身处巨大变革而无能为力<br />
-求而不得<br />
-我是可怜可悲的<br />
-这是时代的安排<br />
-宿命的印记<br />
-是知识见闻和无能的无奈和残酷<br />
-如果我是一样的无知就好了<br />
-只可惜我的另一个区域的无知和无能<br />
-如果我没那么的无能就好了<br />
-如果我……<br />
-深深的无力</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/18/life-is-pity/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -907,10 +1029,10 @@ categories: <br />
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page4" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">5/23</span>
+          <span class="page_number ">5/24</span>
           
             <a href="/page6" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page23" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page24" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -926,6 +1048,10 @@ categories: <br />
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/05/13/cook/">煮饭禁忌</a></li>
+                    
+                        <li><a href="/2022/05/13/daily/">daily，2022-05-13，过分自省，周全，冒险</a></li>
                     
                         <li><a href="/2022/05/12/sony-xperia-1-iv/">SONY Xperia 1 IV</a></li>
                     
@@ -983,10 +1109,6 @@ categories: <br />
                     
                         <li><a href="/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">You can use the sass-convert command to automatically fix most cases---Ruby 不同版本</a></li>
                     
-                        <li><a href="/2022/03/24/dont-pick-the-easy-path/">志氣</a></li>
-                    
-                        <li><a href="/2022/03/22/life-is-impermanent/">人生无常</a></li>
-                    
                 </ul>
             </div>
 
@@ -1012,7 +1134,7 @@ categories: <br />
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">135</span>
+                            <span class="badge">137</span>
                         </a>
                     </li>
                     
@@ -1158,7 +1280,7 @@ categories: <br />
                       
                       
                       
-                      <a href="/tag/#daily" style="font-size: 13.5pt; color: #444;">daily</a>
+                      <a href="/tag/#daily" style="font-size: 14pt; color: #444;">daily</a>
                     
                       
                       
@@ -1166,6 +1288,13 @@ categories: <br />
                       
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
                 </div>
             </div>
