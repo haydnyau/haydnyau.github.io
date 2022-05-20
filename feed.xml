@@ -5,9 +5,54 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 May 2022 12:45:14 +0800</pubDate>
-    <lastBuildDate>Fri, 20 May 2022 12:45:14 +0800</lastBuildDate>
+    <pubDate>Fri, 20 May 2022 14:23:37 +0800</pubDate>
+    <lastBuildDate>Fri, 20 May 2022 14:23:37 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>lightdm  ubuntu 桌面显示管理器</title>
+        <description>转载于:https://www.cnblogs.com/SimbaBao/p/5791458.html
+
+在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：
+
+（1）/usr/share/lightdm/lightdm.conf.d/*.conf（此为系统提供的配置文件，用户不可编辑）
+
+（2）/etc/lightdm/lightdm.conf.d/*.conf
+
+（3）/etc/lightdm/lightdm.conf
+
+（2、3这两个配置文件，系统管理员可以覆写）
+
+在此之后看到了一个关于解决不能看见界面的办法：
+
+（1）使用Ctrl+alt+F1，进入文本终端
+
+（2）sudo stop lightdm ，停止lightdm界面
+
+（3）sudo start lightdm ，开始lightdm界面
+
+（4）sudo start gdm ，登录gdm管理器
+
+（5）sudo dpkg-reconfigure lightdm ，设置管理器的系统默认值
+
+注：本文部分资料参阅https://wiki.ubuntu.com/LightDM
+
+由于本人菜鸟，能力有限，文中错误之处，敬请大神指出、、、
+
+2016.8.20
+
+转载于:https://www.cnblogs.com/SimbaBao/p/5791458.html
+</description>
+        <pubDate>Fri, 20 May 2022 14:17:18 +0800</pubDate>
+        <link>/2022/05/20/lightdm/</link>
+        <guid isPermaLink="true">/2022/05/20/lightdm/</guid>
+        
+        <category>lightdm</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
     
       <item>
         <title>daily，2022-05-19，無望時見本質</title>
@@ -168,26 +213,6 @@
         <guid isPermaLink="true">/2022/05/13/cook/</guid>
         
         <category>cook</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-05-13，过分自省，周全，冒险</title>
-        <description>一个人不该过分自省，这会使他变得软弱。&lt;br /&gt;
-理智的做法，只有在做很小的决定时才有效。&lt;br /&gt;
-至于改变人生的事情，你必须冒险。&lt;br /&gt;
-意义非凡的事情，总是碰巧发生的。&lt;br /&gt;
-只有不重要的事，才有周全的计划。
-
-</description>
-        <pubDate>Fri, 13 May 2022 15:42:47 +0800</pubDate>
-        <link>/2022/05/13/daily/</link>
-        <guid isPermaLink="true">/2022/05/13/daily/</guid>
-        
-        <category>daily</category>
         
         
         <category>personal</category>
