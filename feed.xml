@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 May 2022 14:57:24 +0800</pubDate>
-    <lastBuildDate>Fri, 20 May 2022 14:57:24 +0800</lastBuildDate>
+    <pubDate>Sat, 21 May 2022 17:44:36 +0800</pubDate>
+    <lastBuildDate>Sat, 21 May 2022 17:44:36 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>又梦见你</title>
+        <description>梦回小学，你常驻，我回来，但是总有阻力，阻止我走向你。
+</description>
+        <pubDate>Sat, 21 May 2022 17:36:18 +0800</pubDate>
+        <link>/2022/05/21/you-in-my-dream-again/</link>
+        <guid isPermaLink="true">/2022/05/21/you-in-my-dream-again/</guid>
+        
+        <category>she</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>lightdm  ubuntu 桌面显示管理器</title>
@@ -177,26 +192,6 @@
         <guid isPermaLink="true">/2022/05/13/be-a-bad-man/</guid>
         
         <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>煮饭禁忌</title>
-        <description>以下食物&lt;strong&gt;不要直接炒&lt;/strong&gt;&lt;br /&gt;
-鲜竹笋、菠菜、苋菜、苦瓜，焯水5-10秒，去除草酸&lt;br /&gt;
-四季豆、扁豆、长豆角，焯水5分钟，去除皂素&lt;br /&gt;
-西兰花，菜花，焯水1-2分钟，去除农药残留和小虫子&lt;br /&gt;
-香椿，焯水1分钟左右，去除亚硝酸盐
-
-</description>
-        <pubDate>Fri, 13 May 2022 15:49:34 +0800</pubDate>
-        <link>/2022/05/13/cook/</link>
-        <guid isPermaLink="true">/2022/05/13/cook/</guid>
-        
-        <category>cook</category>
         
         
         <category>personal</category>
