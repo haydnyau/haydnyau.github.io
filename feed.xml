@@ -5,9 +5,30 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 May 2022 14:12:35 +0800</pubDate>
-    <lastBuildDate>Thu, 26 May 2022 14:12:35 +0800</lastBuildDate>
+    <pubDate>Thu, 26 May 2022 14:40:23 +0800</pubDate>
+    <lastBuildDate>Thu, 26 May 2022 14:40:23 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>ssh: connect to host ssh.github.com port 443: Connection refused</title>
+        <description>出现标题问题，打开：https://www.ipaddress.com/ ，输入：ssh.github.com，得到IP地址：140.82.113.36&lt;br /&gt;
+修改本地hosts：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc
+sudo gedit hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+添加：&lt;br /&gt;
+140.82.113.36          ssh.github.com
+</description>
+        <pubDate>Thu, 26 May 2022 14:21:22 +0800</pubDate>
+        <link>/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/</link>
+        <guid isPermaLink="true">/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/</guid>
+        
+        <category>ssh</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
     
       <item>
         <title>回力鞋</title>
@@ -196,22 +217,6 @@
         <guid isPermaLink="true">/2022/05/14/do-what-you-love-love-what-you-do/</guid>
         
         <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>网上看到的</title>
-        <description>你要写风，你就不能只写风。你要写树梢的弯度，你要写湖面的波纹，你要写树叶婆娑的声音和它落地的路径。&lt;br /&gt;
-你要写云朵向哪走，飞沙往哪飘，炊烟在哪散。要写屋檐边悬挂的铃铛响，要写轻舟与竹筏轻轻漾，秋千轻轻晃。&lt;br /&gt;
-要写人们的不听话衣角和发梢，写抓不住的气球和孩子手里转动的玩具风车，写歪了后握紧的伞柄。写拨云见日的山，写卷起又落下的浪。甚至是一场散了的大雾。&lt;br /&gt;
-这意味着，你要写一样东西，先用眼睛，用耳朵，用感受，最后才落在手指尖，落在笔下。
-</description>
-        <pubDate>Fri, 13 May 2022 23:30:54 +0800</pubDate>
-        <link>/2022/05/13/from-the-internet/</link>
-        <guid isPermaLink="true">/2022/05/13/from-the-internet/</guid>
         
         
         <category>personal</category>
