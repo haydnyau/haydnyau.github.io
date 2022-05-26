@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 May 2022 14:59:56 +0800</pubDate>
-    <lastBuildDate>Thu, 26 May 2022 14:59:56 +0800</lastBuildDate>
+    <pubDate>Thu, 26 May 2022 15:02:32 +0800</pubDate>
+    <lastBuildDate>Thu, 26 May 2022 15:02:32 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -21,7 +21,7 @@ sudo gedit hosts
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqWdkQXFWB88lLNe9b.pKPd.bOkeCQ1XnXqIwv6SR2DItDkSBuzvyRWfXmXV4k8yccpRrk38TrDNSADQdQqoUnfE!/r&quot; alt=&quot;&quot; /&gt;
 
-&lt;h4 id=&quot;22端口错误&quot;&gt;22端口错误：&lt;/h4&gt;
+&lt;h4 id=&quot;22端口无法连接&quot;&gt;22端口无法连接：&lt;/h4&gt;
 &lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/&quot;&gt;ssh: connect to host github.com port 22: Connection timed out&lt;/a&gt;
 </description>
         <pubDate>Thu, 26 May 2022 14:21:22 +0800</pubDate>
