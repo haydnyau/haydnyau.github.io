@@ -5,9 +5,35 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 May 2022 15:13:22 +0800</pubDate>
-    <lastBuildDate>Fri, 27 May 2022 15:13:22 +0800</lastBuildDate>
+    <pubDate>Fri, 27 May 2022 15:24:43 +0800</pubDate>
+    <lastBuildDate>Fri, 27 May 2022 15:24:43 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</title>
+        <description>&lt;a href=&quot;https://blog.csdn.net/u014375643/article/details/115826506&quot;&gt;问题解决：curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接&lt;/a&gt;&lt;br /&gt;
+https://qiuhaidong.github.io/blog/2022/04/05/octopress2-on-ubuntu-22-dot-04/
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+提示：
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+解决：&lt;br /&gt;
+&lt;a href=&quot;https://blog.csdn.net/u014375643/article/details/115826506&quot;&gt;Failed to connect to raw.githubusercontent.com&lt;/a&gt;&lt;br /&gt;
+到这个网址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.ipaddress.com/&lt;/code&gt;，输入：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raw.githubusercontent.com&lt;/code&gt;，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;185.199.108.133 raw.githubusercontent.com&lt;/code&gt;，重试，不行就重启再试。
+
+</description>
+        <pubDate>Fri, 27 May 2022 15:19:28 +0800</pubDate>
+        <link>/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/</link>
+        <guid isPermaLink="true">/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/</guid>
+        
+        <category>octopress2.0</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
     
       <item>
         <title>ssh: connect to host ssh.github.com port 443: Connection refused</title>
@@ -26,6 +52,8 @@ sudo gedit hosts
 
 &lt;h4 id=&quot;22端口无法连接&quot;&gt;22端口无法连接：&lt;/h4&gt;
 &lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/&quot;&gt;ssh: connect to host github.com port 22: Connection timed out&lt;/a&gt;
+
+&lt;a href=&quot;https://blog.csdn.net/u014375643/article/details/115826506&quot;&gt;curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接&lt;/a&gt;
 </description>
         <pubDate>Thu, 26 May 2022 14:21:22 +0800</pubDate>
         <link>/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/</link>
@@ -208,21 +236,6 @@ sudo gedit hosts
         <pubDate>Sat, 14 May 2022 23:01:35 +0800</pubDate>
         <link>/2022/05/14/daily/</link>
         <guid isPermaLink="true">/2022/05/14/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>do what you love, love what you do</title>
-        <description>&lt;img src=&quot;https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqbg0brft8j2OoIl4mzJiEzcZLP02LyFuxmuw.GBB1U.XzjgZUTmofFAQQP7R.4VmDQKOgTmni5lRzcw8EgLrTso!/r&quot; alt=&quot;do what you love, love what you do&quot; /&gt;
-</description>
-        <pubDate>Sat, 14 May 2022 02:42:22 +0800</pubDate>
-        <link>/2022/05/14/do-what-you-love-love-what-you-do/</link>
-        <guid isPermaLink="true">/2022/05/14/do-what-you-love-love-what-you-do/</guid>
         
         <category>daily</category>
         
