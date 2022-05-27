@@ -5,19 +5,20 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 May 2022 14:41:52 +0800</pubDate>
-    <lastBuildDate>Fri, 27 May 2022 14:41:52 +0800</lastBuildDate>
+    <pubDate>Fri, 27 May 2022 14:50:40 +0800</pubDate>
+    <lastBuildDate>Fri, 27 May 2022 14:50:40 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
         <title>ssh: connect to host ssh.github.com port 443: Connection refused</title>
-        <description>出现标题问题，打开：https://www.ipaddress.com/ ，输入：ssh.github.com，得到IP地址：140.82.113.36&lt;br /&gt;
+        <description>出现标题问题，打开：https://www.ipaddress.com/ ，有时会出现403禁止访问的错误，要点一下&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go to homepage&lt;/code&gt;才行。输入：ssh.github.com，得到IP地址：140.82.113.36  140.82.114.35&lt;br /&gt;
 修改本地hosts：
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /etc
 sudo gedit hosts
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 添加：
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;140.82.113.36          ssh.github.com
+140.82.114.35          ssh.github.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqWdkQXFWB88lLNe9b.pKPd.bOkeCQ1XnXqIwv6SR2DItDkSBuzvyRWfXmXV4k8yccpRrk38TrDNSADQdQqoUnfE!/r&quot; alt=&quot;&quot; /&gt;
 
