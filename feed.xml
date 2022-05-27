@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 May 2022 15:24:43 +0800</pubDate>
-    <lastBuildDate>Fri, 27 May 2022 15:24:43 +0800</lastBuildDate>
+    <pubDate>Fri, 27 May 2022 18:00:12 +0800</pubDate>
+    <lastBuildDate>Fri, 27 May 2022 18:00:12 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2022-05-27，篮球废物</title>
+        <description>昨天打篮球，我们几个熟悉的，笑称我们自己是废物5人组，然后提议要成立球队，准备去印队服。哈哈哈哈哈
+</description>
+        <pubDate>Fri, 27 May 2022 17:55:36 +0800</pubDate>
+        <link>/2022/05/27/daily/</link>
+        <guid isPermaLink="true">/2022/05/27/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</title>
@@ -217,25 +232,6 @@ sudo gedit hosts
         <pubDate>Tue, 17 May 2022 23:16:33 +0800</pubDate>
         <link>/2022/05/17/daily/</link>
         <guid isPermaLink="true">/2022/05/17/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-05-14</title>
-        <description>每一個獨自從深淵裏爬出來的人&lt;br /&gt;
-都默默地爲自己換了一種性格&lt;br /&gt;
-隱藏了純良和無邪&lt;br /&gt;
-靈魂從此一半慈悲，一半兇狠&lt;br /&gt;
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqd6Qtnnb9eCsnh5TXmH9lHVl1PwyVav9mJE943BkNxukfyG2EmQ3Skqb7nTvpMLHpRvff8WuYxHM*GcDN32qeB4!/r&quot; alt=&quot;爱琳诗篇乌特伽&quot; /&gt;
-</description>
-        <pubDate>Sat, 14 May 2022 23:01:35 +0800</pubDate>
-        <link>/2022/05/14/daily/</link>
-        <guid isPermaLink="true">/2022/05/14/daily/</guid>
         
         <category>daily</category>
         
