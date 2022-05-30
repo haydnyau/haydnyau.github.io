@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2022 23:57:27 +0800</pubDate>
-    <lastBuildDate>Sun, 29 May 2022 23:57:27 +0800</lastBuildDate>
+    <pubDate>Mon, 30 May 2022 15:10:14 +0800</pubDate>
+    <lastBuildDate>Mon, 30 May 2022 15:10:14 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>不再喜欢家庭</title>
+        <description>做家人，也要讲究缘分的，我已经不再喜欢家庭了，太累了
+</description>
+        <pubDate>Mon, 30 May 2022 15:07:18 +0800</pubDate>
+        <link>/2022/05/30/dont-like-family-anymore/</link>
+        <guid isPermaLink="true">/2022/05/30/dont-like-family-anymore/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>daily，2022-05-29，聊齋新志</title>
@@ -223,24 +238,6 @@ sudo gedit hosts
         
         
         <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-05-19，無望時見本質</title>
-        <description>身處深淵&lt;br /&gt;
-不知道終點，不知道過程，不知道路線，看不到希望時，你才知道自己是什麼人，才知道自己的本質
-
-當沒人知道你在做什麼時，生活會變得更好，事以密成，語以洩敗
-</description>
-        <pubDate>Thu, 19 May 2022 14:26:16 +0800</pubDate>
-        <link>/2022/05/19/daily-v2/</link>
-        <guid isPermaLink="true">/2022/05/19/daily-v2/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
         
       </item>
     
