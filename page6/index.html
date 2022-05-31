@@ -126,6 +126,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -138,6 +140,73 @@
         <h1>⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/03/22/life-is-impermanent/">人生无常</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-03-22
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2022年3月21日下午，一架飞机在广西梧州滕县失事，132人，惨烈。<br />
+飞行数据显示，MU5735航班从昆明机场起飞后，一直在约8869米高度进行巡航。下午2点19分，飞机突然从巡航高度下降，同时飞行速度从约每小时845公里开始下降。机头垂直向下，2点21分，MU5735航班丢失ADS-B雷达信号，同地面失联。<br />
+人生无常，真的是，你永远不知道明天和意外谁先到来。<br />
+生死面前，都是小事。<br />
+珍惜。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/03/22/life-is-impermanent/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -872,131 +941,6 @@ layout: null
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-27
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
-<h2 id="清理没用的服务">清理没用的服务</h2>
-<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
-
-<p><strong>去除Disqus评论</strong><br />
-打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
-#disqus_short_name: 
-#disqus_show_comment_count: true
-</code></pre></div></div>
-
-<p><strong>去掉Github仓库展示</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
-#github_user: 
-#github_repo_count: 
-#github_show_profile_link: true
-#github_skip_forks: true
-</code></pre></div></div>
-
-<p><strong>去除Twitter按钮</strong><br />
-<strong>去除Google+相关</strong><br />
-<strong>去除Pinboard服务</strong><br />
-<strong>去除Delicious评论，去除后可能没有评论系统</strong><br />
-<strong>去除Facebook Like</strong></p>
-
-<h2 id="替换快速的请求资源">替换快速的请求资源</h2>
-<p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
-
-<h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
-<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
-参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
-
- (function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src='http://droidyue-tools.qiniudn.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
- })();
-   <span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
-<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
-修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
-</code></pre></div></div>
-
-<h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
-<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">&amp;&amp;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">unescape</span><span class="p">(</span><span class="dl">'</span><span class="s1">%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E</span><span class="dl">'</span><span class="p">))</span><span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/octopress.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h3 id="總結">總結</h3>
-
-<p>导致网站慢的原因其实是加载Google的资源，当然我们不能怨Google.经过测试，使用数字公司的解决方法之后，国内国外访问速度都是可以的。这里还是推荐以下数字公司的这个解决方案http://libs.useso.com/</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/27/speed-up-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1007,10 +951,10 @@ layout: null
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page5" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">6/25</span>
+          <span class="page_number ">6/26</span>
           
             <a href="/page7" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page25" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page26" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -1026,6 +970,8 @@ layout: null
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/05/31/you-in-my-dream-again/">又梦见你</a></li>
                     
                         <li><a href="/2022/05/30/dont-like-family-anymore/">不再喜欢家庭</a></li>
                     
@@ -1085,8 +1031,6 @@ layout: null
                     
                         <li><a href="/2022/05/03/daily/">daily，2022-05-03，卸载</a></li>
                     
-                        <li><a href="/2022/05/02/daily/">daily，2022-05-02，失眠</a></li>
-                    
                 </ul>
             </div>
 
@@ -1112,7 +1056,7 @@ layout: null
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">152</span>
+                            <span class="badge">153</span>
                         </a>
                     </li>
                     
@@ -1286,7 +1230,7 @@ layout: null
                       
                       
                       
-                      <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                      <a href="/tag/#she" style="font-size: 9.5pt; color: #999;">she</a>
                     
                 </div>
             </div>
