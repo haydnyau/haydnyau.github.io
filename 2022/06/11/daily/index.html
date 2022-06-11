@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</title>
-    <meta name="description" content="preview.sh代码#!/bin/shcd /home/dong/haydnyaujekyll build #生成jekyll serve=================================deploy.sh代码#!/bin/shcd /home/dong/haydnyaujekyll buil...">
+    <title>daily，2022-06-11</title>
+    <meta name="description" content="真心相待不巧言长久相伴理在前有点类似郭靖黄蓉，无关紧要的小事我让着你，但是大是大非定不能乱来，不能没有底线">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">
+    <link rel="canonical" href="/2022/06/11/daily/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -138,14 +138,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</h1>
+        <h1>daily，2022-06-11</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-01-07
+                <i class="fa fa-calendar"></i>2022-06-11
             </div>
 
             <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
                 
             </div>
 
@@ -162,7 +163,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
     
   
 
@@ -179,8 +180,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a-->
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+        <!--a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a-->
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
     
   
 
@@ -194,51 +195,20 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>preview.sh代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build #生成
-jekyll serve
-</code></pre></div></div>
-
-<p>=================================</p>
-
-<p>deploy.sh代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build
-octopress deploy
-</code></pre></div></div>
-
-<p>=================================</p>
-
-<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build
-mv _posts/ _site/
-octopress deploy
-mv _site/_posts/ .
-</code></pre></div></div>
-
-<p>注意这个点 “.”
-<code class="language-plaintext highlighter-rouge">.</code> 或者 <code class="language-plaintext highlighter-rouge">./</code> 表示当前目录</p>
+        <p>真心相待不巧言<br />
+长久相伴理在前<br />
+有点类似郭靖黄蓉，无关紧要的小事我让着你，但是大是大非定不能乱来，不能没有底线</p>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a></p>
+        <p><strong>上一篇</strong> <a href="/2022/06/10/hannibal/">Hannibal汉尼拔</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a></p>
         
     </div>
 </div>

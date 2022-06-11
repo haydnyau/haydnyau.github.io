@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Jun 2022 01:02:57 +0800</pubDate>
-    <lastBuildDate>Sat, 11 Jun 2022 01:02:57 +0800</lastBuildDate>
+    <pubDate>Sat, 11 Jun 2022 15:29:18 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Jun 2022 15:29:18 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2022-06-11</title>
+        <description>真心相待不巧言&lt;br /&gt;
+长久相伴理在前&lt;br /&gt;
+有点类似郭靖黄蓉，无关紧要的小事我让着你，但是大是大非定不能乱来，不能没有底线
+</description>
+        <pubDate>Sat, 11 Jun 2022 15:25:56 +0800</pubDate>
+        <link>/2022/06/11/daily/</link>
+        <guid isPermaLink="true">/2022/06/11/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Hannibal汉尼拔</title>
@@ -221,21 +238,6 @@ Pro系列首次使用可变刷新率，10-120Hz自由调节
         <pubDate>Sun, 05 Jun 2022 12:21:42 +0800</pubDate>
         <link>/2022/06/05/iphone/</link>
         <guid isPermaLink="true">/2022/06/05/iphone/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>daily，2022-06-05</title>
-        <description>纵有疾风起，人生不言弃
-</description>
-        <pubDate>Sun, 05 Jun 2022 00:57:57 +0800</pubDate>
-        <link>/2022/06/05/daily/</link>
-        <guid isPermaLink="true">/2022/06/05/daily/</guid>
         
         <category>daily</category>
         
