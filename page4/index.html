@@ -124,12 +124,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -145,11 +139,240 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/19/daily/">daily，2022-05-19，活着時才能說說話聊聊天</a>
+                  <a class="post-link" href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/">安装Ruby2.6.9，Error running '__rvm_make -j4'</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-19
+                        <i class="fa fa-calendar"></i>2022-04-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.6.9
+</code></pre></div></div>
+<p>提示错误：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+</code></pre></div></div>
+<p><a href="https://github.com/rvm/rvm/issues/4370">Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 </a><br />
+<strong>解决：</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/04/05/octopress2-on-ubuntu-22-dot-04/">Ubuntu 22.04安装Octopress 2.0和3.0</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-04-05
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>以后重装系统，记得把octopress、haydnyau、ssh2、ssh3文件夹、.gitconfig，打包备份，并上传网盘。<br />
+依赖：python2，ruby2.6.9</p>
+<h3 id="octopress-20">Octopress 2.0</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+sudo apt install git
+</code></pre></div></div>
+<p>然后配置git，把之前的octopress-haydnyau和ssh2-ssh3文件夹和.gitconfig文件复制到主目录，改ssh文件夹名</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+<p>ok</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python2 --version
+sudo apt install python2
+
+ruby --version
+</code></pre></div></div>
+<p>没有<br />
+到rvm官网(下面的命令可能有更新，看官网)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command 'gpg2' not found, but can be installed with:
+sudo apt install gnupg2
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install gnupg2
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command 'curl' not found, but can be installed with:
+sudo apt install curl
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+</code></pre></div></div>
+<p>解决：<br />
+<a href="https://blog.csdn.net/u014375643/article/details/115826506">Failed to connect to raw.githubusercontent.com</a><br />
+到这个网址：<code class="language-plaintext highlighter-rouge">https://www.ipaddress.com/</code>，输入：<code class="language-plaintext highlighter-rouge">raw.githubusercontent.com</code>，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：<code class="language-plaintext highlighter-rouge">185.199.108.133 raw.githubusercontent.com</code>，重试，不行就重启再试。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+Thanks for installing RVM
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/dong/.rvm/scripts/rvm
+</code></pre></div></div>
+<p>重启命令行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+rvm install 2.6.9
+</code></pre></div></div>
+<p>提示错误：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error running '__rvm_make -j4',
+please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
+
+There has been an error while running make. Halting the installation.
+......
+</code></pre></div></div>
+
+<p><strong>解决：</strong><br />
+<a href="https://github.com/rvm/rvm/issues/4370">Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 </a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
+rvm remove 2.6.9
+rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby --version
+</code></pre></div></div>
+
+<h4 id="记得终端-首选项-未命名-命令-勾选以登陆shell方式运行命令重启所有终端">记得：终端-首选项-未命名-命令-勾选‘以登陆shell方式运行命令’，重启所有终端</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.6.9 --default
+</code></pre></div></div>
+
+<p>把 <code class="language-plaintext highlighter-rouge">/octopress/Gemfile</code> 文件里的源改回最初的：<code class="language-plaintext highlighter-rouge">source "https://rubygems.org/"</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+bundle install
+</code></pre></div></div>
+<p><a href="https://qiuhaidong.github.io/blog/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">更改：You can use the sass-convert command to automatically fix most cases.</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+......
+</code></pre></div></div>
+<p>之后就都是常规操作。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/04/05/octopress2-on-ubuntu-22-dot-04/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/04/01/action-confident-gratitude/">行动 自信 感恩</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-04-01
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -185,7 +408,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
     
   
 
@@ -197,24 +420,24 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>《非自然死亡》，第8集<br />
-兒子年輕時犯錯入獄，父母親和他斷絕關係，出獄後也不再見麵，兒子雖然改過，也自知無顏見父母，隻在喝醉後才敢說出對父母的思唸，隻在和朋友相處時才找到家人的感覺。一次火災，兒子拼命救朋友，無奈隻救出一個，火情就蔓延到無法出去的地步了，隻能把剩下的朋友們背到樓上，最終沒能等到救援。父母知道後原諒了他，可惜已經天人相隔。<br />
-<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqRzC5Lm.54UkYqOqSrpAaIW0o707ztMP1ut6J*bXbynwzkda*xuciTShS57lwYILKzqrvAbBnEFlejLCiqGkySI!/r" alt="活着時才能說說話聊聊天" /></p>
+                    <p>如题<br />
+比如打篮球，很多人对我是很好的，感恩，我不是个很差的人，自信<br />
+行动</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/19/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/04/01/action-confident-gratitude/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/17/daily/">daily，2022-05-17，熬夜因爲心不安</a>
+                  <a class="post-link" href="/2022/03/30/zhang-zhao-yang/">张朝阳</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-17
+                        <i class="fa fa-calendar"></i>2022-03-30
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -250,7 +473,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
     
   
 
@@ -262,25 +485,28 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>我看不上的人和事很多，雖然我自己沒有身份地位狗屁不是，但是這兩者並不衝突，因爲他們沒有底線，但我有，我還堅持我的原則。窮則獨身其身，我不發言，但我不與之爲伍。</p>
-
-<p>我經常熬夜，之前我不知道爲什麼，看到網上的一段話，突然明白，是因爲我自知我還有很多東西沒做，內心有個聲音在告訴自己，我還不能睡，我心不安，理不得。<br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfsYWxsh1ivAVxKc8b0LgVrYSR2vJApaA0zHX2P2UaL73JxGCFEWlMp2rMo*V3N7ENCJp..mA*rebolfe*.TkVs!/r" alt="" /></p>
+                    <p>看到张朝阳的物理课，查了下。<br />
+张朝阳，清华物理系，麻省理工博士，创立搜狐，中国互联网教父，位列中国富豪榜。<br />
+年少得志，生活潇洒风流，商海浮沉，抑郁过几年。<br />
+2021年末，57岁，讲授物理课，各种深奥晦涩的知识。<br />
+很多人三十来岁，已经连初中数学都不记得了。<br />
+他还能讲授深奥的物理和数学知识，在讲台上意气风发。<br />
+抑郁时，他从佛学明白： 心有所依处。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/17/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/03/30/zhang-zhao-yang/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/14/daily/">daily，2022-05-14</a>
+                  <a class="post-link" href="/2022/03/29/houston-rockets/">板凳匪徒，发带兄弟，惊天逆转</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-14
+                        <i class="fa fa-calendar"></i>2022-03-29
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -316,7 +542,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
     
   
 
@@ -328,26 +554,66 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>每一個獨自從深淵裏爬出來的人<br />
-都默默地爲自己換了一種性格<br />
-隱藏了純良和無邪<br />
-靈魂從此一半慈悲，一半兇狠<br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqd6Qtnnb9eCsnh5TXmH9lHVl1PwyVav9mJE943BkNxukfyG2EmQ3Skqb7nTvpMLHpRvff8WuYxHM*GcDN32qeB4!/r" alt="爱琳诗篇乌特伽" /></p>
+                    <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEGakdk9T6a7l9Ezbq.CwrwWDc5ZHAHvBYXbWNYIOI.gGx*ePguAbaoOWxgT4uQ1TDGFmIoKC83OMtaia2ee61.g!/r" alt="火箭发带帮兄弟" /></p>
+
+<p><a href="https://baijiahao.baidu.com/s?id=1611220223436452666&amp;wfr=spider&amp;for=pc">经典：2015年火箭VS快船G6 火箭上演惊天逆转 快船打懵了！</a></p>
+
+<!--more-->
+
+<p>比赛录像回放请前往文章末尾，现在是文字回顾。</p>
+
+<p>前面我们说到了双方的第五场比赛，火箭在1:3的局面下，回到主场哈登迎来了一次爆发，将比赛重新带回到了洛杉矶，现在火箭仍然面临着赢球或者回家的局面，他们现在2：3落后于快船，而快船方面自然希望在主场就此终结这个系列赛，因为抢七之战将会继续前往休斯顿，这对于快船来说，十分不利。</p>
+
+<p>当火箭带着落后13分的分差进入末节时，火箭是迎来了队史上第50次进入末节时落后两位数分差的季后赛赛事，而前49次火箭最终都输掉了比赛。但这一次火箭赢了！末节落后13分的情况下逆转奏凯，火箭创造了联盟近14年来的一项纪录——在季后系列赛事关晋级与出局的关键场次中，上一次出现比火箭这次末节逆转分差还要大的比赛是在2001年，当时爵士与小牛的首轮系列赛第5场决战中（5战3胜赛制），小牛在末节最多时落后14分，而小牛末节翻盘奏凯。</p>
+
+<p>火箭是在1-3落后的情况下拼出了抢七机会，这是火箭队史上的第二次。1995年，火箭在同太阳的次轮系列赛中一度1-3落后，但火箭成功翻盘，马里奥-埃利的决胜三分球成为了那次翻盘的经典故事，这个故事叫做埃利死亡之吻，那一年火箭也实现了卫冕总冠军的伟业。</p>
+
+<p>尽管前火箭核心麦迪在接受采访时表示，“球队还没找到哈登和霍华德同时发挥的方法”，但在NBA西部半决赛第六场，火箭却神奇逆转，战胜了快船队。在最多落后19分的情况下，火箭最终以119-107击败快船，将大比分扳成3-3，保留了晋级NBA西部决赛的最后希望。不过麦迪有一点说得没错，火箭当家核心哈登的确表现一般，在球队最重要的反扑时刻，他被摁在了板凳上。有网友吐槽说，“这是火箭和快船两队在用生命黑哈登……”</p>
+
+<p>40比15，这就是火箭队第四节轰出的恐怖数据，更令人惊奇的是，引领这波反扑的，不是火箭队的双核哈登和霍华德，而是约什和布鲁尔这两位大多数时候的替补球员。三记三分，第四节14分，这就是约什交出的数据。（好笑的是，约什史密斯是“被砍”的常客，因为他罚球不准）另外一位板凳“匪徒”布鲁尔同样恐怖—他在末节狂砍15分，与约什一同接管了比赛。</p>
+
+<p>我们今天就来回顾一下双方的第六场经典之战。</p>
+
+<p>同开拓者系列赛的第6战一样，火箭又是在客场面对着输球即出局的险境。火箭队史上前3次“第6场客场生死战”均告落败。季后赛历史上，系列赛中3-1领先过的球队最终赢下系列赛的概率高达96%。而输掉第5战后仍握有两个晋级赛点的快船心态非常明确：要在这系列赛最后一个主场实现队史首次晋级西部决赛的历史突破。</p>
+
+<p>小乔丹在赛前两个小时就开始了罚球为主的热身练习。开场后小乔丹对霍华德连送封盖、抢断。在霍华德空接灌篮率先入球后，小乔丹的灌篮引出快船8-0攻势。霍华德连控前场篮板连以二次攻入球，火箭的前8分有6分来自霍华德。火箭主帅麦克海尔告知霍华德：即使陷入犯规麻烦也要平稳心态。首节中段霍华德在5秒内连续被判防守犯规，魔兽以笑容应对。虽然哈登首节5投全失，阿里扎的远投与琼斯的打三分仍助火箭对峙出了25-29的首节比分。</p>
+
+<p>第二节一上来，阿里扎就三分命中。随后魔兽接普里吉奥尼妙传暴扣得手，火箭追到只差一分。小里弗斯抢断一条龙暴扣，普里吉奥尼不满判罚吃T，克劳福德跳投命中之后，分差拉开到了7分。关键时刻，哈登爆发。突破小里弗斯造2加1，此后连中了两记三分，史密斯三分也中之后，火箭46比43反超。</p>
+
+<p>此后双方比分交替上涨，还剩4分07秒，格里芬后撤步三分命中，快船将分差缩小到3分。还剩2分钟，双方互砍，小乔丹两罚两中，魔兽4罚全失。格里芬转身劈扣，雷迪克三分命中，快船趁机反超。格里芬再度空切暴扣之后，半场战罢快船64比62领先。第二节单节哈登得到了17分。</p>
+
+<p>快船队的进攻在第三节开火，雷迪克再中三分率队连得7分，快船队以71-62领先9分。火箭队追回4分，格里芬跳投命中，保罗开启攻击模式，他独得10分，他们带领球队打出15-2的进攻高潮，第三节还有3分钟时快船队以87-68领先19分。</p>
+
+<p>落后19分，对手又是拥有超级球星保罗和格里芬的快船，火箭全队上下已经无路可退，他们先是凭借小将琼斯的勇猛发挥，独得7分缩小差距，又凭借霍华德四罚全中，将分差缩小至10分之内。虽然克劳福德命中三分，将第三节比分锁定在92-79，但是火箭队正在继续力量期待下半场殊死一搏。</p>
+
+<p>火箭带着“死马当作活马医”的心态展开反扑，替补球员布鲁尔和约什史密斯联袂发挥，快速追分，阿里扎关键时刻命中三分，再次将分差缩小至9分，为哈登迎来了场下喘息的宝贵时间。但是随后一幕把小伙伴们都惊呆了，本来寄希望于核心哈登在末节回归球场，不料火箭替补阵容连续追分，布鲁尔与约什先后成为球队英雄。布鲁尔突破打3分成功，史密斯手感复苏，他连中2个三分球，第四节还有6分25秒时火箭队追至97-102。保罗跳投不中，霍华德两罚不中错失追分良机，但快船队还是无法取分，史密斯突破得分，霍华德两罚一中，第四节还有4分40秒时火箭队追至100-102。</p>
+
+<p>此时，火箭在危急时刻不断有球员站出来，哈登在替补席继续休息，但场上的队友们已经形成良好的“化学反应”，火箭主帅麦克海尔做出其执教生涯的一个惊人之举，就是继续让哈登在场下休息，让场上的球员完成搏命一击。布鲁尔底角命中三分，特里中投得分，他们带领球队又是6-0的小高潮，第四节还有2分25秒时火箭队以108-102领先，此时快船已经被打得彻底没有脾气，13次出手均无建树。</p>
+
+<p>虽然哈登在末节几乎没有登场(注：上了几秒但没触球，又被换下去)，但大胡子还是在场下乐开了花，毕竟球队获胜是最重要的。保罗制造犯规罚进两球，史密斯、布鲁尔和阿里扎罚中四球，特里投中三分，火箭队以119-107获胜。</p>
+
+<p>在NBA的历史上，鲜有在生死战的末节无故弃用头号球星的例子，又有哪位教练敢有这种魄力？但被火箭队球迷调侃为“水货”的主帅麦克海尔，却做出了一次可能是教练生涯中最伟大的调整—他将头号球星哈登末节“死死”地按在板凳上，而这却激发了全队的潜能，直接换回了一场大胜。令人意外的是，缺少哈登的火箭队却迸发出惊人的爆发力，打得快船队措手不及，而快船队将帅赛后直言：“正是哈登的下场打乱了快船队的部署。”</p>
+
+<p>“魔术师”约翰逊则做出了更多点评，他说：“快船在第三节末段没有打好收官阶段的比赛，结果火箭从第四节一开始得到反扑的动力。约什是火箭的英雄，他在第四节投进3个三分球，单节得到全场19分中的14分。快船现在处于麻烦中了，第6场他们没能在主场拿下，现在必须要前往休斯顿来打第7场。”</p>
+
+<p>苏群：“火箭为什么能完成惊天大逆转呢？我觉得他们是一种纯赌博心态，已经落后19分了，孤注一掷，但他们赌赢了，现在对他们就非常有利了。火箭获胜的功臣是谁呢？就是布鲁尔、史密斯，也是原来打得最不好的几个人，积极拼抢，给火箭带来了赢球机会。”</p>
+
+<p>第六战火箭完成了惊天逆转，抢七之战中，哈登再度成为主角，敬请期待。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/14/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/03/29/houston-rockets/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/14/do-what-you-love-love-what-you-do/">do what you love, love what you do</a>
+                  <a class="post-link" href="/2022/03/29/mo-fa-man-wu/">魔法满屋</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-14
+                        <i class="fa fa-calendar"></i>2022-03-29
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -383,7 +649,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
     
   
 
@@ -395,22 +661,22 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqbg0brft8j2OoIl4mzJiEzcZLP02LyFuxmuw.GBB1U.XzjgZUTmofFAQQP7R.4VmDQKOgTmni5lRzcw8EgLrTso!/r" alt="do what you love, love what you do" /></p>
+                    <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEM0khhjIcrT5.NR4En57TftokYLuvBNdoTs8pSE*a3dXDuchJGVkoKhhnZxDjZp3NSXj9e0JPn.fVxcuikrWnog!/r" alt="" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/14/do-what-you-love-love-what-you-do/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/03/29/mo-fa-man-wu/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/13/from-the-internet/">网上看到的</a>
+                  <a class="post-link" href="/2022/03/26/how-to-use-rvm/">RVM用法</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-13
+                        <i class="fa fa-calendar"></i>2022-03-26
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -429,7 +695,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#rvm" title="Category: rvm" rel="category">rvm</a>
     
   
 
@@ -446,71 +712,7 @@
   <i class="fa fa-tags"></i>
   
     
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>你要写风，你就不能只写风。你要写树梢的弯度，你要写湖面的波纹，你要写树叶婆娑的声音和它落地的路径。<br />
-你要写云朵向哪走，飞沙往哪飘，炊烟在哪散。要写屋檐边悬挂的铃铛响，要写轻舟与竹筏轻轻漾，秋千轻轻晃。<br />
-要写人们的不听话衣角和发梢，写抓不住的气球和孩子手里转动的玩具风车，写歪了后握紧的伞柄。写拨云见日的山，写卷起又落下的浪。甚至是一场散了的大雾。<br />
-这意味着，你要写一样东西，先用眼睛，用耳朵，用感受，最后才落在手指尖，落在笔下。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/13/from-the-internet/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/13/one-hundred-years-of-solitude/">百年孤独</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-13
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#rvm" title="Tag: rvm" rel="tag">rvm</a>
     
   
 
@@ -522,233 +724,57 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>人生的本质<br />
-就是一个人活着<br />
-不要对别人心存太多期待<br />
-我们总是想找到<br />
-能为自己分担痛苦和悲伤的人<br />
-可大多时候<br />
-我们那些惊天动地的伤痛<br />
-在别人眼里<br />
-不过是随手拂过的尘埃<br />
-或许成年人的孤独<br />
-就是悲喜自渡<br />
-而这，也正是我们难得的自由。</p>
+                    <p><a href="https://cloud.tencent.com/developer/ask/34591">原文</a><br />
+列出可用的ruby版本以安装类型：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm list known
+</code></pre></div></div>
+
+<p>然后从已知的列表中安装，输入：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install VERSION_NUMBER
+</code></pre></div></div>
+
+<p>然后使用你已经安装的ruby版本：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use VERSION_NUMBER
+</code></pre></div></div>
+
+<p>你可以使一个特定的ruby版本成为你的默认系统版本：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use VERSION_NUMBER --default
+</code></pre></div></div>
+
+<p>要删除gem版本，保持gemsets：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm uninstall VERSION_NUMBER
+</code></pre></div></div>
+
+<p>删除ruby等：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm remove VERSION_NUMBER
+</code></pre></div></div>
+
+<p>要了解你的ruby环境以及它们的安装位置/别名：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm info
+</code></pre></div></div>
+
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/13/one-hundred-years-of-solitude/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/03/26/how-to-use-rvm/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/13/be-a-bad-man/">做一个反派</a>
+                  <a class="post-link" href="/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/">You can use the sass-convert command to automatically fix most cases---Ruby 不同版本</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-13
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>反派的心态永远乐观，遇到挫折的第一反应永远是：<br />
-哈哈，事情开始变得有趣了</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/13/be-a-bad-man/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/13/cook/">煮饭禁忌</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-13
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#cook" title="Tag: cook" rel="tag">cook</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>以下食物<strong>不要直接炒</strong><br />
-鲜竹笋、菠菜、苋菜、苦瓜，焯水5-10秒，去除草酸<br />
-四季豆、扁豆、长豆角，焯水5分钟，去除皂素<br />
-西兰花，菜花，焯水1-2分钟，去除农药残留和小虫子<br />
-香椿，焯水1分钟左右，去除亚硝酸盐</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/13/cook/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/13/daily/">daily，2022-05-13，过分自省，周全，冒险</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-13
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>一个人不该过分自省，这会使他变得软弱。<br />
-理智的做法，只有在做很小的决定时才有效。<br />
-至于改变人生的事情，你必须冒险。<br />
-意义非凡的事情，总是碰巧发生的。<br />
-只有不重要的事，才有周全的计划。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/13/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/12/sony-xperia-1-iv/">SONY Xperia 1 IV</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-12
+                        <i class="fa fa-calendar"></i>2022-03-26
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -784,7 +810,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#tech" title="Tag: tech" rel="tag">tech</a>
+        <a href="/tag/#ruby2.3.1" title="Tag: ruby2.3.1" rel="tag">ruby2.3.1</a>
     
   
 
@@ -796,15 +822,201 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <h3 id="設計做工質感">設計，做工，質感</h3>
+                    <p>octopress-2.0，ruby-<strong>2.3.1</strong>，ubuntu20.04，可以运行（修改这里后）<br />
+octopress-2.0，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（修改这里后）<br />
+octopress-2.0，ruby-<strong>2.6.9</strong>，ubuntu20.04，可以运行（修改这里后）<br />
+octopress-<strong>3.0</strong>，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（無需修改）<br />
+octopress-<strong>3.0</strong>，ruby-<strong>2.6.9</strong>，ubuntu20.04，可以运行（無需修改）</p>
 
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqROdOmbClZ*DMdJPsPnN1L5YrvF2xOQnc.Eeikb6M7zu4Cf8WHI2W5cq1htROaCNLuGCktplDnxcKGziF2wcajo!/r" alt="SONY Xperia 1 IV" /></p>
+<p>換了版本要重新安裝octopress3.0：</p>
 
-<p><a href="https://video.sonystyle.com.cn/customerTrans/5c3f07699e9c757a4d576bb240fa61e0/efe5091-180a8436cc4-0003-cd2e-0e7-91d59.mp4">SONY Xperia 1 IV 官方宣傳視頻</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install octopress
+</code></pre></div></div>
+<p>octopress-2.0-3.0，ruby-<strong>3.1.1</strong>，ubuntu20.04，都無法运行。</p>
+
+<p><a href="https://stackoverflow.com/questions/35949660/compass-sass-deprecation-warning">原网页</a><br />
+<a href="http://cache.baiducontent.com/c?m=Xxdd763vX7YjRNeeOiILGLerW1Lrc_ceIQ3hCNMB9gwdzDHZoy_PikcN75GYpR9DFB3vxBUcejQkaSvlN3gZEfAPpNN-08FVQIDyZHTNJgPwSgoB3NKL4_GS4nx_XrCC-BUaRNwAuECMpWgq8wxzkIpLErbpEqlwK68Qi6soQwepLTgid54lohbxMlnl6PQpNH2t__da7lDpAsRwCb6EY-y40SooyRN5jX-9ufBiajUS0lec_A47rZ0vRgOYP12W&amp;p=8d7d8e0285cc43dd08e297780f568f&amp;newp=c273c00586cc42a95aa9c7710f408f231610db2151d3da146b82c825d7331b001c3bbfb42220150ed3c6796204af4259e8f033783d0923a3dda5c91d9fb4c57479cc&amp;s=2a38a4a9316c49e5&amp;user=baidu&amp;fm=sc&amp;query=You+can+use+the+sass%2Dconvert+command+to+automatically+fix+most+cases%2E&amp;qid=c0e3498b0000d650&amp;p1=1">百度缓存网页</a></p>
+
+<p>I just installed and Compass &amp; Sass as described here.</p>
+
+<p>I got the following warning when I ran <code class="language-plaintext highlighter-rouge">compass watch</code> for the first time. What exactly does it mean? What should I do to fix it, do I need to do anything?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ (master) compass watch
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.
+DEPRECATION WARNING on line 87 of /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss: #{} interpolation near operators will be simplified
+in a future version of Sass. To preserve the current behavior, use quotes:
+
+  unquote('"$moz-"#{$experimental-support-for-mozilla} "$webkit-"#{$experimental-support-for-webkit} "$opera-"#{$experimental-support-for-opera} "$microsoft-"#{$experimental-support-for-microsoft} "$khtml-"#{$experimental-support-for-khtml}')
+
+You can use the sass-convert command to automatically fix most cases.
+
+DEPRECATION WARNING on line 92 of /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss: #{} interpolation near operators will be simplified
+in a future version of Sass. To preserve the current behavior, use quotes:
+
+  unquote('"$ie6-"#{$legacy-support-for-ie6} "$ie7-"#{$legacy-support-for-ie7} "$ie8-"#{$legacy-support-for-ie8}')
+
+You can use the sass-convert command to automatically fix most cases.
+
+    write css/styles.css
+</code></pre></div></div>
+
+<h4 id="1-answer-">1 Answer :</h4>
+
+<p>To fix the error message, just change the <strong><em>line 87</em></strong> from your “<strong>_deprecated-support.scss</strong>” file to this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // A debug tool for checking browser support
+@mixin debug-support-matrix($experimental: true, $ie: true) {
+    @debug '#{"$moz-"}$experimental-support-for-mozilla'
+                 '#{"$webkit-"}$experimental-support-for-webkit'
+                 '#{"$opera-"}$experimental-support-for-opera'
+                 '#{"$microsoft-"}$experimental-support-for-microsoft'
+                 '#{"$khtml-"}$experimental-support-for-khtml';
+    @debug '#{"$ie6-"}$legacy-support-for-ie6'
+                 '#{"$ie7-"}$legacy-support-for-ie7'
+                 '#{"$ie8-"}$legacy-support-for-ie8';
+}
+</code></pre></div></div>
+
+<p>The file can be found at your <strong>/home/dong/.rvm/gems/ruby-2.3.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss</strong></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/12/sony-xperia-1-iv/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/03/26/you-can-use-the-sass-convert-command-to-automatically-fix-most-cases/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/03/24/dont-pick-the-easy-path/">志氣</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-03-24
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>日常的平淡，能殺滅所有的志氣。<br />
+做難事必有所得，做自己沒有做過的事。<br />
+不被平淡淹沒。<br />
+自我挑戰。<br />
+生命在過程中綻放。<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMz29Wp5J31REEDaOBk6vMyqJkysnltBbC9Fm5zpbeL7mUYgGG7yb.OntLsWJot.D.fGVV8uP31if.85Zk557S0!/r" alt="" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/03/24/dont-pick-the-easy-path/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/03/22/life-is-impermanent/">人生无常</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-03-22
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2022年3月21日下午，一架飞机在广西梧州滕县失事，132人，惨烈。<br />
+飞行数据显示，MU5735航班从昆明机场起飞后，一直在约8869米高度进行巡航。下午2点19分，飞机突然从巡航高度下降，同时飞行速度从约每小时845公里开始下降。机头垂直向下，2点21分，MU5735航班丢失ADS-B雷达信号，同地面失联。<br />
+人生无常，真的是，你永远不知道明天和意外谁先到来。<br />
+生死面前，都是小事。<br />
+珍惜。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/03/22/life-is-impermanent/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -819,10 +1031,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page3" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">4/27</span>
+          <span class="page_number ">4/24</span>
           
             <a href="/page5" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page27" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page24" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -839,49 +1051,25 @@
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/06/12/daily/">daily，奎迪，独自变强</a></li>
-                    
-                        <li><a href="/2022/06/11/daily/">daily，2022-06-11</a></li>
-                    
                         <li><a href="/2022/06/10/hannibal/">Hannibal汉尼拔</a></li>
-                    
-                        <li><a href="/2022/06/10/read/">读书</a></li>
                     
                         <li><a href="/2022/06/09/never-perfect/">没有完美，都是江湖</a></li>
                     
                         <li><a href="/2022/06/09/health/">身体健康</a></li>
                     
-                        <li><a href="/2022/06/09/self-discipline/">self-discipline，自律</a></li>
-                    
                         <li><a href="/2022/06/08/yi-qi-tong-guo-chuang/">一起同过窗</a></li>
                     
-                        <li><a href="/2022/06/08/daily/">daily，2022-06-08</a></li>
-                    
-                        <li><a href="/2022/06/05/let-go/">释怀</a></li>
-                    
                         <li><a href="/2022/06/05/iphone/">iPhone</a></li>
-                    
-                        <li><a href="/2022/06/05/daily/">daily，2022-06-05</a></li>
                     
                         <li><a href="/2022/06/04/never-stop/">never stop</a></li>
                     
                         <li><a href="/2022/06/04/kindle-stop-service/">Kindle国区停服，电子书备份</a></li>
-                    
-                        <li><a href="/2022/06/03/zui-quan-2/">醉拳2，弱肉强食</a></li>
-                    
-                        <li><a href="/2022/06/02/daily/">daily，2022-06-02，误解，理解</a></li>
-                    
-                        <li><a href="/2022/06/02/be-valuable/">永不停止学习，让自己有价值</a></li>
-                    
-                        <li><a href="/2022/06/01/daily/">daily，2022-06-01，种树</a></li>
                     
                         <li><a href="/2022/05/31/you-in-my-dream-again/">又梦见你</a></li>
                     
                         <li><a href="/2022/05/30/dont-like-family-anymore/">不再喜欢家庭</a></li>
                     
                         <li><a href="/2022/05/28/daily-liaozhaixinzhi/">daily，2022-05-29，聊齋新志</a></li>
-                    
-                        <li><a href="/2022/05/28/daily/">daily，2022-05-28，接受</a></li>
                     
                         <li><a href="/2022/05/27/daily/">daily，2022-05-27，篮球废物</a></li>
                     
@@ -891,13 +1079,37 @@
                     
                         <li><a href="/2022/05/26/huili-xie/">回力鞋</a></li>
                     
-                        <li><a href="/2022/05/23/daily/">daily，2022-05-23，行动</a></li>
-                    
                         <li><a href="/2022/05/21/you-in-my-dream-again/">又梦见你</a></li>
                     
                         <li><a href="/2022/05/20/lightdm/">lightdm  ubuntu 桌面显示管理器</a></li>
                     
-                        <li><a href="/2022/05/19/daily-v2/">daily，2022-05-19，無望時見本質</a></li>
+                        <li><a href="/2022/05/19/daily/">daily，2022-05-19，活着時才能說說話聊聊天</a></li>
+                    
+                        <li><a href="/2022/05/14/do-what-you-love-love-what-you-do/">do what you love, love what you do</a></li>
+                    
+                        <li><a href="/2022/05/13/cook/">煮饭禁忌</a></li>
+                    
+                        <li><a href="/2022/05/12/sony-xperia-1-iv/">SONY Xperia 1 IV</a></li>
+                    
+                        <li><a href="/2022/05/12/daily/">daily，2022-05-12</a></li>
+                    
+                        <li><a href="/2022/05/11/think-different/">Think Different 不同凡响</a></li>
+                    
+                        <li><a href="/2022/05/04/daily/">daily，2022-05-04，开玩笑</a></li>
+                    
+                        <li><a href="/2022/05/02/daily/">daily，2022-05-02，失眠</a></li>
+                    
+                        <li><a href="/2022/05/01/daily/">daily，2022-05-01，目标</a></li>
+                    
+                        <li><a href="/2022/04/29/daily/">daily，2022-04-29，目标</a></li>
+                    
+                        <li><a href="/2022/04/28/daily/">daily，2022-04-28，无用情绪</a></li>
+                    
+                        <li><a href="/2022/04/27/daily/">daily，2022-04-27，记录</a></li>
+                    
+                        <li><a href="/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></li>
+                    
+                        <li><a href="/2022/04/17/bigger-picture/">人无远虑，必有近忧</a></li>
                     
                 </ul>
             </div>
@@ -924,7 +1136,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">171</span>
+                            <span class="badge">142</span>
                         </a>
                     </li>
                     
@@ -1007,14 +1219,14 @@
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 13.5pt; color: #444;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 18pt; color: #000;">octopress3.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 10pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 10.5pt; color: #777;">octopress2.0</a>
                     
                       
                       
@@ -1028,7 +1240,7 @@
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 13pt; color: #555;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 15.5pt; color: #333;">rough</a>
                     
                       
                       
@@ -1049,7 +1261,7 @@
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 10pt; color: #888;">ssh</a>
                     
                       
                       
@@ -1070,7 +1282,7 @@
                       
                       
                       
-                      <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
+                      <a href="/tag/#daily" style="font-size: 17pt; color: #111;">daily</a>
                     
                       
                       
@@ -1098,7 +1310,7 @@
                       
                       
                       
-                      <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                      <a href="/tag/#she" style="font-size: 9.5pt; color: #999;">she</a>
                     
                 </div>
             </div>

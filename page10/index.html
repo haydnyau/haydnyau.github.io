@@ -124,12 +124,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -145,597 +139,11 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/01/20/leave/">穷山恶水，离开吧</a>
+                  <a class="post-link" href="/2021/04/25/bai-yuan-zhi-lian/">百元之恋</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-20
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>刚才父亲又因山林补贴争吵。<br />
-风险太大。<br />
-官场黑暗。邻里纷争。<br />
-穷山恶水。<br />
-走吧，早走为上。<br />
-君子不立危墙之下。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/20/leave/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/ubuntu-cannot-boot-windows/">ubuntu2022年无法添加引导windows，官方禁用OS Prober</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#ubuntu" title="Tag: ubuntu" rel="tag">ubuntu</a>&nbsp;
-    
-        <a href="/tag/#windows" title="Tag: windows" rel="tag">windows</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="原博os-prober-被禁用ubuntu-正在考虑新的多重引导方案"><a href="https://www.oschina.net/news/174751/ubuntu-22.04-multi-boot-changes">原博：OS Prober 被禁用，Ubuntu 正在考虑新的多重引导方案</a></h3>
-<p>GNU GRUB（GRUB）是一个来自 GNU 项目的启动引导程序。它允许用户在计算机内同时拥有多个操作系统，并在计算机启动时选择希望运行的操作系统。</p>
-
-<p>今年 6 月，由于上游 GRUB 引导程序在发布 2.06 版本时禁用 OS_Prober 后所带来的一些变化，Ubuntu 的开发者正在考虑如何在 Ubuntu 22.04 LTS 中管理双引导/多引导方案。</p>
-
-<p>Ubuntu 依靠 OS-Prober 来检查其他已安装的操作系统，以便能够方便地在 GRUB 引导程序中显示它们。这意味着随着 Ubuntu 22.04 转向 GRUB 2.06，非 UEFI BIOS 用户不能再启动任何其他操作系统，而基于 UEFI 的系统如果通过 UEFI 引导程序，则仍然可以启动其他操作系统。这个问题主要是会阻碍那些仍然运行传统 BIOS 启动程序的用户使用已安装的系统。</p>
-
-<p>默认禁用OS-Prober旨在通过操作系统检测功能解决潜在的安全问题，因为它在检查其他操作系统时，会检查并挂载系统上的所有分区，如果利用文件系统的漏洞，启用该功能会引发一个能被黑客利用的安全问题。</p>
-
-<p>因此，面对安全和用户体验这个两难的选择下，Ubuntu 开发者也不得不考虑是否要重新启用 OS-Prober。</p>
-
-<p>因为 OS_Prober 存在潜在安全风险，所以重新启用它并不是一个理想的解决方案，目前 Ubuntu 团队内部也在仔细思考这个问题，但不排除这个可能性。</p>
-
-<p>Ubuntu 团队考虑的其他解决方案包括：创建一个新的 GRUB 模块，该模块只在用户查找系统时才执行 OS-Prober 的一些功能，用于增加一个链式启动选项专门处理用户需要启动 Windows 的需求；亦或是仅在安装系统时运行 OS-Prober，然后依靠该信息进行后续启动；最后一种可能性是，从以前的 Ubuntu 版本升级到 Ubuntu 22.04 时启用 OS-Prober。</p>
-
-<p>我们还不清楚 Ubuntu 团队在上述选择中最终会如何进行抉择，在 Ubuntu 22.04 正式推出之前还有充足的考虑时间，可以访问 ubuntu-devel 了解更多详情。我们也将关注 GRUB 上游在此期间是否也会推出相应的解决方案。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/ubuntu-cannot-boot-windows/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/sougou-is-xiugou/">搜狗输入法</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>就是个坑，有时安装了就能用，有时搞到所有的输入法都用不了，要卸载了才能恢复之前的输入法</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/sougou-is-xiugou/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/done-tired/">ok 好累</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>睡觉</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/done-tired/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/model/">post文件模板</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>layout: post<br />
-title: <br />
-date: <br />
-tags: <br />
-author: 丘海东<br />
-comments: <br />
-categories:</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/model/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>怎么都不行<br />
-用octopress3.0创建theme blog，可能因为</p>
-<h2 id="网络不行">网络不行？</h2>
-
-<p>一直卡在那里，一动不动<br />
-<code class="language-plaintext highlighter-rouge">bundle</code> 和 <code class="language-plaintext highlighter-rouge">bundle install</code> 也是一动不动<br />
-这是没有成功的，后面会报错<br />
-重复，直到ok</p>
-
-<h2 id="对了我把gemfile和gemfilelock文件删除就没报错了">对了，我把Gemfile和Gemfile.lock文件删除，就没报错了</h2>
-
-<p>正常来说，rvm安装ruby就行了，如果还不行，再用<code class="language-plaintext highlighter-rouge">apt</code> ubuntu官方源安装一次</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ruby
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/fucking-hard/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/13/zhe-teng/">生命不息，折腾不止</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-13
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>强迫症发作<br />
-Ubuntu<br />
-20.04  21.10  12.04  16.04  18.04  20.04<br />
-Ocotpress<br />
-2.0  3.0<br />
-jekyll<br />
-theme<br />
-折腾了好几天，没日没夜，不眠不休，吃喝不管，性格使然<br />
-好了，好好吃个早餐，睡觉<br />
-买票，回家<br />
-过年<br />
-又一年</p>
-
-<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF4SNHNw/TmEUgtj9EK6.7V8ajmQrED*vOD1GW9P6z*YHWzdix5ugnQZhaqS7C.z080deNWFg4xOMjEHv1aasu8tzxYvAtb1t9yau2Mq4OpNK*fQIgtU!/r" alt="qq" /></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEBBt8qnK74UlxjsyjJazHjsofXQG0rneEceE2fxJ0iYoev1qV8XUkGa4f3zBfsnMgFIYBE1jz*MnTX.pIZ3Q*vM!/r">1</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMvM6fKWWIQv6JDPdRrBOJqFS4uUzBy0m8XBjGOIoiZXMSoI.HdGAy.rkrSc5UI8Z*ysJrYVi0R.4DY*u*OrPQE!/r">2</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEAw6qMrx.DeMqYhYPoEnryZ2mTrcAJOnMc9Xx2iSdXrgYHFg4sZN5ZGinn5jCvWIvCcJjldvIixNDk52hLvjZn8!/r">3</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEG.2u5LO7ccw90DKotmv7RsLQgumBc.mg5E5KTLsM.Fg99Fhnb9DK0Ses.zLtoernJRx3brpcsyNMPD0RVJRaq8!/r">4</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEFlB5ERIdlKsfngVuoiz21Qj4tdrizVtkIJ0ua4Xq9SfOVPBzKif3gRqpfZEbyjsP3R8CwlHEt.Xm8iJyuz2nGw!/r">5</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEMUFcGm9g7XE9f.fwXhEjR30nG7aiswalxP6Ywg3gXL0M95PSB.m8xx8UpxlTcm.R*BBTWREfGkrCrcndSaspsQ!/r">6</a></p>
-
-<p><a href="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF1Pu30D/TmEUgtj9EK6.7V8ajmQrEDw6.pSwRjPoCMVPlKqnitgykgEcoUEE0NkZ2XKCIsiXTx9gMTxcD2J6wujiIkfLV6RfO4AVxca.yqf9IyAzHzk!/r">7</a></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/13/zhe-teng/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/13/jekyll-theme-config/">jekyll theme octopress 博客的具体配置</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-13
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.7.0  
-</code></pre></div></div>
-<p>_config.yml<br />
-gemfile<br />
-gemfile.lock</p>
-
-<p>一些问题看手机图片,在空间</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/13/jekyll-theme-config/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/12/new-and-old-blog/">新 舊博客</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-12
+                        <i class="fa fa-calendar"></i>2021-04-25
                     </div>
                     <div class="label-card">
                         
@@ -780,29 +188,350 @@ gemfile.lock</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <h3 id="新博客"><a href="https://haydnyau.github.io/">新博客</a></h3>
-<h3 id="旧博客"><a href="https://qiuhaidong.github.io/">旧博客</a></h3>
-
-<p>折腾了好几天，终于迁移好了</p>
-
-<p><a href="https://gaohaoyang.github.io/">这是主题作者的Blog</a></p>
-
-<p><a href="https://github.com/Gaohaoyang">这是他的Github</a> 和 <a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">仓库</a></p>
+                    <p>电影《百元之恋》，她并无意外地输了比赛，但是远离了一团糟糕的过往。<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEON5QcnR6oa1tj8dsSMJSkHOr3mJXuFZwt6F2mgShK.9cw58OvXA624UgnAtTBhu4W1UgCi.aQ27o2OdKNMK0VM!/r" alt="百元之恋" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/01/12/new-and-old-blog/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2021/04/25/bai-yuan-zhi-lian/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6</a>
+                  <a class="post-link" href="/2021/04/04/chou-le-de-ji-tui/">臭了的鸡腿</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-12
+                        <i class="fa fa-calendar"></i>2021-04-04
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>还是这一天，我在美团上买了6块钱鸡腿，拿回来，打开包装的时候，已经闻到有点臭味了，但是没办法，硬着头皮，用热水壶水煮了，吃了。<br />
+希望别吃坏肚子。<br />
+希望最坏就是拉肚子就算了，别去医院。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2021/04/04/chou-le-de-ji-tui/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2021/04/04/fang-xia/">放下 接受 和解</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2021-04-04
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>现在是清明，昨天阿妈跟着阿玲阿康他们一起上来探阿梅，在佛山西樵山游玩一下，然后过来广州，我傍晚吃了饭后，过去阿梅那里，见个面。<br />
+然后晚上，时间差不多到末班车了，我回来，阿梅那边地方不大，我就和阿妈来我租房睡上下床。<br />
+到了我这，阿妈就唠叨我这里又没煮饭的东西，租房也不大（其实一房一厅已经是挺大的了，高于平均水准），然后又开始念叨我的工作不好，各方面的事，问这问那。<br />
+我的心态又被搞崩了，一晚上没睡着，辗转反侧。阿妈睡着了，但是磨牙，还有以他的咿咿呀呀的动响，她的睡眠也不好。到了早上六点后，我才睡着一会，八点半闹钟响起，我们再起床过去阿梅那里。<br />
+之后在闲聊中，她告诉我，之前我帮她做好了微信的实名认证，然后现在她除了在做饭店洗碗的工作外，其他的时间，还到教育城做除草的工作，4个小时，40元工钱。<br />
+今天阿妈同阿玲阿梅去长隆野生动物世界游玩。<br />
+我没去，因为我没钱。<br />
+晚上阿梅他们说去酒店吃饭，叫了我，我也没去，因为我没钱。<br />
+阿妈上来广州，我连陪她去逛逛动物园，去吃一顿饭，都没钱。<br />
+就别想那么多了。<br />
+放下，接受，和解。<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEGnkq54Cr6lEM0Mg14Mgqau6*qn3nosETkkPu31w36Dg.XVPXYvZF4hHwB5QdpzuHvPD68GYPByRH1GHLTQU*6w!/r" alt="西樵山" /><br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEJCffLXulfmzNJyIs49ax5dDSz6Quj.LDPY6QL9YPW3LScSIlmbgU2DVf3RFItlN16ci3niXQ0Bh*mg82qjDipc!/r" alt="长隆野生动物世界" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2021/04/04/fang-xia/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/09/09/dying/">崩溃</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-09-09
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>每天深夜，崩溃，折磨，垂死，挣扎，咒骂<br />
+也睡不好<br />
+醒来昏昏沉沉<br />
+深夜继续折磨<br />
+我快死了<br />
+很多时候我也想摆脱原生家庭的折磨<br />
+也想有个人和我一起，听我述说我的喜好，我的感悟，我的痛苦<br />
+可是，我能给她什么？这样的我会带给她痛苦，她又如何承受！<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEElD36i6*VpBZLgB0AGJR8wWyadxK14yEeqFlAbaMlI5Ghkmv51flc9XtYYKJJ4JM0kQ9iE7R004esSb6FVMH3M!/r" alt="孤独" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/09/09/dying/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/08/21/family/">家人</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-08-21
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>在我没钱的时候，我的家人们用最短的时间赶我走<br />
+哈哈哈哈哈哈哈哈<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEH33Dg9dIOkVs2S81Gz6HI.GP8IEsXoDaE463DOqKxSKjfXsqHVW5rYoo.u2c.zcK4CQFxy6CNLslHHgkC8W7kQ!/r" alt="family" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/08/21/family/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/07/12/ren-xing-de-ruo-dian/">人性的弱点</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-07-12
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="急功近利自负">急功近利,自负</h3>
+<p>老表的一次失利遭遇<br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEIoZkjFSZIdjl.dxHZvjgixVGZhuhH2VK.z5Ql0Yn2bHywGaOn.7q4ediOy7GOhjh.bxFMUvQO8bg*Mu7chuJ7s!/r" alt="人性的弱点" /></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/07/12/ren-xing-de-ruo-dian/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/07/03/ios-upgrade-and-downgrade/">iOS的升级与降级</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-07-03
                     </div>
                     <div class="label-card">
                         
@@ -837,7 +566,97 @@ gemfile.lock</p>
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#octopress" title="Tag: octopress" rel="tag">octopress</a>
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>升级bate版，到官网上注册，下载描述文件，常规升级</p>
+
+<p>降级：<br />
+举例：<br />
+iOS14降级为13.5.1：</p>
+
+<h3 id="1-itunes备份数据到电脑">1. iTunes备份数据到电脑</h3>
+
+<ul>
+  <li>建议再备份到iCloud</li>
+  <li>微信聊天记录备份到另一手机</li>
+</ul>
+
+<h3 id="2-爱思助手下载固件选择常规快速刷机">2. 爱思助手下载固件，选择：常规快速刷机</h3>
+
+<ul>
+  <li>注意：降级不能选择：保留用户资料</li>
+  <li>第一次电信宽带，刷机在60%失败</li>
+  <li>第二次翻墙（全部代理），同样失败</li>
+  <li>第三次手机网络（联通），USB分享，成功</li>
+  <li>只用了3M流量</li>
+  <li>每次刷机都是10分钟左右，挺快的</li>
+</ul>
+
+<h3 id="3-找到备份文件infoplist更改固件版本">3. 找到备份文件，Info.plist，更改固件版本</h3>
+
+<ul>
+  <li>Product Version：14.0改为13.5.1</li>
+  <li>Build Version：18A5301v改为17F80</li>
+  <li>因为高版本的备份无法还原到低版本的系统</li>
+</ul>
+
+<h3 id="4-开机后从电脑恢复数据">4. 开机后从电脑恢复数据</h3>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/07/03/ios-upgrade-and-downgrade/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/06/14/next-computer-partition-capacity-about-ubuntu/">Ubuntu 分区大小</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-06-14
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
     
   
 
@@ -849,47 +668,136 @@ gemfile.lock</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="https://blog.csdn.net/qq_41988167/article/details/106202868">No binary rubies available for: ubuntu/20.04/x86_64/ruby-2.2.6;;Error running requirements_debian_libs_install libssl1.0-dev</a></p>
-
-<p>原博内容：</p>
-
-<p>rvm安装低版本ruby报错Error running ‘requirements_debian_libs_install libssl1.0-dev’,Requirements installation failed with status: 100.</p>
-
-<p>由于参与的一个项目在用2.3.1版本的ruby，所以想用rvm来安装ruby2.3.1。运行报错，需要libssl1.0-dev.<br />
-解决办法：</p>
-
-<ul>
-  <li>运行</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/apt/sources.list
-</code></pre></div></div>
-
-<p>在<code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> 中添加下载源 <code class="language-plaintext highlighter-rouge">deb http://security.ubuntu.com/ubuntu bionic-security main</code>。保存退出。</p>
-
-<ul>
-  <li>更新</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
-</code></pre></div></div>
-
-<ul>
-  <li>安装</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cache policy libssl1.0-dev  #（这步我没有做，先不做）
-</code></pre></div></div>
-
-<p>然后再安装<code class="language-plaintext highlighter-rouge">rvm install 2.2.6</code></p>
-
-<p>————————————————<br />
-版权声明：本文为CSDN博主「会打滚的咸鱼」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/qq_41988167/article/details/106202868</p>
+                    <p>Ubuntu 分区大小不用太多，现在只用了12G而已，估计下次给它30G就ok了<br />
+<img src="http://r.photo.store.qq.com/psc?/V13NDf2z0er9V4/jmmX4OKaz9ls*nNN2EORpdUZxewuHv2zzf0xLU5fQbxzOua1RSynmCnzTIHZiqC*6XkA94FYqyCRSoPTFb63m6qEs3HFCGw0gTgyMroP1qA!/r" alt="分区容量" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/01/12/no-binary-rubies-available-for-ubuntu-slash-20-dot-04-slash-x86-64-slash-ruby-2-dot-2-6/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2020/06/14/next-computer-partition-capacity-about-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/05/01/exceltiaojiangeshi/">Excel WPS 条件格式：按照条件设置字体背景等格式</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-05-01
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#excel" title="Category: excel" rel="category">excel</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>Excel：<br />
+开始，条件格式……<br />
+WPS：<br />
+数据，条件格式，包含以下内容，文本包括，输入或复制√或者×，应用范围，鼠标选择行或列，格式样式，自己定，创建规则，OK<br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/exceltiaojiangeshi.png" alt="excel条件格式" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/05/01/exceltiaojiangeshi/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2020/04/30/overwatch/">Wallpaper Engine Overwatch</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2020-04-30
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>守望先锋pigu，阿里云盘，百度网盘</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2020/04/30/overwatch/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -904,10 +812,10 @@ gemfile.lock</p>
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page9" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">10/27</span>
+          <span class="page_number ">10/24</span>
           
             <a href="/page11" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page27" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page24" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -924,49 +832,25 @@ gemfile.lock</p>
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2022/06/12/daily/">daily，奎迪，独自变强</a></li>
-                    
-                        <li><a href="/2022/06/11/daily/">daily，2022-06-11</a></li>
-                    
                         <li><a href="/2022/06/10/hannibal/">Hannibal汉尼拔</a></li>
-                    
-                        <li><a href="/2022/06/10/read/">读书</a></li>
                     
                         <li><a href="/2022/06/09/never-perfect/">没有完美，都是江湖</a></li>
                     
                         <li><a href="/2022/06/09/health/">身体健康</a></li>
                     
-                        <li><a href="/2022/06/09/self-discipline/">self-discipline，自律</a></li>
-                    
                         <li><a href="/2022/06/08/yi-qi-tong-guo-chuang/">一起同过窗</a></li>
                     
-                        <li><a href="/2022/06/08/daily/">daily，2022-06-08</a></li>
-                    
-                        <li><a href="/2022/06/05/let-go/">释怀</a></li>
-                    
                         <li><a href="/2022/06/05/iphone/">iPhone</a></li>
-                    
-                        <li><a href="/2022/06/05/daily/">daily，2022-06-05</a></li>
                     
                         <li><a href="/2022/06/04/never-stop/">never stop</a></li>
                     
                         <li><a href="/2022/06/04/kindle-stop-service/">Kindle国区停服，电子书备份</a></li>
-                    
-                        <li><a href="/2022/06/03/zui-quan-2/">醉拳2，弱肉强食</a></li>
-                    
-                        <li><a href="/2022/06/02/daily/">daily，2022-06-02，误解，理解</a></li>
-                    
-                        <li><a href="/2022/06/02/be-valuable/">永不停止学习，让自己有价值</a></li>
-                    
-                        <li><a href="/2022/06/01/daily/">daily，2022-06-01，种树</a></li>
                     
                         <li><a href="/2022/05/31/you-in-my-dream-again/">又梦见你</a></li>
                     
                         <li><a href="/2022/05/30/dont-like-family-anymore/">不再喜欢家庭</a></li>
                     
                         <li><a href="/2022/05/28/daily-liaozhaixinzhi/">daily，2022-05-29，聊齋新志</a></li>
-                    
-                        <li><a href="/2022/05/28/daily/">daily，2022-05-28，接受</a></li>
                     
                         <li><a href="/2022/05/27/daily/">daily，2022-05-27，篮球废物</a></li>
                     
@@ -976,13 +860,37 @@ gemfile.lock</p>
                     
                         <li><a href="/2022/05/26/huili-xie/">回力鞋</a></li>
                     
-                        <li><a href="/2022/05/23/daily/">daily，2022-05-23，行动</a></li>
-                    
                         <li><a href="/2022/05/21/you-in-my-dream-again/">又梦见你</a></li>
                     
                         <li><a href="/2022/05/20/lightdm/">lightdm  ubuntu 桌面显示管理器</a></li>
                     
-                        <li><a href="/2022/05/19/daily-v2/">daily，2022-05-19，無望時見本質</a></li>
+                        <li><a href="/2022/05/19/daily/">daily，2022-05-19，活着時才能說說話聊聊天</a></li>
+                    
+                        <li><a href="/2022/05/14/do-what-you-love-love-what-you-do/">do what you love, love what you do</a></li>
+                    
+                        <li><a href="/2022/05/13/cook/">煮饭禁忌</a></li>
+                    
+                        <li><a href="/2022/05/12/sony-xperia-1-iv/">SONY Xperia 1 IV</a></li>
+                    
+                        <li><a href="/2022/05/12/daily/">daily，2022-05-12</a></li>
+                    
+                        <li><a href="/2022/05/11/think-different/">Think Different 不同凡响</a></li>
+                    
+                        <li><a href="/2022/05/04/daily/">daily，2022-05-04，开玩笑</a></li>
+                    
+                        <li><a href="/2022/05/02/daily/">daily，2022-05-02，失眠</a></li>
+                    
+                        <li><a href="/2022/05/01/daily/">daily，2022-05-01，目标</a></li>
+                    
+                        <li><a href="/2022/04/29/daily/">daily，2022-04-29，目标</a></li>
+                    
+                        <li><a href="/2022/04/28/daily/">daily，2022-04-28，无用情绪</a></li>
+                    
+                        <li><a href="/2022/04/27/daily/">daily，2022-04-27，记录</a></li>
+                    
+                        <li><a href="/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></li>
+                    
+                        <li><a href="/2022/04/17/bigger-picture/">人无远虑，必有近忧</a></li>
                     
                 </ul>
             </div>
@@ -1009,7 +917,7 @@ gemfile.lock</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">171</span>
+                            <span class="badge">142</span>
                         </a>
                     </li>
                     
@@ -1092,14 +1000,14 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 13.5pt; color: #444;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 18pt; color: #000;">octopress3.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 10pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 10.5pt; color: #777;">octopress2.0</a>
                     
                       
                       
@@ -1113,7 +1021,7 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 13pt; color: #555;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 15.5pt; color: #333;">rough</a>
                     
                       
                       
@@ -1134,7 +1042,7 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 10pt; color: #888;">ssh</a>
                     
                       
                       
@@ -1155,7 +1063,7 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
+                      <a href="/tag/#daily" style="font-size: 17pt; color: #111;">daily</a>
                     
                       
                       
@@ -1183,7 +1091,7 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                      <a href="/tag/#she" style="font-size: 9.5pt; color: #999;">she</a>
                     
                 </div>
             </div>
