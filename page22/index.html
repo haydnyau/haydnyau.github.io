@@ -141,6 +141,102 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/01/09/shell-script/">pull push.sh shell脚本</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-01-09
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://github.com/qinjx/30min_guides/blob/master/shell.md">参见原博</a></p>
+
+<p>新建文本，扩展名为sh，扩展名并不影响脚本的执行，见名知意即可，若是用PHP编写，扩展名就用php<br />
+终端下先执行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 1.9.3
+</code></pre></div></div>
+
+<p>再执行脚本<br />
+代码：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/octopress
+git pull origin source
+rake generate deploy
+</code></pre></div></div>
+
+<p>保存即可(文件名为pull.sh)<br />
+运行脚本，终端命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x pull.sh
+./pull.sh
+</code></pre></div></div>
+
+<p>别漏了前面的符号.</p>
+
+<p>push.sh</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/octopress
+rake generate deploy
+git add .
+git commit -m 'update'
+git push origin source
+</code></pre></div></div>
+
+<p>或者建好后修改文件属性，权限，允许作为程序执行文件（ubuntu16.04）</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/01/09/shell-script/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/01/08/lantern/">Lantern</a>
                 </h2>
                 <div class="label">
@@ -778,123 +874,6 @@ git push origin source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/08/23/gfw-bundle-install/">GFW rubygems bundle install</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-08-23
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>2022-01-05:最新网址：https://gems.ruby-china.com/<br />
-<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong><br />
-封网，rubygems.org 不行了<br />
-<code class="language-plaintext highlighter-rouge">bundle install</code>  自然也不行<br />
-点算？<br />
-https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网<br />
-用法：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --remove https://rubygems.org/
-gem sources -a https://gems.ruby-china.com/
-gem sources -l
-</code></pre></div></div>
-
-<p>输出：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** CURRENT SOURCES ***  
-
-https://gems.ruby-china.com  
-</code></pre></div></div>
-
-<p>确保只有 https://gems.ruby-china.com/</p>
-
-<p>###但是这样也不行，还得到octopress文件夹，打开Gemfile文件，编辑：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    source "https://gems.ruby-china.com"
-</code></pre></div></div>
-
-<p>Ubuntu 14.04，安装octopress,执行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
-
-<p>一直提示缺少各种 gem 包，例如：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
-Gem::RemoteFetcher::FetchError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/gems/safe_yaml-1.0.4.gem)
-An error occurred while installing safe_yaml (1.0.4), and Bundler cannot continue.
-Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
-
-```
-</code></pre></div></div>
-
-<p>按提示输入命令 <code class="language-plaintext highlighter-rouge">gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
-
-<p>解决方法：</p>
-
-<p>修改octopress文件夹里的Gemfile文件：</p>
-
-<p>把：<br />
-<code class="language-plaintext highlighter-rouge">source "https://rubygems.org"</code><br />
-改为：<br />
-<code class="language-plaintext highlighter-rouge">source "https://gems.ruby-china.com"</code><br />
-再执行：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
-
-<p>完美通过。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/08/23/gfw-bundle-install/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -924,6 +903,8 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/08/13/qi-tong-guo-chuang-di-san-ji/">一起同过窗第三季</a></li>
                     
                         <li><a href="/2022/08/02/got-no-fear/">放开胸怀，无所畏惧</a></li>
                     
@@ -983,8 +964,6 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     
                         <li><a href="/2022/05/14/do-what-you-love-love-what-you-do/">do what you love, love what you do</a></li>
                     
-                        <li><a href="/2022/05/13/cook/">煮饭禁忌</a></li>
-                    
                 </ul>
             </div>
 
@@ -1010,7 +989,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">153</span>
+                            <span class="badge">154</span>
                         </a>
                     </li>
                     
@@ -1093,7 +1072,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 15.5pt; color: #333;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 15pt; color: #333;">octopress3.0</a>
                     
                       
                       
@@ -1114,7 +1093,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 13.5pt; color: #444;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 13.5pt; color: #555;">rough</a>
                     
                       
                       
