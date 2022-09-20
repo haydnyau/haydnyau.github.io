@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>windows10和Ubuntu双系统，时间不对</title>
-    <meta name="description" content="原博文windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：sudo gedit /etc/default/rcSutc=yes 改成 utc=no然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！后来谷歌了半天找到了...">
+    <title>daily，2022-09-20</title>
+    <meta name="description" content="如果有一天，我不再是独自一人，和她一起看《老友记》、《一起同过窗》，会很好">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">
+    <link rel="canonical" href="/2022/09/20/daily/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -134,14 +134,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>windows10和Ubuntu双系统，时间不对</h1>
+        <h1>daily，2022-09-20</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2016-11-10
+                <i class="fa fa-calendar"></i>2022-09-20
             </div>
 
             <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
                 
             </div>
 
@@ -158,7 +159,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
     
   
 
@@ -175,6 +176,9 @@
   <i class="fa fa-tags"></i>
   
     
+        <!--a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a-->
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+    
   
 
 </span>
@@ -187,41 +191,18 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
-
-<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
-utc=yes 改成 utc=no
-</code></pre></div></div>
-
-<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
-后来谷歌了半天找到了一个完美解决办法：<br />
-先在ubuntu下更新一下时间，确保时间无误：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
-sudo ntpdate time.windows.com
-</code></pre></div></div>
-
-<p>然后将时间更新到硬件上：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
-</code></pre></div></div>
-
-<p>重新进入windows10，发现时间恢复正常了！</p>
+        <p>如果有一天，我不再是独自一人，和她一起看《老友记》、《一起同过窗》，会很好</p>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2016/11/10/Voltage-change/">voltage change</a></p>
+        <p><strong>上一篇</strong> <a href="/2022/09/19/daily/">daily，2022-09-19</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2016/11/13/sql-edit-more-than-200-item/">SQL: edit more than 200 item</a></p>
         
     </div>
 </div>
