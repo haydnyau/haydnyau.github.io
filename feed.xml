@@ -5,9 +5,27 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Oct 2022 17:10:26 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Oct 2022 17:10:26 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Oct 2022 18:07:29 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Oct 2022 18:07:29 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>添加音乐</title>
+        <description>&amp;lt;iframe frameborder=”no” border=”0” marginwidth=”0” marginheight=”0” width=330 height=86 src=”//music.163.com/outchain/player?type=2&amp;amp;id=1452476987&amp;amp;auto=1&amp;amp;height=66”&amp;gt;&amp;lt;/iframe&amp;gt;&lt;br /&gt;
+到&lt;a href=&quot;https://music.163.com/&quot;&gt;网易云音乐&lt;/a&gt;，搜索喜欢的音乐，点击&lt;strong&gt;生成外链播放器&lt;/strong&gt;，复制代码直接放到博文即可。&lt;br /&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqX60ljgLDpTIv7z2qbqMyb8U7bqeX*4yox6K9xgib7.MieS7SlW5GEBANTMmsI.NAC.6i6QySgW3U6S0GC0.SGE!/r&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqbC9NmutSXcW6DjQZhsPIzOB415iXQO8oBKF.sfEKmTdPCpqkbzCEwYJBzGRoiDDIc1LDhjbHWNTiXudPiUCW0w!/r&quot; alt=&quot;&quot; /&gt;
+</description>
+        <pubDate>Fri, 07 Oct 2022 17:23:48 +0800</pubDate>
+        <link>/2022/10/07/add-music/</link>
+        <guid isPermaLink="true">/2022/10/07/add-music/</guid>
+        
+        <category>octopress</category>
+        
+        
+        <category>tech-octopress</category>
+        
+      </item>
     
       <item>
         <title>day 0, A17</title>
@@ -174,24 +192,6 @@
         <pubDate>Fri, 08 Jul 2022 07:35:24 +0800</pubDate>
         <link>/2022/07/08/fview/</link>
         <guid isPermaLink="true">/2022/07/08/fview/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>高度和格局</title>
-        <description>没有高度，看到的全是问题&lt;br /&gt;
-没有格局，看到的全是鸡毛蒜皮&lt;br /&gt;
-但是&lt;br /&gt;
-别拿卖白菜的钱，担卖白粉的险
-</description>
-        <pubDate>Mon, 04 Jul 2022 13:49:51 +0800</pubDate>
-        <link>/2022/07/04/gao-du-he-ge-ju/</link>
-        <guid isPermaLink="true">/2022/07/04/gao-du-he-ge-ju/</guid>
         
         <category>daily</category>
         
