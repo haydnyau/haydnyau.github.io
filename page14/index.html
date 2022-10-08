@@ -143,6 +143,85 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2018/09/05/error-no-symbol-table/">Ubuntu启动问题 : no symbol table</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2018-09-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://askubuntu.com/questions/965070/no-symbol-table-error-after-upgrading-to-17-04">参见原博：error : no symbol table</a><br />
+升级到ubuntu18.04后，开机出现：</p>
+
+<p><strong><em>error：no symbol table</em></strong><br />
+<strong><em>press any key to continue…</em></strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo fdisk -l  
+</code></pre></div></div>
+
+<p>This will list all partitions on your HDD (find under Type section the Ubuntu or Linux and its Device (like <code class="language-plaintext highlighter-rouge">/dev/sda</code>)) then, do:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo grub-install /dev/sda  
+</code></pre></div></div>
+
+<p>note that is sda and NOT sda1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-grub  
+
+sudo reboot  
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2018/09/05/error-no-symbol-table/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2018/08/27/intel-8g-cpu-cannot-install-win7/">intel8代cpu无法安装win7</a>
                 </h2>
                 <div class="label">
@@ -705,72 +784,6 @@ rake generate preview
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2018/03/26/what-we-live-for/">活着——抉择</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2018-03-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>活着是为了什么？<br />
-我想要什么？<br />
-每个人的追求都不同，有人喜欢安稳，有人喜欢闯荡，四海为家。<br />
-我们都在忙着挣钱，为了让自己和家人过更好的生活。为什么想过更好的生活？开心。<br />
-对，开心。衣食住行，我们都在追求更好的物质，最终转化为精神上的满足。<br />
-不是所有人都喜欢呆在家，但所有人都希望家人生活得好好的，希望家人开心，但我们是否有想过这样一个问题：我们拼命在外工作，给家里寄钱，一年也没回家两天，父母是否开心？在外打拼一辈子，临老回家乡过晚年，这时候，父母是否还在？幸运的还在，我们又能享受多少时光的天伦之乐？<br />
-活着是一个个的抉择，一个个的决定和选择。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2018/03/26/what-we-live-for/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -800,6 +813,8 @@ rake generate preview
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2022/10/09/bishisanlinluoxue/">雪毕</a></li>
                     
                         <li><a href="/2022/10/07/add-music/">添加音乐</a></li>
                     
@@ -859,8 +874,6 @@ rake generate preview
                     
                         <li><a href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/">curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</a></li>
                     
-                        <li><a href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/">ssh: connect to host ssh.github.com port 443: Connection refused</a></li>
-                    
                 </ul>
             </div>
 
@@ -886,7 +899,7 @@ rake generate preview
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">158</span>
+                            <span class="badge">159</span>
                         </a>
                     </li>
                     
