@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Oct 2022 13:52:17 +0800</pubDate>
-    <lastBuildDate>Tue, 11 Oct 2022 13:52:17 +0800</lastBuildDate>
+    <pubDate>Tue, 11 Oct 2022 13:58:17 +0800</pubDate>
+    <lastBuildDate>Tue, 11 Oct 2022 13:58:17 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -107,7 +107,7 @@ A16 仿生芯片 ，4nm 台积电工艺&lt;br /&gt;
     
       <item>
         <title>day 0, A17</title>
-        <description>A17，iPhone 15 Pro Max，3nm工艺，8G RAM
+        <description>A17，3nm，8G RAM，120Hz，4300+ mAh，6.7英寸
 </description>
         <pubDate>Sun, 02 Oct 2022 16:26:26 +0800</pubDate>
         <link>/2022/10/02/day-0-a17/</link>
