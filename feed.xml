@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Dec 2022 23:00:01 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Dec 2022 23:00:01 +0800</lastBuildDate>
+    <pubDate>Sat, 11 Feb 2023 20:52:10 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Feb 2023 20:52:10 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>早睡早起身体好</title>
+        <description>11点睡觉，8点起床。
+</description>
+        <pubDate>Sat, 11 Feb 2023 20:36:39 +0800</pubDate>
+        <link>/2023/02/11/sleep-health/</link>
+        <guid isPermaLink="true">/2023/02/11/sleep-health/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>fuck it! give it a shot!</title>
@@ -215,25 +230,6 @@ Happy ending&lt;br /&gt;
         
         
         <category>tech-octopress</category>
-        
-      </item>
-    
-      <item>
-        <title>郭德纲的处世之道</title>
-        <description>别人的事，自己不了解，无法帮做决定。&lt;br /&gt;
-对于困难坎坷，没有人生信条，想不了那么多，不惹事，不怕事，该怎么办就怎么办。有时得忍，有的事不是以自己为主见的。&lt;br /&gt;
-对于如何坚持，就是得活着，上天无路，入地无门， 只能坚持往前走。&lt;br /&gt;
-笼鸡有事汤锅近，野鹤无粮天地宽。——唐伯虎&lt;br /&gt;
-习惯了就好。
-</description>
-        <pubDate>Sun, 25 Sep 2022 16:16:43 +0800</pubDate>
-        <link>/2022/09/25/guo-de-gang/</link>
-        <guid isPermaLink="true">/2022/09/25/guo-de-gang/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
         
       </item>
     
