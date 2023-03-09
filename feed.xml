@@ -5,9 +5,31 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Feb 2023 11:09:23 +0800</pubDate>
-    <lastBuildDate>Sun, 12 Feb 2023 11:09:23 +0800</lastBuildDate>
+    <pubDate>Fri, 10 Mar 2023 00:45:16 +0800</pubDate>
+    <lastBuildDate>Fri, 10 Mar 2023 00:45:16 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>工作好烦</title>
+        <description>安装，作为常规流程（售后除外）的最后一环，前面所有环节所有人出的错误：销售吹的牛逼，客户的臆想，沟通理解的误会，生产时的错漏，需要场地客户配合准备的没沟通每做好，都会在我这个环节冒出来，也就是我要给所有的人擦屁股，替他们给客户交代，好TM烦。&lt;br /&gt;
+而且本来公司的产品在我眼里就没有达标。&lt;br /&gt;
+艹，烦到鬼那样。&lt;br /&gt;
+真TM想甩手不干！&lt;br /&gt;
+没办法，家里要靠我！&lt;br /&gt;
+现在的就业形势又那么恶劣！&lt;br /&gt;
+他妈的，想做一个认真负责点的人，想尽善尽美一点，真是累死自己。&lt;br /&gt;
+难道真的要做一个不负责的人，才能活得轻松一点吗？
+</description>
+        <pubDate>Fri, 10 Mar 2023 00:14:17 +0800</pubDate>
+        <link>/2023/03/10/job-make-me-upset/</link>
+        <guid isPermaLink="true">/2023/03/10/job-make-me-upset/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>早睡早起身体好</title>
@@ -212,25 +234,6 @@ Happy ending&lt;br /&gt;
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>添加音乐</title>
-        <description>&amp;lt;iframe frameborder=”no” border=”0” marginwidth=”0” marginheight=”0” width=330 height=86 src=”//music.163.com/outchain/player?type=2&amp;amp;id=1452476987&amp;amp;auto=0&amp;amp;height=66”&amp;gt;&amp;lt;/iframe&amp;gt;&lt;br /&gt;
-到&lt;a href=&quot;https://music.163.com/&quot;&gt;网易云音乐&lt;/a&gt;，搜索喜欢的音乐，点击&lt;strong&gt;生成外链播放器&lt;/strong&gt;，复制代码直接放到博文即可。&lt;br /&gt;
-&lt;!--more--&gt;&lt;br /&gt;
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqX60ljgLDpTIv7z2qbqMyb8U7bqeX*4yox6K9xgib7.MieS7SlW5GEBANTMmsI.NAC.6i6QySgW3U6S0GC0.SGE!/r&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqbC9NmutSXcW6DjQZhsPIzOB415iXQO8oBKF.sfEKmTdPCpqkbzCEwYJBzGRoiDDIc1LDhjbHWNTiXudPiUCW0w!/r&quot; alt=&quot;&quot; /&gt;
-</description>
-        <pubDate>Fri, 07 Oct 2022 17:23:48 +0800</pubDate>
-        <link>/2022/10/07/add-music/</link>
-        <guid isPermaLink="true">/2022/10/07/add-music/</guid>
-        
-        <category>octopress</category>
-        
-        
-        <category>tech-octopress</category>
         
       </item>
     
