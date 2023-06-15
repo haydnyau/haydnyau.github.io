@@ -5,9 +5,77 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Jun 2023 21:39:31 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Jun 2023 21:39:31 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Jun 2023 01:49:29 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Jun 2023 01:49:29 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>ubuntu安装deb文件</title>
+        <description>Ubuntu下安装deb包的命令总结
+
+&lt;a href=&quot;https://blog.csdn.net/cui_shuang_xi/article/details/90904929&quot;&gt;原文链接&lt;/a&gt;
+
+在Ubuntu下安装deb包需要使用dpkg命令.
+
+Dpkg 的普通用法：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -i &amp;lt;package.deb&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+安装一个 Debian 软件包，如你手动下载的文件。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -c &amp;lt;package.deb&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+列出 &lt;package.deb&gt; 的内容。&lt;/package.deb&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -I &amp;lt;package.deb&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+从 &lt;package.deb&gt; 中提取包裹信息。&lt;/package.deb&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -r  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+移除一个已安装的包裹。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -P  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -L  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -s  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg-reconfigure  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。
+
+如果安装过程中出现问题,可以先使用命令:
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+更新后再执行上面的命令.
+</description>
+        <pubDate>Fri, 16 Jun 2023 01:38:49 +0800</pubDate>
+        <link>/2023/06/16/install-deb/</link>
+        <guid isPermaLink="true">/2023/06/16/install-deb/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily，2023-06-14，提高</title>
@@ -168,68 +236,6 @@
         <pubDate>Tue, 01 Nov 2022 02:44:30 +0800</pubDate>
         <link>/2022/11/01/bei-guan-de-ru-shi-zhe/</link>
         <guid isPermaLink="true">/2022/11/01/bei-guan-de-ru-shi-zhe/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>聊聊 iPhone 的矛盾，困境，和恶心</title>
-        <description>毋庸置疑，iPhone 是行内第一，整体而言，遥遥领先，完全没有竞品能撼动它的位置。&lt;br /&gt;
-但是，iPhone 绝对不是完美的，其实，iPhone 有着很多的槽点，缺陷，无奈。&lt;br /&gt;
-以 iPhone 14 Pro Max 举例：&lt;br /&gt;
-&lt;!--more--&gt;&lt;br /&gt;
-&lt;img src=&quot;http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqaaplv9QRPMX7qsOrbnw08PIY1b3lup6qp7xy54qjvbuNt4mDmSOtUGP*gSbyTnipslgO7RNMVJ3AwtokCXQDvA!/r&quot; alt=&quot;&quot; /&gt;
-
-即使已经用了设计去欺骗视觉，但相机模块的凸起，依旧是到了恶劣的程度。而且即使是这样，iPhone 的拍照还是比不过安卓，成像风格、发色倾向、夜间拍照、高光压制、镜头眩光鬼影，都不行。&lt;br /&gt;
-当然，拍视频是无敌的。&lt;br /&gt;
-但是，视频文件巨大，iPhone 的数据接口还是非常落后的 USB2.0 ，蜗牛一样慢的数据传输速度，根本满足不了苹果宣传的生产力需求。&lt;br /&gt;
-换用 TYPE-C 接口，问题马上解决，也没有任何技术障碍，但是，为了利润，苹果一直置之不理。&lt;br /&gt;
-这是公司利润和先进技术、用户体验的矛盾。&lt;br /&gt;
-而苹果一直宣传的公司文化就是用户体验，事实是，当用户体验和利润有冲突时，苹果毫不犹豫地抛弃了用户体验。&lt;br /&gt;
-公司就是要赚取利润的，我明白，它完全有权利做自己的选择，我也没有资格去反对。我的看法是：你如果做不到，就不要说，你选择了当婊子，就不要立牌坊。又当又立，真的很恶心。&lt;br /&gt;
-再说说其他恶心的点，我就列出来，不细说了。&lt;br /&gt;
-数字系列阉割高刷。&lt;br /&gt;
-到了这个年代，LPDDR5 规格的 RAM 不会有 8GB 以下的版本，而苹果搞了个 6G 的。可以理解为，苹果加钱定制了低容量的 RAM ，以降低用户的使用年限。&lt;br /&gt;
-没有长截图&lt;br /&gt;
-没有通话录音&lt;br /&gt;
-没有骚扰拦截&lt;br /&gt;
-没有应用多开&lt;br /&gt;
-NFC 功能限制&lt;br /&gt;
-打压第三方输入法&lt;br /&gt;
-传输管理文件及其麻烦&lt;br /&gt;
-散热差&lt;br /&gt;
-信号差
-
-iPhone 14 Pro Max 部分参数：&lt;br /&gt;
-6 G RAM，4325 mAh电池&lt;br /&gt;
-A16 仿生芯片 ，4nm 台积电工艺&lt;br /&gt;
-120Hz ProMotion 自适应刷新率技术&lt;br /&gt;
-6.7 英寸
-
-2796 x 1290 像素分辨率，460 ppi&lt;br /&gt;
-2000000:1 对比度 (典型)&lt;br /&gt;
-1000 尼特最大亮度 (典型)&lt;br /&gt;
-1600 尼特峰值亮度 (HDR)&lt;br /&gt;
-2000 尼特峰值亮度 (户外)&lt;br /&gt;
-主摄 4800 万像素，RAW格式 &lt;br /&gt;
-超广角、长焦 1200 万像素&lt;br /&gt;
-6 倍光学变焦范围&lt;br /&gt;
-视频播放最长可达 29 小时&lt;br /&gt;
-6 核中央处理器&lt;br /&gt;
-5 核图形处理器&lt;br /&gt;
-16 核神经网络引擎&lt;br /&gt;
-5G 蜂窝网络&lt;br /&gt;
-超瓷晶面板，手术级不锈钢边框&lt;br /&gt;
-抗水性能：在 6 米深的水下停留时间最长可达 30 分钟&lt;br /&gt;
-160.7 x 77.6 x 7.85 mm，240 g
-</description>
-        <pubDate>Mon, 10 Oct 2022 22:14:00 +0800</pubDate>
-        <link>/2022/10/10/iphone-stuffs/</link>
-        <guid isPermaLink="true">/2022/10/10/iphone-stuffs/</guid>
         
         <category>daily</category>
         
