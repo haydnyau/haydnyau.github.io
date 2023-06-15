@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Jun 2023 01:49:29 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2023 01:49:29 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Jun 2023 01:52:48 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Jun 2023 01:52:48 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -70,10 +70,10 @@ Dpkg 的普通用法：
         <link>/2023/06/16/install-deb/</link>
         <guid isPermaLink="true">/2023/06/16/install-deb/</guid>
         
-        <category>daily</category>
+        <category>ubuntu</category>
         
         
-        <category>personal</category>
+        <category>tech</category>
         
       </item>
     
