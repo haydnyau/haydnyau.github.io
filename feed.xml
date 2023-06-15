@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Jun 2023 01:52:48 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2023 01:52:48 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Jun 2023 02:34:57 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Jun 2023 02:34:57 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>男人的修养</title>
+        <description>气概，是即使时运不齐，也不失情怀和风骨。&lt;br /&gt;
+穷不怪父母，苦不怨生活，气不凶无辜。&lt;br /&gt;
+一人之力，顶风抗雨，摸爬滚打，赢得属于自己的一片天地。
+</description>
+        <pubDate>Fri, 16 Jun 2023 02:29:44 +0800</pubDate>
+        <link>/2023/06/16/xiuyang/</link>
+        <guid isPermaLink="true">/2023/06/16/xiuyang/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>ubuntu安装deb文件</title>
@@ -218,24 +235,6 @@ Dpkg 的普通用法：
         <pubDate>Sat, 05 Nov 2022 01:18:41 +0800</pubDate>
         <link>/2022/11/05/for-myself/</link>
         <guid isPermaLink="true">/2022/11/05/for-myself/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>悲观入世</title>
-        <description>历史人性，永劫无间&lt;br /&gt;
-&lt;del&gt;胸怀天下，明台不染&lt;/del&gt;&lt;br /&gt;
-哲观内查，悲观入世&lt;br /&gt;
-立身行道
-</description>
-        <pubDate>Tue, 01 Nov 2022 02:44:30 +0800</pubDate>
-        <link>/2022/11/01/bei-guan-de-ru-shi-zhe/</link>
-        <guid isPermaLink="true">/2022/11/01/bei-guan-de-ru-shi-zhe/</guid>
         
         <category>daily</category>
         
