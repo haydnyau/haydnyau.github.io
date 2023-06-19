@@ -145,6 +145,147 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/13/sql-edit-more-than-200-item/">SQL: edit more than 200 item</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-13
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>工具，选项，SQL Server 对象资源管理器，命令……</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/13/sql-edit-more-than-200-item/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">windows10和Ubuntu双系统，时间不对</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
+
+<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+utc=yes 改成 utc=no
+</code></pre></div></div>
+
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
+后来谷歌了半天找到了一个完美解决办法：<br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>然后将时间更新到硬件上：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
+</code></pre></div></div>
+
+<p>重新进入windows10，发现时间恢复正常了！</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/10/time-stuff-between-windows-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/10/Voltage-change/">voltage change</a>
                 </h2>
                 <div class="label">
@@ -741,135 +882,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/03/extract/">解压 Extract</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-03
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install rar unrar p7zip-full p7zip-rar
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/03/extract/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/03/sql2000-install-hang-up/">SQL2000:某个程序安装已在安装计算机上创建挂起的文件操作</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-03
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ol>
-  <li>在添加/删除程序中彻底删除sql server</li>
-  <li>将没有删除的sql server目录也删除掉</li>
-  <li>打开注册表编辑器，在HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager中找到PendingFileRenameOperations项目，并删除它。这样就可以清除安装暂挂项目</li>
-  <li>删除注册表中跟sql server相关的键</li>
-</ol>
-
-<p><em>或者使用:SQL安装挂起解决工具免安装版.exe</em><br />
-<strong>DG：在安装盘C或D，搜索sql，会看到一个关于sql的编辑注册表项——SQL2000安装挂起.reg</strong></p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/03/sql2000-install-hang-up/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -899,6 +911,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/06/20/make-a-move/">每天进步</a></li>
+                    
+                        <li><a href="/2023/06/20/my-fault/">我的愚蠢错误</a></li>
                     
                         <li><a href="/2023/06/17/fuck-off-sb/">远离SB</a></li>
                     
@@ -956,10 +972,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2022/06/20/kai-qiao-ba-,drop-the-bads/">开窍吧，drop the bads</a></li>
                     
-                        <li><a href="/2022/06/20/be-smart/">开窍吧-折腾音箱</a></li>
-                    
-                        <li><a href="/2022/06/15/riding/">骑行-徐云流浪中国</a></li>
-                    
                 </ul>
             </div>
 
@@ -985,7 +997,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">170</span>
+                            <span class="badge">172</span>
                         </a>
                     </li>
                     
@@ -1075,7 +1087,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 10pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
                     
                       
                       
