@@ -5,9 +5,27 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Jun 2023 01:38:23 +0800</pubDate>
-    <lastBuildDate>Thu, 22 Jun 2023 01:38:23 +0800</lastBuildDate>
+    <pubDate>Sat, 24 Jun 2023 01:03:41 +0800</pubDate>
+    <lastBuildDate>Sat, 24 Jun 2023 01:03:41 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Daily，2023-06-24</title>
+        <description>黄金十年，控制情欲。&lt;br /&gt;
+清醒，目标，行动，坚持。&lt;br /&gt;
+目标明确，效率至上，遇水架桥，逢山开路，控制情绪，极致理性。&lt;br /&gt;
+思考全面，做好准备但不忧虑没发生的事情。
+</description>
+        <pubDate>Sat, 24 Jun 2023 00:56:00 +0800</pubDate>
+        <link>/2023/06/24/daily/</link>
+        <guid isPermaLink="true">/2023/06/24/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily，2023-06-22</title>
@@ -212,22 +230,6 @@ Dpkg 的普通用法：
         <pubDate>Fri, 10 Mar 2023 00:14:17 +0800</pubDate>
         <link>/2023/03/10/job-make-me-upset/</link>
         <guid isPermaLink="true">/2023/03/10/job-make-me-upset/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>早睡早起身体好</title>
-        <description>11点睡觉，8点起床。&lt;br /&gt;
-晚睡会毁了那两三天的。
-</description>
-        <pubDate>Sat, 11 Feb 2023 20:36:39 +0800</pubDate>
-        <link>/2023/02/11/sleep-health/</link>
-        <guid isPermaLink="true">/2023/02/11/sleep-health/</guid>
         
         <category>daily</category>
         
