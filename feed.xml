@@ -5,9 +5,29 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Jun 2023 03:05:10 +0800</pubDate>
-    <lastBuildDate>Sat, 24 Jun 2023 03:05:10 +0800</lastBuildDate>
+    <pubDate>Sun, 25 Jun 2023 22:57:28 +0800</pubDate>
+    <lastBuildDate>Sun, 25 Jun 2023 22:57:28 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>daily，2023-06-25</title>
+        <description>烦躁的时候千万不要说话&lt;br /&gt;
+也不要做任何决定&lt;br /&gt;
+安静地待会&lt;br /&gt;
+你已经长大了&lt;br /&gt;
+一些难过的情绪&lt;br /&gt;
+要学会自己消化
+</description>
+        <pubDate>Sun, 25 Jun 2023 22:52:31 +0800</pubDate>
+        <link>/2023/06/25/daily/</link>
+        <guid isPermaLink="true">/2023/06/25/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>开窍</title>
@@ -218,23 +238,6 @@ Dpkg 的普通用法：
         
         
         <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily，2023-06-14，提高</title>
-        <description>多看书，提高效率，沟通能力，说服力&lt;br /&gt;
-别给自己找麻烦，别给他人擦屁股&lt;br /&gt;
-严格作息
-</description>
-        <pubDate>Wed, 14 Jun 2023 21:28:35 +0800</pubDate>
-        <link>/2023/06/14/daily-2023-06-14/</link>
-        <guid isPermaLink="true">/2023/06/14/daily-2023-06-14/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
         
       </item>
     
