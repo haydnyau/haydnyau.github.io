@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Jun 2023 23:12:37 +0800</pubDate>
-    <lastBuildDate>Sun, 25 Jun 2023 23:12:37 +0800</lastBuildDate>
+    <pubDate>Wed, 28 Jun 2023 00:12:53 +0800</pubDate>
+    <lastBuildDate>Wed, 28 Jun 2023 00:12:53 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Daily,2023-06-27</title>
+        <description>因为龙舟节时段下雨和工作经常加班，有大半个月没打球没运动了，今天终于天晴，下班了赶紧跑，去打球，但是只打了3个球，就明显脚软，跑不起来，节奏慢半拍，打了三四场，有点喘气不上来。&lt;br /&gt;
+所以，真的要每天运动健身，就算10分钟也行。上年纪了，必须每天花时间和汗水，保持体能。&lt;br /&gt;
+另外，每天打字，写点东西，不然脑袋也荒废得利害。&lt;br /&gt;
+我买了个樱桃青轴的机械键盘，打字感觉很舒服的，手感很好，声音就和老式打字机一样好听。每天都写点东西，物尽其用嘛。&lt;br /&gt;
+读书，写字。
+</description>
+        <pubDate>Tue, 27 Jun 2023 23:38:28 +0800</pubDate>
+        <link>/2023/06/27/daily/</link>
+        <guid isPermaLink="true">/2023/06/27/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>daily，2023-06-25</title>
@@ -172,74 +191,6 @@
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>ubuntu安装deb文件</title>
-        <description>Ubuntu下安装deb包的命令总结
-
-&lt;a href=&quot;https://blog.csdn.net/cui_shuang_xi/article/details/90904929&quot;&gt;原文链接&lt;/a&gt;
-
-在Ubuntu下安装deb包需要使用dpkg命令.
-
-Dpkg 的普通用法：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -i &amp;lt;package.deb&amp;gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-安装一个 Debian 软件包，如你手动下载的文件。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -c &amp;lt;package.deb&amp;gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-列出 &lt;package.deb&gt; 的内容。&lt;/package.deb&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -I &amp;lt;package.deb&amp;gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-从 &lt;package.deb&gt; 中提取包裹信息。&lt;/package.deb&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -r  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-移除一个已安装的包裹。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -P  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -L  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -s  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg-reconfigure  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。
-
-如果安装过程中出现问题,可以先使用命令:
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get update  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-更新后再执行上面的命令.
-</description>
-        <pubDate>Fri, 16 Jun 2023 01:38:49 +0800</pubDate>
-        <link>/2023/06/16/install-deb/</link>
-        <guid isPermaLink="true">/2023/06/16/install-deb/</guid>
-        
-        <category>ubuntu</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
