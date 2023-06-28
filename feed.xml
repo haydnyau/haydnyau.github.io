@@ -5,9 +5,25 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Jun 2023 00:12:53 +0800</pubDate>
-    <lastBuildDate>Wed, 28 Jun 2023 00:12:53 +0800</lastBuildDate>
+    <pubDate>Thu, 29 Jun 2023 00:48:22 +0800</pubDate>
+    <lastBuildDate>Thu, 29 Jun 2023 00:48:22 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Daily</title>
+        <description>人在江湖，到处是江湖，烦事避不了的。&lt;br /&gt;
+熬得住无人问津的寂寞，才配得上诗和远方。
+</description>
+        <pubDate>Thu, 29 Jun 2023 00:45:22 +0800</pubDate>
+        <link>/2023/06/29/daily/</link>
+        <guid isPermaLink="true">/2023/06/29/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily,2023-06-27</title>
@@ -169,23 +185,6 @@
         <pubDate>Sat, 17 Jun 2023 12:22:16 +0800</pubDate>
         <link>/2023/06/17/fuck-off-sb/</link>
         <guid isPermaLink="true">/2023/06/17/fuck-off-sb/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>男人的修养</title>
-        <description>气概，是即使时运不齐，也不失情怀和风骨。&lt;br /&gt;
-穷不怪父母，苦不怨生活，气不凶无辜。&lt;br /&gt;
-一人之力，顶风抗雨，摸爬滚打，赢得属于自己的一片天地。
-</description>
-        <pubDate>Fri, 16 Jun 2023 02:29:44 +0800</pubDate>
-        <link>/2023/06/16/xiuyang/</link>
-        <guid isPermaLink="true">/2023/06/16/xiuyang/</guid>
         
         <category>daily</category>
         
