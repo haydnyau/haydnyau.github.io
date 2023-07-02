@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 Jul 2023 00:40:06 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Jul 2023 00:40:06 +0800</lastBuildDate>
+    <pubDate>Sun, 02 Jul 2023 23:17:44 +0800</pubDate>
+    <lastBuildDate>Sun, 02 Jul 2023 23:17:44 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>Daily</title>
+        <description>嘿，深圳的7通道安卓，本来以为要明天才有可能搞定的，没想到今天就搞好回来了。
+</description>
+        <pubDate>Sun, 02 Jul 2023 23:15:21 +0800</pubDate>
+        <link>/2023/07/02/daily/</link>
+        <guid isPermaLink="true">/2023/07/02/daily/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily，春有百花秋有月</title>
@@ -192,22 +207,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng&lt;br /&gt;
         <pubDate>Thu, 22 Jun 2023 00:56:38 +0800</pubDate>
         <link>/2023/06/22/daily/</link>
         <guid isPermaLink="true">/2023/06/22/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>度量都是委屈撑出来的</title>
-        <description>也不知道是好还是坏，有些委屈，我也默默承受，不作解释了。&lt;br /&gt;
-应该是我也了解了一些人性，解释没有作用，我也懒得浪费时间，口舌，和情绪。
-</description>
-        <pubDate>Wed, 21 Jun 2023 01:28:46 +0800</pubDate>
-        <link>/2023/06/21/carry/</link>
-        <guid isPermaLink="true">/2023/06/21/carry/</guid>
         
         <category>daily</category>
         
