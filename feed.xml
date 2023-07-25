@@ -5,9 +5,25 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Jul 2023 22:35:31 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Jul 2023 22:35:31 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Jul 2023 22:41:55 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Jul 2023 22:41:55 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>诗词，《出塞》，唐朝，王昌龄</title>
+        <description>秦时明月汉时关，万里长征人未还&lt;br /&gt;
+但使龙城飞将在，不教胡马度阴山
+</description>
+        <pubDate>Tue, 25 Jul 2023 22:38:22 +0800</pubDate>
+        <link>/2023/07/25/shici/</link>
+        <guid isPermaLink="true">/2023/07/25/shici/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>计划</title>
@@ -173,22 +189,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng&lt;br /&gt;
         <pubDate>Thu, 29 Jun 2023 22:32:08 +0800</pubDate>
         <link>/2023/06/29/daily02/</link>
         <guid isPermaLink="true">/2023/06/29/daily02/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily</title>
-        <description>人在江湖，到处是江湖，烦事避不了的。&lt;br /&gt;
-熬得住无人问津的寂寞，才配得上诗和远方。
-</description>
-        <pubDate>Thu, 29 Jun 2023 00:45:22 +0800</pubDate>
-        <link>/2023/06/29/daily/</link>
-        <guid isPermaLink="true">/2023/06/29/daily/</guid>
         
         <category>daily</category>
         
