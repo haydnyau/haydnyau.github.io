@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>被貓抓了一下</title>
-    <meta name="description" content="前幾天晚上，有一隻貓，據父親說是野貓、流浪貓，都會來我家討食，我們餵了它兩天。昨晚我想和它玩玩，把手伸到它面前，它抓了我一下，一道1厘米多點的抓痕，過了兩三分鐘，滲出一下血。我用熱水器的熱水沖洗了幾分鐘，擦洗了傷口。希望沒事。雖然愛貓，但因貓的性子，如若不熟悉，還是別逗它。有風險。">
+    <title>ERROR: We&#39;re doing an SSH key audit.Please visit to approve this key so we know it&#39;s safe.</title>
+    <meta name="description" content="错误代码：dong@Ubuntu:~$ ./launch.sh ERROR: We're doing an SSH key audit.Reason: unverified automatically (private key found in a public repository)Please visit h...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2022/02/24/cat-catch/">
+    <link rel="canonical" href="/2023/08/01/SSH-key-audit/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -142,11 +142,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>被貓抓了一下</h1>
+        <h1>ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-02-24
+                <i class="fa fa-calendar"></i>2023-08-01
             </div>
 
             <div class="label-card">
@@ -167,7 +167,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -184,8 +184,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a-->
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+        <!--a href="/tag/#octopress" title="Tag: octopress" rel="tag">octopress</a-->
+        <a href="/tag/#octopress" title="Tag: octopress" rel="tag">octopress</a>
     
   
 
@@ -199,25 +199,38 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>前幾天晚上，有一隻貓，據父親說是野貓、流浪貓，都會來我家討食，我們餵了它兩天。<br />
-昨晚我想和它玩玩，把手伸到它面前，它抓了我一下，一道1厘米多點的抓痕，過了兩三分鐘，滲出一下血。<br />
-我用熱水器的熱水沖洗了幾分鐘，擦洗了傷口。<br />
-希望沒事。<br />
-雖然愛貓，但因貓的性子，如若不熟悉，還是別逗它。<br />
-有風險。</p>
+        <p>错误代码：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ ./launch.sh 
+ERROR: We're doing an SSH key audit.
+Reason: unverified automatically (private key found in a public repository)
+Please visit https://github.com/settings/keys/………………
+to approve this key so we know it's safe.
+
+Fingerprint:
+SHA256:………………
+
+fatal: 无法读取远程仓库。
+
+请确认您有正确的访问权限并且仓库存在。
+</code></pre></div></div>
+
+<p>解决方法：<br />
+重新生成 ssh key<br />
+或者<br />
+到Github账号里，https://github.com/settings/keys/………………， Approve 验证原来的 ssh key</p>
+
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a></p>
+        <p><strong>上一篇</strong> <a href="/2023/08/01/day1/">day 1</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2022/02/24/octopress-3-0-is-faster-than-2-0/">Octopress3.0訪問速度比2.0快太多了</a></p>
         
     </div>
 </div>
