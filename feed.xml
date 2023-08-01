@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Aug 2023 01:27:26 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 01:27:26 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2023 21:31:48 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2023 21:31:48 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day2</title>
+        <description>Blue&lt;br /&gt;
+我应该做几个月装机，这样才能熟悉公司的软件硬件。&lt;br /&gt;
+但是：&lt;br /&gt;
+现实中我不会有这么理想的条件，我只能边做份内的工作，边在间隙中学习。&lt;br /&gt;
+时间紧迫，机会不多。
+</description>
+        <pubDate>Tue, 01 Aug 2023 21:08:49 +0800</pubDate>
+        <link>/2023/08/01/day2/</link>
+        <guid isPermaLink="true">/2023/08/01/day2/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</title>
@@ -57,9 +76,9 @@ fatal: 无法读取远程仓库。
 没能完成工作预习，然后熬夜工作，损害明天的精神，恶性循环。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Tue, 01 Aug 2023 00:13:19 +0800</pubDate>
-        <link>/2023/08/01/day1/</link>
-        <guid isPermaLink="true">/2023/08/01/day1/</guid>
+        <pubDate>Mon, 31 Jul 2023 23:59:19 +0800</pubDate>
+        <link>/2023/07/31/day1/</link>
+        <guid isPermaLink="true">/2023/07/31/day1/</guid>
         
         <category>daily</category>
         
@@ -176,29 +195,6 @@ fatal: 无法读取远程仓库。
         <pubDate>Sun, 02 Jul 2023 23:15:21 +0800</pubDate>
         <link>/2023/07/02/daily/</link>
         <guid isPermaLink="true">/2023/07/02/daily/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily，春有百花秋有月</title>
-        <description>南宋僧人，慧开&lt;br /&gt;
-春有百花秋有月&lt;br /&gt;
-夏有凉风冬有雪&lt;br /&gt;
-如无闲事挂心头&lt;br /&gt;
-便是人间好时节
-
-工作都是挺烦的，没办法&lt;br /&gt;
-放开胸怀大胆干&lt;br /&gt;
-早点睡觉
-</description>
-        <pubDate>Sat, 01 Jul 2023 00:33:25 +0800</pubDate>
-        <link>/2023/07/01/daily/</link>
-        <guid isPermaLink="true">/2023/07/01/daily/</guid>
         
         <category>daily</category>
         
