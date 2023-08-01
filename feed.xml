@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Aug 2023 21:31:48 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 21:31:48 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2023 21:39:07 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2023 21:39:07 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -39,7 +39,7 @@ Please visit https://github.com/settings/keys/………………
 to approve this key so we know it's safe.
 
 Fingerprint:
-SHA256:………………
+SHA256:......
 
 fatal: 无法读取远程仓库。
 
@@ -49,7 +49,7 @@ fatal: 无法读取远程仓库。
 解决方法：&lt;br /&gt;
 重新生成 ssh key&lt;br /&gt;
 或者&lt;br /&gt;
-到Github账号里，https://github.com/settings/keys/………………， Approve 验证原来的 ssh key
+到Github账号里，https://github.com/settings/keys/…  Approve 验证原来的 ssh key
 
 </description>
         <pubDate>Tue, 01 Aug 2023 01:16:09 +0800</pubDate>
