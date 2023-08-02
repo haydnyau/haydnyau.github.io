@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Aug 2023 23:23:41 +0800</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 23:23:41 +0800</lastBuildDate>
+    <pubDate>Wed, 02 Aug 2023 22:43:30 +0800</pubDate>
+    <lastBuildDate>Wed, 02 Aug 2023 22:43:30 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day3</title>
+        <description>Blue&lt;br /&gt;
+快速反应，否则被市场&lt;strong&gt;&lt;em&gt;淘汰&lt;/em&gt;&lt;/strong&gt;！&lt;br /&gt;
+自己也被淘汰！&lt;br /&gt;
+别怕出错，认真总结。&lt;br /&gt;
+记录问题，就事论事，不是得罪人。
+</description>
+        <pubDate>Wed, 02 Aug 2023 22:36:50 +0800</pubDate>
+        <link>/2023/08/02/day3/</link>
+        <guid isPermaLink="true">/2023/08/02/day3/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day2</title>
@@ -183,21 +202,6 @@ fatal: 无法读取远程仓库。
         <pubDate>Sun, 02 Jul 2023 23:49:31 +0800</pubDate>
         <link>/2023/07/02/daily-shici/</link>
         <guid isPermaLink="true">/2023/07/02/daily-shici/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily</title>
-        <description>嘿，深圳的7通道安卓，本来以为要明天才有可能搞定的，没想到今天就搞好回来了。
-</description>
-        <pubDate>Sun, 02 Jul 2023 23:15:21 +0800</pubDate>
-        <link>/2023/07/02/daily/</link>
-        <guid isPermaLink="true">/2023/07/02/daily/</guid>
         
         <category>daily</category>
         
