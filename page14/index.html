@@ -151,6 +151,161 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/">octopress 2.0 test on ubuntu 20.04</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.3.1  
+</code></pre></div></div>
+
+<p>失败<br />
+.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby --version
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.7.0
+ 	Required ruby-2.7.0 is not installed.
+ 	To install do: 'rvm install "ruby-2.7.0"'  
+</code></pre></div></div>
+
+<h1 id="记得是用270">记得是用2.7.0</h1>
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rvm install "ruby-2.7.0"  
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ ruby --version
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake generate
+Could not find rake-10.5.0 in any of the sources
+Run `bundle install` to install missing gems.
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ bundle install
+Traceback (most recent call last):
+4: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;'
+3: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/ruby_executable_hooks:22:in `eval'
+2: from /home/dong/.rvm/rubies/ruby-2.7.0/bin/bundle:23:in `&lt;main&gt;'
+1: from /home/dong/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:294:in `activate_bin_path'
+/home/dong/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:275:in `find_spec_for_exe': Could not find 'bundler' (1.17.3) required by your /home/dong/octopress/Gemfile.lock. (Gem::GemNotFoundException)
+To update to the latest version installed on your system, run `bundle update --bundler`.
+To install the missing version, run `gem install bundler:1.17.3`
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ gem install bundler:1.17.3
+Fetching bundler-1.17.3.gem
+Successfully installed bundler-1.17.3
+Parsing documentation for bundler-1.17.3
+Installing ri documentation for bundler-1.17.3
+Done installing documentation for bundler after 3 seconds
+1 gem installed
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake generate
+Could not find rake-10.5.0 in any of the sources
+Run `bundle install` to install missing gems.
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ bundle install
+</code></pre></div></div>
+
+<p>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake generate
+rake aborted!
+Gem::LoadError: You have already activated rake 13.0.1, but your Gemfile requires rake 10.5.0. Prepending `bundle exec` to your command may solve this.
+/home/dong/octopress/Rakefile:2:in `&lt;top (required)&gt;'
+(See full trace by running task with --trace)
+</code></pre></div></div>
+
+<p>提示失败，<br />
+但是可以加上<code class="language-plaintext highlighter-rouge">bundle exec</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$bundle exec rake generate
+</code></pre></div></div>
+
+<p>很多警告，但是成了，<br />
+下面也一样：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec rake preview
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/11/octopress-2.0-test-on-ubuntu-20.04/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a>
                 </h2>
                 <div class="label">
@@ -1314,76 +1469,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/15/jd3/">京東3</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>day 68<br />
-今天休假<br />
-昨天耳朵又听到低沉的发动机的轰隆隆的声音，我以为是耳鸣，现在基本可以确定，这就是附近道路晚上泥头车汽車发动机或者工廠機器運转的声音。<br />
-在京东时也常常听到。<br />
-我<strong>感冒鼻塞</strong>时，耳朵<strong>对这些声音特别敏感</strong>。<br />
-就这样。<br />
-昨天上班时，没搞清情况，情绪又崩溃了……<br />
-<strong><em>補充</em></strong>：<br />
-工作沒勁頭，好想打電話給媽，和她坦白這一切，想讓她接受我的平庸，我的失敗，我的不婚，想發泄所有的不安、恐懼、負面情緒。<br />
-幸好，我還懂得衝動憤怒情緒不穩定時，別做決定，別做事。<br />
-休息了一天，現在知道不是耳鳴，是感冒鼻塞或者咽鼓管堵塞或者其他的聽力系統的某一部分出了問題，而引起的狀況，感冒好了，整個聽力系統自然就沒事了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/15/jd3/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1413,6 +1498,8 @@ git add .
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/08/06/day-7/">day 7</a></li>
                     
                         <li><a href="/2023/08/05/day6/">day 6</a></li>
                     
@@ -1472,8 +1559,6 @@ git add .
                     
                         <li><a href="/2023/06/16/install-deb/">ubuntu安装deb文件</a></li>
                     
-                        <li><a href="/2023/06/14/daily-2023-06-14/">Daily，2023-06-14，提高</a></li>
-                    
                 </ul>
             </div>
 
@@ -1499,7 +1584,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">195</span>
+                            <span class="badge">196</span>
                         </a>
                     </li>
                     
@@ -1589,14 +1674,14 @@ git add .
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress" style="font-size: 9.5pt; color: #999;">octopress</a>
+                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
                       
                       
@@ -1624,7 +1709,7 @@ git add .
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                       
                       

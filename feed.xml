@@ -5,9 +5,27 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 05 Aug 2023 23:41:05 +0800</pubDate>
-    <lastBuildDate>Sat, 05 Aug 2023 23:41:05 +0800</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2023 00:05:14 +0800</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2023 00:05:14 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day 7</title>
+        <description>&lt;strong&gt;&lt;em&gt;lue&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+效率还是低。&lt;br /&gt;
+眼光放长远，摒弃鸡毛蒜皮，蝇头小利。&lt;br /&gt;
+芝麻西瓜，因小失大。
+</description>
+        <pubDate>Sun, 06 Aug 2023 23:58:58 +0800</pubDate>
+        <link>/2023/08/06/day-7/</link>
+        <guid isPermaLink="true">/2023/08/06/day-7/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day 6</title>
@@ -185,25 +203,6 @@ fatal: 无法读取远程仓库。
         <pubDate>Tue, 25 Jul 2023 22:29:29 +0800</pubDate>
         <link>/2023/07/25/plan/</link>
         <guid isPermaLink="true">/2023/07/25/plan/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily，诗词，渡荆门送别</title>
-        <description>唐代，李白&lt;br /&gt;
-渡远荆门外，来从楚国游。&lt;br /&gt;
-山随平野尽，江入大荒流。&lt;br /&gt;
-月下飞天镜，云生结海楼。&lt;br /&gt;
-仍怜故乡水，万里送行舟。
-</description>
-        <pubDate>Mon, 17 Jul 2023 20:40:23 +0800</pubDate>
-        <link>/2023/07/17/daily/</link>
-        <guid isPermaLink="true">/2023/07/17/daily/</guid>
         
         <category>daily</category>
         
