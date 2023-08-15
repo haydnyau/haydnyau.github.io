@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Aug 2023 22:26:34 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Aug 2023 22:26:34 +0800</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2023 08:45:16 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2023 08:45:16 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day 11</title>
+        <description>&lt;strong&gt;&lt;em&gt;lue&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+不设限&lt;br /&gt;
+不破不立
+</description>
+        <pubDate>Tue, 15 Aug 2023 08:43:40 +0800</pubDate>
+        <link>/2023/08/15/day-11/</link>
+        <guid isPermaLink="true">/2023/08/15/day-11/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day 10 不要在情绪不稳定时做决定</title>
@@ -174,41 +191,6 @@
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</title>
-        <description>错误代码：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dong@Ubuntu:~$ ./launch.sh 
-ERROR: We're doing an SSH key audit.
-Reason: unverified automatically (private key found in a public repository)
-Please visit https://github.com/settings/keys/………………
-to approve this key so we know it's safe.
-
-Fingerprint:
-SHA256:......
-
-fatal: 无法读取远程仓库。
-
-请确认您有正确的访问权限并且仓库存在。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-解决方法：&lt;br /&gt;
-重新生成 ssh key&lt;br /&gt;
-或者&lt;br /&gt;
-到Github账号里，https://github.com/settings/keys/…  Approve 验证原来的 ssh key
-
-</description>
-        <pubDate>Tue, 01 Aug 2023 01:16:09 +0800</pubDate>
-        <link>/2023/08/01/SSH-key-audit/</link>
-        <guid isPermaLink="true">/2023/08/01/SSH-key-audit/</guid>
-        
-        <category>octopress</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
