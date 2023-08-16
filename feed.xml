@@ -5,9 +5,25 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Aug 2023 12:22:27 +0800</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2023 12:22:27 +0800</lastBuildDate>
+    <pubDate>Wed, 16 Aug 2023 19:04:51 +0800</pubDate>
+    <lastBuildDate>Wed, 16 Aug 2023 19:04:51 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day 12</title>
+        <description>&lt;strong&gt;&lt;em&gt;熬夜&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+学习老板的高效率和多线程处理的能力
+</description>
+        <pubDate>Wed, 16 Aug 2023 19:01:04 +0800</pubDate>
+        <link>/2023/08/16/day-12/</link>
+        <guid isPermaLink="true">/2023/08/16/day-12/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day 11</title>
@@ -164,28 +180,6 @@
         <pubDate>Wed, 02 Aug 2023 22:36:50 +0800</pubDate>
         <link>/2023/08/02/day3/</link>
         <guid isPermaLink="true">/2023/08/02/day3/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>day 2</title>
-        <description>Blue&lt;br /&gt;
-我应该做几个月装机，这样才能熟悉公司的软件硬件。&lt;br /&gt;
-但是：&lt;br /&gt;
-现实中我不会有这么理想的条件，我只能边做份内的工作，边在间隙中学习。&lt;br /&gt;
-时间紧迫，机会不多。
-
-领悟点：&lt;br /&gt;
-如何通过标准化，规范化，流程化，让新人快速上手，和避免低级的、基础的错误。
-</description>
-        <pubDate>Tue, 01 Aug 2023 21:08:49 +0800</pubDate>
-        <link>/2023/08/01/day2/</link>
-        <guid isPermaLink="true">/2023/08/01/day2/</guid>
         
         <category>daily</category>
         

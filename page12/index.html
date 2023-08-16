@@ -151,6 +151,155 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/27/add-tags/">添加tags，導航欄，側邊欄</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a></p>
+
+<h3 id="下载">下载</h3>
+
+<p>首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。</p>
+
+<h3 id="octopress-tag-pages">octopress-tag-pages</h3>
+
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+
+<h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
+
+<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+
+<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
+<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
+    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>解释：</p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+
+<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre></div></div>
+
+<p>博文写标签：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r" alt="Alt text" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre></div></div>
+
+<h3 id="解决">解决</h3>
+
+<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
+    <span class="c1"># sort the tag pairs by frequency in descending order</span>
+    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
+    <span class="c1"># then slice off the top @limit tag pairs</span>
+    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+
+<p>修改第74行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p>修改第95行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+
+<p>出现另一警告：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r" alt="Alt text" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r" alt="Alt text" /></p>
+
+<h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
+
+<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+</code></pre></div></div>
+
+<h2 id="搞定">搞定</h2>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/add-tags/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a>
                 </h2>
                 <div class="label">
@@ -879,79 +1028,6 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要<br />
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-21
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在根目录新建一文件夹<code class="language-plaintext highlighter-rouge">_templates</code>，文件夹里建一个文件<code class="language-plaintext highlighter-rouge">post</code>，无后缀，内容是：<br />
-<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong><br />
-—<br />
-layout: <br />
-title: “”<br />
-date: <br />
-author:<br />
-tags: <br />
-comments: true<br />
-categories: <br />
-—</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/21/template-of-new-post/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -981,6 +1057,8 @@ categories: <br />
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/08/16/day-12/">day 12</a></li>
                     
                         <li><a href="/2023/08/15/day-11/">day 11</a></li>
                     
@@ -1040,8 +1118,6 @@ categories: <br />
                     
                         <li><a href="/2023/06/21/carry/">度量都是委屈撑出来的</a></li>
                     
-                        <li><a href="/2023/06/20/make-a-move/">每天进步</a></li>
-                    
                 </ul>
             </div>
 
@@ -1067,7 +1143,7 @@ categories: <br />
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">200</span>
+                            <span class="badge">201</span>
                         </a>
                     </li>
                     
@@ -1171,7 +1247,7 @@ categories: <br />
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
                       
                       
