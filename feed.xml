@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Aug 2023 19:04:51 +0800</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2023 19:04:51 +0800</lastBuildDate>
+    <pubDate>Thu, 17 Aug 2023 22:55:17 +0800</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2023 22:55:17 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day 13</title>
+        <description>看穿表象、假象，抓住本质。
+</description>
+        <pubDate>Thu, 17 Aug 2023 22:49:39 +0800</pubDate>
+        <link>/2023/08/17/day-13/</link>
+        <guid isPermaLink="true">/2023/08/17/day-13/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day 12</title>
@@ -161,25 +176,6 @@
         <pubDate>Thu, 03 Aug 2023 22:58:11 +0800</pubDate>
         <link>/2023/08/03/day4/</link>
         <guid isPermaLink="true">/2023/08/03/day4/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>day 3</title>
-        <description>Blue&lt;br /&gt;
-快速反应，否则被市场&lt;strong&gt;&lt;em&gt;淘汰&lt;/em&gt;&lt;/strong&gt;！&lt;br /&gt;
-自己也被淘汰！&lt;br /&gt;
-别怕出错，认真总结。&lt;br /&gt;
-记录问题，就事论事，不是得罪人。
-</description>
-        <pubDate>Wed, 02 Aug 2023 22:36:50 +0800</pubDate>
-        <link>/2023/08/02/day3/</link>
-        <guid isPermaLink="true">/2023/08/02/day3/</guid>
         
         <category>daily</category>
         

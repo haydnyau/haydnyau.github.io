@@ -151,6 +151,71 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/01/11/man-without-warm-shoes/">一个顾客</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>这几天挺冷的，今天阴天，偶尔起风，下午5点多。<br />
+一个中年男子，来买了条皮带，49块。<br />
+他约三四十岁，一双手都是黑色的，估计是沾了机油，做维修之类的工作。头发浓密而略蓬乱，一脸的胡渣。<br />
+出门的时候，我看了看，他穿一条破旧起皱的裤子，一双胶拖鞋。<br />
+我想到这类的男人，中年，要负担一家人的开支，疲于挣钱，没有时间与精力拾腾自己。<br />
+我还想到再多一些东西。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/01/11/man-without-warm-shoes/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/01/09/shell-script/">pull push.sh shell脚本</a>
                 </h2>
                 <div class="label">
@@ -775,115 +840,6 @@ hold on，7/8/9/10<br />
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2015/08/25/how-to-git-octopress/">how to ‘git’ Octopress</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2015-08-25
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>如何为已经存在于Github上的Octopress搭建本地环境<br />
-大部分步骤和全新搭建时差不多，这里只列出不同的那几步<br />
-···安装其他···<br />
-clone <code class="language-plaintext highlighter-rouge">source</code> 分支：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:username/repositoryname.git octopress
-</code></pre></div></div>
-
-<p>换成我的具体命令就是:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
-</code></pre></div></div>
-
-<p>clone <code class="language-plaintext highlighter-rouge">master</code> 分支：<br />
-<code class="language-plaintext highlighter-rouge">master</code> 分支存放在 <code class="language-plaintext highlighter-rouge">_deploy</code>目录</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
-git clone git@github.com:username/repositoryname.git _deploy
-</code></pre></div></div>
-
-<p>具体命令：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
-</code></pre></div></div>
-
-<p>if<br />
-<a href="https://qiuhaidong.github.io/blog/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull Push</a><br />
-fix it:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
-git https://github.com/qiuhaidong/qiuhaidong.github.com.git _deploy
-</code></pre></div></div>
-
-<p>···其他步骤···<br />
-另个重要命令：<br />
-拉取：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
-git pull origin source
-cd _deploy
-git pull origin master
-</code></pre></div></div>
-
-<p>推送：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
-git add .
-git commit -m 'my message'
-git push origin source
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2015/08/25/how-to-git-octopress/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -913,6 +869,8 @@ git push origin source
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/08/17/day-13/">day 13</a></li>
                     
                         <li><a href="/2023/08/16/day-12/">day 12</a></li>
                     
@@ -972,8 +930,6 @@ git push origin source
                     
                         <li><a href="/2023/06/22/daily/">Daily，2023-06-22</a></li>
                     
-                        <li><a href="/2023/06/21/carry/">度量都是委屈撑出来的</a></li>
-                    
                 </ul>
             </div>
 
@@ -999,7 +955,7 @@ git push origin source
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">201</span>
+                            <span class="badge">202</span>
                         </a>
                     </li>
                     
