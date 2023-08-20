@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Aug 2023 00:38:02 +0800</pubDate>
-    <lastBuildDate>Sun, 20 Aug 2023 00:38:02 +0800</lastBuildDate>
+    <pubDate>Sun, 20 Aug 2023 22:45:38 +0800</pubDate>
+    <lastBuildDate>Sun, 20 Aug 2023 22:45:38 +0800</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
+    
+      <item>
+        <title>day 15</title>
+        <description>该休息就休息，该摸鱼就摸鱼，不疲劳作战。
+</description>
+        <pubDate>Sun, 20 Aug 2023 22:42:54 +0800</pubDate>
+        <link>/2023/08/20/day-15/</link>
+        <guid isPermaLink="true">/2023/08/20/day-15/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>day 14 开窍</title>
@@ -160,22 +175,6 @@
         <pubDate>Sat, 05 Aug 2023 23:29:59 +0800</pubDate>
         <link>/2023/08/05/day6/</link>
         <guid isPermaLink="true">/2023/08/05/day6/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>day 5</title>
-        <description>&lt;strong&gt;&lt;em&gt;lue&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
-效率还是不行。努力呀！
-</description>
-        <pubDate>Fri, 04 Aug 2023 23:28:19 +0800</pubDate>
-        <link>/2023/08/04/day5/</link>
-        <guid isPermaLink="true">/2023/08/04/day5/</guid>
         
         <category>daily</category>
         
