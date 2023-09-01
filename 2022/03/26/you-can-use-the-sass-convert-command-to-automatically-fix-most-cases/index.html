@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>You can use the sass-convert command to automatically fix most cases---Ruby 不同版本</title>
-    <meta name="description" content="octopress-2.0，ruby-2.3.1，ubuntu20.04，可以运行（修改这里后）octopress-2.0，ruby-2.5.9，ubuntu20.04，可以运行（修改这里后）octopress-2.0，ruby-2.6.9，ubuntu20.04，可以运行（修改这里后）octopress-3.0...">
+    <meta name="description" content="octopress-2.0，ruby-2.3.1，ubuntu20.04，可以运行（修改这里后）  octopress-2.0，ruby-2.5.9，ubuntu20.04，可以运行（修改这里后）  octopress-2.0，ruby-2.6.9，ubuntu20.04，可以运行（修改这里后）  octopre...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -203,26 +203,26 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>octopress-2.0，ruby-<strong>2.3.1</strong>，ubuntu20.04，可以运行（修改这里后）<br />
-octopress-2.0，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（修改这里后）<br />
-octopress-2.0，ruby-<strong>2.6.9</strong>，ubuntu20.04，可以运行（修改这里后）<br />
-octopress-<strong>3.0</strong>，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（無需修改）<br />
+        <p>octopress-2.0，ruby-<strong>2.3.1</strong>，ubuntu20.04，可以运行（修改这里后）  <br />
+octopress-2.0，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（修改这里后）  <br />
+octopress-2.0，ruby-<strong>2.6.9</strong>，ubuntu20.04，可以运行（修改这里后）  <br />
+octopress-<strong>3.0</strong>，ruby-<strong>2.5.9</strong>，ubuntu20.04，可以运行（無需修改）  <br />
 octopress-<strong>3.0</strong>，ruby-<strong>2.6.9</strong>，ubuntu20.04，可以运行（無需修改）</p>
 
 <p>換了版本要重新安裝octopress3.0：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install octopress
-</code></pre></div></div>
+<pre><code>gem install octopress
+</code></pre>
 <p>octopress-2.0-3.0，ruby-<strong>3.1.1</strong>，ubuntu20.04，都無法运行。</p>
 
-<p><a href="https://stackoverflow.com/questions/35949660/compass-sass-deprecation-warning">原网页</a><br />
+<p><a href="https://stackoverflow.com/questions/35949660/compass-sass-deprecation-warning">原网页</a>  <br />
 <a href="http://cache.baiducontent.com/c?m=Xxdd763vX7YjRNeeOiILGLerW1Lrc_ceIQ3hCNMB9gwdzDHZoy_PikcN75GYpR9DFB3vxBUcejQkaSvlN3gZEfAPpNN-08FVQIDyZHTNJgPwSgoB3NKL4_GS4nx_XrCC-BUaRNwAuECMpWgq8wxzkIpLErbpEqlwK68Qi6soQwepLTgid54lohbxMlnl6PQpNH2t__da7lDpAsRwCb6EY-y40SooyRN5jX-9ufBiajUS0lec_A47rZ0vRgOYP12W&amp;p=8d7d8e0285cc43dd08e297780f568f&amp;newp=c273c00586cc42a95aa9c7710f408f231610db2151d3da146b82c825d7331b001c3bbfb42220150ed3c6796204af4259e8f033783d0923a3dda5c91d9fb4c57479cc&amp;s=2a38a4a9316c49e5&amp;user=baidu&amp;fm=sc&amp;query=You+can+use+the+sass%2Dconvert+command+to+automatically+fix+most+cases%2E&amp;qid=c0e3498b0000d650&amp;p1=1">百度缓存网页</a></p>
 
 <p>I just installed and Compass &amp; Sass as described here.</p>
 
-<p>I got the following warning when I ran <code class="language-plaintext highlighter-rouge">compass watch</code> for the first time. What exactly does it mean? What should I do to fix it, do I need to do anything?</p>
+<p>I got the following warning when I ran <code>compass watch</code> for the first time. What exactly does it mean? What should I do to fix it, do I need to do anything?</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ (master) compass watch
+<pre><code>$ (master) compass watch
 &gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.
 DEPRECATION WARNING on line 87 of /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss: #{} interpolation near operators will be simplified
 in a future version of Sass. To preserve the current behavior, use quotes:
@@ -239,13 +239,13 @@ in a future version of Sass. To preserve the current behavior, use quotes:
 You can use the sass-convert command to automatically fix most cases.
 
     write css/styles.css
-</code></pre></div></div>
+</code></pre>
 
 <h4 id="1-answer-">1 Answer :</h4>
 
 <p>To fix the error message, just change the <strong><em>line 87</em></strong> from your “<strong>_deprecated-support.scss</strong>” file to this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // A debug tool for checking browser support
+<pre><code>    // A debug tool for checking browser support
 @mixin debug-support-matrix($experimental: true, $ie: true) {
     @debug '#{"$moz-"}$experimental-support-for-mozilla'
                  '#{"$webkit-"}$experimental-support-for-webkit'
@@ -256,7 +256,7 @@ You can use the sass-convert command to automatically fix most cases.
                  '#{"$ie7-"}$legacy-support-for-ie7'
                  '#{"$ie8-"}$legacy-support-for-ie8';
 }
-</code></pre></div></div>
+</code></pre>
 
 <p>The file can be found at your <strong>/home/dong/.rvm/gems/ruby-2.3.1/gems/compass-core-1.0.3/stylesheets/compass/css3/_deprecated-support.scss</strong></p>
 
@@ -294,6 +294,10 @@ You can use the sass-convert command to automatically fix most cases.
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2222/02/22/daily-lts-love-life/">⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</a></li>
+                    
+                        <li><a href="/2023/09/01/123/">123</a></li>
+                    
                         <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
                         <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
@@ -322,7 +326,7 @@ You can use the sass-convert command to automatically fix most cases.
                     
                         <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
+                        <li><a href="/2023/08/01/SSH%20key%20audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
                         <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
@@ -350,10 +354,6 @@ You can use the sass-convert command to automatically fix most cases.
                     
                         <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
-                    
-                        <li><a href="/2023/06/24/kaiqiao/">开窍</a></li>
-                    
                 </ul>
             </div>
 
@@ -379,7 +379,7 @@ You can use the sass-convert command to automatically fix most cases.
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">206</span>
                         </a>
                     </li>
                     
@@ -402,9 +402,9 @@ You can use the sass-convert command to automatically fix most cases.
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -432,7 +432,47 @@ You can use the sass-convert command to automatically fix most cases.
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -440,6 +480,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -447,6 +491,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -454,6 +502,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -461,6 +513,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
@@ -468,6 +524,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
@@ -475,6 +535,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -482,6 +546,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
@@ -489,6 +557,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -496,6 +568,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -503,6 +579,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -510,6 +590,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -517,6 +601,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -524,6 +612,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -531,6 +623,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -538,6 +634,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -545,6 +645,10 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -552,8 +656,23 @@ You can use the sass-convert command to automatically fix most cases.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/tag/#LTS" style="font-size: 9pt; color: #999;">LTS</a>
                     
                 </div>
             </div>

@@ -199,15 +199,15 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h4 id="停止rake-preview-任务用ctrlc别用ctrlz可以避免这个问题">停止<code class="language-plaintext highlighter-rouge">rake preview</code> 任务，用<code class="language-plaintext highlighter-rouge">ctrl+c</code>，别用<code class="language-plaintext highlighter-rouge">ctrl+z</code>，可以避免这个问题</h4>
+        <h4 id="停止rake-preview-任务用ctrlc别用ctrlz可以避免这个问题">停止<code>rake preview</code> 任务，用<code>ctrl+c</code>，别用<code>ctrl+z</code>，可以避免这个问题</h4>
 <p>在执行命令</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake preview
-</code></pre></div></div>
+<pre><code>rake preview
+</code></pre>
 
 <p>时，输出：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake preview  
+<pre><code>dong@Ubuntu:~/octopress$ rake preview  
 Starting to watch source with Jekyll and Compass. Starting Rack on port 4000  
 &gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.  
 Configuration file: /home/dong/octopress/_config.yml  
@@ -237,47 +237,47 @@ Configuration file: /home/dong/octopress/_config.yml
                 done.
     write public/stylesheets/screen.css
  Auto-regeneration: enabled for 'source'
-</code></pre></div></div>
+</code></pre>
 
-<p>解决方法：<br />
+<p>解决方法：  <br />
 执行：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
-</code></pre></div></div>
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
 
 <p>如果提示：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo: netstat：找不到命令
-</code></pre></div></div>
+<pre><code>sudo: netstat：找不到命令
+</code></pre>
 <p>运行：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -tulpn |grep 4000
-</code></pre></div></div>
+<pre><code>netstat -tulpn |grep 4000
+</code></pre>
 <p>然后：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ netstat -tulpn |grep 4000
+<pre><code>dong@Ubuntu:~/octopress$ netstat -tulpn |grep 4000
 Command 'netstat' not found, but can be installed with:
 sudo apt install net-tools
 dong@Ubuntu:~/octopress$ sudo apt install net-tools
-</code></pre></div></div>
+</code></pre>
 <p>再运行：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo netstat -tulpn |grep 4000
-</code></pre></div></div>
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
 <p>得到：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
+<pre><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
 [sudo] password for dong: 
 tcp        0      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      2889/rackup  
-</code></pre></div></div>
+</code></pre>
 
 <p>执行：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kill -9 2889
+<pre><code>kill -9 2889
 #更改2889处对应的数字，前面的-9好像不变
-</code></pre></div></div>
+</code></pre>
 
 <p>得到：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ kill -9 2889
+<pre><code>dong@Ubuntu:~/octopress$ kill -9 2889
 dong@Ubuntu:~/octopress$
-</code></pre></div></div>
+</code></pre>
 
 <p>done.</p>
 
@@ -315,6 +315,10 @@ dong@Ubuntu:~/octopress$
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2222/02/22/daily-lts-love-life/">⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</a></li>
+                    
+                        <li><a href="/2023/09/01/123/">123</a></li>
+                    
                         <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
                         <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
@@ -343,7 +347,7 @@ dong@Ubuntu:~/octopress$
                     
                         <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
+                        <li><a href="/2023/08/01/SSH%20key%20audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
                         <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
@@ -371,10 +375,6 @@ dong@Ubuntu:~/octopress$
                     
                         <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
-                    
-                        <li><a href="/2023/06/24/kaiqiao/">开窍</a></li>
-                    
                 </ul>
             </div>
 
@@ -400,7 +400,7 @@ dong@Ubuntu:~/octopress$
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">206</span>
                         </a>
                     </li>
                     
@@ -423,9 +423,9 @@ dong@Ubuntu:~/octopress$
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -453,7 +453,47 @@ dong@Ubuntu:~/octopress$
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -461,6 +501,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -468,6 +512,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -475,6 +523,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -482,6 +534,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
@@ -489,6 +545,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
@@ -496,6 +556,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -503,6 +567,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
@@ -510,6 +578,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -517,6 +589,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -524,6 +600,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -531,6 +611,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -538,6 +622,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -545,6 +633,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -552,6 +644,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -559,6 +655,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -566,6 +666,10 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -573,8 +677,23 @@ dong@Ubuntu:~/octopress$
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/tag/#LTS" style="font-size: 9pt; color: #999;">LTS</a>
                     
                 </div>
             </div>

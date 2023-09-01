@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>GFW rubygems bundle install</title>
-    <meta name="description" content="2022-01-05:最新网址：https://gems.ruby-china.com/这个不行了：2016-10-28:最新网址：https://gems.ruby-china.org 这个不行了封网，rubygems.org 不行了bundle install  自然也不行点算？https://gems.ru...">
+    <meta name="description" content="2022-01-05:最新网址：https://gems.ruby-china.com/  这个不行了：2016-10-28:最新网址：https://gems.ruby-china.org 这个不行了  封网，rubygems.org 不行了  bundle install  自然也不行  点算？  https...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -199,62 +199,62 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>2022-01-05:最新网址：https://gems.ruby-china.com/<br />
-<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong><br />
-封网，rubygems.org 不行了<br />
-<code class="language-plaintext highlighter-rouge">bundle install</code>  自然也不行<br />
-点算？<br />
-https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网<br />
+        <p>2022-01-05:最新网址：https://gems.ruby-china.com/  <br />
+<strong>这个不行了</strong>：2016-10-28:最新网址：https://gems.ruby-china.org <strong>这个不行了</strong>  <br />
+封网，rubygems.org 不行了  <br />
+<code>bundle install</code>  自然也不行  <br />
+点算？  <br />
+https://gems.ruby-china.com/ 是一个完整的 rubygems.org 镜像，用以代替官网  <br />
 用法：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources --remove https://rubygems.org/
+<pre><code>gem sources --remove https://rubygems.org/
 gem sources -a https://gems.ruby-china.com/
 gem sources -l
-</code></pre></div></div>
+</code></pre>
 
 <p>输出：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*** CURRENT SOURCES ***  
+<pre><code>*** CURRENT SOURCES ***  
 
 https://gems.ruby-china.com  
-</code></pre></div></div>
+</code></pre>
 
 <p>确保只有 https://gems.ruby-china.com/</p>
 
 <p>###但是这样也不行，还得到octopress文件夹，打开Gemfile文件，编辑：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    source "https://gems.ruby-china.com"
-</code></pre></div></div>
+<pre><code>    source "https://gems.ruby-china.com"
+</code></pre>
 
 <p>Ubuntu 14.04，安装octopress,执行</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
+<pre><code>bundle install
+</code></pre>
 
 <p>一直提示缺少各种 gem 包，例如：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+<pre><code>```
 Gem::RemoteFetcher::FetchError: SSL_connect SYSCALL returned=5 errno=0 state=unknown state (https://rubygems.global.ssl.fastly.net/gems/safe_yaml-1.0.4.gem)
 An error occurred while installing safe_yaml (1.0.4), and Bundler cannot continue.
 Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
 
 ```
-</code></pre></div></div>
+</code></pre>
 
-<p>按提示输入命令 <code class="language-plaintext highlighter-rouge">gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
+<p>按提示输入命令 <code>gem install safe_yaml -v '1.0.4'</code> 安装依赖项，但是安装了一个又一个，一个又一个，实在太多太慢太麻烦了</p>
 
 <p>解决方法：</p>
 
 <p>修改octopress文件夹里的Gemfile文件：</p>
 
-<p>把：<br />
-<code class="language-plaintext highlighter-rouge">source "https://rubygems.org"</code><br />
-改为：<br />
-<code class="language-plaintext highlighter-rouge">source "https://gems.ruby-china.com"</code><br />
+<p>把：  <br />
+<code>source "https://rubygems.org"</code>  <br />
+改为：  <br />
+<code>source "https://gems.ruby-china.com"</code>  <br />
 再执行：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
+<pre><code>bundle install
+</code></pre>
 
 <p>完美通过。</p>
 
@@ -292,6 +292,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2222/02/22/daily-lts-love-life/">⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</a></li>
+                    
+                        <li><a href="/2023/09/01/123/">123</a></li>
+                    
                         <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
                         <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
@@ -320,7 +324,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     
                         <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
+                        <li><a href="/2023/08/01/SSH%20key%20audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
                         <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
@@ -348,10 +352,6 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     
                         <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
-                    
-                        <li><a href="/2023/06/24/kaiqiao/">开窍</a></li>
-                    
                 </ul>
             </div>
 
@@ -377,7 +377,7 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">206</span>
                         </a>
                     </li>
                     
@@ -400,9 +400,9 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -430,7 +430,47 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -438,6 +478,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -445,6 +489,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -452,6 +500,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -459,6 +511,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
@@ -466,6 +522,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
@@ -473,6 +533,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -480,6 +544,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
@@ -487,6 +555,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -494,6 +566,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -501,6 +577,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -508,6 +588,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -515,6 +599,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -522,6 +610,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -529,6 +621,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -536,6 +632,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -543,6 +643,10 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -550,8 +654,23 @@ Make sure that `gem install safe_yaml -v '1.0.4'` succeeds before bundling.
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/tag/#LTS" style="font-size: 9pt; color: #999;">LTS</a>
                     
                 </div>
             </div>

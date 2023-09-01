@@ -200,11 +200,11 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <h3 id="原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容">原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容</h3>
-<p>首先利用<code class="language-plaintext highlighter-rouge">rfkill</code>命令查看目前无线传输设备的状态，<code class="language-plaintext highlighter-rouge">rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
+<p>首先利用<code>rfkill</code>命令查看目前无线传输设备的状态，<code>rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
 
 <p>rfkill的常用方法为:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
+<pre><code>rfkill list all
 #  获得设备列表
 
 rfkill block [index|type]
@@ -212,11 +212,11 @@ rfkill block [index|type]
 
 rfkill unblock [index|type]
 #  通过索引或类型启用设备
-</code></pre></div></div>
+</code></pre>
 
 <p>当前设备状态如下：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
+<pre><code>rfkill list all
 输出：
 0: phy0: Wireless LAN
 	Soft blocked: no
@@ -224,7 +224,7 @@ rfkill unblock [index|type]
 1: acer-wireless: Wireless LAN
 	Soft blocked: no
 	Hard blocked: no
-</code></pre></div></div>
+</code></pre>
 
 <p>通过rfkill启用/禁用设备无法对硬件阻塞产生作用。</p>
 
@@ -243,22 +243,22 @@ rfkill unblock [index|type]
 
 <p>解决方法：</p>
 
-<p>通过在/etc/modprobe.d/文件夹下，编辑blacklist.conf文件，最后一行添加内容：  <code class="language-plaintext highlighter-rouge">blacklist acer_wmi</code></p>
+<p>通过在/etc/modprobe.d/文件夹下，编辑blacklist.conf文件，最后一行添加内容：  <code>blacklist acer_wmi</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/modprobe.d/blacklist.conf
-</code></pre></div></div>
+<pre><code>sudo gedit /etc/modprobe.d/blacklist.conf
+</code></pre>
 
-<p>重启<br />
+<p>重启  <br />
 wifi自动为打开状态，此时rfkill list all命令结果如下:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
+<pre><code>rfkill list all
 
 0: phy0: Wireless LAN
 Soft blocked: no
 Hard blocked: no
-</code></pre></div></div>
+</code></pre>
 
-<p>版权声明：本文为CSDN博主「Monkey_D_Shuai」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+<p>版权声明：本文为CSDN博主「Monkey_D_Shuai」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br />
 原文链接：https://blog.csdn.net/ls12165/article/details/68189943</p>
 
 <p><a href="https://blog.csdn.net/ls12165/article/details/68189943?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;utm_relevant_index=2">原文链接</a></p>
@@ -299,6 +299,10 @@ Hard blocked: no
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2222/02/22/daily-lts-love-life/">⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</a></li>
+                    
+                        <li><a href="/2023/09/01/123/">123</a></li>
+                    
                         <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
                         <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
@@ -327,7 +331,7 @@ Hard blocked: no
                     
                         <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
+                        <li><a href="/2023/08/01/SSH%20key%20audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
                         <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
@@ -355,10 +359,6 @@ Hard blocked: no
                     
                         <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
-                    
-                        <li><a href="/2023/06/24/kaiqiao/">开窍</a></li>
-                    
                 </ul>
             </div>
 
@@ -384,7 +384,7 @@ Hard blocked: no
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">206</span>
                         </a>
                     </li>
                     
@@ -407,9 +407,9 @@ Hard blocked: no
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -437,7 +437,47 @@ Hard blocked: no
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -445,6 +485,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -452,6 +496,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -459,6 +507,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -466,6 +518,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
@@ -473,6 +529,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
@@ -480,6 +540,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -487,6 +551,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
@@ -494,6 +562,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -501,6 +573,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -508,6 +584,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -515,6 +595,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -522,6 +606,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -529,6 +617,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -536,6 +628,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -543,6 +639,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -550,6 +650,10 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -557,8 +661,23 @@ Hard blocked: no
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/tag/#LTS" style="font-size: 9pt; color: #999;">LTS</a>
                     
                 </div>
             </div>

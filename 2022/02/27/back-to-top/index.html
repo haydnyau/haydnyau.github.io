@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>back to top返回頂部按鈕</title>
-    <meta name="description" content="教程1教程2实现返回按钮功能首先创建source/javascripts/top.js，添加如下代码实现滑动返回顶部效果:function goTop(acceleration, time){        acceleration = acceleration || 1;  //加速度        time ...">
+    <meta name="description" content="教程1  教程2实现返回按钮功能首先创建source/javascripts/top.js，添加如下代码实现滑动返回顶部效果:function goTop(acceleration, time){        acceleration = acceleration || 1;  //加速度        tim...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -200,75 +200,75 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p><a href="https://www.jianshu.com/p/fe0e089a985c">教程1</a><br />
+        <p><a href="https://www.jianshu.com/p/fe0e089a985c">教程1</a>  <br />
 <a href="https://www.cnblogs.com/biglucky/p/4148867.html">教程2</a></p>
 
 <h3 id="实现返回按钮功能">实现返回按钮功能</h3>
-<p>首先创建<code class="language-plaintext highlighter-rouge">source/javascripts/top.js</code>，添加如下代码实现滑动返回顶部效果:</p>
+<p>首先创建<code>source/javascripts/top.js</code>，添加如下代码实现滑动返回顶部效果:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">goTop</span><span class="p">(</span><span class="nx">acceleration</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span>
-<span class="p">{</span>
-        <span class="nx">acceleration</span> <span class="o">=</span> <span class="nx">acceleration</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">//加速度</span>
-        <span class="nx">time</span> <span class="o">=</span> <span class="nx">time</span> <span class="o">||</span> <span class="mi">16</span><span class="p">;</span>  <span class="c1">//时间间隔 (毫秒)</span>
+<pre><code class="language-javascript">function goTop(acceleration, time)
+{
+        acceleration = acceleration || 1;  //加速度
+        time = time || 16;  //时间间隔 (毫秒)
 
-        <span class="kd">var</span> <span class="nx">x1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">y1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">x2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">y2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">x3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">y3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        var x1 = 0;
+        var y1 = 0;
+        var x2 = 0;
+        var y2 = 0;
+        var x3 = 0;
+        var y3 = 0;
 
-        <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">)</span>
-        <span class="p">{</span>
-                <span class="nx">x1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-                <span class="nx">y1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
-        <span class="p">{</span>
-                <span class="nx">x2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-                <span class="nx">y2</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="kd">var</span> <span class="nx">x3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollX</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">y3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+        if (document.documentElement)
+        {
+                x1 = document.documentElement.scrollLeft || 0;
+                y1 = document.documentElement.scrollTop || 0;
+        }
+        if (document.body)
+        {
+                x2 = document.body.scrollLeft || 0;
+                y2 = document.body.scrollTop || 0;
+        }
+        var x3 = window.scrollX || 0;
+        var y3 = window.scrollY || 0;
         
-        <span class="c1">// 滚动条到页面顶部的水平距离</span>
-        <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x1</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x2</span><span class="p">,</span> <span class="nx">x3</span><span class="p">));</span>
-        <span class="c1">// 滚动条到页面顶部的垂直距离</span>
-        <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">y1</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">y2</span><span class="p">,</span> <span class="nx">y3</span><span class="p">));</span>
+        // 滚动条到页面顶部的水平距离
+        var x = Math.max(x1, Math.max(x2, x3));
+        // 滚动条到页面顶部的垂直距离
+        var y = Math.max(y1, Math.max(y2, y3));
 
-        <span class="c1">// 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小</span>
-        <span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nx">acceleration</span><span class="p">;</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span> <span class="o">/</span> <span class="nx">speed</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">y</span> <span class="o">/</span> <span class="nx">speed</span><span class="p">));</span>
+        // 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小
+        var speed = 1 + acceleration;
+        window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));
 
-        <span class="c1">// 如果距离不为零, 继续调用迭代本函数</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">invokeFunction</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">goTop(</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">acceleration</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">time</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">)</span><span class="dl">"</span><span class="p">;</span>
-                <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">invokeFunction</span><span class="p">,</span> <span class="nx">time</span><span class="p">);</span>
-        <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+        // 如果距离不为零, 继续调用迭代本函数
+        if(x &gt; 0 || y &gt; 0)
+        {
+                var invokeFunction = "goTop(" + acceleration + ", " + time + ")";
+                window.setTimeout(invokeFunction, time);
+        }
+}
+</code></pre>
 
 <h3 id="自定义返回按钮格式">自定义返回按钮格式</h3>
-<p>创建<code class="language-plaintext highlighter-rouge">source/_includes/custom/totop.html</code>，设置返回顶部按钮样式和位置<br />
-其中的<code class="language-plaintext highlighter-rouge">width、height、right、bottom</code>为图片在网页中的位置，可根据图片大小自行设定，示例代码如下：</p>
+<p>创建<code>source/_includes/custom/totop.html</code>，设置返回顶部按钮样式和位置  <br />
+其中的<code>width、height、right、bottom</code>为图片在网页中的位置，可根据图片大小自行设定，示例代码如下：</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--返回顶部开始--&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"full"</span> <span class="na">style=</span><span class="s">"width:30px; height:30px; position:fixed; right:13px; bottom:13px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"goTop();return false;"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"/images/top.png"</span> <span class="na">border=</span><span class="s">0</span> <span class="na">alt=</span><span class="s">"返回顶部"</span><span class="nt">&gt;&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/top.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="c">&lt;!--返回顶部结束--&gt;</span>
-</code></pre></div></div>
+<pre><code class="language-html">&lt;!--返回顶部开始--&gt;
+&lt;div id="full" style="width:30px; height:30px; position:fixed; right:13px; bottom:13px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;"&gt;
+&lt;a href="#" onclick="goTop();return false;"&gt;&lt;img src="/images/top.png" border=0 alt="返回顶部"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;script src="/javascripts/top.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;!--返回顶部结束--&gt;
+</code></pre>
 
 <h3 id="选择按钮图片">选择按钮图片</h3>
-<p>找到自己喜爱的返回按钮图片，命名为<code class="language-plaintext highlighter-rouge">top.png</code>后添加到<code class="language-plaintext highlighter-rouge">source/images</code>目录中（或修改<code class="language-plaintext highlighter-rouge">totop.html</code>中图片的路径），文件名和<code class="language-plaintext highlighter-rouge">totop.html</code>中的一致就可以了，可以自己命名。</p>
+<p>找到自己喜爱的返回按钮图片，命名为<code>top.png</code>后添加到<code>source/images</code>目录中（或修改<code>totop.html</code>中图片的路径），文件名和<code>totop.html</code>中的一致就可以了，可以自己命名。</p>
 
-<p>然后把<code class="language-plaintext highlighter-rouge">totop.html</code> 引入到文件中，考虑到进到具体每一篇blog里面也有这个功能，我们把这个文件在<code class="language-plaintext highlighter-rouge">foot.html</code>中引入，修改:<code class="language-plaintext highlighter-rouge">octopress/source/_includes/custom/footer.html</code>，添加一行：<br />
+<p>然后把<code>totop.html</code> 引入到文件中，考虑到进到具体每一篇blog里面也有这个功能，我们把这个文件在<code>foot.html</code>中引入，修改:<code>octopress/source/_includes/custom/footer.html</code>，添加一行：  <br />
 <img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMHNMi9RBV8SPCiQjrpiIVqTO0oBBa1zGSTDwX1cxXY1I0xQDhEyJNc9d2jqFOe5QAet0C9GvAgWzpRjxvDQ7Sc!/r" alt="octopress/source/_includes/custom/footer.html" /></p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {\% include custom/totop.html \%}  //记得去除两个\号
-</code></pre></div></div>
+<pre><code class="language-html">  {\% include custom/totop.html \%}  //记得去除两个\号
+</code></pre>
 
 <p>bug提醒：如果post文件中有上面这一行代码（没有\号），blog网站首页和这篇博文页，会有返回按钮图片错误</p>
 
@@ -306,6 +306,10 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2222/02/22/daily-lts-love-life/">⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</a></li>
+                    
+                        <li><a href="/2023/09/01/123/">123</a></li>
+                    
                         <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
                         <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
@@ -334,7 +338,7 @@
                     
                         <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
+                        <li><a href="/2023/08/01/SSH%20key%20audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
                         <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
@@ -362,10 +366,6 @@
                     
                         <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
-                    
-                        <li><a href="/2023/06/24/kaiqiao/">开窍</a></li>
-                    
                 </ul>
             </div>
 
@@ -391,7 +391,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">206</span>
                         </a>
                     </li>
                     
@@ -414,9 +414,9 @@
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -444,7 +444,47 @@
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -452,6 +492,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -459,6 +503,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -466,6 +514,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -473,6 +525,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
@@ -480,6 +536,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
@@ -487,6 +547,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -494,6 +558,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
@@ -501,6 +569,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -508,6 +580,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -515,6 +591,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -522,6 +602,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -529,6 +613,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -536,6 +624,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -543,6 +635,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -550,6 +646,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -557,6 +657,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -564,8 +668,23 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                        
+                      
+                      <a href="/tag/#LTS" style="font-size: 9pt; color: #999;">LTS</a>
                     
                 </div>
             </div>
