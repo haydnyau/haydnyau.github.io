@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Sep 2023 22:25:18 +0800</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2023 22:25:18 +0800</lastBuildDate>
+    <pubDate>Thu, 14 Sep 2023 23:28:03 +0800</pubDate>
+    <lastBuildDate>Thu, 14 Sep 2023 23:28:03 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Day 5：把身体养好</title>
+        <description>身体是一切的载体：  &lt;br /&gt;
+体力，耐力，活力，动力，记忆力，思维的活跃，精神面貌，所有所有！
+
+</description>
+        <pubDate>Thu, 14 Sep 2023 23:05:53 +0800</pubDate>
+        <link>/2023/09/14/day-5/</link>
+        <guid isPermaLink="true">/2023/09/14/day-5/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 4</title>
@@ -194,22 +211,6 @@ dong@dong-Ubuntu:~$ sudo snap install curl
         <pubDate>Fri, 01 Sep 2023 22:19:43 +0800</pubDate>
         <link>/2023/09/01/install-curl/</link>
         <guid isPermaLink="true">/2023/09/01/install-curl/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>day 15</title>
-        <description>该休息就休息，该摸鱼就摸鱼，不疲劳作战。
-
-</description>
-        <pubDate>Sun, 20 Aug 2023 22:42:54 +0800</pubDate>
-        <link>/2023/08/20/day-15/</link>
-        <guid isPermaLink="true">/2023/08/20/day-15/</guid>
         
         <category>daily</category>
         
