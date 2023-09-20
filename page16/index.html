@@ -155,6 +155,75 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/13/jekyll-theme-config/">jekyll theme octopress 博客的具体配置</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-13
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <pre><code>rvm use 2.7.0  
+</code></pre>
+<p>_config.yml  <br />
+gemfile  <br />
+gemfile.lock</p>
+
+<p>一些问题看手机图片,在空间</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/13/jekyll-theme-config/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/12/new-and-old-blog/">新 舊博客</a>
                 </h2>
                 <div class="label">
@@ -1236,100 +1305,6 @@ Please make sure you have the correct access rights and the repository exists.
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>preview.sh代码</p>
-
-<pre><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build #生成
-jekyll serve
-</code></pre>
-
-<p>=================================</p>
-
-<p>deploy.sh代码</p>
-
-<pre><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build
-octopress deploy
-</code></pre>
-
-<p>=================================</p>
-
-<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
-
-<pre><code>#!/bin/sh
-cd /home/dong/haydnyau
-jekyll build
-mv _posts/ _site/
-octopress deploy
-mv _site/_posts/ .
-</code></pre>
-
-<p>注意这个点 “.”<br />
-<code>.</code> 或者 <code>./</code> 表示当前目录</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1359,6 +1334,8 @@ mv _site/_posts/ .
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/09/20/day-12/">Day 12：警醒</a></li>
                     
                         <li><a href="/2023/09/19/day-11/">Day 11：乐观积极</a></li>
                     
@@ -1418,8 +1395,6 @@ mv _site/_posts/ .
                     
                         <li><a href="/2023/08/02/day3/">day 3</a></li>
                     
-                        <li><a href="/2023/08/01/day2/">day 2</a></li>
-                    
                 </ul>
             </div>
 
@@ -1445,7 +1420,7 @@ mv _site/_posts/ .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">220</span>
+                            <span class="badge">221</span>
                         </a>
                     </li>
                     

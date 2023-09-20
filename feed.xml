@@ -5,9 +5,27 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Sep 2023 23:58:41 +0800</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2023 23:58:41 +0800</lastBuildDate>
+    <pubDate>Wed, 20 Sep 2023 12:09:44 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Sep 2023 12:09:44 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Day 12：警醒</title>
+        <description>很现实的一段话：  &lt;br /&gt;
+告诉你一个残酷的真相，出身底层的聪明人，大多数是非常可悲的。因为这类人都有着清醒的头脑、正确的认知，以及远大的理想和抱负，现实中却无能为力。  &lt;br /&gt;
+他们缺乏资源、缺少关系背景，更没有可以试错的本钱，一旦一步走错，后面会举步维艰，甚至会持续很长一段时间无法翻身，最终在现实的一次次打击中，选择了躺平。
+
+</description>
+        <pubDate>Wed, 20 Sep 2023 12:06:55 +0800</pubDate>
+        <link>/2023/09/20/day-12/</link>
+        <guid isPermaLink="true">/2023/09/20/day-12/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 11：乐观积极</title>
@@ -182,25 +200,6 @@
         <pubDate>Mon, 11 Sep 2023 23:33:25 +0800</pubDate>
         <link>/2023/09/11/day-3/</link>
         <guid isPermaLink="true">/2023/09/11/day-3/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Day 2：眼光，主动</title>
-        <description>眼光看长远：  &lt;br /&gt;
-回看志胜公司的产品，就是缺少一个足够了解所有产品细节，同时了解市场的人，去做一个整体的梳理，整理，规划。  &lt;br /&gt;
-把过时的产品、功能去除，把冲突的（例如F8键有两种功能，宴会厅视频加密播放器的两台电脑同步用网线直连，但还要连接wifi用于平板操作视频播放，还要用到中控，无线和有线的ip就容易造成冲突或识别错误）解决，而且在完成对过往的梳理后，要结合对市场的预测，去规划，不跟着市场走，而是引领市场。  &lt;br /&gt;
-化被动跟随，为主动引领。
-
-</description>
-        <pubDate>Sat, 09 Sep 2023 00:45:35 +0800</pubDate>
-        <link>/2023/09/09/day-2/</link>
-        <guid isPermaLink="true">/2023/09/09/day-2/</guid>
         
         <category>daily</category>
         
