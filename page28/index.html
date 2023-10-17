@@ -159,6 +159,83 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull push: not read from remote repository. correct access rights and the repository exists.</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-08-22
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">SSH KEYS认证方式改动</a><br />
+关于<code>git pull origin source</code>or<code>git push origin source</code>,若出错：</p>
+
+<pre><code>fatal: Could not read from remote repository. 
+Please make sure you have the correct access rights and the repository exists.
+</code></pre>
+
+<p>SSH keys不用动</p>
+
+<pre><code>gedit octopress/.git/config
+</code></pre>
+
+<p>把<code>url = git@github.com:qiuhaidong/qiuhaidong.github.com.git</code>  <br />
+改为<code>url = https://github.com/qiuhaidong/qiuhaidong.github.com.git</code>  <br />
+<a href="http://bbs.csdn.net/topics/390909877">参见此Blog，9楼</a>  <br />
+done.  <br />
+<code>pull</code>or<code>push</code>时或会报错，但不影响功能，多用几次就好了。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/08/20/C%23-on-Linux/">C# on Linux</a>
                 </h2>
                 <div class="label">
@@ -961,67 +1038,6 @@ S7 Edge：弧形屏幕的误触问题</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/04/01/be-alone/">习惯一个人</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-04-01
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>独自面对自己的世界。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/04/01/be-alone/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1051,6 +1067,8 @@ S7 Edge：弧形屏幕的误触问题</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/10/17/day-32/">Day 32：牧马城市</a></li>
                     
                         <li><a href="/2023/10/17/day-31/">Day 31</a></li>
                     
@@ -1110,8 +1128,6 @@ S7 Edge：弧形屏幕的误触问题</p>
                     
                         <li><a href="/2023/09/14/day-5/">Day 5：把身体养好</a></li>
                     
-                        <li><a href="/2023/09/13/day-4/">Day 4</a></li>
-                    
                 </ul>
             </div>
 
@@ -1137,7 +1153,7 @@ S7 Edge：弧形屏幕的误触问题</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">242</span>
+                            <span class="badge">243</span>
                         </a>
                     </li>
                     

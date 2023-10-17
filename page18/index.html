@@ -159,6 +159,85 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-15
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>怎么都不行  <br />
+用octopress3.0创建theme blog，可能因为</p>
+<h2 id="网络不行">网络不行？</h2>
+
+<p>一直卡在那里，一动不动  <br />
+<code>bundle</code> 和 <code>bundle install</code> 也是一动不动  <br />
+这是没有成功的，后面会报错  <br />
+重复，直到ok</p>
+
+<h2 id="对了我把gemfile和gemfilelock文件删除就没报错了">对了，我把Gemfile和Gemfile.lock文件删除，就没报错了</h2>
+
+<p>正常来说，rvm安装ruby就行了，如果还不行，再用<code>apt</code> ubuntu官方源安装一次</p>
+
+<pre><code>sudo apt install ruby
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/15/fucking-hard/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/13/zhe-teng/">生命不息，折腾不止</a>
                 </h2>
                 <div class="label">
@@ -1213,113 +1292,6 @@ git push origin source
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="三步">三步</h3>
-
-<h2 id="step-1">Step 1</h2>
-
-<h3 id="添加-category_list-插件">添加 <code>category_list</code> 插件</h3>
-
-<p>在 <code>octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code>category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
-
-<pre><code>module Jekyll
-  class CategoryListTag &lt; Liquid::Tag
-    def render(context)
-      html = ""
-      categories = context.registers[:site].categories.keys
-      categories.sort.each do |category|
-        posts_in_category = context.registers[:site].categories[category].size
- 	       category_dir = context.registers[:site].config['category_dir']
-        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
-    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
-      end
-      html
-    end
-  end
-end
-
-Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
-</code></pre>
-
-<p>这个插件会向<code>liquid</code>注册一个名为<code>category_list</code>的<code>tag</code>，该<code>tag</code>就是以<code>li</code>的形式将站点所有的<code>category</code>组织起来。如果要将<code>category</code>加入到侧边导航栏，需要增加一个<code>aside</code>。</p>
-
-<h2 id="step-2">Step 2</h2>
-
-<h3 id="增加-aside">增加 <code>aside</code></h3>
-
-<p>在 <code>octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code>category_list.html</code> 。并粘贴下面的代码：</p>
-
-<p><strong>注意</strong>： 去掉 <code>%</code> 前面的2个 <code>\</code>  <br />
-这里如果不加上<code>\</code>，markdown格式会显示<code>category_list</code>的内容。我是为了正确显示代码才加上的</p>
-
-<pre><code>&lt;section&gt;
-  &lt;h1&gt;Categories&lt;/h1&gt;
-  &lt;ul id="categories"&gt;
-    {\% category_list \%}
-  &lt;/ul&gt;
-&lt;/section&gt;
-</code></pre>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/10/add-category/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1349,6 +1321,8 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/10/17/day-32/">Day 32：牧马城市</a></li>
                     
                         <li><a href="/2023/10/17/day-31/">Day 31</a></li>
                     
@@ -1408,8 +1382,6 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     
                         <li><a href="/2023/09/14/day-5/">Day 5：把身体养好</a></li>
                     
-                        <li><a href="/2023/09/13/day-4/">Day 4</a></li>
-                    
                 </ul>
             </div>
 
@@ -1435,7 +1407,7 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">242</span>
+                            <span class="badge">243</span>
                         </a>
                     </li>
                     
