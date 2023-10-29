@@ -163,6 +163,297 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/25/win10-can-not-install-mbr-gpt/">Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-25
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://blog.sina.cn/dpool/blog/s/blog_a6079ee00101mlfv.html?vt=4">原博</a>  <br />
+安装win7或win8经常会出现这种提示：Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘。  <br />
+前几天装系统的时候，遇到一个问题：官方下载的windows 8 pro中文版镜像，使用UltraISO写进U盘后，使用U盘启动安装方式安装系统，当安装到选择磁盘的地方时，点一下步，竟然出现以下提示“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表。在 EFI 系统上，Windows 只能安装到 GPT 磁盘。“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表”的处理X  <br />
+<img src="http://s2.sinaimg.cn/bmiddle/a6079ee0gx6BJOK4LHb71&amp;690" alt="mbr" />  <br />
+出现这种情况主要是因为U盘启动时，默认使用EFI引导启动，而不是常见的MBR引导，所以会发生这种情况。这种情况常常出现在原来安装32位系统、现在改安64位系统的过程中。  <br />
+解决方法一：出现上述问题后，直接把U盘拔掉插到其它电脑，把U盘里的efi文件夹和bootmgr.efi文件删掉，问题就搞定了，然后，再用这个U盘启动盘去装系统，就不会出现这种问题了。  <br />
+删掉这两个文件夹跟文件的原因是因为从U盘安装会默认使用efi引导启动，删掉之后没有efi，就默认用mbr启动了。  <br />
+另外，我之前用光盘刻录过win8，给朋友安装的时候，也一样出现这种问题，但是问题是我的光盘是一次读写的，无法像U盘一样进去把那两个文件夹删掉，所以对于光盘我也不知道怎样弄。但是，奇怪的是，我自己的电脑也是用U盘安装的windows 8 pro，却没出现上述问题，我个人觉得是因为我的电脑比较老（09年底买的），不支持EFI启动的原因。什么是EFI呢？这是一种很重要的技术，统治电脑20多年的BIOS启动技术将来会被EFI代替，那时，在BIOS设置界面（严格来说应该是EFI界面）装可以使用鼠标，也可以是中文，不再是晦涩难懂的英文，也不再是只能使用键盘操作了。  <br />
+<img src="http://s14.sinaimg.cn/bmiddle/6db312f1gd1cb40b9337d&amp;690" alt="2" />  <br />
+“Windows 无法安装到这个磁盘。选中的磁盘具有MBR分区表”的处理  <br />
+解决方法二：非预装win8机型出厂时，硬盘默认为MBR分区表格式，而UEFI模式仅支持在GPT分区表的硬盘上安装系统。  <br />
+如果系统安装光盘中包含了UEFI信息，启动时可能会自动加载并进入UEFI模式，因此便会出现“ windows无法安装到这个磁盘，选中的磁盘具有MBR分区表，在EFI系统上，windows只能安装到GFT磁盘”的提示。  <br />
+建议您尝试以下方法：  <br />
+开机按ESC键，会显示两个光驱或者U盘的选项，选择光驱名称前没有UEFI的选项启动，即可正常把系统安装在MBR分区表硬盘上。  <br />
+解决方法三：进入主板选择启动的项目、比如F8、F11之类、u盘启动里有2项、一个是EFI启动、一个是普通启动、安装64位系统、选了EFI启动，就会出错，应该选普通启动。如果光盘安装，进BIOS看看， EFI进入bios看到UEFI状态时，Enabled 如果是启用状态，那么把他禁用掉看看（改为disabled），保存重启，选择光驱启动。但不能选择第uefi的光驱模式。  <br />
+<img src="http://www.45it.com/picture/allimg/130123/1449462291-1.jpg" alt="3" />  <br />
+<img src="http://www.45it.com/picture/allimg/130123/14494Ac2-2.jpg" alt="4" />  <br />
+<img src="http://www.45it.com/picture/allimg/130123/1449464146-3.jpg" alt="5" />  <br />
+解决方法四：使用windows8 的分区工具来重分区安装。或者用diskgenius最新版的来建立GPT分区。提示，使用这种方法前请把硬盘数据进行拷贝，以免造成损失。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/25/win10-can-not-install-mbr-gpt/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/23/i-ran-the-red-light/">我闯了红灯</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-23
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="太危险">太危险！</h3>
+<h3 id="为了自己为了开车的人">为了自己，为了开车的人！</h3>
+<h3 id="愚蠢">愚蠢！</h3>
+<h3 id="永远别闯红灯">永远别闯红灯!</h3>
+<h1 id="11-24">11-24</h1>
+<h1 id="昨天刚说完今天就有星力的人出车祸了">昨天刚说完，今天就有星力的人出车祸了！</h1>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/23/i-ran-the-red-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/20/uninstall-and-update-command/">uninstall and update command</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-20
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <pre><code>sudo apt-get purge ***
+sudo apt-get remove ***
+sudo apt-get autoremove
+sudo apt-get clean
+sudo apt-get update
+sudo apt list --upgradable
+sudo apt upgrade
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/20/uninstall-and-update-command/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/19/screen-light/">屏幕亮度调节 Ubuntu13.04和16.04 screen light</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-19
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>参见另一篇博文</p>
+
+<pre><code>sudo gedit /etc/default/grub
+</code></pre>
+
+<p>更改为：(斜黑体部分)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"  
+</code></pre>
+
+<p>(东哥：13.04、16.04按Fn有效调节)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX="acpi_osi= acpi_backlight=vendor"        (东哥有效12.04，20.04，22.04)
+</code></pre>
+
+<pre><code>sudo update-grub
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/19/screen-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/19/ruby-version/">ruby version</a>
                 </h2>
                 <div class="label">
@@ -582,334 +873,6 @@ A: co1</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/11/10/failed-when-gem-install-therubyracer/">failed when: gem install therubyracer</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>运行</p>
-
-<pre><code>dong@ubuntu:~/octopress$ gem install therubyracer  
-</code></pre>
-
-<p>报错</p>
-
-<pre><code>ERROR:  Error installing therubyracer:
-	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
-</code></pre>
-
-<p>corrupt:broken  <br />
-the package is broken  <br />
-so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem  <br />
-then redownload and reinstall  <br />
-successed.</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/10/failed-when-gem-install-therubyracer/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/31/bad-night/">bad night</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-31
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>Got a lot of nightmares on those days.  <br />
-So many bad things,bad days.  <br />
-Got to carry on.</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/31/bad-night/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/29/config-dot-yml/">config.yml</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-29
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>.# ———————– #  <br />
-.#      Main Configs       #  <br />
-.# ———————– #</p>
-
-<p>url: https://qiuhaidong.github.io  <br />
-title: Haydn Yau  <br />
-subtitle:  <br />
-author: 丘海东  <br />
-simple_search: https://www.google.com/search  <br />
-description:</p>
-
-<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)  <br />
-.# You can customize the format as defined in  <br />
-.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime  <br />
-.# Additionally, %o will give you the ordinal representation of the day  <br />
-date_format: “ordinal”</p>
-
-<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)  <br />
-subscribe_rss: /atom.xml  <br />
-subscribe_email:  <br />
-.# RSS feeds can list your email address if you like  <br />
-email:</p>
-
-<p>.# ———————– #  <br />
-.#    Jekyll &amp; Plugins     #  <br />
-.# ———————– #</p>
-
-<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’  <br />
-root: /  <br />
-permalink: /blog/:year/:month/:day/:title/  <br />
-source: source  <br />
-destination: public  <br />
-plugins: plugins  <br />
-code_dir: downloads/code  <br />
-category_dir: blog/categories  <br />
-markdown: rdiscount  <br />
-rdiscount:  <br />
-  extensions:  <br />
-    - autolink  <br />
-    - footnotes  <br />
-    - smart  <br />
-highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
-
-<p>paginate: 5                     # Posts per page on the blog index  <br />
-paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/  <br />
-recent_posts: 5               # Posts in the sidebar Recent Posts section  <br />
-excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles  <br />
-excerpt_separator: “<!--more-->”</p>
-
-<p>titlecase: true       # Converts page and post titles to titlecase</p>
-
-<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.  <br />
-.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’  <br />
-default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]  <br />
-.#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
-
-<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below  <br />
-.# and add an array with the asides you want to use.  <br />
-.# blog_index_asides:  <br />
-.# post_asides:  <br />
-.# page_asides:</p>
-
-<p>.# ———————– #  <br />
-.#   3rd Party Settings    #  <br />
-.# ———————– #</p>
-
-<p>.# Github repositories  <br />
-github_user: qiuhaidong  <br />
-github_repo_count: 0  <br />
-github_show_profile_link: true  <br />
-github_skip_forks: true</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/29/config-dot-yml/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/28/install-again/">install again</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>something new:  <br />
-install git:</p>
-
-<pre><code>sudo apt-get install git
-</code></pre>
-
-<p>don’t install from ppa anymore.  <br />
-install rvm: run the command from official website,the latest version,maybe not the stable version.  <br />
-install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.  <br />
-<code>rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/28/install-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -939,6 +902,14 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/10/29/day-47/">Day 47</a></li>
+                    
+                        <li><a href="/2023/10/29/day-46/">Day 46：破心中贼</a></li>
+                    
+                        <li><a href="/2023/10/29/day-45/">Day 45</a></li>
+                    
+                        <li><a href="/2023/10/29/day-44/">Day 44</a></li>
                     
                         <li><a href="/2023/10/25/day-43/">Day 43：最难的不是到达，而是出发</a></li>
                     
@@ -992,14 +963,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2023/09/21/day-20/">Day 20</a></li>
                     
-                        <li><a href="/2023/09/21/day-19/">Day 19</a></li>
-                    
-                        <li><a href="/2023/09/21/day-18/">Day 18</a></li>
-                    
-                        <li><a href="/2023/09/21/day-17/">Day 17</a></li>
-                    
-                        <li><a href="/2023/09/21/day-16/">Day 16</a></li>
-                    
                 </ul>
             </div>
 
@@ -1025,7 +988,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">254</span>
+                            <span class="badge">258</span>
                         </a>
                     </li>
                     

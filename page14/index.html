@@ -163,6 +163,318 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/">curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://blog.csdn.net/u014375643/article/details/115826506">问题解决：curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a>  <br />
+https://qiuhaidong.github.io/blog/2022/04/05/octopress2-on-ubuntu-22-dot-04/</p>
+<pre><code>sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
+<p>提示：</p>
+<pre><code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+</code></pre>
+<p>解决：  <br />
+<a href="https://blog.csdn.net/u014375643/article/details/115826506">Failed to connect to raw.githubusercontent.com</a>  <br />
+到这个网址：<code>https://www.ipaddress.com/</code>，输入：<code>raw.githubusercontent.com</code>，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：<code>185.199.108.133 raw.githubusercontent.com</code>，重试，不行就重启再试。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/">ssh: connect to host ssh.github.com port 443: Connection refused</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-26
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ssh" title="Tag: ssh" rel="tag">ssh</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>出现标题问题，打开：<a href="https://www.ipaddress.com/">IPAddress.com</a> ，有时会出现403禁止访问的错误，要点一下<code>Go to Homepage</code>才行。输入：<code>ssh.github.com</code>，得到IP地址：  <br />
+<code>140.82.113.36</code>  <br />
+<code>140.82.114.35</code>  <br />
+修改本地hosts：</p>
+<pre><code>cd /etc
+sudo gedit hosts
+</code></pre>
+<p>添加：</p>
+<pre><code>140.82.113.36          ssh.github.com
+140.82.114.35          ssh.github.com
+</code></pre>
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqWdkQXFWB88lLNe9b.pKPd.bOkeCQ1XnXqIwv6SR2DItDkSBuzvyRWfXmXV4k8yccpRrk38TrDNSADQdQqoUnfE!/r" alt="" /></p>
+
+<h4 id="22端口无法连接">22端口无法连接：</h4>
+<p><a href="https://qiuhaidong.github.io/blog/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></p>
+
+<p><a href="https://blog.csdn.net/u014375643/article/details/115826506">curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/05/26/huili-xie/">回力鞋</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-26
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>初中时我就穿过回力鞋，红色经典款。</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqXVZjyw.Io6CrdJc0fWHXnr3q4dUHaR0xPc646NIEVQCcQiSgJvYmzbq2gFBxRjPOkSIs9e4fG7ZXca4doqIegU!/r" alt="" /></p>
+
+<p>刚上高中时，体育课，穿这红色款，我还不好意思，怕别人笑我。  <br />
+<!--more-->  <br />
+然后买过其他的杂牌鞋。  <br />
+之后好像是高二吧，买了当时的新款的回力鞋，稍微时尚一点的。那时好像还是29元的价格。就是下面这款，但是布料是白色的，简洁的，我没找到相应的图片。</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqerQz2XiIcsB5TWpc2zCB.fl3ptPacYa3Oz1.*mcXV8CozPKvxWyn7jcOJwjac7VUFA0svgvN33O2HrAovQ3BFc!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdaqExTQcE..sFI2qhuFwOFI1E5DWF7BaMYXecAcKntigHARsfNjH*BTamA.l2yrQnoR*SIhvEF0JWNlp27xEhc!/r" alt="" /></p>
+
+<p>大学时还穿过其他款式的回力鞋，帆布的，稍稍有点高帮的，红白蓝款都穿过。</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqYtINEqoDu1BFFrvpTSB56TbIXYI7cSMTjoFS9MG92lPWCmmDPVL6lhkUckqspWLgpMJ*daXetVoiJqT3RnMGA8!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdVz7fNyJqV4JI3jhf*6zTvDc6PLmyQQYSQpC0y0Sdzabp*88al8EYmLYKYGWrl5RdsLkvob0.JO7uGYygtMqcc!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqc6.19kAtZU0vBIQen4xag6ZtFn4kir4pmTPiUY7v4Z*9mfqYutrgu9JbhsOGHdmnkGZ*402pD*LHZ25xu2fbHs!/r" alt="" /></p>
+
+<p>之后我就一直穿经典款，银色牛筋底的</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfelfs2XhZK*r.DGe*rfi5iKv7E4Y8Qhpsllj7mqC8zxJ5qZcuBB554dJTsIQA9RjyYQ3GPRb40q2xOJsKUPiXA!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqTI6TVFnJ*lY.CLDBk.mRlX*pqBD*hUxLiVgbqk4lMSbNUvZ9kfFBRwdl*HoexX0RTaxVwKWg9t*Ffe.hDikqCc!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqRDlMxQrZ0P.E8xFknRTG2Ux1RovdOh8kOqKzmZfETxcNOo32cJ97r*2l1YxzpnTjK6XyNKr00CFwrSQDvxOmc8!/r" alt="" /></p>
+
+<p>然而很遗憾，这两年，我买到的鞋都是仓底尾货，生产日期经常是两三年前的，甚至四年的也有呀。太无奈了。而且以前一双能穿一年，这些年变成半年，4个月，3个月，最近的一双，穿了不到50天。  <br />
+于是我上网查了查，回力这几年终究是经营不过来，自己的工厂经营不下去，关了。授权给别人生产，已经变成一个贴牌了。质量肯定是得不到保证。恶性循环。  <br />
+生活就是这样，无论你多喜欢，有些东西，就算是十几二十年的感情，终究是敌不过现实的残酷。  <br />
+只能选择其他的。  <br />
+361燃战TD版</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfXqPSrsdMuzLigH8NuKpNU3zBo.L8zCSo697I0fEhtVz6aa0A0VkW4PGQdHo3419EeL2GVZYIEN81m7tqC9LpA!/r" alt="" /></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/26/huili-xie/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/05/21/you-in-my-dream-again/">又梦见你</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-21
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#she" title="Tag: she" rel="tag">she</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>梦回小学，你常驻，我回来，但是总有阻力，阻止我走向你。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/21/you-in-my-dream-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/05/20/lightdm/">lightdm  ubuntu 桌面显示管理器</a>
                 </h2>
                 <div class="label">
@@ -569,301 +881,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/11/think-different/">Think Different 不同凡响</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-11
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>苹果公司1997年广告  🍎</p>
-
-<p>Here’s to the crazy ones.  <br />
-向那些疯狂的家伙们致敬。  <br />
-The misfits.  <br />
-他们特立独行，  <br />
-The rebels.  <br />
-他们桀骜不驯，  <br />
-The troublemakers.  <br />
-他们惹是生非，  <br />
-The round pegs in the square holes.  <br />
-他们格格不入，  <br />
-The ones who see things differently.  <br />
-他们用与众不同的眼光看待事物，  <br />
-They’re not fond of rules.  <br />
-他们不喜欢墨守成规，  <br />
-And they have no respect for the status quo.  <br />
-他们也不愿安于现状。  <br />
-You can quote them, disagree with them，glorify or vilify them.  <br />
-你可以赞美他们，反对他们，颂扬或是诋毁他们，  <br />
-About the only thing that you can’t do is ignore them.  <br />
-但唯独不能漠视他们。  <br />
-Because they change things.  <br />
-因为他们改变了寻常事物。  <br />
-They push the human race forward.  <br />
-他们推动人类向前发展。  <br />
-While some may see them as the crazy ones, we see genius.  <br />
-或许他们是别人眼里的疯子，但他们却是我们眼中的天才。  <br />
-Because the people who are crazy enough to think that they can change the world, are the ones who do.  <br />
-因为只有那些疯狂到以为自己能够改变世界的人，  <br />
-才能真正地改变世界。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/11/think-different/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/04/daily/">daily，2022-05-04，开玩笑</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-04
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>打球可以菜，牛皮必須吹。  <br />
-注意：必須是-朋友間，活躍氣氛，讓大家開心的，不能讓人心情不好</p>
-
-<p>真實的壞消息，比敷衍的假話好。溝通必須基於真實。——客服</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/04/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/02/daily/">daily，2022-05-02，失眠</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-02
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>失眠，因对明天不安</p>
-
-<p>但是，失眠对身体影响太大，4-5点还没睡着，睡到3点也没精神</p>
-
-<p>别忘了，之前<strong><em>耳朵已经出事</em></strong>  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqa3wredBfA2giCtyeyvq1kaPZc94CownXe10jFKSbDK0o9XF6MrJqREAx0oFhmUnwfscsGg0XEG4UNiJ8tLVedE!/r" alt="ear" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/02/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/01/daily/">daily，2022-05-01，目标</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-01
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>1、按时作息：11点半睡觉，8点起床。  <br />
-2、合理饮食：戒糖戒可乐，定时定量吃饭。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/01/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -893,6 +910,14 @@ Because the people who are crazy enough to think that they can change the world,
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/10/29/day-47/">Day 47</a></li>
+                    
+                        <li><a href="/2023/10/29/day-46/">Day 46：破心中贼</a></li>
+                    
+                        <li><a href="/2023/10/29/day-45/">Day 45</a></li>
+                    
+                        <li><a href="/2023/10/29/day-44/">Day 44</a></li>
                     
                         <li><a href="/2023/10/25/day-43/">Day 43：最难的不是到达，而是出发</a></li>
                     
@@ -946,14 +971,6 @@ Because the people who are crazy enough to think that they can change the world,
                     
                         <li><a href="/2023/09/21/day-20/">Day 20</a></li>
                     
-                        <li><a href="/2023/09/21/day-19/">Day 19</a></li>
-                    
-                        <li><a href="/2023/09/21/day-18/">Day 18</a></li>
-                    
-                        <li><a href="/2023/09/21/day-17/">Day 17</a></li>
-                    
-                        <li><a href="/2023/09/21/day-16/">Day 16</a></li>
-                    
                 </ul>
             </div>
 
@@ -979,7 +996,7 @@ Because the people who are crazy enough to think that they can change the world,
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">254</span>
+                            <span class="badge">258</span>
                         </a>
                     </li>
                     
