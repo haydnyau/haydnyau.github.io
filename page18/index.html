@@ -163,6 +163,190 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/27/back-to-top/">back to top返回頂部按鈕</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://www.jianshu.com/p/fe0e089a985c">教程1</a>  <br />
+<a href="https://www.cnblogs.com/biglucky/p/4148867.html">教程2</a></p>
+
+<h3 id="实现返回按钮功能">实现返回按钮功能</h3>
+<p>首先创建<code>source/javascripts/top.js</code>，添加如下代码实现滑动返回顶部效果:</p>
+
+<pre><code class="language-javascript">function goTop(acceleration, time)
+{
+        acceleration = acceleration || 1;  //加速度
+        time = time || 16;  //时间间隔 (毫秒)
+
+        var x1 = 0;
+        var y1 = 0;
+        var x2 = 0;
+        var y2 = 0;
+        var x3 = 0;
+        var y3 = 0;
+
+        if (document.documentElement)
+        {
+                x1 = document.documentElement.scrollLeft || 0;
+                y1 = document.documentElement.scrollTop || 0;
+        }
+        if (document.body)
+        {
+                x2 = document.body.scrollLeft || 0;
+                y2 = document.body.scrollTop || 0;
+        }
+        var x3 = window.scrollX || 0;
+        var y3 = window.scrollY || 0;
+        
+        // 滚动条到页面顶部的水平距离
+        var x = Math.max(x1, Math.max(x2, x3));
+        // 滚动条到页面顶部的垂直距离
+        var y = Math.max(y1, Math.max(y2, y3));
+
+        // 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小
+        var speed = 1 + acceleration;
+        window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));
+
+        // 如果距离不为零, 继续调用迭代本函数
+        if(x &gt; 0 || y &gt; 0)
+        {
+                var invokeFunction = "goTop(" + acceleration + ", " + time + ")";
+                window.setTimeout(invokeFunction, time);
+        }
+}
+</code></pre>
+
+<h3 id="自定义返回按钮格式">自定义返回按钮格式</h3>
+<p>创建<code>source/_includes/custom/totop.html</code>，设置返回顶部按钮样式和位置  <br />
+其中的<code>width、height、right、bottom</code>为图片在网页中的位置，可根据图片大小自行设定，示例代码如下：</p>
+
+<pre><code class="language-html">&lt;!--返回顶部开始--&gt;
+&lt;div id="full" style="width:30px; height:30px; position:fixed; right:13px; bottom:13px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;"&gt;
+&lt;a href="#" onclick="goTop();return false;"&gt;&lt;img src="/images/top.png" border=0 alt="返回顶部"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;script src="/javascripts/top.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;!--返回顶部结束--&gt;
+</code></pre>
+
+<h3 id="选择按钮图片">选择按钮图片</h3>
+<p>找到自己喜爱的返回按钮图片，命名为<code>top.png</code>后添加到<code>source/images</code>目录中（或修改<code>totop.html</code>中图片的路径），文件名和<code>totop.html</code>中的一致就可以了，可以自己命名。</p>
+
+<p>然后把<code>totop.html</code> 引入到文件中，考虑到进到具体每一篇blog里面也有这个功能，我们把这个文件在<code>foot.html</code>中引入，修改:<code>octopress/source/_includes/custom/footer.html</code>，添加一行：  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMHNMi9RBV8SPCiQjrpiIVqTO0oBBa1zGSTDwX1cxXY1I0xQDhEyJNc9d2jqFOe5QAet0C9GvAgWzpRjxvDQ7Sc!/r" alt="octopress/source/_includes/custom/footer.html" /></p>
+
+<pre><code class="language-html">  {\% include custom/totop.html \%}  //记得去除两个\号
+</code></pre>
+
+<p>bug提醒：如果post文件中有上面这一行代码（没有\号），blog网站首页和这篇博文页，会有返回按钮图片错误</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/back-to-top/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/27/read-on/">Read on 阅读全文</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>如果正文太长，不希望在首页直接显示完整内容，可以在适当的位置加上一句<code>&lt;!--more--&gt;</code>，后面的内容就会被按钮<code>Read on→</code>所替代，点击阅读全文。  <br />
+<!--more--><br />
+這以下的內容將會在正文才顯示。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/27/read-on/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/27/add-tags/">添加tags，導航欄，側邊欄</a>
                 </h2>
                 <div class="label">
@@ -910,144 +1094,6 @@ Done installing documentation for jekyll-paginate after 3 seconds
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/24/what-really-matter/">什麼才是重要的</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-24
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>專注內容  <br />
-專注技術  <br />
-Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
-博文才重要</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/24/what-really-matter/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-02-21
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>博客根目录，文件<code>index.html</code>，找到<code>Recent Posts</code>这一大段内容，复制，打开<code>_layouts/post.html</code>，找到：</p>
-<pre><code>    &lt;div class="right"&gt;
-        &lt;div class="wrap"&gt;
-</code></pre>
-<p>复制到其后面。</p>
-
-<p>因为只复制一段老是有错，现在我是把<code>index.html</code>的<code>&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code>_layouts/post.html</code>右边栏一直到最后的内容。</p>
-<h1>🤪😀</h1>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/02/21/post-html-add-sidebar-about-recent-posts/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1077,6 +1123,10 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/11/02/day-52/">Day 52</a></li>
+                    
+                        <li><a href="/2023/11/02/day-51/">Day 51</a></li>
                     
                         <li><a href="/2023/11/01/day-50/">Day 50：管好自己，莫渡他人</a></li>
                     
@@ -1134,10 +1184,6 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
                     
                         <li><a href="/2023/10/07/day-23/">Day 23：规划，行动，坚持</a></li>
                     
-                        <li><a href="/2023/10/06/day-22/">Day 22：宁生穷命，莫生穷相</a></li>
-                    
-                        <li><a href="/2023/10/05/day-21/">Day 21：你得有价值</a></li>
-                    
                 </ul>
             </div>
 
@@ -1163,7 +1209,7 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">261</span>
+                            <span class="badge">263</span>
                         </a>
                     </li>
                     
