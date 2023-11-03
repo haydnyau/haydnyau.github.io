@@ -148,6 +148,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -160,6 +162,241 @@
         <h1>⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/06/goagent/">GoAgent</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-06
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2016-01-09  goagent的github仓库已经全部删除，it’s gone.</p>
+
+<p><a href="https://github.com/goagent/goagent">新网址</a>  <br />
+<a href="http://git.io/goa">压缩包下载地址</a>  <br />
+<a href="https://github.com/goagent/goagent/blob/wiki/SimpleGuide.md">简易教程</a></p>
+
+<p><strong>部署</strong></p>
+
+<ol>
+  <li>申请 Google Appengine 并创建 appid。</li>
+  <li>下载 <a href="https://github.com/goagent/goagent">goagent</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>修改 local\proxy.ini 中的 [gae] 下的 appid = 你的appid(多appid请用</td>
+          <td>隔开)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>运行 uploader.bat 或 uploader.py 开始上传, 成功后即可使用了。</li>
+</ol>
+
+<p><strong>使用</strong></p>
+
+<ul>
+  <li>Windows 用户推荐使用 goagent.exe 托盘图标设置 IE 代理(对其它浏览器也有效)。</li>
+  <li>Chrome/Opera 请安装 SwitchyOmega 插件(下载到本地然后拖放文件到扩展设置)，导入 SwitchyOptions.bak</li>
+  <li>Firefox 请安装 FoxyProxy ，Firefox需要导入证书，方法请见 FAQ</li>
+  <li>出现连接不上的情况可以尝试使用 gscan 或 GoGo Tester 测速。</li>
+</ul>
+
+<p><a href="https://github.com/goagent/goagent/blob/wiki/InstallGuide.md">图文教程</a></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/06/goagent/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/">TCPServer Error: Address already in use - bind(2)</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h4 id="停止rake-preview-任务用ctrlc别用ctrlz可以避免这个问题">停止<code>rake preview</code> 任务，用<code>ctrl+c</code>，别用<code>ctrl+z</code>，可以避免这个问题</h4>
+<p>在执行命令</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>时，输出：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ rake preview  
+Starting to watch source with Jekyll and Compass. Starting Rack on port 4000  
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.  
+Configuration file: /home/dong/octopress/_config.yml  
+[2015-03-05 13:22:19] INFO  WEBrick 1.3.1  
+[2015-03-05 13:22:19] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]  
+[2015-03-05 13:22:19] WARN  TCPServer Error: Address already in use - bind(2)  
+/home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `new'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `block in create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `each'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:82:in `listen'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:70:in `initialize'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:45:in `initialize'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `new'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `run'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:286:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:147:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/bin/rackup:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+        Source: source
+   Destination: public
+      Generating... 
+                done.
+    write public/stylesheets/screen.css
+ Auto-regeneration: enabled for 'source'
+</code></pre>
+
+<p>解决方法：  <br />
+执行：</p>
+
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
+
+<p>如果提示：</p>
+<pre><code>sudo: netstat：找不到命令
+</code></pre>
+<p>运行：</p>
+<pre><code>netstat -tulpn |grep 4000
+</code></pre>
+<p>然后：</p>
+<pre><code>dong@Ubuntu:~/octopress$ netstat -tulpn |grep 4000
+Command 'netstat' not found, but can be installed with:
+sudo apt install net-tools
+dong@Ubuntu:~/octopress$ sudo apt install net-tools
+</code></pre>
+<p>再运行：</p>
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
+<p>得到：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
+[sudo] password for dong: 
+tcp        0      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      2889/rackup  
+</code></pre>
+
+<p>执行：</p>
+
+<pre><code>kill -9 2889
+#更改2889处对应的数字，前面的-9好像不变
+</code></pre>
+
+<p>得到：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ kill -9 2889
+dong@Ubuntu:~/octopress$
+</code></pre>
+
+<p>done.</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -848,170 +1085,6 @@ gem install therubyracer
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/09/21/tobaowen/">致宝文</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-09-21
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h4 id="严正声明事关宝文个人隐私未经宝文允许不得传出宿舍外">严正声明：事关宝文个人隐私，未经宝文允许，不得传出宿舍外！</h4>
-
-<p>昨天，秋风冷起。</p>
-
-<p>昨天，得知宝文又谈恋爱。</p>
-
-<p>都是昨天，万事万物皆有关联，这说明：宝文的恋爱和秋风一样让人感到冰冷。</p>
-
-<p>你想，全宿舍最猥琐的宝文居然谈恋爱了，而且是又谈恋爱了，而帅得血了呼啦潮得犀了马哈的东哥，却只配做个好人，我呸！</p>
-
-<p>然后我的反应是：难道这几天又有天文奇观天狗食月？</p>
-
-<p>插叙下：宝文上个女朋友，表白那天，下午，宝文和我去轮滑，到了鼎湖山，再去九龙湖。回来后，天黑了，我们在校门口吃了5块钱炒粉，宝文还打包多一份回宿舍，然后他没有冲凉，就约小宇出来表白，然后那天还遇上N年难得一遇的天狗食月。</p>
-
-<p>说到这我得简略小结一下：又累、又饿、又满身臭汗没冲凉、又月食，表白……</p>
-
-<p>么蛋，别说女生拒绝你，是我我也拒绝你啦！</p>
-
-<p>果然失败了。哈哈哈。</p>
-
-<p>过了段时间，我记得是寒假，中午，宝文发信息给我，说他成功了，小宇答应了。</p>
-
-<p>擦，女人真的是个奇怪的物种。</p>
-
-<p>再后来，我看到小宇，挺好的一个女生，就是眼神不好。</p>
-
-<p>我们曾无数次在宿舍卧谈会嘲笑宝文月食之夜表白的糗事，有时候我会想：这样赤裸裸地嘲笑自己的舍友会不会不好？宝文会不会想不开做自由落体运动？然后我想明白了，在情在理，我们嘲笑宝文，都是好的。</p>
-
-<p>理：宝文这么猥琐，如果被人笑笑就受不了，早就瓜老衬了。</p>
-
-<p>情：宝文这么猥琐，就应该被人嘲笑。</p>
-
-<p>毕业不久，他们分手了，感情上我也不好接受，挺好的女生，宝文可惜了，而理智告诉我，没被宝文糟蹋，也是好事。</p>
-
-<p>所以现在听到宝文又谈恋爱的消息，简直是晴天霹雳万里无云，唉……现在的许多小女生，就是喜欢猥琐屌丝、美女配野兽，啊不，禽兽！真希望下次聚会，约他们出来，谈谈小宇。</p>
-
-<p>对于宝文这个猥琐男，我只能说：希望宝文早日踏入婚姻的殿堂爱情的坟墓，然后买到穿孔的避孕套，生几个孩子向他讨债！</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/09/21/tobaowen/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/09/16/dgs-classroom/">东哥学堂1</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-09-16
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>新人入职，别太出风头，不然容易被排挤。</p>
-
-<p>当然也要适当表现自己的能力给老板看到。</p>
-
-<p>两者之间的度要把握好。</p>
-
-<p>小时候在学校在家里接受的很多教育都是错的，比如说：知错能改就是好孩子。社会上，错了，要负责任！</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/09/16/dgs-classroom/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1022,10 +1095,10 @@ gem install therubyracer
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page34" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">35/36</span>
+          <span class="page_number ">35/37</span>
           
             <a href="/page36" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page36" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page37" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -1041,6 +1114,10 @@ gem install therubyracer
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/11/03/day-54/">Day 54</a></li>
+                    
+                        <li><a href="/2023/11/03/day-53/">Day 53</a></li>
                     
                         <li><a href="/2023/11/02/day-52/">Day 52</a></li>
                     
@@ -1098,10 +1175,6 @@ gem install therubyracer
                     
                         <li><a href="/2023/10/11/day-25/">Day 25</a></li>
                     
-                        <li><a href="/2023/10/11/day-24/">Day 24：自律</a></li>
-                    
-                        <li><a href="/2023/10/07/day-23/">Day 23：规划，行动，坚持</a></li>
-                    
                 </ul>
             </div>
 
@@ -1127,7 +1200,7 @@ gem install therubyracer
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">263</span>
+                            <span class="badge">265</span>
                         </a>
                     </li>
                     
