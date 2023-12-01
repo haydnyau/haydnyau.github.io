@@ -167,6 +167,71 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/15/done-tired/">ok 好累</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-15
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>睡觉</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/15/done-tired/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/15/model/">post文件模板</a>
                 </h2>
                 <div class="label">
@@ -952,107 +1017,6 @@ Gem::LoadError: You have already activated rake 13.0.1, but your Gemfile require
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-11
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h3 id="原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容">原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容</h3>
-<p>首先利用<code>rfkill</code>命令查看目前无线传输设备的状态，<code>rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
-
-<p>rfkill的常用方法为:</p>
-
-<pre><code>rfkill list all
-#  获得设备列表
-
-rfkill block [index|type]
-#  通过索引或类型禁用设备
-
-rfkill unblock [index|type]
-#  通过索引或类型启用设备
-</code></pre>
-
-<p>当前设备状态如下：</p>
-
-<pre><code>rfkill list all
-输出：
-0: phy0: Wireless LAN
-	Soft blocked: no
-	Hard blocked: yes
-1: acer-wireless: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
-</code></pre>
-
-<p>通过rfkill启用/禁用设备无法对硬件阻塞产生作用。</p>
-
-<p>由于笔记本只有一个无线网卡，这两个模块应该是有冲突</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>使用命令lsmod</td>
-      <td>grep acer可以看出系统启动了acer_wmi模块</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>通过查找资料后，解决方法为禁用acer_wmi模块。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/11/ubuntu-wifi-do-not-work/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1082,6 +1046,8 @@ rfkill unblock [index|type]
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/12/01/day-64/">Day 64：戒抖音</a></li>
                     
                         <li><a href="/2023/11/28/day-63/">Day 63：篮球，库里，不放弃</a></li>
                     
@@ -1141,8 +1107,6 @@ rfkill unblock [index|type]
                     
                         <li><a href="/2023/10/18/day-35/">Day 35</a></li>
                     
-                        <li><a href="/2023/10/17/day-34/">Day 34</a></li>
-                    
                 </ul>
             </div>
 
@@ -1168,7 +1132,7 @@ rfkill unblock [index|type]
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">274</span>
+                            <span class="badge">275</span>
                         </a>
                     </li>
                     
@@ -1305,7 +1269,7 @@ rfkill unblock [index|type]
                       
                         
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 10.5pt; color: #888;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
                       
                       
