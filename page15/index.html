@@ -138,20 +138,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -167,14 +153,13 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/06/05/iphone/">iPhone</a>
+                  <a class="post-link" href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-06-05
+                        <i class="fa fa-calendar"></i>2022-01-11
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -190,7 +175,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -207,7 +192,106 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容">原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容</h3>
+<p>首先利用<code class="language-plaintext highlighter-rouge">rfkill</code>命令查看目前无线传输设备的状态，<code class="language-plaintext highlighter-rouge">rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
+
+<p>rfkill的常用方法为:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
+#  获得设备列表
+
+rfkill block [index|type]
+#  通过索引或类型禁用设备
+
+rfkill unblock [index|type]
+#  通过索引或类型启用设备
+</code></pre></div></div>
+
+<p>当前设备状态如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rfkill list all
+输出：
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: yes
+1: acer-wireless: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+</code></pre></div></div>
+
+<p>通过rfkill启用/禁用设备无法对硬件阻塞产生作用。</p>
+
+<p>由于笔记本只有一个无线网卡，这两个模块应该是有冲突</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>使用命令lsmod</td>
+      <td>grep acer可以看出系统启动了acer_wmi模块</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>通过查找资料后，解决方法为禁用acer_wmi模块。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/11/ubuntu-wifi-do-not-work/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
     
   
 
@@ -219,465 +303,283 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>16、iPhone 13系列，2021年9月15日凌晨1点，在Apple Park发布。iPhone 13 mini，iPhone 13，iPhone 13 Pro，iPhone 13 Pro Max。A15，台积电第二代5nm  <br />
-A15仿生芯片，6核CPU，具有2个性能核心和4个能效核心，数字系列4核GPU（Pro系列5核），16核NPU，数字系列4G运存，Pro系列6G运存  <br />
-Pro系列首次使用可变刷新率，10-120Hz自由调节</p>
+                    <p>ubuntu20.04安装了几次2.0都失败<br />
+ubuntu12.04已经无法安装系统本身的更新了，更别说安装其他软件<br />
+强迫症发作，于是有了这次：</p>
+
+<h3 id="列出大致步骤吧主要是有些error要如何解决">列出大致步骤吧，主要是有些error要如何解决</h3>
 
 <!--more-->
 
-<p>1、2007年1月9日，乔布斯在旧金山马士孔尼会展中心的 Macworld 2007中发布第一代iPhone，于当地时间2007年6月29日下午6时正在美国正式发售。</p>
+<h2 id="git">git</h2>
+<h3 id="install-git">install git</h3>
 
-<p>2、2008年7月11日，苹果公司在全球22个国家及地区发售iPhone3G，当中包括原有的6个地区，最终增至80个国家及地区。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+sudo apt install git
+git --version
+</code></pre></div></div>
 
-<p>3、2009年6月8日，苹果公司宣布推出iPhone 3GS，连同服务合约的预计在6月，7月或8月的下旬推出。2009年6月19日开始于美国、加拿大及欧洲主要国家推出。</p>
+<h3 id="set-up-git">set up git</h3>
 
-<p>4、2010年6月7日，乔布斯在WWDC中发布iPhone 4。首次使用自研芯片A4。</p>
+<h4 id="username">Username</h4>
+<p>github用户名</p>
 
-<p>5、2011年10月4日，苹果公司新CEO提姆·库克在发布会上发布新一代iPhone—iPhone 4S。A5</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "qiuhaidong"
+#or haydnyau
+</code></pre></div></div>
 
-<p>6、2012年9月12日，苹果公司发布iPhone 5，他们首次通过使屏幕变长不变宽的做法，屏幕由3.5英寸增至4吋。手机屏幕的比例由3:2调整至接近16:9。A6</p>
+<h4 id="email">Email</h4>
+<p>github登录帐号邮箱名</p>
 
-<p>7、2013年9月10日，苹果公司于美国加州库比蒂诺备受瞩目的新闻发布会上，透露推出两款新iPhone型号：iPhone 5c及iPhone 5s。iPhone5c手机由五种颜色的塑料制成。A7</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.email "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
 
-<p>8、2014年9月10日，苹果公司在美国加州库部蒂诺市弗林特剧院（Flint Center）召开发布会，CEO提姆·库克（Tim Cook）开场即发布新的两款iPhone产品：iPhone 6及iPhone 6 Plus。A8，双核1GRAM，20nm台积电</p>
+<p>Password caching</p>
 
-<p>9、2015年9月9日（当地时间），苹果公司在美国加州旧金山比尔·格拉汉姆市政礼堂召开秋季发布会，发布两款最新的iPhone产品：iPhone 6S及iPhone 6S Plus。A9，双核，2Gram，三星14nmFinFET 台积电16nm</p>
+<p>To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:</p>
 
-<p>10、2016年3月22日，苹果发布iPhone SE。它采用了和iPhone 5s一样的工业设计，但硬件的参数则达到了iPhone 6s的水平。A9</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global credential.helper cache
+</code></pre></div></div>
 
-<p>11、2016年9月7日（当地时间）苹果公司在美国加州比尔·格雷厄姆市政礼堂发布了iPhone 7和iPhone 7 Plus。A10，四核，3GRAM，台积电 16nm FinFET</p>
+<h3 id="添加-ssh-keys">添加 SSH Keys</h3>
+<h4 id="step-1-check-for-ssh-keys">Step 1: Check for SSH keys</h4>
+<p>First, we need to check for existing ssh keys on your computer. Open up Terminal and run:</p>
 
-<p>12、2017年9月12日（当地时间）苹果公司在美国加州圣何塞的乔布斯剧院发布了iPhone 8、iPhone 8 Plus和iPhone X。A11，3GRAM，6核心，由2个代号为Monsoon的高性能核心及4个代号Mistral的低功耗核心组成 。台积电10nm。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.ssh
+# Checks to see if there is a directory named ".ssh" in your user directory
+</code></pre></div></div>
 
-<p>13、2018年9月12日，Apple推出了三款新设备：iPhone XR，iPhone XS和iPhone XS Max。这三款设备都配备了新款处理器Apple A12 Bionic。与之前的iPhone X相比，iPhone XS没有太多视觉上的变化。iPhone XR是三款新机型中最便宜的。它配备较少，没有双摄像头，并配有LCD屏幕。A12，7nm，6核，xr 3G，xs和max是 4G</p>
+<p>If it says “No such file or directory” go to step 2. Otherwise, you already have an existing keypair, and you can skip to step 3.</p>
 
-<p>14、2019年9月11日，苹果在史蒂夫·乔布斯剧院正式发布iPhone 11系列手机，推出了iPhone 11、iPhone 11 Pro和iPhone 11 Pro Max三款新iPhone，其国行版本均支持双卡双待。A13，全系4G RAM。7nm</p>
+<p><strong>最好就是把 .shh 这个文件夹删除了，做step 2</strong></p>
 
-<p>A13 Bionic拥有2个高性能核心，速度提升20%，功耗降低30%；拥有4个效能核心，速度同样提升20%，功耗降低了40%，搭载于iPhone 11全系产品上。</p>
+<h4 id="step-2-generate-a-new-ssh-key">Step 2: Generate a new SSH key</h4>
 
-<p>iPhone 11采用后置双摄像头，有紫色、白色、绿色、黄色、黑色、红色六种颜色，64G、128G、256G三种储存空间，6.1英寸LCD屏，支持杜比全景声，5499元起售。摄像头方面，iPhone 11采用一颗1200万超广角摄像头+1200万像素广角摄像头，超广角镜头支持两倍光学变焦，可视角度达到120度。</p>
+<p>To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, <strong>just press enter</strong>.不要输入文件名</p>
 
-<p>iPhone 11 Pro屏幕尺寸5.8英寸，采用Super Retina XDR OLED显示器，具有200万：1的对比度，1200nits的亮度，节能15%。iPhone 11 Pro系列手机采用后置三摄。分别为1200万像素广角镜头、1200万像素长焦镜头和1200万像素超广角镜头。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "your_email@example.com"
+我的就是：ssh-keygen -t rsa -C "690982322@qq.com"
+#or 1148891016@qq.com
+</code></pre></div></div>
 
-<p>iPhone 11 Pro Max屏幕尺寸6.5英寸，采用Super Retina XDR OLED显示器，具有200万：1的对比度，1200nits的亮度，节能15%。iPhone 11 Pro系列手机采用后置三摄。分别为1200万像素广角镜头、1200万像素长焦镜头和1200万像素超广角镜头。</p>
+<p>Now you need to enter a passphrase.设置密码。（有人是密码都不要的，再按两下enter就行了）</p>
 
-<p>15、iPhone 12系列，2020年10月14日凌晨1点，在Apple Park发布。iPhone 12 mini，iPhone 12，iPhone 12 Pro，iPhone 12 Pro Max。A14，台积电5nm，集成了118亿晶体管  <br />
-A14仿生芯片，6核CPU，具有2个性能核心和4个能效核心，4核GPU，16核NPU，数字系列4G RAM，Pro系列6G RAM</p>
+<p>Which should give you something like this:</p>
 
-<p>16、iPhone 13系列，2021年9月15日凌晨1点，在Apple Park发布。iPhone 13 mini，iPhone 13，iPhone 13 Pro，iPhone 13 Pro Max。A15，台积电第二代5nm  <br />
-A15仿生芯片，6核CPU，具有2个性能核心和4个能效核心，数字系列4核GPU（Pro系列5核），16核NPU，数字系列4G运存，Pro系列6G运存  <br />
-Pro系列首次使用可变刷新率，10-120Hz自由调节</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /home/you/.ssh/id_rsa.
+Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+</code></pre></div></div>
+
+<h3 id="step-3-add-your-ssh-key-to-github">Step 3: Add your SSH key to GitHub</h3>
+<p>ctrl+h，显示隐藏文件，这里其实可以打开这个<strong>id_rsa.pub</strong>文件，直接复制，不用安装下面的软件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install xclip
+# Downloads and installs xclip.
+
+xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
+</code></pre></div></div>
+
+<h4 id="add-your-ssh-key-to-github">Add your SSH key to GitHub</h4>
+
+<p>到github网站，登陆，头像，设置，SSH and GPG keys，把旧的SSH keys删除，添加新的，title不用管，粘贴到key就行了</p>
+
+<h3 id="step-4-test">Step 4: Test</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+
+<p>这里可能会还要按照提示做一下，不难，看英文做</p>
+
+<p>如果看到：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi qiuhaidong! You've successfully authenticated, but GitHub does not provide shell access.
+# or haydnyau
+</code></pre></div></div>
+
+<p>If that username is correct, you’ve successfully set up your SSH key. Don’t worry about the shell access thing, you don’t want that anyway.</p>
+
+<p>If you see “<strong>access denied</strong>” please consider using HTTPS instead of SSH. If you need SSH start at these instructions for diagnosing the issue.</p>
+
+<h4 id="如果不成功用https的认证方式代替ssh因为github觉得ssh不安全认证方式有时会改变">如果不成功，用https的认证方式代替ssh，因为github觉得ssh不安全，认证方式有时会改变</h4>
+
+<h2 id="rvm">RVM</h2>
+<p>看官网命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+</code></pre></div></div>
+
+<p>会显示失败，先不管它<br />
+Install RVM：命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ curl -sSL https://get.rvm.io | bash -s stable
+Downloading https://github.com/rvm/rvm/archive/1.29.12.tar.gz
+Downloading https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc
+gpg: 于 2021年01月16日 星期六 02时46分22秒 CST 创建的签名，使用 RSA，钥匙号 39499BDB
+gpg: 无法检查签名：没有公钥
+GPG signature verification failed for '/home/dong/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
+    gpg2 --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+or if it fails:
+    command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+In case of further problems with validation please refer to https://rvm.io/rvm/security
+</code></pre></div></div>
+
+<p>这个提示错误，并且给出了解决方法：<br />
+运行：<br />
+命令1：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>命令2：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+</code></pre></div></div>
+
+<p>再运行上一条命令安装rvm：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L https://get.rvm.io | bash -s stable
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  * To start using RVM you need to run `source /home/dong/.rvm/scripts/rvm`
+</code></pre></div></div>
+
+<p>安装成功，按照提示运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source /home/dong/.rvm/scripts/rvm
+</code></pre></div></div>
+
+<p>测试：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm --version
+git --version
+</code></pre></div></div>
+
+<p>安装ruby2.2.6（1.9.3太久了，无法安装）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.2.6
+</code></pre></div></div>
+
+<p>会提示输入本机密码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.2.6
+</code></pre></div></div>
+
+<h3 id="setup-octopress">Setup Octopress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+# 或者 git clone git://github.com/imathis/octopress.git octopress
+# octopress  2.0 原码
+cd octopress
+</code></pre></div></div>
+
+<h4 id="install-dependencies">install dependencies</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+
+<h4 id="会提示失败按提示加上版本号安装适合本系统的">会提示失败，按提示加上版本号，安装适合本系统的</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<h4 id="install-the-default-octopress-theme">Install the default Octopress theme</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake install
+</code></pre></div></div>
+
+<h4 id="deploying-to-github-pages">Deploying to Github Pages</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake setup_github_pages
+</code></pre></div></div>
+
+<p>这里可能会要输入链接等，ssh，https</p>
+
+<p>The rake task will ask you for a URL of the Github repo. Copy the SSH or HTTPS URL from your newly created repository <br />
+(e.g. git@github.com:username/username.github.io.git) <br />
+git@github.com:qiuhaidong/qiuhaidong.github.com.git<br />
+https://github.com/qiuhaidong/qiuhaidong.github.com.git<br />
+or<br />
+git@github.com:haydnyau/haydnyau.github.io.git<br />
+https://github.com/haydnyau/haydnyau.github.io.git<br />
+and paste it in as a response.</p>
+
+<p>This will:</p>
+
+<ol>
+  <li>Ask for and store your Github Pages repository url.</li>
+  <li>Rename the remote pointing to imathis/octopress from ‘origin’ to ‘octopress’</li>
+  <li>Add your Github Pages repository as the default origin remote.</li>
+  <li>Switch the active branch from master to source.</li>
+  <li>Configure your blog’s url according to your repository.</li>
+  <li>Setup a master branch in the _deploy directory for deployment.</li>
+</ol>
+
+<p>Next run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+rake deploy
+</code></pre></div></div>
+
+<p>This will generate your blog, copy the generated files into <code class="language-plaintext highlighter-rouge">_deploy/</code>, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.</p>
+
+<h2>=======================================================</h2>
+
+<p>来自官网<br />
+<strong>下面这个不知道要不要做：</strong><br />
+Now you have a place to commit the generated content for your site, but you should also set up repository to store the source for your blog. After you set up a repository for your blog source, add it as the origin remote.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin (your repo url)
+# set your new origin as the default branch
+git config branch.master.remote origin
+</code></pre></div></div>
+
+<p>Now push your changes and you’ll be all set.<br />
+<strong>上面这个不知道要不要做：</strong><br />
+来自官网</p>
+
+<h2 id="-1">========================================================</h2>
+
+<p><strong>Don’t forget</strong> to commit the source for your blog.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+git commit -m 'update'
+git push origin source
+</code></pre></div></div>
+
+<h3 id="configuring-octopress">Configuring Octopress</h3>
+
+<h4 id="edit-_configyml">edit _config.yml</h4>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/06/05/iphone/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/06/04/never-stop/">never stop</a>
+                  <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-06-04
+                        <i class="fa fa-calendar"></i>2022-01-10
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqTrmV0FGghNFiZ7c*9aIpE6e3Etui9kTYD0kRW4Yz3.WfiNLNeZP13FUC7q9wNt3NddHWPf35H.et7OoWiFTonQ!/r" alt="" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/06/04/never-stop/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/06/04/kindle-stop-service/">Kindle国区停服，电子书备份</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-06-04
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>Amazon Kindle，中国区将停止服务，Amazon官方提供的正版免费书，我已经上传到百度网盘和阿里云盘，单个和打包的都有上传，以后要看书，搜索即可。样章和个人文档是无法下载到电脑的，个人文档可以到邮箱里搜索。  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqZpIT8fRKwUi3x77tcE8lHZgdTrMb.rjCraz.msgOZBuDF2Lsg7frdcydzoapQvd3qa0ihoLnTlJOIzVctYNHFo!/r" alt="kindle" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/06/04/kindle-stop-service/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/31/you-in-my-dream-again/">又梦见你</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-31
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#she" title="Tag: she" rel="tag">she</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>贫困潦倒，何以胆敢又梦见你？！</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/31/you-in-my-dream-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/30/dont-like-family-anymore/">不再喜欢家庭</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-30
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>做家人，也要讲究缘分的，我已经不再喜欢家庭了，太累了</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/30/dont-like-family-anymore/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/28/daily-liaozhaixinzhi/">daily，2022-05-29，聊齋新志</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-28
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>如有凌雲壯志，當在白雲深處憶佳人……  <br />
-<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqcwRFfR5mZXwpaimDZg2ujCUO3uiPH*PesY9EZTTFvSOcgNfgcq9N4GbmMjFBMpo.STRHfY8zQ5XHQfcnqRHuNc!/r" alt="" /></p>
-
-<p>以前上選修課時看的，這次在B站重溫，愈髮覺得精妙絶倫，融匯古今中外，粵劇和流行樂結合，太好聽了。當然第一幕可能讓人有點怕，但你看完整劇，就算不喜歡這種類型，你也會覺得這是精品。  <br />
-<a href="https://www.bilibili.com/video/BV1ys411B7TC?spm_id_from=333.851.header_right.fav_list.click">【音樂劇】【香港】【2001】聊齋新誌/The Dark Tales 【鄭少秋/李麗珍/鐘景輝/焦媛】【音樂顧問】黃霑</a></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/28/daily-liaozhaixinzhi/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/27/daily/">daily，2022-05-27，篮球废物</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-27
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>昨天打篮球，我们几个<strong>熟悉</strong>的，<strong>笑称</strong>我们<strong>自己</strong>是<strong>废物5人组</strong>，然后提议要成立球队，准备去印队服。哈哈哈哈哈</p>
-
-<p>我是不厉害呀，但是我的兄弟，马的比我还菜，真服了，哈哈哈哈哈  <br />
-唐斯=软蛋，恩比德=软蛋，但是恩比德vs唐斯=硬汉对决，因为都想证明对方才是联盟最软的</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/27/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/">curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-27
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -722,36 +624,69 @@ Pro系列首次使用可变刷新率，10-120Hz自由调节</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="https://blog.csdn.net/u014375643/article/details/115826506">问题解决：curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a>  <br />
-https://qiuhaidong.github.io/blog/2022/04/05/octopress2-on-ubuntu-22-dot-04/</p>
-<pre><code>sudo apt install curl
-curl -sSL https://get.rvm.io | bash -s stable
-</code></pre>
-<p>提示：</p>
-<pre><code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
-</code></pre>
-<p>解决：  <br />
-<a href="https://blog.csdn.net/u014375643/article/details/115826506">Failed to connect to raw.githubusercontent.com</a>  <br />
-到这个网址：<code>https://www.ipaddress.com/</code>，输入：<code>raw.githubusercontent.com</code>，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：<code>185.199.108.133 raw.githubusercontent.com</code>，重试，不行就重启再试。</p>
+                    <h3 id="三步">三步</h3>
+
+<h2 id="step-1">Step 1</h2>
+
+<h3 id="添加-category_list-插件">添加 <code class="language-plaintext highlighter-rouge">category_list</code> 插件</h3>
+
+<p>在 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Jekyll
+  class CategoryListTag &lt; Liquid::Tag
+    def render(context)
+      html = ""
+      categories = context.registers[:site].categories.keys
+      categories.sort.each do |category|
+        posts_in_category = context.registers[:site].categories[category].size
+ 	       category_dir = context.registers[:site].config['category_dir']
+        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
+    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
+      end
+      html
+    end
+  end
+end
+
+Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
+</code></pre></div></div>
+
+<p>这个插件会向<code class="language-plaintext highlighter-rouge">liquid</code>注册一个名为<code class="language-plaintext highlighter-rouge">category_list</code>的<code class="language-plaintext highlighter-rouge">tag</code>，该<code class="language-plaintext highlighter-rouge">tag</code>就是以<code class="language-plaintext highlighter-rouge">li</code>的形式将站点所有的<code class="language-plaintext highlighter-rouge">category</code>组织起来。如果要将<code class="language-plaintext highlighter-rouge">category</code>加入到侧边导航栏，需要增加一个<code class="language-plaintext highlighter-rouge">aside</code>。</p>
+
+<h2 id="step-2">Step 2</h2>
+
+<h3 id="增加-aside">增加 <code class="language-plaintext highlighter-rouge">aside</code></h3>
+
+<p>在 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list.html</code> 。并粘贴下面的代码：</p>
+
+<p><strong>注意</strong>： 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的2个 <code class="language-plaintext highlighter-rouge">\</code><br />
+这里如果不加上<code class="language-plaintext highlighter-rouge">\</code>，markdown格式会显示<code class="language-plaintext highlighter-rouge">category_list</code>的内容。我是为了正确显示代码才加上的</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
+  &lt;h1&gt;Categories&lt;/h1&gt;
+  &lt;ul id="categories"&gt;
+    {\% category_list \%}
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre></div></div>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/01/10/add-category/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/">ssh: connect to host ssh.github.com port 443: Connection refused</a>
+                  <a class="post-link" href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-26
+                        <i class="fa fa-calendar"></i>2022-01-10
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -784,7 +719,87 @@ curl -sSL https://get.rvm.io | bash -s stable
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#ssh" title="Tag: ssh" rel="tag">ssh</a>
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>代码如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ git push origin source
+
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>打开文件~/octopress/.git/config，查看</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[remote "origin"]
+	url = git@github.com:haydnyau/haydnyau.github.io.git
+</code></pre></div></div>
+
+<p>我是改了几次，com.git和io.git搞错了</p>
+
+<p><a href="https://blog.csdn.net/weixin_40886892/article/details/80725071">和我同样问题的网友</a></p>
+
+<p><a href="https://blog.csdn.net/meng_lemon/article/details/88963157">另一个网友的类似问题</a></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/can-not-push/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -796,42 +811,369 @@ curl -sSL https://get.rvm.io | bash -s stable
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>出现标题问题，打开：<a href="https://www.ipaddress.com/">IPAddress.com</a> ，有时会出现403禁止访问的错误，要点一下<code>Go to Homepage</code>才行。输入：<code>ssh.github.com</code>，得到IP地址：  <br />
-<code>140.82.113.36</code>  <br />
-<code>140.82.114.35</code>  <br />
-修改本地hosts：</p>
-<pre><code>cd /etc
-sudo gedit hosts
-</code></pre>
-<p>添加：</p>
-<pre><code>140.82.113.36          ssh.github.com
-140.82.114.35          ssh.github.com
-</code></pre>
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqWdkQXFWB88lLNe9b.pKPd.bOkeCQ1XnXqIwv6SR2DItDkSBuzvyRWfXmXV4k8yccpRrk38TrDNSADQdQqoUnfE!/r" alt="" /></p>
+                    <p>preview.sh代码</p>
 
-<h4 id="22端口无法连接">22端口无法连接：</h4>
-<p><a href="https://qiuhaidong.github.io/blog/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build #生成
+jekyll serve
+</code></pre></div></div>
 
-<p><a href="https://blog.csdn.net/u014375643/article/details/115826506">curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a></p>
+<p>=================================</p>
 
+<p>deploy.sh代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+octopress deploy
+</code></pre></div></div>
+
+<p>=================================</p>
+
+<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+mv _posts/ _site/
+octopress deploy
+mv _site/_posts/ .
+</code></pre></div></div>
+
+<p>注意这个点 “.”
+<code class="language-plaintext highlighter-rouge">.</code> 或者 <code class="language-plaintext highlighter-rouge">./</code> 表示当前目录</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2022/05/26/huili-xie/">回力鞋</a>
+                  <a class="post-link" href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-26
+                        <i class="fa fa-calendar"></i>2022-01-07
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>更改了/home/dong/haydnyau/_templates/post
+增加了：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>categories: 
+</code></pre></div></div>
+
+<h3 id="ps-里面有代码">ps: {}里面有代码:</h3>
+
+<p>categories: {{ categories }}<br />
+因为格式问题没有显示，参见原文件</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/change-templates-post-if-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/07/octopress3-0/">创建octopress3.0简单说明</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="注意下面的有些步骤不适合">注意，下面的有些步骤不适合</h3>
+<h4 id="先到jekyll官网用它的方法安装好本地博客再看几个octopress30的教程比如官方github的和博文1octopress-3-arrives-to-make-blog-generation-crazy-simple--安装octopress用它来上传blog结合下面的前面几步gitrvmrubybundlerbundle-installor-bundle">先到jekyll官网，用它的方法安装好本地博客，再看几个octopress3.0的教程，比如官方github的和<a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a>  ，安装octopress，用它来上传blog，结合下面的前面几步，git，rvm，ruby，bundler，bundle install(or bundle)</h4>
+
+<p>重装octopress 2.0 博客失败<br />
+很多新旧的软件，依赖，都不兼容了<br />
+算了，世界在发展，有的旧事物必然被淘汰<br />
+毕竟连作者都不维护了<br />
+而且连3.0都不维护了</p>
+
+<p>============================</p>
+
+<p><a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a></p>
+
+<p><a href="https://jingsam.github.io/2015/10/21/blogging-with-octopress-3-0.html">博文2，Octopress 3.0博客搭建教程</a></p>
+
+<!--more-->
+
+<p>安装git<br />
+设置好用户名，email等等，参见之前的blog<br />
+添加ssh钥匙到github<br />
+安装rvm<br />
+安装ruby 2.7.0,好像默认就是<br />
+<a href="https://blog.csdn.net/qq_41988167/article/details/106202868">修复安装2.2.6失败的教程</a><br />
+安装octopress</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install octopress
+</code></pre></div></div>
+
+<p>创建博客的主文件夹</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new haydnyau #名字自取
+</code></pre></div></div>
+
+<p>新建一篇blog</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new post hello world
+</code></pre></div></div>
+
+<p>生成网页</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
+
+<p>为避免下面的错误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
+</code></pre></div></div>
+
+<p>本地预览</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+</code></pre></div></div>
+
+<h3 id="可能会报错参见此blog"><a href="https://github.com/jekyll/jekyll/issues/8523">可能会报错,参见此blog</a></h3>
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEOrm72ctF5gw0aqWv21aZeNSASWKMfjZMh4q6GkEqIeM78CkO7o4O*iqGXdxCboPoKIKO9drAx052jTS2quUV58!/r" alt="jekyll serve, cannot load such file -- webrick (LoadError)" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle exec jekyll serve
+Configuration file: /home/dong/haydnyau/_config.yml
+            Source: /home/dong/haydnyau
+       Destination: /home/dong/haydnyau/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.398 seconds.
+ Auto-regeneration: enabled for '/home/dong/haydnyau'
+                    ------------------------------------------------
+      Jekyll 4.2.1   Please append `--trace` to the `serve` command 
+                     for any additional information or backtrace. 
+                    ------------------------------------------------
+/home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `require_relative'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `setup'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:100:in `process'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/exe/jekyll:15:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `load'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `eval'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;'
+dong@Ubuntu:~/haydnyau$ 
+</code></pre></div></div>
+
+<p>原因：</p>
+<h3 id="回答1">回答1：</h3>
+
+<p>This happens because webrick is no longer a bundled gem in Ruby 3.0. From https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/:</p>
+
+<blockquote>
+  <ul>
+    <li>The following libraries are no longer bundled gems or standard libraries. Install the corresponding gems to use these features.</li>
+    <li>sdbm</li>
+    <li>webrick</li>
+    <li>net-telnet</li>
+    <li>xmlrpc</li>
+  </ul>
+</blockquote>
+
+<p>Adding <code class="language-plaintext highlighter-rouge">gem "webrick"</code> to my Gemfile solves the problem, but Jekyll should include it in its gemspec.</p>
+
+<h2 id="回答2">回答2：</h2>
+
+<p>I think you want run: <code class="language-plaintext highlighter-rouge">bundle add webrick</code>.</p>
+
+<p>我运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
+</code></pre></div></div>
+
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEBN4rGxoHZRJvba1HYTQq27ffRKlLPwSuElBnQsx8myUeNz3PvYmrJfIi3*2TZPi9OuuBIJmyilHvC5IQwNqaYw!/r" alt="sudo bundle add webrick" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle add webrick
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Using public_suffix 4.0.6
+Using bundler 2.3.4
+Using colorator 1.1.0
+Using concurrent-ruby 1.1.9
+Using eventmachine 1.2.7
+Using http_parser.rb 0.8.0
+Using ffi 1.15.4
+Using forwardable-extended 2.6.0
+Using rb-fsevent 0.11.0
+Using rexml 3.2.5
+Using liquid 4.0.3
+Using mercenary 0.4.0
+Using rouge 3.27.0
+Using safe_yaml 1.0.5
+Using unicode-display_width 1.8.0
+Using webrick 1.7.0
+Using addressable 2.8.0
+Using sassc 2.4.0
+Using rb-inotify 0.10.1
+Using kramdown 2.3.1
+Using terminal-table 2.0.0
+Using listen 3.7.0
+Using kramdown-parser-gfm 1.1.0
+Using jekyll-sass-converter 2.1.0
+Using pathutil 0.16.2
+Using em-websocket 0.5.3
+Using i18n 1.8.11
+Using jekyll-watch 2.2.1
+Using jekyll 4.2.1
+Using jekyll-feed 0.16.0
+Using jekyll-seo-tag 2.7.1
+Using minima 2.5.1
+dong@Ubuntu:~/haydnyau$ 
+</code></pre></div></div>
+
+<p>问题解决</p>
+
+<p>解决前后的Gemfile文件：<br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEJRCIzYAaW3bXX8u6*IVJZ.XtCdPn6AvRrMkapg1VV.CqGful*eQepRFyH0ztMqVtAXon32yueiaIigulllP3VI!/r" alt="Genfile，前" /><br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrECtxM1XJmWMiuXm2sA41EdXEaIr2GF1uWWNzSBr7KU5QsmUQqXrNTxgBvdf2nvM66ZFdRT4*rwlgIb3LIswYiAo!/r" alt="Genfile，后" /></p>
+
+<p>生成发布配置文件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
+</code></pre></div></div>
+
+<p>发布</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy
+</code></pre></div></div>
+
+<p>git上传</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+git add .
+</code></pre></div></div>
+
+<p>还有的以后琢磨<br />
+买个早餐，吃饱，睡觉</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress3-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/01/02/basketball-in-the-zone/">篮球境界</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-02
+                    </div>
+                    <div class="label-card">
                         
                     </div>
                     <div class="label-card">
@@ -864,7 +1206,86 @@ sudo gedit hosts
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>今晚<br />
+并不是说命中率最高、速度最快，而是心态最好，进入境界。<br />
+就像麦迪说的，35秒13分并不是他的最好，他的最好是进入了“in the zone”的境界。<br />
+我今晚也一样。<br />
+具体这样说吧：<br />
+心跳如常，不为任何情况所动，该怎样怎样。<br />
+<strong>进攻</strong>：<br />
+该跑跑，该停停，该切切，该快快，该慢慢。<br />
+该投投，不犹豫。<br />
+该晃晃，该突突，该传传，该断断。<br />
+<strong>防守</strong>：<br />
+该紧紧，该松松。<br />
+被背打就被背打，不懊恼。<br />
+能帽帽，不喜不惧。<br />
+<strong>其他</strong>：<br />
+投不进就不进，不懊恼，不可惜，继续。<br />
+失误就失误，继续。<br />
+开场还是抢七，该怎样怎样。<br />
+不怕强劲的对手，不怕拖累队友。<br />
+心态控制体能，微汗。<br />
+如李小龙说的：<strong>从心所欲,一心一意，表达自己</strong>。<br />
+<strong>心态如常，张弛有道，不为所动</strong>。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/02/basketball-in-the-zone/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2021/12/31/my-2021/">我的2021</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2021-12-31
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
     
   
 
@@ -876,42 +1297,91 @@ sudo gedit hosts
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>初中时我就穿过回力鞋，红色经典款。</p>
-
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqXVZjyw.Io6CrdJc0fWHXnr3q4dUHaR0xPc646NIEVQCcQiSgJvYmzbq2gFBxRjPOkSIs9e4fG7ZXca4doqIegU!/r" alt="" /></p>
-
-<p>刚上高中时，体育课，穿这红色款，我还不好意思，怕别人笑我。  <br />
-<!--more-->  <br />
-然后买过其他的杂牌鞋。  <br />
-之后好像是高二吧，买了当时的新款的回力鞋，稍微时尚一点的。那时好像还是29元的价格。就是下面这款，但是布料是白色的，简洁的，我没找到相应的图片。</p>
-
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqerQz2XiIcsB5TWpc2zCB.fl3ptPacYa3Oz1.*mcXV8CozPKvxWyn7jcOJwjac7VUFA0svgvN33O2HrAovQ3BFc!/r" alt="" />  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdaqExTQcE..sFI2qhuFwOFI1E5DWF7BaMYXecAcKntigHARsfNjH*BTamA.l2yrQnoR*SIhvEF0JWNlp27xEhc!/r" alt="" /></p>
-
-<p>大学时还穿过其他款式的回力鞋，帆布的，稍稍有点高帮的，红白蓝款都穿过。</p>
-
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqYtINEqoDu1BFFrvpTSB56TbIXYI7cSMTjoFS9MG92lPWCmmDPVL6lhkUckqspWLgpMJ*daXetVoiJqT3RnMGA8!/r" alt="" />  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdVz7fNyJqV4JI3jhf*6zTvDc6PLmyQQYSQpC0y0Sdzabp*88al8EYmLYKYGWrl5RdsLkvob0.JO7uGYygtMqcc!/r" alt="" />  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqc6.19kAtZU0vBIQen4xag6ZtFn4kir4pmTPiUY7v4Z*9mfqYutrgu9JbhsOGHdmnkGZ*402pD*LHZ25xu2fbHs!/r" alt="" /></p>
-
-<p>之后我就一直穿经典款，银色牛筋底的</p>
-
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfelfs2XhZK*r.DGe*rfi5iKv7E4Y8Qhpsllj7mqC8zxJ5qZcuBB554dJTsIQA9RjyYQ3GPRb40q2xOJsKUPiXA!/r" alt="" />  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqTI6TVFnJ*lY.CLDBk.mRlX*pqBD*hUxLiVgbqk4lMSbNUvZ9kfFBRwdl*HoexX0RTaxVwKWg9t*Ffe.hDikqCc!/r" alt="" />  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqRDlMxQrZ0P.E8xFknRTG2Ux1RovdOh8kOqKzmZfETxcNOo32cJ97r*2l1YxzpnTjK6XyNKr00CFwrSQDvxOmc8!/r" alt="" /></p>
-
-<p>然而很遗憾，这两年，我买到的鞋都是仓底尾货，生产日期经常是两三年前的，甚至四年的也有呀。太无奈了。而且以前一双能穿一年，这些年变成半年，4个月，3个月，最近的一双，穿了不到50天。  <br />
-于是我上网查了查，回力这几年终究是经营不过来，自己的工厂经营不下去，关了。授权给别人生产，已经变成一个贴牌了。质量肯定是得不到保证。恶性循环。  <br />
-生活就是这样，无论你多喜欢，有些东西，就算是十几二十年的感情，终究是敌不过现实的残酷。  <br />
-只能选择其他的。  <br />
-361燃战TD版</p>
-
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfXqPSrsdMuzLigH8NuKpNU3zBo.L8zCSo697I0fEhtVz6aa0A0VkW4PGQdHo3419EeL2GVZYIEN81m7tqC9LpA!/r" alt="" /></p>
-
+                    <p>这一年，三件事：到京东<strong>打工</strong>，学<strong>做饭</strong>，耳朵<strong>生病</strong>。<br />
+<strong>打工</strong><br />
+是做苦力，卖力气，很丢人，但，荒废了两年，终于动了。具体的，以前写过，不重复。<br />
+<strong>做饭</strong><br />
+很有门道，比如炒青菜，刚下锅，有的马上熟了，有的还没炒到，心慌。淡定，正常翻炒，就行了。还有先炒猪肉，再放面去炒，再放青菜，看起来一大锅，怕青菜在上面炒不熟，慌了。淡定，正常翻炒，就行了。<br />
+淡定，正常地做，就行了。<br />
+<strong>生病</strong><br />
+对自己太狠。秋冬，连续俩月通宵夜班，噪声大，有压力，情绪不稳定，早上洗冷水澡，重糖，重淀粉（米面主食），重油，重盐，吃辣椒，估计血糖高，血脂高，血压高，血粘稠，睡眠严重不足，內耳供血不足，听觉神经长期疲累不堪。免疫力下降，感冒，鼻塞，咽鼓管之类的不通畅。<br />
+种种原因，祸不单行，差点聋了。<br />
+就这三件事。<br />
+吸取教训，放下执念，放过自己，好好生活。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2022/05/26/huili-xie/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2021/12/31/my-2021/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2021/12/15/jd3/">京東3</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2021-12-15
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>day 68<br />
+今天休假<br />
+昨天耳朵又听到低沉的发动机的轰隆隆的声音，我以为是耳鸣，现在基本可以确定，这就是附近道路晚上泥头车汽車发动机或者工廠機器運转的声音。<br />
+在京东时也常常听到。<br />
+我<strong>感冒鼻塞</strong>时，耳朵<strong>对这些声音特别敏感</strong>。<br />
+就这样。<br />
+昨天上班时，没搞清情况，情绪又崩溃了……<br />
+<strong><em>補充</em></strong>：<br />
+工作沒勁頭，好想打電話給媽，和她坦白這一切，想讓她接受我的平庸，我的失敗，我的不婚，想發泄所有的不安、恐懼、負面情緒。<br />
+幸好，我還懂得衝動憤怒情緒不穩定時，別做決定，別做事。<br />
+休息了一天，現在知道不是耳鳴，是感冒鼻塞或者咽鼓管堵塞或者其他的聽力系統的某一部分出了問題，而引起的狀況，感冒好了，整個聽力系統自然就沒事了。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2021/12/15/jd3/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -926,10 +1396,10 @@ sudo gedit hosts
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page14" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">15/38</span>
+          <span class="page_number ">15/31</span>
           
             <a href="/page16" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page38" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page31" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -946,65 +1416,65 @@ sudo gedit hosts
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2023/12/01/day-64/">Day 64：戒抖音</a></li>
+                        <li><a href="/2023/12/02/day-65/">Day 65：决策疲劳</a></li>
                     
-                        <li><a href="/2023/11/28/day-63/">Day 63：篮球，库里，不放弃</a></li>
+                        <li><a href="/2023/08/20/day-15/">day 15</a></li>
                     
-                        <li><a href="/2023/11/25/day-62/">Day 62：贫穷的本质</a></li>
+                        <li><a href="/2023/08/20/day-14/">day 14 开窍</a></li>
                     
-                        <li><a href="/2023/11/22/day-61/">Day 61：天雨大不润无根草</a></li>
+                        <li><a href="/2023/08/17/day-13/">day 13</a></li>
                     
-                        <li><a href="/2023/11/18/day-60/">Day 60：35岁，给自己耐心和宽容</a></li>
+                        <li><a href="/2023/08/16/day-12/">day 12</a></li>
                     
-                        <li><a href="/2023/11/13/day-59/">Day 59</a></li>
+                        <li><a href="/2023/08/15/day-11/">day 11</a></li>
                     
-                        <li><a href="/2023/11/09/day-58/">Day 58：过于早熟</a></li>
+                        <li><a href="/2023/08/13/day-10/">day 10 不要在情绪不稳定时做决定</a></li>
                     
-                        <li><a href="/2023/11/09/day-57/">Day 57：别害怕成功</a></li>
+                        <li><a href="/2023/08/13/day9/">day 9</a></li>
                     
-                        <li><a href="/2023/11/06/day-56/">Day 56：时间会让事物展现得更全面</a></li>
+                        <li><a href="/2023/08/07/day-8/">day 8</a></li>
                     
-                        <li><a href="/2023/11/04/day-55/">Day 55：对毕鑫业导演的敬佩又增加了</a></li>
+                        <li><a href="/2023/08/06/day-7/">day 7</a></li>
                     
-                        <li><a href="/2023/11/03/day-54/">Day 54</a></li>
+                        <li><a href="/2023/08/05/day6/">day 6</a></li>
                     
-                        <li><a href="/2023/11/03/day-53/">Day 53</a></li>
+                        <li><a href="/2023/08/04/day5/">day 5</a></li>
                     
-                        <li><a href="/2023/11/02/day-52/">Day 52</a></li>
+                        <li><a href="/2023/08/03/day4/">day 4</a></li>
                     
-                        <li><a href="/2023/11/02/day-51/">Day 51</a></li>
+                        <li><a href="/2023/08/02/day3/">day 3</a></li>
                     
-                        <li><a href="/2023/11/01/day-50/">Day 50：管好自己，莫渡他人</a></li>
+                        <li><a href="/2023/08/01/day2/">day 2</a></li>
                     
-                        <li><a href="/2023/10/31/day-49/">Day 49</a></li>
+                        <li><a href="/2023/08/01/SSH-key-audit/">ERROR: We're doing an SSH key audit.Please visit to approve this key so we know it's safe.</a></li>
                     
-                        <li><a href="/2023/10/31/day-48/">Day 48</a></li>
+                        <li><a href="/2023/07/31/day1/">day 1</a></li>
                     
-                        <li><a href="/2023/10/29/day-47/">Day 47</a></li>
+                        <li><a href="/2023/07/25/shici/">诗词，《出塞》，唐朝，王昌龄</a></li>
                     
-                        <li><a href="/2023/10/29/day-46/">Day 46：破心中贼</a></li>
+                        <li><a href="/2023/07/25/plan/">计划</a></li>
                     
-                        <li><a href="/2023/10/29/day-45/">Day 45</a></li>
+                        <li><a href="/2023/07/17/daily/">Daily，诗词，渡荆门送别</a></li>
                     
-                        <li><a href="/2023/10/29/day-44/">Day 44</a></li>
+                        <li><a href="/2023/07/16/daily/">Daily，诗词，逢雪宿芙蓉山主人</a></li>
                     
-                        <li><a href="/2023/10/25/day-43/">Day 43：最难的不是到达，而是出发</a></li>
+                        <li><a href="/2023/07/15/product-or-function/">做产品还是做功能?</a></li>
                     
-                        <li><a href="/2023/10/25/day-42/">Day 42</a></li>
+                        <li><a href="/2023/07/02/daily-shici/">daily，诗词，夜宿山寺，唐代，李白</a></li>
                     
-                        <li><a href="/2023/10/25/day-41/">Day 41</a></li>
+                        <li><a href="/2023/07/02/daily/">Daily</a></li>
                     
-                        <li><a href="/2023/10/23/day-40/">Day 40</a></li>
+                        <li><a href="/2023/07/01/daily/">Daily，春有百花秋有月</a></li>
                     
-                        <li><a href="/2023/10/22/day-39/">Day 39</a></li>
+                        <li><a href="/2023/06/29/poetry/">商山早行</a></li>
                     
-                        <li><a href="/2023/10/21/day-38/">Day 38</a></li>
+                        <li><a href="/2023/06/29/daily02/">Daily 02</a></li>
                     
-                        <li><a href="/2023/10/21/day-37/">Day 37</a></li>
+                        <li><a href="/2023/06/29/daily/">Daily</a></li>
                     
-                        <li><a href="/2023/10/20/day-36/">Day 36：纪伯伦，我曾七次鄙视自己的灵魂</a></li>
+                        <li><a href="/2023/06/27/daily/">Daily,2023-06-27</a></li>
                     
-                        <li><a href="/2023/10/18/day-35/">Day 35</a></li>
+                        <li><a href="/2023/06/25/daily/">daily，2023-06-25</a></li>
                     
                 </ul>
             </div>
@@ -1031,7 +1501,7 @@ sudo gedit hosts
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">275</span>
+                            <span class="badge">205</span>
                         </a>
                     </li>
                     
@@ -1054,9 +1524,9 @@ sudo gedit hosts
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1084,45 +1554,7 @@ sudo gedit hosts
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -1130,10 +1562,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1141,10 +1569,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1152,10 +1576,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1163,32 +1583,20 @@ sudo gedit hosts
                       
                       
                       
-                        
                       
-                      
-                        
-                      
-                      <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #777;">octopress3.0</a>
                     
                       
                       
                       
                       
-                        
                       
-                      
-                        
-                      
-                      <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
                       
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1196,21 +1604,13 @@ sudo gedit hosts
                       
                       
                       
-                        
                       
-                      
-                        
-                      
-                      <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10.5pt; color: #777;">rough</a>
                     
                       
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1218,10 +1618,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1229,10 +1625,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1240,10 +1632,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1251,10 +1639,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1262,10 +1646,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1273,10 +1653,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1284,10 +1660,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1295,10 +1667,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1306,10 +1674,6 @@ sudo gedit hosts
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
