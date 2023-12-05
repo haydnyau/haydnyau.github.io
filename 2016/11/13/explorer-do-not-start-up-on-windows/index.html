@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>windows本地浏览器没有启动 explorer do not start up on windows</title>
-    <meta name="description" content="原帖DG works：打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显...">
+    <meta name="description" content="原帖  DG works：  打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -213,24 +213,24 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p><a href="https://zhidao.baidu.com/question/588254618.html">原帖</a><br />
-<strong>DG works：</strong><br />
+        <p><a href="https://zhidao.baidu.com/question/588254618.html">原帖</a>  <br />
+<strong>DG works：</strong>  <br />
 <strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong></p>
 
-<p>关于explorer.exe加载不了 无法显示任务栏与桌面解决办法<br />
-Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.exe。说明系统启动时候没有加载Explorer.exe。(explorer是Windows程序管理器或者Windows资源管理器，它用于管理Windows图形壳，包括开始菜单、任务栏、桌面和文件管理。删除该程序会导致Windows图形界面无法适用。)<br />
-点击“Windows任务管理器”–&gt;“文件”–&gt;“新建任务（运行……）”敲入Explorer.exe看看是否能够执行，如果不能执行说明系统的winnt目录下没有Explorer.exe这个文件或者Explorer.exe文件损坏。<br />
-首先尝试下面的方法：<br />
-1<br />
-<strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong><br />
-2<br />
-打开注册表，找到子键“HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer”，新建“DWORD”值“NoDesktop”，其值为“1”。（这个是我在网上搜索的方法，为什么要使用这个健值我不清楚。）再检查注册表….HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell 
+<p>关于explorer.exe加载不了 无法显示任务栏与桌面解决办法  <br />
+Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.exe。说明系统启动时候没有加载Explorer.exe。(explorer是Windows程序管理器或者Windows资源管理器，它用于管理Windows图形壳，包括开始菜单、任务栏、桌面和文件管理。删除该程序会导致Windows图形界面无法适用。)  <br />
+点击“Windows任务管理器”–&gt;“文件”–&gt;“新建任务（运行……）”敲入Explorer.exe看看是否能够执行，如果不能执行说明系统的winnt目录下没有Explorer.exe这个文件或者Explorer.exe文件损坏。  <br />
+首先尝试下面的方法：  <br />
+1  <br />
+<strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong>  <br />
+2  <br />
+打开注册表，找到子键“HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer”，新建“DWORD”值“NoDesktop”，其值为“1”。（这个是我在网上搜索的方法，为什么要使用这个健值我不清楚。）再检查注册表….HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell <br />
 看是否为explorer.exe，不是的话自己改.</p>
 
-<p>第一个，把Explorer加入进程：<br />
-开始菜单→运行→输入“regedit”，回车→打开注册表内的HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\项，在该项下新建一个名称为“Explorer.exe”的新字符串值，编辑该值，数据为你系统中Explorer.exe的位置。<br />
-第二个，取消开机项目<br />
-开始菜单→运行→输入“msconfig”，回车→在『启动』选项卡中，找到那个安装程序的对应的值（如果不知道就把一些没有必要的全部去掉），去掉前面的“√”，保存，退出。<br />
+<p>第一个，把Explorer加入进程：  <br />
+开始菜单→运行→输入“regedit”，回车→打开注册表内的HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\项，在该项下新建一个名称为“Explorer.exe”的新字符串值，编辑该值，数据为你系统中Explorer.exe的位置。  <br />
+第二个，取消开机项目  <br />
+开始菜单→运行→输入“msconfig”，回车→在『启动』选项卡中，找到那个安装程序的对应的值（如果不知道就把一些没有必要的全部去掉），去掉前面的“√”，保存，退出。  <br />
 重启电脑。</p>
 
         </article>
@@ -271,7 +271,7 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -375,9 +375,9 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -405,7 +405,45 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -413,6 +451,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -420,6 +462,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -427,6 +473,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -434,6 +484,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -441,6 +495,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -448,6 +506,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -455,6 +517,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -462,6 +528,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -469,6 +539,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -476,6 +550,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -483,6 +561,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -490,6 +572,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -497,6 +583,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -504,6 +594,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -511,6 +605,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -518,6 +616,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -525,6 +627,10 @@ Ctrl+Alt+Del打开“Windows任务管理器”，发现进程里没有Explorer.e
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     

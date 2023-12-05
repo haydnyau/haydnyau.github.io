@@ -218,6 +218,7 @@
                 <div class="excerpt">
                     <p>工具，选项，SQL Server 对象资源管理器，命令……</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2016/11/13/sql-edit-more-than-200-item/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -280,24 +281,25 @@
 
 <p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+<pre><code>sudo gedit /etc/default/rcS
 utc=yes 改成 utc=no
-</code></pre></div></div>
+</code></pre>
 
-<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
-后来谷歌了半天找到了一个完美解决办法：<br />
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！  <br />
+后来谷歌了半天找到了一个完美解决办法：  <br />
 先在ubuntu下更新一下时间，确保时间无误：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+<pre><code>sudo apt-get install ntpdate
 sudo ntpdate time.windows.com
-</code></pre></div></div>
+</code></pre>
 
 <p>然后将时间更新到硬件上：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
-</code></pre></div></div>
+<pre><code>sudo hwclock --localtime --systohc
+</code></pre>
 
 <p>重新进入windows10，发现时间恢复正常了！</p>
+
 
                 </div>
                 <div class="read-all">
@@ -357,34 +359,35 @@ sudo ntpdate time.windows.com
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>MACHINE: fish hunting<br />
-black pan: GND<br />
-red pan:<br />
+                    <p>MACHINE: fish hunting  <br />
+black pan: GND  <br />
+red pan:  <br />
 A: co1</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press 100
+<pre><code>press 100
 	voltage change from 3.36V to almost 0V,and then come back to 3.36V
   	PRESS 10
 	3.36V,0.9V,3.36V
-</code></pre></div></div>
+</code></pre>
 
 <p>B: HP</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+<pre><code>press coin return
 	3.2V, 1.8V,3.2V
-</code></pre></div></div>
+</code></pre>
 
 <p>C: SSR</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+<pre><code>press coin return
 	5.0V, 0.48V, 5.0V
-</code></pre></div></div>
+</code></pre>
 
 <p>D: TF</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+<pre><code>press coin return
 	3.2V, 0V, 3.2V
-</code></pre></div></div>
+</code></pre>
+
 
                 </div>
                 <div class="read-all">
@@ -446,20 +449,21 @@ A: co1</p>
                 <div class="excerpt">
                     <p>运行</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ gem install therubyracer  
-</code></pre></div></div>
+<pre><code>dong@ubuntu:~/octopress$ gem install therubyracer  
+</code></pre>
 
 <p>报错</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing therubyracer:
+<pre><code>ERROR:  Error installing therubyracer:
 	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
-</code></pre></div></div>
+</code></pre>
 
-<p>corrupt:broken<br />
-the package is broken<br />
-so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem<br />
-then redownload and reinstall<br />
+<p>corrupt:broken  <br />
+the package is broken  <br />
+so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem  <br />
+then redownload and reinstall  <br />
 successed.</p>
+
 
                 </div>
                 <div class="read-all">
@@ -519,9 +523,10 @@ successed.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>Got a lot of nightmares on those days.<br />
-So many bad things,bad days.<br />
+                    <p>Got a lot of nightmares on those days.  <br />
+So many bad things,bad days.  <br />
 Got to carry on.</p>
+
 
                 </div>
                 <div class="read-all">
@@ -569,76 +574,76 @@ Got to carry on.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>.# ———————– #<br />
-.#      Main Configs       #<br />
+                    <p>.# ———————– #  <br />
+.#      Main Configs       #  <br />
 .# ———————– #</p>
 
-<p>url: https://qiuhaidong.github.io<br />
-title: Haydn Yau<br />
-subtitle:<br />
-author: 丘海东<br />
-simple_search: https://www.google.com/search<br />
+<p>url: https://qiuhaidong.github.io  <br />
+title: Haydn Yau  <br />
+subtitle:  <br />
+author: 丘海东  <br />
+simple_search: https://www.google.com/search  <br />
 description:</p>
 
-<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)<br />
-.# You can customize the format as defined in<br />
-.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime<br />
-.# Additionally, %o will give you the ordinal representation of the day<br />
+<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)  <br />
+.# You can customize the format as defined in  <br />
+.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime  <br />
+.# Additionally, %o will give you the ordinal representation of the day  <br />
 date_format: “ordinal”</p>
 
-<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)<br />
-subscribe_rss: /atom.xml<br />
-subscribe_email:<br />
-.# RSS feeds can list your email address if you like<br />
+<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)  <br />
+subscribe_rss: /atom.xml  <br />
+subscribe_email:  <br />
+.# RSS feeds can list your email address if you like  <br />
 email:</p>
 
-<p>.# ———————– #<br />
-.#    Jekyll &amp; Plugins     #<br />
+<p>.# ———————– #  <br />
+.#    Jekyll &amp; Plugins     #  <br />
 .# ———————– #</p>
 
-<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’<br />
-root: /<br />
-permalink: /blog/:year/:month/:day/:title/<br />
-source: source<br />
-destination: public<br />
-plugins: plugins<br />
-code_dir: downloads/code<br />
-category_dir: blog/categories<br />
-markdown: rdiscount<br />
-rdiscount:<br />
-  extensions:<br />
-    - autolink<br />
-    - footnotes<br />
-    - smart<br />
+<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’  <br />
+root: /  <br />
+permalink: /blog/:year/:month/:day/:title/  <br />
+source: source  <br />
+destination: public  <br />
+plugins: plugins  <br />
+code_dir: downloads/code  <br />
+category_dir: blog/categories  <br />
+markdown: rdiscount  <br />
+rdiscount:  <br />
+  extensions:  <br />
+    - autolink  <br />
+    - footnotes  <br />
+    - smart  <br />
 highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
 
-<p>paginate: 5                     # Posts per page on the blog index<br />
-paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/<br />
-recent_posts: 5               # Posts in the sidebar Recent Posts section<br />
-excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles<br />
+<p>paginate: 5                     # Posts per page on the blog index  <br />
+paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/  <br />
+recent_posts: 5               # Posts in the sidebar Recent Posts section  <br />
+excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles  <br />
 excerpt_separator: “<!--more-->”</p>
 
 <p>titlecase: true       # Converts page and post titles to titlecase</p>
 
-<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.<br />
-.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’<br />
-default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]<br />
+<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.  <br />
+.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’  <br />
+default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]  <br />
 .#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
 
-<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below<br />
-.# and add an array with the asides you want to use.<br />
-.# blog_index_asides:<br />
-.# post_asides:<br />
+<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below  <br />
+.# and add an array with the asides you want to use.  <br />
+.# blog_index_asides:  <br />
+.# post_asides:  <br />
 .# page_asides:</p>
 
-<p>.# ———————– #<br />
-.#   3rd Party Settings    #<br />
+<p>.# ———————– #  <br />
+.#   3rd Party Settings    #  <br />
 .# ———————– #</p>
 
-<p>.# Github repositories<br />
-github_user: qiuhaidong<br />
-github_repo_count: 0<br />
-github_show_profile_link: true<br />
+<p>.# Github repositories  <br />
+github_user: qiuhaidong  <br />
+github_repo_count: 0  <br />
+github_show_profile_link: true  <br />
 github_skip_forks: true</p>
 
 
@@ -700,16 +705,17 @@ github_skip_forks: true</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>something new:<br />
+                    <p>something new:  <br />
 install git:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install git
-</code></pre></div></div>
+<pre><code>sudo apt-get install git
+</code></pre>
 
-<p>don’t install from ppa anymore.<br />
-install rvm: run the command from official website,the latest version,maybe not the stable version.<br />
-install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.<br />
-<code class="language-plaintext highlighter-rouge">rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
+<p>don’t install from ppa anymore.  <br />
+install rvm: run the command from official website,the latest version,maybe not the stable version.  <br />
+install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.  <br />
+<code>rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
+
 
                 </div>
                 <div class="read-all">
@@ -769,8 +775,9 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>世事难料。<br />
+                    <p>世事难料。  <br />
 坚守本心。</p>
+
 
                 </div>
                 <div class="read-all">
@@ -832,6 +839,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <div class="excerpt">
                     <p>控制面板，显示，更改大小，应用，注销，再把大小改回来。</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2016/09/05/display-icon-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -890,12 +898,13 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>8月1号出发，9月7号回来。<br />
-第一次出差。<br />
-第一次坐火车超过24小时。<br />
-第一次住宾馆超过一个月。<br />
-第一次可以说是真正意义上的去外省。<br />
+                    <p>8月1号出发，9月7号回来。  <br />
+第一次出差。  <br />
+第一次坐火车超过24小时。  <br />
+第一次住宾馆超过一个月。  <br />
+第一次可以说是真正意义上的去外省。  <br />
 我以前在广西工作，但离广东不到10公里，当然如果你说广西不是外省，中国移动会坚决反对！</p>
+
 
                 </div>
                 <div class="read-all">
@@ -938,7 +947,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -1042,9 +1051,9 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1072,7 +1081,45 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -1080,6 +1127,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1087,6 +1138,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1094,6 +1149,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1101,6 +1160,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1108,6 +1171,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1115,6 +1182,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1122,6 +1193,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -1129,6 +1204,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1136,6 +1215,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1143,6 +1226,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1150,6 +1237,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1157,6 +1248,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1164,6 +1259,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1171,6 +1270,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1178,6 +1281,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1185,6 +1292,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1192,6 +1303,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     

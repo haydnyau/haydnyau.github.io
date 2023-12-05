@@ -222,85 +222,85 @@
 
 <h3 id="octopress-tag-pages">octopress-tag-pages</h3>
 
-<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code>.md</code>文件先不用管</p>
 
 <h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
 
-<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+<p><strong>1 .</strong> 将 <code>octopress-tag-cloud\plugins</code>  路径里面的 <code>tag_cloud.rb</code>  文件复制到 <code>octopress\plugins\</code>  文件夹里面。</p>
 
-<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
-<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+<p><strong>2 .</strong> 将下面的代码复制到 <code>octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）<br />
+<strong>注意：</strong> 去掉 <code>%</code> 前面的反斜杠<code>\</code>。</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
-  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
+<pre><code class="language-html">&lt;section&gt;
+  &lt;h1&gt;Tags&lt;/h1&gt;
+  &lt;ul id="tag-cloud"&gt;
     {\% tag_cloud font-size: 120-160%, limit: 20 \%}
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/section&gt;</span>
-</code></pre></div></div>
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
 
 <p>解释：</p>
 
-<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+<p><code>tag_cloud</code> 的参数中， <code>font-size</code> 指定 <code>tag</code> 的大小范围；<code>limit</code> 限定 <code>20</code> 个 <code>tag</code> 。</p>
 
-<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
-</code></pre></div></div>
+<p><strong>3 .</strong> 在 <code>octopress\_config.yml</code> 中的 <code>default_asides</code> 中添加 <code>custom/asides/tags.html</code>，注意相应的位置。</p>
+<pre><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre>
 
 <p>博文写标签：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
-</code></pre></div></div>
+<pre><code>tags: [tag1, tag2, tag3]
+</code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+<p><code>rake generate</code> 出现问题：</p>
 
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r" alt="Alt text" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
-</code></pre></div></div>
+<pre><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre>
 
 <h3 id="解决">解决</h3>
 
-<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+<p><code>octopress\plugins\tag_cloud.rb</code> 第74行:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
-    <span class="c1"># sort the tag pairs by frequency in descending order</span>
-    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
-    <span class="c1"># then slice off the top @limit tag pairs</span>
-    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
-<span class="k">end</span>
-</code></pre></div></div>
+<pre><code class="language-ruby">if @limit &gt; 0 and @sort != 'rand'
+    # sort the tag pairs by frequency in descending order
+    weighted.sort! { |a,b| b[1] &lt;=&gt; a[1] }
+    # then slice off the top @limit tag pairs
+    weighted = weighted[0,@limit]
+end
+</code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+<p><code>weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code>@limit</code> ，会报错。</p>
 
 <p>修改第74行为:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
-</code></pre></div></div>
+<pre><code class="language-ruby">      if @limit &gt; 0 and @sort != 'rand' and @limit &lt; weighted.length
+</code></pre>
 
 <p>修改第95行为:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
-</code></pre></div></div>
+<pre><code class="language-ruby">        if @limit &gt; 0 and @limit &lt; weighted.length
+</code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+<p><code>rake generate</code> ，不再出现错误</p>
 
 <p>出现另一警告：</p>
 
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r" alt="Alt text" /></p>
 
-<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+<p><code>rake preview</code> ，标签云成功添加:</p>
 
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r" alt="Alt text" /></p>
 
 <h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
 
-<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+<p>将 <code>octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code>nil</code> 改为 <code>null</code> ：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+<pre><code>---
 layout: null
 ---
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="搞定">搞定</h2>
 
@@ -342,7 +342,7 @@ layout: null
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -446,9 +446,9 @@ layout: null
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -476,7 +476,45 @@ layout: null
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -484,6 +522,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -491,6 +533,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -498,6 +544,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -505,6 +555,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -512,6 +566,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -519,6 +577,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -526,6 +588,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -533,6 +599,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -540,6 +610,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -547,6 +621,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -554,6 +632,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -561,6 +643,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -568,6 +654,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -575,6 +665,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -582,6 +676,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -589,6 +687,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -596,6 +698,10 @@ layout: null
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
