@@ -167,6 +167,82 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull push: not read from remote repository. correct access rights and the repository exists.</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-08-22
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">SSH KEYS认证方式改动</a>
+关于<code class="language-plaintext highlighter-rouge">git pull origin source</code>or<code class="language-plaintext highlighter-rouge">git push origin source</code>,若出错：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: Could not read from remote repository. 
+Please make sure you have the correct access rights and the repository exists.
+</code></pre></div></div>
+
+<p>SSH keys不用动</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
+</code></pre></div></div>
+
+<p>把<code class="language-plaintext highlighter-rouge">url = git@github.com:qiuhaidong/qiuhaidong.github.com.git</code><br />
+改为<code class="language-plaintext highlighter-rouge">url = https://github.com/qiuhaidong/qiuhaidong.github.com.git</code><br />
+<a href="http://bbs.csdn.net/topics/390909877">参见此Blog，9楼</a><br />
+done.<br />
+<code class="language-plaintext highlighter-rouge">pull</code>or<code class="language-plaintext highlighter-rouge">push</code>时或会报错，但不影响功能，多用几次就好了。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/08/22/SSL-cannot-push-pull-keys-https-issue/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/08/20/C-on-Linux/">C# on Linux</a>
                 </h2>
                 <div class="label">
@@ -962,66 +1038,6 @@ S7 Edge：弧形屏幕的误触问题</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/04/01/be-alone/">习惯一个人</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-04-01
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>独自面对自己的世界。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/04/01/be-alone/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1051,6 +1067,8 @@ S7 Edge：弧形屏幕的误触问题</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2023/12/06/day-72/">Day 72</a></li>
                     
                         <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
@@ -1110,8 +1128,6 @@ S7 Edge：弧形屏幕的误触问题</p>
                     
                         <li><a href="/2023/10/25/day-43/">Day 43：最难的不是到达，而是出发</a></li>
                     
-                        <li><a href="/2023/10/25/day-42/">Day 42</a></li>
-                    
                 </ul>
             </div>
 
@@ -1137,7 +1153,7 @@ S7 Edge：弧形屏幕的误触问题</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">282</span>
+                            <span class="badge">283</span>
                         </a>
                     </li>
                     
