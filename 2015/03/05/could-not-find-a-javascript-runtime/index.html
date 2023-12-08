@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Could not find a JavaScript runtime</title>
-    <meta name="description" content="以下是两条命令的输出结果：第一条：dong@Ubuntu:~/octopress$ rake generate## Generating Site with Jekyll	write source/stylesheets/screen.css/home/dong/.rvm/gems/ruby-1.9.3-p551...">
+    <meta name="description" content="以下是两条命令的输出结果：  第一条：dong@Ubuntu:~/octopress$ rake generate## Generating Site with Jekyll	write source/stylesheets/screen.css/home/dong/.rvm/gems/ruby-1.9.3-p5...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -215,10 +215,10 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>以下是两条命令的输出结果：<br />
+        <p>以下是两条命令的输出结果：  <br />
 第一条：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake generate
+<pre><code>dong@Ubuntu:~/octopress$ rake generate
 ## Generating Site with Jekyll
 	write source/stylesheets/screen.css
 /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
@@ -241,11 +241,11 @@
 	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `&lt;main&gt;'
 	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
 	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
-</code></pre></div></div>
+</code></pre>
 
 <p>第二条：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ rake preview
+<pre><code>dong@Ubuntu:~/octopress$ rake preview
 Starting to watch source with Jekyll and Compass. Starting Rack on port 4000
 /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
 	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:5:in `&lt;module:ExecJS&gt;'
@@ -279,19 +279,19 @@ Starting to watch source with Jekyll and Compass. Starting Rack on port 4000
 127.0.0.1 - - [05/Mar/2015:12:37:51 +0800] "GET / HTTP/1.1" 404 - 0.0007
 ^Z
 [1]+  已停止               rake preview
-</code></pre></div></div>
+</code></pre>
 
-<p>解决方法：<br />
+<p>解决方法：  <br />
 执行命令：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install execjs
+<pre><code>gem install execjs
 gem install therubyracer
-</code></pre></div></div>
+</code></pre>
 
 <p>may fail,<a href="http://stackoverflow.com/questions/20888318/error-install-rubyracer-with-error-invalid-gem-package-is-corrupt">check this</a> ,<a href="https://qiuhaidong.github.io/blog/2016/11/10/failed-when-gem-install-therubyracer/">or</a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install nodejs
-</code></pre></div></div>
+<pre><code>sudo apt-get install nodejs
+</code></pre>
 
 <p>done.</p>
 
@@ -329,19 +329,21 @@ gem install therubyracer
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2023/12/09/day-75/">Day 75：自知，别让他人吹灭你的光</a></li>
+                    
                         <li><a href="/2023/12/07/day-74/">Day 74：只攻不防，素质不详</a></li>
                     
                         <li><a href="/2023/12/06/day-73/">Day 73：情绪处理和学习</a></li>
                     
                         <li><a href="/2023/12/06/day-72/">Day 72</a></li>
                     
-                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
+                        <li><a href="/2023/12/05/day-71:xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                         <li><a href="/2023/12/05/day-70/">Day 70：管理者，最重要的能力</a></li>
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -387,8 +389,6 @@ gem install therubyracer
                     
                         <li><a href="/2023/10/29/day-46/">Day 46：破心中贼</a></li>
                     
-                        <li><a href="/2023/10/29/day-45/">Day 45</a></li>
-                    
                 </ul>
             </div>
 
@@ -414,7 +414,7 @@ gem install therubyracer
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">285</span>
+                            <span class="badge">286</span>
                         </a>
                     </li>
                     
@@ -437,9 +437,9 @@ gem install therubyracer
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -467,7 +467,45 @@ gem install therubyracer
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -475,6 +513,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -482,6 +524,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -489,6 +535,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -496,6 +546,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -503,6 +557,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -510,6 +568,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -517,6 +579,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -524,6 +590,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -531,6 +601,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -538,6 +612,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -545,6 +623,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -552,6 +634,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -559,6 +645,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -566,6 +656,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -573,6 +667,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -580,6 +678,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -587,6 +689,10 @@ gem install therubyracer
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
