@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Commands about Linux</title>
-    <meta name="description" content="2016-03-02 21:26  shell: 命令行解释器  Linux命令格式: 命令名 [选项] [参数1] [参数2] ……   命令与参数之间，参数与参数之间用空格隔开  立即关机:  sudo shutdown-h now 或者 sudo halt （Ubuntu不行，在最后画面不动,停机但不关电源...">
+    <meta name="description" content="2016-03-02 21:26shell: 命令行解释器Linux命令格式: 命令名 [选项] [参数1] [参数2] …… 命令与参数之间，参数与参数之间用空格隔开立即关机:  sudo shutdown-h now 或者 sudo halt （Ubuntu不行，在最后画面不动,停机但不关电源）或者sudo ...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -215,42 +215,42 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>2016-03-02 21:26  <br />
-shell: 命令行解释器  <br />
-Linux<strong>命令格式</strong>: 命令名 [选项] [参数1] [参数2] ……   <br />
-命令与参数之间，参数与参数之间用空格隔开  <br />
-立即<strong>关机</strong>:  <code>sudo shutdown-h now</code> 或者 <code>sudo halt</code> （Ubuntu不行，在最后画面不动,停机但不关电源）或者<code>sudo poweroff</code>  <br />
-立即<strong>重启</strong>:  <code>sudo shutdown-r now</code> (Ubuntu不行)或者 <code>sudo reboot</code>（行）  <br />
-<code>ls</code>  <br />
-<code>cd  dir</code>  <br />
-<strong>复制</strong>: <code>cp /.../.../sourcefile /.../.../targetfile</code> 有重命名的功能  <br />
-<code>cp file1 file2</code> #在当前目录为file1创建一个副本file2  <br />
-<code>cp file ~/target/</code> #复制当前目录下的file到主目录下的target目录中，保持原文件名  <br />
-<code>cp file1 file2 ~/target/</code> #把file1、file2俩个文件复制到target目录，保持原文件名  <br />
--p: 保持文件属性 <code>cp -p file ~/target/</code>  <br />
--R: 若被复制对象有目录，则把该目录下的子目录和子目录下的文件都复制  <br />
-<strong>移动</strong>: <code>mv</code> #有重命名的功能  <br />
-<code>mv file1 file2</code> #把file1重命名为file2  <br />
-<code>mv file1 file2 ~/target/</code> 把这两个文件都移动到…… #最后一个参数（/target/）必须是目录  <br />
-<strong>创建目录</strong>: <code>mkdir dir</code>  <br />
-<strong>删除目录</strong>: <code>rmdir dir</code>  (空目录)  <br />
-<strong>删除文件</strong>: <code>rm file</code>  <br />
-<code>rm</code>用于删除文件，若使用参数<code>-r</code>或<code>-R</code>，则可删除目录  <br />
-<code>-r</code>,<code>-R</code>:递归删除，无论目录下是否有东西  <br />
-<code>-i</code>: 删除前先询问  <br />
-<code>-f</code>: 强制删除  <br />
-<code>rm -i test*</code>: 删除所有文件名以test开头的文件  <br />
-<code>rm -rf test/</code>: 删除目录test,无论是否是空目录  <br />
-<strong>超级用户</strong>:<code>sudo su -</code>  <br />
-统计文件信息: <code>wc [-l] [-w] [-c] filename</code> (行数，单词数，字符数)  <br />
-<code>--version</code>  <br />
-<code>--help</code>  <br />
-<code>man</code>  <br />
-Linux中，一个文件是一组数据的集合，可理解为一个字符流或字节流，Linux并不为文件设计内部结构，而是把文件都理解为无结构的数据集合。  <br />
+        <p>2016-03-02 21:26<br />
+shell: 命令行解释器<br />
+Linux<strong>命令格式</strong>: 命令名 [选项] [参数1] [参数2] …… <br />
+命令与参数之间，参数与参数之间用空格隔开<br />
+立即<strong>关机</strong>:  <code class="language-plaintext highlighter-rouge">sudo shutdown-h now</code> 或者 <code class="language-plaintext highlighter-rouge">sudo halt</code> （Ubuntu不行，在最后画面不动,停机但不关电源）或者<code class="language-plaintext highlighter-rouge">sudo poweroff</code><br />
+立即<strong>重启</strong>:  <code class="language-plaintext highlighter-rouge">sudo shutdown-r now</code> (Ubuntu不行)或者 <code class="language-plaintext highlighter-rouge">sudo reboot</code>（行）<br />
+<code class="language-plaintext highlighter-rouge">ls</code><br />
+<code class="language-plaintext highlighter-rouge">cd  dir</code><br />
+<strong>复制</strong>: <code class="language-plaintext highlighter-rouge">cp /.../.../sourcefile /.../.../targetfile</code> 有重命名的功能<br />
+<code class="language-plaintext highlighter-rouge">cp file1 file2</code> #在当前目录为file1创建一个副本file2<br />
+<code class="language-plaintext highlighter-rouge">cp file ~/target/</code> #复制当前目录下的file到主目录下的target目录中，保持原文件名<br />
+<code class="language-plaintext highlighter-rouge">cp file1 file2 ~/target/</code> #把file1、file2俩个文件复制到target目录，保持原文件名<br />
+-p: 保持文件属性 <code class="language-plaintext highlighter-rouge">cp -p file ~/target/</code><br />
+-R: 若被复制对象有目录，则把该目录下的子目录和子目录下的文件都复制<br />
+<strong>移动</strong>: <code class="language-plaintext highlighter-rouge">mv</code> #有重命名的功能<br />
+<code class="language-plaintext highlighter-rouge">mv file1 file2</code> #把file1重命名为file2<br />
+<code class="language-plaintext highlighter-rouge">mv file1 file2 ~/target/</code> 把这两个文件都移动到…… #最后一个参数（/target/）必须是目录<br />
+<strong>创建目录</strong>: <code class="language-plaintext highlighter-rouge">mkdir dir</code><br />
+<strong>删除目录</strong>: <code class="language-plaintext highlighter-rouge">rmdir dir</code>  (空目录)<br />
+<strong>删除文件</strong>: <code class="language-plaintext highlighter-rouge">rm file</code><br />
+<code class="language-plaintext highlighter-rouge">rm</code>用于删除文件，若使用参数<code class="language-plaintext highlighter-rouge">-r</code>或<code class="language-plaintext highlighter-rouge">-R</code>，则可删除目录<br />
+<code class="language-plaintext highlighter-rouge">-r</code>,<code class="language-plaintext highlighter-rouge">-R</code>:递归删除，无论目录下是否有东西<br />
+<code class="language-plaintext highlighter-rouge">-i</code>: 删除前先询问<br />
+<code class="language-plaintext highlighter-rouge">-f</code>: 强制删除<br />
+<code class="language-plaintext highlighter-rouge">rm -i test*</code>: 删除所有文件名以test开头的文件<br />
+<code class="language-plaintext highlighter-rouge">rm -rf test/</code>: 删除目录test,无论是否是空目录<br />
+<strong>超级用户</strong>:<code class="language-plaintext highlighter-rouge">sudo su -</code><br />
+统计文件信息: <code class="language-plaintext highlighter-rouge">wc [-l] [-w] [-c] filename</code> (行数，单词数，字符数)<br />
+<code class="language-plaintext highlighter-rouge">--version</code><br />
+<code class="language-plaintext highlighter-rouge">--help</code><br />
+<code class="language-plaintext highlighter-rouge">man</code><br />
+Linux中，一个文件是一组数据的集合，可理解为一个字符流或字节流，Linux并不为文件设计内部结构，而是把文件都理解为无结构的数据集合。<br />
 所以:新建并打开文件可直接说编辑该文件即可（test.c文件之前并未存在）:</p>
 
-<pre><code>sudo gedit test.c
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit test.c
+</code></pre></div></div>
 
 
         </article>
@@ -287,6 +287,8 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2023/12/13/day-76/">Day 76：底层人的出路</a></li>
+                    
                         <li><a href="/2023/12/09/day-75/">Day 75：自知，别让他人吹灭你的光</a></li>
                     
                         <li><a href="/2023/12/07/day-74/">Day 74：只攻不防，素质不详</a></li>
@@ -295,13 +297,13 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                     
                         <li><a href="/2023/12/06/day-72/">Day 72</a></li>
                     
-                        <li><a href="/2023/12/05/day-71:xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
+                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                         <li><a href="/2023/12/05/day-70/">Day 70：管理者，最重要的能力</a></li>
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -345,8 +347,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                     
                         <li><a href="/2023/10/29/day-47/">Day 47</a></li>
                     
-                        <li><a href="/2023/10/29/day-46/">Day 46：破心中贼</a></li>
-                    
                 </ul>
             </div>
 
@@ -372,7 +372,7 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">286</span>
+                            <span class="badge">287</span>
                         </a>
                     </li>
                     
@@ -395,9 +395,9 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -425,45 +425,7 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -471,10 +433,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -482,10 +440,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -493,10 +447,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -504,10 +454,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -515,10 +461,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -526,10 +468,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -537,10 +475,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -548,10 +482,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -559,10 +489,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -570,10 +496,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -581,10 +503,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -592,10 +510,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -603,10 +517,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -614,10 +524,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -625,10 +531,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -636,10 +538,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -647,10 +545,6 @@ Linux中，一个文件是一组数据的集合，可理解为一个字符流或
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
