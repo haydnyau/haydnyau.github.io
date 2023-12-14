@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>windows10和Ubuntu双系统，时间不对</title>
-    <meta name="description" content="原博文windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：sudo gedit /etc/default/rcSutc=yes 改成 utc=no然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！后来谷歌了半天找到了...">
+    <meta name="description" content="原博文windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：sudo gedit /etc/default/rcSutc=yes 改成 utc=no然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！  后来谷歌了半天找...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -219,22 +219,22 @@
 
 <p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+<pre><code>sudo gedit /etc/default/rcS
 utc=yes 改成 utc=no
-</code></pre></div></div>
+</code></pre>
 
-<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
-后来谷歌了半天找到了一个完美解决办法：<br />
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！  <br />
+后来谷歌了半天找到了一个完美解决办法：  <br />
 先在ubuntu下更新一下时间，确保时间无误：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+<pre><code>sudo apt-get install ntpdate
 sudo ntpdate time.windows.com
-</code></pre></div></div>
+</code></pre>
 
 <p>然后将时间更新到硬件上：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
-</code></pre></div></div>
+<pre><code>sudo hwclock --localtime --systohc
+</code></pre>
 
 <p>重新进入windows10，发现时间恢复正常了！</p>
 
@@ -272,6 +272,8 @@ sudo ntpdate time.windows.com
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2023/12/15/day-78/">Day 78：为什么老实人总是赚不到钱</a></li>
+                    
                         <li><a href="/2023/12/13/day-77/">Day 77：晋通父母子女的悲哀</a></li>
                     
                         <li><a href="/2023/12/13/day-76/">Day 76：底层人的出路</a></li>
@@ -284,13 +286,13 @@ sudo ntpdate time.windows.com
                     
                         <li><a href="/2023/12/06/day-72/">Day 72</a></li>
                     
-                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
+                        <li><a href="/2023/12/05/day-71:xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                         <li><a href="/2023/12/05/day-70/">Day 70：管理者，最重要的能力</a></li>
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -330,8 +332,6 @@ sudo ntpdate time.windows.com
                     
                         <li><a href="/2023/10/31/day-49/">Day 49</a></li>
                     
-                        <li><a href="/2023/10/31/day-48/">Day 48</a></li>
-                    
                 </ul>
             </div>
 
@@ -357,7 +357,7 @@ sudo ntpdate time.windows.com
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">288</span>
+                            <span class="badge">289</span>
                         </a>
                     </li>
                     
@@ -380,9 +380,9 @@ sudo ntpdate time.windows.com
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -410,7 +410,45 @@ sudo ntpdate time.windows.com
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -418,6 +456,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -425,6 +467,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -432,6 +478,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -439,6 +489,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -446,6 +500,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -453,6 +511,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -460,6 +522,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -467,6 +533,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -474,6 +544,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -481,6 +555,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -488,6 +566,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -495,6 +577,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -502,6 +588,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -509,6 +599,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -516,6 +610,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -523,6 +621,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -530,6 +632,10 @@ sudo ntpdate time.windows.com
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
