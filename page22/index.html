@@ -223,9 +223,8 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>真是快太多了，完全不是一個級別的，2.0有時候根本就訪問不了  <br />
+                    <p>真是快太多了，完全不是一個級別的，2.0有時候根本就訪問不了<br />
 <a href="https://qiuhaidong.github.io/blog/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0</a></p>
-
 
                 </div>
                 <div class="read-all">
@@ -288,13 +287,12 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>前幾天晚上，有一隻貓，據父親說是野貓、流浪貓，都會來我家討食，我們餵了它兩天。  <br />
-昨晚我想和它玩玩，把手伸到它面前，它抓了我一下，一道1厘米多點的抓痕，過了兩三分鐘，滲出一下血。  <br />
-我用熱水器的熱水沖洗了幾分鐘，擦洗了傷口。  <br />
-希望沒事。  <br />
-雖然愛貓，但因貓的性子，如若不熟悉，還是別逗它。  <br />
+                    <p>前幾天晚上，有一隻貓，據父親說是野貓、流浪貓，都會來我家討食，我們餵了它兩天。<br />
+昨晚我想和它玩玩，把手伸到它面前，它抓了我一下，一道1厘米多點的抓痕，過了兩三分鐘，滲出一下血。<br />
+我用熱水器的熱水沖洗了幾分鐘，擦洗了傷口。<br />
+希望沒事。<br />
+雖然愛貓，但因貓的性子，如若不熟悉，還是別逗它。<br />
 有風險。</p>
-
 
                 </div>
                 <div class="read-all">
@@ -363,10 +361,10 @@
 
 <p>我们每次使用命令</p>
 
-<pre><code>git clone git@gitlab.xxx.com:xxxxx.git
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
+</code></pre></div></div>
 
-<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code>daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
+<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="language-plaintext highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
 
 <p><img src="https://ooo.0o0.ooo/2016/07/07/577e349ab42ed.png" alt="7f07c8f6deef169ef6be5103bbd3e932f8676bb1.png" /></p>
 
@@ -374,31 +372,30 @@
 
 <p>直接使用命令</p>
 
-<pre><code>git branch -r #查看远程分支
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -r #查看远程分支
+</code></pre></div></div>
 <p>或</p>
 
-<pre><code>git branch -a #查看所有分支
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -a #查看所有分支
+</code></pre></div></div>
 
 <p>会显示</p>
 
-<pre><code>origin/HEAD -&gt; origin/master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin/HEAD -&gt; origin/master
 origin/daily/1.2.2
 origin/daily/1.3.0
 origin/daily/1.4.1
 origin/develop
 origin/feature/daily-1.0.0
 origin/master
-</code></pre>
+</code></pre></div></div>
 
 <p>然后直接</p>
 
-<pre><code>git checkout origin/daily/1.4.1
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout origin/daily/1.4.1
+</code></pre></div></div>
 
 <p>就好了。。。</p>
-
 
                 </div>
                 <div class="read-all">
@@ -471,24 +468,24 @@ origin/master
 
 <p>在启动 jekyll 服务的时候出现以下错误：</p>
 
-<pre><code>jekyll serve
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
 Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
   Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-paginate' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
 jekyll 3.1.2 | Error:  jekyll-paginate
-</code></pre>
+</code></pre></div></div>
 
 <h3 id="解决方法">解决方法</h3>
 
 <p>我们安装这个插件到本地即可。</p>
 
-<pre><code>gem install jekyll-paginate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-paginate
 Fetching: jekyll-paginate-1.1.0.gem (100%)
 Successfully installed jekyll-paginate-1.1.0
 Parsing documentation for jekyll-paginate-1.1.0
 Installing ri documentation for jekyll-paginate-1.1.0
 Done installing documentation for jekyll-paginate after 3 seconds
 1 gem installed
-</code></pre>
+</code></pre></div></div>
 
 
                 </div>
@@ -552,9 +549,9 @@ Done installing documentation for jekyll-paginate after 3 seconds
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>專注內容  <br />
-專注技術  <br />
-Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
+                    <p>專注內容<br />
+專注技術<br />
+Octopress2.0、3.0、jekyll官方、其他主題，都不重要<br />
 博文才重要</p>
 
 
@@ -619,15 +616,14 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>博客根目录，文件<code>index.html</code>，找到<code>Recent Posts</code>这一大段内容，复制，打开<code>_layouts/post.html</code>，找到：</p>
-<pre><code>    &lt;div class="right"&gt;
+                    <p>博客根目录，文件<code class="language-plaintext highlighter-rouge">index.html</code>，找到<code class="language-plaintext highlighter-rouge">Recent Posts</code>这一大段内容，复制，打开<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>，找到：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="right"&gt;
         &lt;div class="wrap"&gt;
-</code></pre>
+</code></pre></div></div>
 <p>复制到其后面。</p>
 
-<p>因为只复制一段老是有错，现在我是把<code>index.html</code>的<code>&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code>_layouts/post.html</code>右边栏一直到最后的内容。</p>
+<p>因为只复制一段老是有错，现在我是把<code class="language-plaintext highlighter-rouge">index.html</code>的<code class="language-plaintext highlighter-rouge">&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>右边栏一直到最后的内容。</p>
 <h1>🤪😀</h1>
-
 
                 </div>
                 <div class="read-all">
@@ -690,18 +686,17 @@ Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>在根目录新建一文件夹<code>_templates</code>，文件夹里建一个文件<code>post</code>，无后缀，内容是：  <br />
-<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong>  <br />
-—  <br />
-layout:   <br />
-title: “”  <br />
-date:   <br />
-author:  <br />
-tags:   <br />
-comments: true  <br />
-categories:   <br />
+                    <p>在根目录新建一文件夹<code class="language-plaintext highlighter-rouge">_templates</code>，文件夹里建一个文件<code class="language-plaintext highlighter-rouge">post</code>，无后缀，内容是：<br />
+<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong><br />
+—<br />
+layout: <br />
+title: “”<br />
+date: <br />
+author:<br />
+tags: <br />
+comments: true<br />
+categories: <br />
 —</p>
-
 
                 </div>
                 <div class="read-all">
@@ -763,27 +758,26 @@ categories:   <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>农历正月十八  <br />
-有时雨，有时雾  <br />
-破烂的旧房子  <br />
-天花板不时剥落残渣  <br />
+                    <p>农历正月十八<br />
+有时雨，有时雾<br />
+破烂的旧房子<br />
+天花板不时剥落残渣<br />
 雨水漏下，打在铁谷柜上，在这寂静中，尤为响动</p>
 
-<p>我父亲是可怜的  <br />
-我母亲是可怜的  <br />
-时代给他们的无知  <br />
-身处巨大变革而无能为力  <br />
-求而不得  <br />
-我是可怜可悲的  <br />
-这是时代的安排  <br />
-宿命的印记  <br />
-是知识见闻和无能的无奈和残酷  <br />
-如果我是一样的无知就好了  <br />
-只可惜我的另一个区域的无知和无能  <br />
-如果我没那么的无能就好了  <br />
-如果我……  <br />
+<p>我父亲是可怜的<br />
+我母亲是可怜的<br />
+时代给他们的无知<br />
+身处巨大变革而无能为力<br />
+求而不得<br />
+我是可怜可悲的<br />
+这是时代的安排<br />
+宿命的印记<br />
+是知识见闻和无能的无奈和残酷<br />
+如果我是一样的无知就好了<br />
+只可惜我的另一个区域的无知和无能<br />
+如果我没那么的无能就好了<br />
+如果我……<br />
 深深的无力</p>
-
 
                 </div>
                 <div class="read-all">
@@ -847,7 +841,6 @@ categories:   <br />
                 <div class="excerpt">
                     <h3 id="别被其他一切因素影响">别被其他一切因素影响</h3>
 
-
                 </div>
                 <div class="read-all">
                     <a  href="/2022/02/16/myself/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -908,13 +901,12 @@ categories:   <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>刚才父亲又因山林补贴争吵。  <br />
-风险太大。  <br />
-官场黑暗。邻里纷争。  <br />
-穷山恶水。  <br />
-走吧，早走为上。  <br />
+                    <p>刚才父亲又因山林补贴争吵。<br />
+风险太大。<br />
+官场黑暗。邻里纷争。<br />
+穷山恶水。<br />
+走吧，早走为上。<br />
 君子不立危墙之下。</p>
-
 
                 </div>
                 <div class="read-all">
@@ -953,7 +945,7 @@ categories:   <br />
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                        <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
                     
                         <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
                     
@@ -983,13 +975,13 @@ categories:   <br />
                     
                         <li><a href="/2023/12/06/day-72/">Day 72</a></li>
                     
-                        <li><a href="/2023/12/05/day-71:xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
+                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                         <li><a href="/2023/12/05/day-70/">Day 70：管理者，最重要的能力</a></li>
                     
                         <li><a href="/2023/12/05/day-69/">Day 69</a></li>
                     
-                        <li><a href="/2023/12/05/day-68:education/">Day 68：教育观</a></li>
+                        <li><a href="/2023/12/05/day-68-education/">Day 68：教育观</a></li>
                     
                         <li><a href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a></li>
                     
@@ -1061,9 +1053,9 @@ categories:   <br />
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1091,45 +1083,7 @@ categories:   <br />
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -1137,10 +1091,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1148,10 +1098,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1159,10 +1105,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1170,10 +1112,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1181,10 +1119,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1192,10 +1126,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1203,10 +1133,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
@@ -1214,10 +1140,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1225,10 +1147,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1236,10 +1154,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1247,10 +1161,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1258,10 +1168,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1269,10 +1175,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1280,10 +1182,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1291,10 +1189,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1302,10 +1196,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1313,10 +1203,6 @@ categories:   <br />
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
