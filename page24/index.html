@@ -158,6 +158,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -170,6 +172,164 @@
         <h1>⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-24
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
+
+<h2 id="jekyll-paginate-依赖缺失">jekyll-paginate 依赖缺失</h2>
+
+<p>因为 jekyll 3 中默认安装已经没有这个分页组件了，官方把这个分页组件插件化了，因此要独立安装。详情见 <a href="https://jekyllrb.com/docs/pagination/">https://jekyllrb.com/docs/pagination/</a>。</p>
+
+<h3 id="错误呈现">错误呈现</h3>
+
+<p>在启动 jekyll 服务的时候出现以下错误：</p>
+
+<pre><code>jekyll serve
+Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
+  Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-paginate' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
+jekyll 3.1.2 | Error:  jekyll-paginate
+</code></pre>
+
+<h3 id="解决方法">解决方法</h3>
+
+<p>我们安装这个插件到本地即可。</p>
+
+<pre><code>gem install jekyll-paginate
+Fetching: jekyll-paginate-1.1.0.gem (100%)
+Successfully installed jekyll-paginate-1.1.0
+Parsing documentation for jekyll-paginate-1.1.0
+Installing ri documentation for jekyll-paginate-1.1.0
+Done installing documentation for jekyll-paginate after 3 seconds
+1 gem installed
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/24/error-jekyll-paginate/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2022/02/24/what-really-matter/">什麼才是重要的</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-24
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>專注內容  <br />
+專注技術  <br />
+Octopress2.0、3.0、jekyll官方、其他主題，都不重要  <br />
+博文才重要</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/24/what-really-matter/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -225,14 +385,15 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>博客根目录，文件<code class="language-plaintext highlighter-rouge">index.html</code>，找到<code class="language-plaintext highlighter-rouge">Recent Posts</code>这一大段内容，复制，打开<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>，找到：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="right"&gt;
+                    <p>博客根目录，文件<code>index.html</code>，找到<code>Recent Posts</code>这一大段内容，复制，打开<code>_layouts/post.html</code>，找到：</p>
+<pre><code>    &lt;div class="right"&gt;
         &lt;div class="wrap"&gt;
-</code></pre></div></div>
+</code></pre>
 <p>复制到其后面。</p>
 
-<p>因为只复制一段老是有错，现在我是把<code class="language-plaintext highlighter-rouge">index.html</code>的<code class="language-plaintext highlighter-rouge">&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>右边栏一直到最后的内容。</p>
+<p>因为只复制一段老是有错，现在我是把<code>index.html</code>的<code>&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code>_layouts/post.html</code>右边栏一直到最后的内容。</p>
 <h1>🤪😀</h1>
+
 
                 </div>
                 <div class="read-all">
@@ -295,17 +456,18 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>在根目录新建一文件夹<code class="language-plaintext highlighter-rouge">_templates</code>，文件夹里建一个文件<code class="language-plaintext highlighter-rouge">post</code>，无后缀，内容是：<br />
-<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong><br />
-—<br />
-layout: <br />
-title: “”<br />
-date: <br />
-author:<br />
-tags: <br />
-comments: true<br />
-categories: <br />
+                    <p>在根目录新建一文件夹<code>_templates</code>，文件夹里建一个文件<code>post</code>，无后缀，内容是：  <br />
+<strong><em>注意，格式问题，显示有问题，参见原文件</em></strong>  <br />
+—  <br />
+layout:   <br />
+title: “”  <br />
+date:   <br />
+author:  <br />
+tags:   <br />
+comments: true  <br />
+categories:   <br />
 —</p>
+
 
                 </div>
                 <div class="read-all">
@@ -367,26 +529,27 @@ categories: <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>农历正月十八<br />
-有时雨，有时雾<br />
-破烂的旧房子<br />
-天花板不时剥落残渣<br />
+                    <p>农历正月十八  <br />
+有时雨，有时雾  <br />
+破烂的旧房子  <br />
+天花板不时剥落残渣  <br />
 雨水漏下，打在铁谷柜上，在这寂静中，尤为响动</p>
 
-<p>我父亲是可怜的<br />
-我母亲是可怜的<br />
-时代给他们的无知<br />
-身处巨大变革而无能为力<br />
-求而不得<br />
-我是可怜可悲的<br />
-这是时代的安排<br />
-宿命的印记<br />
-是知识见闻和无能的无奈和残酷<br />
-如果我是一样的无知就好了<br />
-只可惜我的另一个区域的无知和无能<br />
-如果我没那么的无能就好了<br />
-如果我……<br />
+<p>我父亲是可怜的  <br />
+我母亲是可怜的  <br />
+时代给他们的无知  <br />
+身处巨大变革而无能为力  <br />
+求而不得  <br />
+我是可怜可悲的  <br />
+这是时代的安排  <br />
+宿命的印记  <br />
+是知识见闻和无能的无奈和残酷  <br />
+如果我是一样的无知就好了  <br />
+只可惜我的另一个区域的无知和无能  <br />
+如果我没那么的无能就好了  <br />
+如果我……  <br />
 深深的无力</p>
+
 
                 </div>
                 <div class="read-all">
@@ -450,6 +613,7 @@ categories: <br />
                 <div class="excerpt">
                     <h3 id="别被其他一切因素影响">别被其他一切因素影响</h3>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/02/16/myself/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -510,12 +674,13 @@ categories: <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>刚才父亲又因山林补贴争吵。<br />
-风险太大。<br />
-官场黑暗。邻里纷争。<br />
-穷山恶水。<br />
-走吧，早走为上。<br />
+                    <p>刚才父亲又因山林补贴争吵。  <br />
+风险太大。  <br />
+官场黑暗。邻里纷争。  <br />
+穷山恶水。  <br />
+走吧，早走为上。  <br />
 君子不立危墙之下。</p>
+
 
                 </div>
                 <div class="read-all">
@@ -598,6 +763,7 @@ categories: <br />
 
 <p>我们还不清楚 Ubuntu 团队在上述选择中最终会如何进行抉择，在 Ubuntu 22.04 正式推出之前还有充足的考虑时间，可以访问 ubuntu-devel 了解更多详情。我们也将关注 GRUB 上游在此期间是否也会推出相应的解决方案。</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/01/15/ubuntu-cannot-boot-windows/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -659,6 +825,7 @@ categories: <br />
                 </div>
                 <div class="excerpt">
                     <p>就是个坑，有时安装了就能用，有时搞到所有的输入法都用不了，要卸载了才能恢复之前的输入法</p>
+
 
                 </div>
                 <div class="read-all">
@@ -724,160 +891,10 @@ categories: <br />
                 <div class="excerpt">
                     <p>睡觉</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/01/15/done-tired/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/model/">post文件模板</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>layout: post<br />
-title: <br />
-date: <br />
-tags: <br />
-author: 丘海东<br />
-comments: <br />
-categories:</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/model/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/15/fucking-hard/">好艰难---把Gemfile和Gemfile.lock文件删除</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-15
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>&nbsp;
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>怎么都不行<br />
-用octopress3.0创建theme blog，可能因为</p>
-<h2 id="网络不行">网络不行？</h2>
-
-<p>一直卡在那里，一动不动<br />
-<code class="language-plaintext highlighter-rouge">bundle</code> 和 <code class="language-plaintext highlighter-rouge">bundle install</code> 也是一动不动<br />
-这是没有成功的，后面会报错<br />
-重复，直到ok</p>
-
-<h2 id="对了我把gemfile和gemfilelock文件删除就没报错了">对了，我把Gemfile和Gemfile.lock文件删除，就没报错了</h2>
-
-<p>正常来说，rvm安装ruby就行了，如果还不行，再用<code class="language-plaintext highlighter-rouge">apt</code> ubuntu官方源安装一次</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install ruby
-</code></pre></div></div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/15/fucking-hard/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -892,10 +909,10 @@ categories:</p>
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page23" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">24/41</span>
+          <span class="page_number ">24/42</span>
           
             <a href="/page25" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page41" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page42" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -911,6 +928,10 @@ categories:</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                    
+                        <li><a href="/2024/01/24/day-99/">Day 99：用好习惯替代坏习惯</a></li>
                     
                         <li><a href="/2024/01/21/day-98/">Day 98：能管住自己的就是神</a></li>
                     
@@ -968,10 +989,6 @@ categories:</p>
                     
                         <li><a href="/2023/12/07/day-74/">Day 74：只攻不防，素质不详</a></li>
                     
-                        <li><a href="/2023/12/06/day-73/">Day 73：情绪处理和学习</a></li>
-                    
-                        <li><a href="/2023/12/06/day-72/">Day 72</a></li>
-                    
                 </ul>
             </div>
 
@@ -997,7 +1014,7 @@ categories:</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">312</span>
+                            <span class="badge">314</span>
                         </a>
                     </li>
                     
@@ -1020,9 +1037,9 @@ categories:</p>
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1050,7 +1067,45 @@ categories:</p>
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -1058,6 +1113,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1065,6 +1124,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1072,6 +1135,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1079,6 +1146,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1086,6 +1157,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1093,6 +1168,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1100,6 +1179,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -1107,6 +1190,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1114,6 +1201,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1121,6 +1212,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1128,6 +1223,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1135,6 +1234,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1142,6 +1245,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1149,6 +1256,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1156,6 +1267,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1163,6 +1278,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1170,6 +1289,10 @@ categories:</p>
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
