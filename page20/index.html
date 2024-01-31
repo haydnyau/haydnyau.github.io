@@ -175,6 +175,80 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/">curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-27
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://blog.csdn.net/u014375643/article/details/115826506">问题解决：curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a>  <br />
+https://qiuhaidong.github.io/blog/2022/04/05/octopress2-on-ubuntu-22-dot-04/</p>
+<pre><code>sudo apt install curl
+curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
+<p>提示：</p>
+<pre><code>curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 28 ms: 拒绝连接
+</code></pre>
+<p>解决：  <br />
+<a href="https://blog.csdn.net/u014375643/article/details/115826506">Failed to connect to raw.githubusercontent.com</a>  <br />
+到这个网址：<code>https://www.ipaddress.com/</code>，输入：<code>raw.githubusercontent.com</code>，查询，得到IP地址，选择其中一个或多个，修改本地HOSTS：Ubuntu下打开/etc/hosts，添加 IP地址：<code>185.199.108.133 raw.githubusercontent.com</code>，重试，不行就重启再试。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/27/curl-7-failed-to-connect-to-raw-dot-githubusercontent-dot-com-port-443-after-28-ms-ju-jue-lian-jie/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/">ssh: connect to host ssh.github.com port 443: Connection refused</a>
                 </h2>
                 <div class="label">
@@ -227,23 +301,24 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>出现标题问题，打开：<a href="https://www.ipaddress.com/">IPAddress.com</a> ，有时会出现403禁止访问的错误，要点一下<code class="language-plaintext highlighter-rouge">Go to Homepage</code>才行。输入：<code class="language-plaintext highlighter-rouge">ssh.github.com</code>，得到IP地址：<br />
-<code class="language-plaintext highlighter-rouge">140.82.113.36</code><br />
-<code class="language-plaintext highlighter-rouge">140.82.114.35</code><br />
+                    <p>出现标题问题，打开：<a href="https://www.ipaddress.com/">IPAddress.com</a> ，有时会出现403禁止访问的错误，要点一下<code>Go to Homepage</code>才行。输入：<code>ssh.github.com</code>，得到IP地址：  <br />
+<code>140.82.113.36</code>  <br />
+<code>140.82.114.35</code>  <br />
 修改本地hosts：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /etc
+<pre><code>cd /etc
 sudo gedit hosts
-</code></pre></div></div>
+</code></pre>
 <p>添加：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>140.82.113.36          ssh.github.com
+<pre><code>140.82.113.36          ssh.github.com
 140.82.114.35          ssh.github.com
-</code></pre></div></div>
+</code></pre>
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqWdkQXFWB88lLNe9b.pKPd.bOkeCQ1XnXqIwv6SR2DItDkSBuzvyRWfXmXV4k8yccpRrk38TrDNSADQdQqoUnfE!/r" alt="" /></p>
 
 <h4 id="22端口无法连接">22端口无法连接：</h4>
 <p><a href="https://qiuhaidong.github.io/blog/2022/04/23/ssh-connect-to-host-github-dot-com-port-22-connection-timed-out/">ssh: connect to host github.com port 22: Connection timed out</a></p>
 
 <p><a href="https://blog.csdn.net/u014375643/article/details/115826506">curl: (7) Failed to connect to raw.githubusercontent.com port 443: 拒绝连接</a></p>
+
 
                 </div>
                 <div class="read-all">
@@ -310,30 +385,30 @@ sudo gedit hosts
 
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqXVZjyw.Io6CrdJc0fWHXnr3q4dUHaR0xPc646NIEVQCcQiSgJvYmzbq2gFBxRjPOkSIs9e4fG7ZXca4doqIegU!/r" alt="" /></p>
 
-<p>刚上高中时，体育课，穿这红色款，我还不好意思，怕别人笑我。<br />
-<!--more--><br />
-然后买过其他的杂牌鞋。<br />
+<p>刚上高中时，体育课，穿这红色款，我还不好意思，怕别人笑我。  <br />
+<!--more-->  <br />
+然后买过其他的杂牌鞋。  <br />
 之后好像是高二吧，买了当时的新款的回力鞋，稍微时尚一点的。那时好像还是29元的价格。就是下面这款，但是布料是白色的，简洁的，我没找到相应的图片。</p>
 
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqerQz2XiIcsB5TWpc2zCB.fl3ptPacYa3Oz1.*mcXV8CozPKvxWyn7jcOJwjac7VUFA0svgvN33O2HrAovQ3BFc!/r" alt="" /><br />
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqerQz2XiIcsB5TWpc2zCB.fl3ptPacYa3Oz1.*mcXV8CozPKvxWyn7jcOJwjac7VUFA0svgvN33O2HrAovQ3BFc!/r" alt="" />  <br />
 <img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdaqExTQcE..sFI2qhuFwOFI1E5DWF7BaMYXecAcKntigHARsfNjH*BTamA.l2yrQnoR*SIhvEF0JWNlp27xEhc!/r" alt="" /></p>
 
 <p>大学时还穿过其他款式的回力鞋，帆布的，稍稍有点高帮的，红白蓝款都穿过。</p>
 
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqYtINEqoDu1BFFrvpTSB56TbIXYI7cSMTjoFS9MG92lPWCmmDPVL6lhkUckqspWLgpMJ*daXetVoiJqT3RnMGA8!/r" alt="" /><br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdVz7fNyJqV4JI3jhf*6zTvDc6PLmyQQYSQpC0y0Sdzabp*88al8EYmLYKYGWrl5RdsLkvob0.JO7uGYygtMqcc!/r" alt="" /><br />
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqYtINEqoDu1BFFrvpTSB56TbIXYI7cSMTjoFS9MG92lPWCmmDPVL6lhkUckqspWLgpMJ*daXetVoiJqT3RnMGA8!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqdVz7fNyJqV4JI3jhf*6zTvDc6PLmyQQYSQpC0y0Sdzabp*88al8EYmLYKYGWrl5RdsLkvob0.JO7uGYygtMqcc!/r" alt="" />  <br />
 <img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqc6.19kAtZU0vBIQen4xag6ZtFn4kir4pmTPiUY7v4Z*9mfqYutrgu9JbhsOGHdmnkGZ*402pD*LHZ25xu2fbHs!/r" alt="" /></p>
 
 <p>之后我就一直穿经典款，银色牛筋底的</p>
 
-<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfelfs2XhZK*r.DGe*rfi5iKv7E4Y8Qhpsllj7mqC8zxJ5qZcuBB554dJTsIQA9RjyYQ3GPRb40q2xOJsKUPiXA!/r" alt="" /><br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqTI6TVFnJ*lY.CLDBk.mRlX*pqBD*hUxLiVgbqk4lMSbNUvZ9kfFBRwdl*HoexX0RTaxVwKWg9t*Ffe.hDikqCc!/r" alt="" /><br />
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfelfs2XhZK*r.DGe*rfi5iKv7E4Y8Qhpsllj7mqC8zxJ5qZcuBB554dJTsIQA9RjyYQ3GPRb40q2xOJsKUPiXA!/r" alt="" />  <br />
+<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqTI6TVFnJ*lY.CLDBk.mRlX*pqBD*hUxLiVgbqk4lMSbNUvZ9kfFBRwdl*HoexX0RTaxVwKWg9t*Ffe.hDikqCc!/r" alt="" />  <br />
 <img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqRDlMxQrZ0P.E8xFknRTG2Ux1RovdOh8kOqKzmZfETxcNOo32cJ97r*2l1YxzpnTjK6XyNKr00CFwrSQDvxOmc8!/r" alt="" /></p>
 
-<p>然而很遗憾，这两年，我买到的鞋都是仓底尾货，生产日期经常是两三年前的，甚至四年的也有呀。太无奈了。而且以前一双能穿一年，这些年变成半年，4个月，3个月，最近的一双，穿了不到50天。<br />
-于是我上网查了查，回力这几年终究是经营不过来，自己的工厂经营不下去，关了。授权给别人生产，已经变成一个贴牌了。质量肯定是得不到保证。恶性循环。<br />
-生活就是这样，无论你多喜欢，有些东西，就算是十几二十年的感情，终究是敌不过现实的残酷。<br />
-只能选择其他的。<br />
+<p>然而很遗憾，这两年，我买到的鞋都是仓底尾货，生产日期经常是两三年前的，甚至四年的也有呀。太无奈了。而且以前一双能穿一年，这些年变成半年，4个月，3个月，最近的一双，穿了不到50天。  <br />
+于是我上网查了查，回力这几年终究是经营不过来，自己的工厂经营不下去，关了。授权给别人生产，已经变成一个贴牌了。质量肯定是得不到保证。恶性循环。  <br />
+生活就是这样，无论你多喜欢，有些东西，就算是十几二十年的感情，终究是敌不过现实的残酷。  <br />
+只能选择其他的。  <br />
 361燃战TD版</p>
 
 <p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqfXqPSrsdMuzLigH8NuKpNU3zBo.L8zCSo697I0fEhtVz6aa0A0VkW4PGQdHo3419EeL2GVZYIEN81m7tqC9LpA!/r" alt="" /></p>
@@ -402,6 +477,7 @@ sudo gedit hosts
                 <div class="excerpt">
                     <p>梦回小学，你常驻，我回来，但是总有阻力，阻止我走向你。</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/05/21/you-in-my-dream-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -465,19 +541,20 @@ sudo gedit hosts
                 <div class="excerpt">
                     <p>转载于：<a href="https://www.cnblogs.com/SimbaBao/p/5791458.html">ubuntu中lightdm以及不能看到界面的一些解决方案</a></p>
 
-<p>在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：<br />
-（1）<code class="language-plaintext highlighter-rouge">/usr/share/lightdm/lightdm.conf.d/*.conf</code><br />
-（此为系统提供的配置文件，用户不可编辑）<br />
-（2）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf.d/*.conf</code><br />
-（3）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf</code><br />
-（2、3这两个配置文件，系统管理员可以覆写）<br />
-在此之后看到了一个关于解决不能看见界面的办法：<br />
-（1）使用<code class="language-plaintext highlighter-rouge">Ctrl+alt+F1</code>，进入文本终端<br />
-（2）<code class="language-plaintext highlighter-rouge">sudo stop lightdm</code> ，停止lightdm界面<br />
-（3）<code class="language-plaintext highlighter-rouge">sudo start lightdm</code> ，开始lightdm界面<br />
-（4）<code class="language-plaintext highlighter-rouge">sudo start gdm</code> ，登录gdm管理器<br />
-（5）<code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure lightdm</code> ，设置管理器的系统默认值<br />
+<p>在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：  <br />
+（1）<code>/usr/share/lightdm/lightdm.conf.d/*.conf</code>  <br />
+（此为系统提供的配置文件，用户不可编辑）  <br />
+（2）<code>/etc/lightdm/lightdm.conf.d/*.conf</code>  <br />
+（3）<code>/etc/lightdm/lightdm.conf</code>  <br />
+（2、3这两个配置文件，系统管理员可以覆写）  <br />
+在此之后看到了一个关于解决不能看见界面的办法：  <br />
+（1）使用<code>Ctrl+alt+F1</code>，进入文本终端  <br />
+（2）<code>sudo stop lightdm</code> ，停止lightdm界面  <br />
+（3）<code>sudo start lightdm</code> ，开始lightdm界面  <br />
+（4）<code>sudo start gdm</code> ，登录gdm管理器  <br />
+（5）<code>sudo dpkg-reconfigure lightdm</code> ，设置管理器的系统默认值  <br />
 注：本文部分资料参阅https://wiki.ubuntu.com/LightDM</p>
+
 
                 </div>
                 <div class="read-all">
@@ -540,9 +617,10 @@ sudo gedit hosts
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>《非自然死亡》，第8集<br />
-兒子年輕時犯錯入獄，父母親和他斷絕關係，出獄後也不再見麵，兒子雖然改過，也自知無顏見父母，隻在喝醉後才敢說出對父母的思唸，隻在和朋友相處時才找到家人的感覺。一次火災，兒子拼命救朋友，無奈隻救出一個，火情就蔓延到無法出去的地步了，隻能把剩下的朋友們背到樓上，最終沒能等到救援。父母知道後原諒了他，可惜已經天人相隔。<br />
+                    <p>《非自然死亡》，第8集  <br />
+兒子年輕時犯錯入獄，父母親和他斷絕關係，出獄後也不再見麵，兒子雖然改過，也自知無顏見父母，隻在喝醉後才敢說出對父母的思唸，隻在和朋友相處時才找到家人的感覺。一次火災，兒子拼命救朋友，無奈隻救出一個，火情就蔓延到無法出去的地步了，隻能把剩下的朋友們背到樓上，最終沒能等到救援。父母知道後原諒了他，可惜已經天人相隔。  <br />
 <img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqRzC5Lm.54UkYqOqSrpAaIW0o707ztMP1ut6J*bXbynwzkda*xuciTShS57lwYILKzqrvAbBnEFlejLCiqGkySI!/r" alt="活着時才能說說話聊聊天" /></p>
+
 
                 </div>
                 <div class="read-all">
@@ -607,6 +685,7 @@ sudo gedit hosts
                 <div class="excerpt">
                     <p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/bqQfVz5yrrGYSXMvKr.cqbg0brft8j2OoIl4mzJiEzcZLP02LyFuxmuw.GBB1U.XzjgZUTmofFAQQP7R.4VmDQKOgTmni5lRzcw8EgLrTso!/r" alt="do what you love, love what you do" /></p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/05/14/do-what-you-love-love-what-you-do/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -668,10 +747,10 @@ sudo gedit hosts
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>以下食物<strong>不要直接炒</strong><br />
-鲜竹笋、菠菜、苋菜、苦瓜，焯水5-10秒，去除草酸<br />
-四季豆、扁豆、长豆角，焯水5分钟，去除皂素<br />
-西兰花，菜花，焯水1-2分钟，去除农药残留和小虫子<br />
+                    <p>以下食物<strong>不要直接炒</strong>  <br />
+鲜竹笋、菠菜、苋菜、苦瓜，焯水5-10秒，去除草酸  <br />
+四季豆、扁豆、长豆角，焯水5分钟，去除皂素  <br />
+西兰花，菜花，焯水1-2分钟，去除农药残留和小虫子  <br />
 香椿，焯水1分钟左右，去除亚硝酸盐</p>
 
 
@@ -742,6 +821,7 @@ sudo gedit hosts
 
 <p><a href="https://video.sonystyle.com.cn/customerTrans/5c3f07699e9c757a4d576bb240fa61e0/efe5091-180a8436cc4-0003-cd2e-0e7-91d59.mp4">SONY Xperia 1 IV 官方宣傳視頻</a></p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/05/12/sony-xperia-1-iv/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -805,102 +885,10 @@ sudo gedit hosts
                 <div class="excerpt">
                     <p>和世界交手这么多年，你是否光彩依旧，兴趣盎然？</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2022/05/12/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/05/11/think-different/">Think Different 不同凡响</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-05-11
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#rough" title="Tag: rough" rel="tag">rough</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>苹果公司1997年广告  🍎</p>
-
-<p>Here’s to the crazy ones.<br />
-向那些疯狂的家伙们致敬。<br />
-The misfits.<br />
-他们特立独行，<br />
-The rebels.<br />
-他们桀骜不驯，<br />
-The troublemakers.<br />
-他们惹是生非，<br />
-The round pegs in the square holes.<br />
-他们格格不入，<br />
-The ones who see things differently.<br />
-他们用与众不同的眼光看待事物，<br />
-They’re not fond of rules.<br />
-他们不喜欢墨守成规，<br />
-And they have no respect for the status quo.<br />
-他们也不愿安于现状。<br />
-You can quote them, disagree with them，glorify or vilify them.<br />
-你可以赞美他们，反对他们，颂扬或是诋毁他们，<br />
-About the only thing that you can’t do is ignore them.<br />
-但唯独不能漠视他们。<br />
-Because they change things.<br />
-因为他们改变了寻常事物。<br />
-They push the human race forward.<br />
-他们推动人类向前发展。<br />
-While some may see them as the crazy ones, we see genius.<br />
-或许他们是别人眼里的疯子，但他们却是我们眼中的天才。<br />
-Because the people who are crazy enough to think that they can change the world, are the ones who do.<br />
-因为只有那些疯狂到以为自己能够改变世界的人，<br />
-才能真正地改变世界。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/05/11/think-different/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -934,6 +922,8 @@ Because the people who are crazy enough to think that they can change the world,
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/01/31/day-103/">Day 103</a></li>
                     
@@ -993,8 +983,6 @@ Because the people who are crazy enough to think that they can change the world,
                     
                         <li><a href="/2023/12/15/day-78/">Day 78：老实人赚不到钱</a></li>
                     
-                        <li><a href="/2023/12/13/day-77/">Day 77：晋通父母子女的悲哀</a></li>
-                    
                 </ul>
             </div>
 
@@ -1020,7 +1008,7 @@ Because the people who are crazy enough to think that they can change the world,
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">317</span>
+                            <span class="badge">318</span>
                         </a>
                     </li>
                     
@@ -1043,9 +1031,9 @@ Because the people who are crazy enough to think that they can change the world,
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1073,7 +1061,45 @@ Because the people who are crazy enough to think that they can change the world,
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -1081,6 +1107,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1088,6 +1118,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1095,6 +1129,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1102,6 +1140,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1109,6 +1151,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1116,6 +1162,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1123,6 +1173,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -1130,6 +1184,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1137,6 +1195,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1144,6 +1206,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1151,6 +1217,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1158,6 +1228,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1165,6 +1239,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1172,6 +1250,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1179,6 +1261,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1186,6 +1272,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1193,6 +1283,10 @@ Because the people who are crazy enough to think that they can change the world,
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
