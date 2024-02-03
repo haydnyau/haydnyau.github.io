@@ -225,27 +225,27 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <pre><code>dong@Ubuntu:~$ ssh -T git@github.com
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ ssh -T git@github.com
 ssh: connect to host github.com port 22: Connection timed out
-</code></pre>
+</code></pre></div></div>
 <p><a href="https://segmentfault.com/a/1190000040896781">解决 ssh: connect to host github.com port 22: Connection timed out</a></p>
 
 <p><a href="https://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out">ssh: connect to host github.com port 22: Connection timed out</a></p>
 
-<p>如果你电脑上的git能在大部分地方进行同步，但是在某处地方的网络下无法同步，并且运行git pull或git push长久没有反映，最后出现ssh: connect to host github.com port 22: Connection timed out，很可能是你的网络供应商（比如广电网）在出口防火墙上屏蔽了22端口，这意味着你将无法访问其他主机的22端口。  <br />
-对此，github提供了一种解决方案，允许你使用443端口进行ssh连接，因为443端口是访问https网站所必须的，大部分防火墙都会允许通过，但如果使用代理服务器可能产生干扰。如果连443端口都被屏蔽，那你应该无法浏览这篇文章。  <br />
+<p>如果你电脑上的git能在大部分地方进行同步，但是在某处地方的网络下无法同步，并且运行git pull或git push长久没有反映，最后出现ssh: connect to host github.com port 22: Connection timed out，很可能是你的网络供应商（比如广电网）在出口防火墙上屏蔽了22端口，这意味着你将无法访问其他主机的22端口。<br />
+对此，github提供了一种解决方案，允许你使用443端口进行ssh连接，因为443端口是访问https网站所必须的，大部分防火墙都会允许通过，但如果使用代理服务器可能产生干扰。如果连443端口都被屏蔽，那你应该无法浏览这篇文章。<br />
 运行这段命令，看看是否有成功提示，如果成功，则可以使用这个解决方案。</p>
-<pre><code>ssh -T -p 443 git@ssh.github.com
-</code></pre>
-<p>简单地配置一下，让你每次ssh连接github都通过443端口。如果你使用Linux，在<code>~/.ssh/config</code>内(新建config文件，无后缀)，添加这些内容，指明ssh连接git@github.com或git@ssh.github.com走443端口。</p>
-<pre><code>Host github.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T -p 443 git@ssh.github.com
+</code></pre></div></div>
+<p>简单地配置一下，让你每次ssh连接github都通过443端口。如果你使用Linux，在<code class="language-plaintext highlighter-rouge">~/.ssh/config</code>内(新建config文件，无后缀)，添加这些内容，指明ssh连接git@github.com或git@ssh.github.com走443端口。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host github.com
 Hostname ssh.github.com
 Port 443
 User git #这行可能不需要也行
-</code></pre>
+</code></pre></div></div>
 
 <p>或者这一段：</p>
-<pre><code>Host github.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host github.com
 Hostname ssh.github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
@@ -258,12 +258,12 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 Port 443
 User git
-</code></pre>
+</code></pre></div></div>
 
-<p>我的：把<code>config</code>文件复制到.ssh2和.ssh3文件夹  <br />
+<p>我的：把<code class="language-plaintext highlighter-rouge">config</code>文件复制到.ssh2和.ssh3文件夹<br />
 改ssh2-3文件夹名，测试：</p>
-<pre><code>ssh -T git@github.com
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
 <h4 id="如果443端口也无法连接试试改hosts">如果443端口也无法连接，试试改hosts：</h4>
 <p><a href="https://qiuhaidong.github.io/blog/2022/05/26/ssh-connect-to-host-ssh-dot-github-dot-com-port-443-connection-refused/">ssh: connect to host ssh.github.com port 443: Connection refused</a></p>
 
@@ -301,7 +301,7 @@ User git
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                        <li><a href="/2024/02/03/day-104/">Day 104</a></li>
                     
                         <li><a href="/2024/01/31/day-103/">Day 103</a></li>
                     
@@ -409,9 +409,9 @@ User git
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -439,45 +439,7 @@ User git
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -485,10 +447,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -496,10 +454,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -507,10 +461,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -518,10 +468,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -529,10 +475,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -540,10 +482,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -551,10 +489,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -562,10 +496,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -573,10 +503,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -584,10 +510,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -595,10 +517,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -606,10 +524,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -617,10 +531,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -628,10 +538,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -639,10 +545,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -650,10 +552,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -661,10 +559,6 @@ User git
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
