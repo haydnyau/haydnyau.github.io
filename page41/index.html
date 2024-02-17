@@ -160,6 +160,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -172,6 +174,594 @@
         <h1>⌚️📖️🖋️🏀️🚲️🚉️🎼️🍵️🏞️📷️</h1>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/">TCPServer Error: Address already in use - bind(2)</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h4 id="停止rake-preview-任务用ctrlc别用ctrlz可以避免这个问题">停止<code>rake preview</code> 任务，用<code>ctrl+c</code>，别用<code>ctrl+z</code>，可以避免这个问题</h4>
+<p>在执行命令</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>时，输出：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ rake preview  
+Starting to watch source with Jekyll and Compass. Starting Rack on port 4000  
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.  
+Configuration file: /home/dong/octopress/_config.yml  
+[2015-03-05 13:22:19] INFO  WEBrick 1.3.1  
+[2015-03-05 13:22:19] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]  
+[2015-03-05 13:22:19] WARN  TCPServer Error: Address already in use - bind(2)  
+/home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `new'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:85:in `block in create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `each'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/utils.rb:82:in `create_listeners'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:82:in `listen'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:70:in `initialize'
+	from /home/dong/.rvm/rubies/ruby-1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:45:in `initialize'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `new'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/handler/webrick.rb:32:in `run'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:286:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/lib/rack/server.rb:147:in `start'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.6.0/bin/rackup:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/rackup:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+        Source: source
+   Destination: public
+      Generating... 
+                done.
+    write public/stylesheets/screen.css
+ Auto-regeneration: enabled for 'source'
+</code></pre>
+
+<p>解决方法：  <br />
+执行：</p>
+
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
+
+<p>如果提示：</p>
+<pre><code>sudo: netstat：找不到命令
+</code></pre>
+<p>运行：</p>
+<pre><code>netstat -tulpn |grep 4000
+</code></pre>
+<p>然后：</p>
+<pre><code>dong@Ubuntu:~/octopress$ netstat -tulpn |grep 4000
+Command 'netstat' not found, but can be installed with:
+sudo apt install net-tools
+dong@Ubuntu:~/octopress$ sudo apt install net-tools
+</code></pre>
+<p>再运行：</p>
+<pre><code>sudo netstat -tulpn |grep 4000
+</code></pre>
+<p>得到：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ sudo netstat -tulpn | grep 4000
+[sudo] password for dong: 
+tcp        0      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      2889/rackup  
+</code></pre>
+
+<p>执行：</p>
+
+<pre><code>kill -9 2889
+#更改2889处对应的数字，前面的-9好像不变
+</code></pre>
+
+<p>得到：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ kill -9 2889
+dong@Ubuntu:~/octopress$
+</code></pre>
+
+<p>done.</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/05/tcpserver-error-address-already-in-use-bind-2/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/03/05/could-not-find-a-javascript-runtime/">Could not find a JavaScript runtime</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>以下是两条命令的输出结果：  <br />
+第一条：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ rake generate
+## Generating Site with Jekyll
+	write source/stylesheets/screen.css
+/home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:5:in `&lt;module:ExecJS&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `block in gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `each'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll.rb:166:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+</code></pre>
+
+<p>第二条：</p>
+
+<pre><code>dong@Ubuntu:~/octopress$ rake preview
+Starting to watch source with Jekyll and Compass. Starting Rack on port 4000
+/home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs/runtimes.rb:45:in `autodetect': Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:5:in `&lt;module:ExecJS&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/execjs-2.3.0/lib/execjs.rb:4:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-coffeescript-1.0.1/lib/jekyll-coffeescript.rb:2:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:46:in `block in gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `each'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll/deprecator.rb:44:in `gracefully_require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/lib/jekyll.rb:166:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `require'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/gems/jekyll-2.5.3/bin/jekyll:6:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `load'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/jekyll:23:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+	from /home/dong/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.
+[2015-03-05 12:32:30] INFO  WEBrick 1.3.1
+[2015-03-05 12:32:30] INFO  ruby 1.9.3 (2014-11-13) [i686-linux]
+[2015-03-05 12:32:30] INFO  WEBrick::HTTPServer#start: pid=2889 port=4000
+ 		write public/stylesheets/screen.css
+127.0.0.1 - - [05/Mar/2015:12:32:49 +0800] "GET / HTTP/1.1" 404 - 0.0610
+127.0.0.1 - - [05/Mar/2015:12:32:50 +0800] "GET /favicon.ico HTTP/1.1" 404 - 0.0015
+127.0.0.1 - - [05/Mar/2015:12:32:53 +0800] "GET / HTTP/1.1" 404 - 0.0013
+127.0.0.1 - - [05/Mar/2015:12:37:50 +0800] "GET / HTTP/1.1" 404 - 0.0007
+127.0.0.1 - - [05/Mar/2015:12:37:51 +0800] "GET / HTTP/1.1" 404 - 0.0007
+^Z
+[1]+  已停止               rake preview
+</code></pre>
+
+<p>解决方法：  <br />
+执行命令：</p>
+
+<pre><code>gem install execjs
+gem install therubyracer
+</code></pre>
+
+<p>may fail,<a href="http://stackoverflow.com/questions/20888318/error-install-rubyracer-with-error-invalid-gem-package-is-corrupt">check this</a> ,<a href="https://qiuhaidong.github.io/blog/2016/11/10/failed-when-gem-install-therubyracer/">or</a></p>
+
+<pre><code>sudo apt-get install nodejs
+</code></pre>
+
+<p>done.</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/03/05/could-not-find-a-javascript-runtime/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2015/02/22/running/">阿甘的奔跑</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2015-02-22
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>想起阿甘。  <br />
+阿甘有点傻，一点点傻。  <br />
+他经历了战友布巴的离世，丹中尉的悲怨起伏，母亲的离世，以及贯穿他整个生命的珍妮的美好而又若即若离触不可及。  <br />
+阿甘不孤单。  <br />
+童年时母亲和珍妮陪他。当兵时布巴陪他。在海上捕虾时丹中尉陪他。  <br />
+阿甘只是孤独。  <br />
+没有人走进阿甘的心里。  <br />
+没有人想走进阿甘的心里。  <br />
+或者说：  <br />
+珍妮没有走进阿甘心里。  <br />
+珍妮不想走进阿甘心里。  <br />
+当珍妮再次离开，所有孤独，清晰浮现。  <br />
+阿甘开始奔跑。  <br />
+跑到城边。  <br />
+跑遍县城。  <br />
+横越阿拉巴马州。  <br />
+跑到一个海角。  <br />
+跑到另一个海角。  <br />
+横越美国。  <br />
+在湖边奔跑。  <br />
+在麦田旁奔跑。  <br />
+在河流石桥上奔跑。  <br />
+在栅栏边奔跑。  <br />
+在牧场旁奔跑。  <br />
+在秋天黄叶林中奔跑。  <br />
+在沙漠奔跑。  <br />
+三年，两个半月。  <br />
+后来，珍妮问起，阿甘告诉她：  <br />
+战场雨停后的星空。  <br />
+海湾的日落。  <br />
+雪山旁湖面的倒影。  <br />
+沙漠的日出。  <br />
+那些属于阿甘的，一个人的一些瞬间。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2015/02/22/running/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2014/11/26/nightmares/">nightmares</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2014-11-26
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>2014年10月16日，4:59AM,在家，睡觉，做梦，醒。</p>
+
+<p>关于大学的梦。</p>
+
+<p>做这梦，不是第一次，估计也不会是最后一次。</p>
+
+<p>它是我生命的印记，不可磨灭。</p>
+
+<p><a href="http://photo.weibo.com/2014037263/wbphotos/large/mid/3781293063682700/pid/780bc50fgw1emosmbfqn4j208w0dc759">2014-10-16-04-59，家里</a></p>
+
+<p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/bad-dream/Screenshot_2014-10-16-04-59-22.png" alt="2014年10月16日家里" /></p>
+
+<p><a href="http://photo.weibo.com/2014037263/wbphotos/large/mid/3817040303409178/pid/780bc50fgw1epuu3qc365j208w0dc0ud">2015-03-04-06-29，水汶</a></p>
+
+<p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/bad-dream/Screenshot_2015-03-04-06-29-27.png" alt="2015年3月4日水汶" /></p>
+
+<p><a href="http://photo.weibo.com/2014037263/wbphotos/large/mid/3854874397980519/pid/780bc50fgw1et7jbd7jejj208w0dcwgb">2015-06-17-05-44，水汶</a></p>
+
+<p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/bad-dream/Screenshot_2015-06-17-05-44-27.png" alt="2015年6月17日水汶" /></p>
+
+<p>2016-01-20 again</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2014/11/26/nightmares/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2014/11/09/life-is-maze/">生活 经历 迷宫</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2014-11-09
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>生活像是一座特殊的迷宫。</p>
+
+<p>它是立体的，一层一层的，无尽的。</p>
+
+<p>它有不可改变的部分，非常难以改变的部分，容易改变的部分。有了足够的经历积累后，会出现一个楼梯，走上去，看下来，之前走过的那一层迷宫，一目了然。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2014/11/09/life-is-maze/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2014/10/22/dgs-classroom2/">东哥学堂2</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2014-10-22
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>1.信任很脆弱</p>
+
+<p>2.信任很可贵</p>
+
+<p>3.冷漠面对网络暴力</p>
+
+<p>4.人脉就是一种能力</p>
+
+<p>5.飞虎II第二集：你看到的很可能是相反的，不要违背原则，瞎好心！</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2014/10/22/dgs-classroom2/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -259,6 +849,7 @@
 
 <p>冯家扬，广州人，典型的广州人性格。非常独立自主。在不伤害不妨碍别人的前提下，喜欢做什么就做什么，不喜欢的坚决不做。这两年我才逐渐意识到，这一点太可贵了————为自己而活。当年有段时间，我可能有点自卑，所以很敏感，</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2014/10/09/dgs-legend3/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -336,6 +927,7 @@
 
 <p>从09年到现在，5年时间，我们走了过来，如果以后没有重大利益或感情纠葛，我相信我们能一直走下去。</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2014/10/09/dgs-legend2/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -402,6 +994,7 @@
 <p>有此念头，一方面是我喜欢文学，另一方面是看到我的高中同学彪哥也给他自己写了传，写得很好，令我也想试一试，在此感谢<strong>彪哥</strong>，<strong>李彪</strong>。</p>
 
 <p>写写我这个人，我的事，我遇到的人，我遇到的事，也好。</p>
+
 
                 </div>
                 <div class="read-all">
@@ -499,531 +1092,10 @@
 
 <p>对于宝文这个猥琐男，我只能说：希望宝文早日踏入婚姻的殿堂爱情的坟墓，然后买到穿孔的避孕套，生几个孩子向他讨债！</p>
 
+
                 </div>
                 <div class="read-all">
                     <a  href="/2014/09/21/tobaowen/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/09/16/dgs-classroom/">东哥学堂1</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-09-16
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>新人入职，别太出风头，不然容易被排挤。</p>
-
-<p>当然也要适当表现自己的能力给老板看到。</p>
-
-<p>两者之间的度要把握好。</p>
-
-<p>小时候在学校在家里接受的很多教育都是错的，比如说：知错能改就是好孩子。社会上，错了，要负责任！</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/09/16/dgs-classroom/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/04/26/ubuntu-14.04/">ubuntu 14.04</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-04-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>中文输入法太差了</p>
-
-<p>试用时就不行，以为安装了会好点，呵呵……</p>
-
-<p>看来以后得观望为主呀，没什么特别吸引人的新东西，不更新</p>
-
-<p>说什么性能提升，都是虚的</p>
-
-<p>2015.3.5</p>
-
-<p><strong>到了14.04.2，才好点</strong></p>
-
-<p>前两天，重装ubuntu 12.04，在setup octopress时，install RVM（命令为：）</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L https://get.rvm.io | bash -s stable --ruby
-</code></pre></div></div>
-
-<p>失败，因为ubuntu 12.04的rvm的库太老并且已损坏了。</p>
-
-<p>用ubuntu 14.04才行。</p>
-
-<p>2015-8-22</p>
-
-<p>又出错失败，不过有提示输入另一个命令，照做，行了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/04/26/ubuntu-14.04/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2014/04/26/zheng-neng-liang/">偶而还是需要正能量</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2014-04-26
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h4 id="不管是为了家人">不管是为了家人</h4>
-
-<h4 id="还是为了自己">还是为了自己</h4>
-
-<h4 id="朋友">朋友</h4>
-
-<h4 id="爱情">爱情</h4>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2014/04/26/zheng-neng-liang/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2013/12/20/sheng-ri-kuai-le/">生日快乐</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2013-12-20
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>2013年</p>
-
-<p>祝自己生日快乐。</p>
-
-<p>妈妈，您辛苦了。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2013/12/20/sheng-ri-kuai-le/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2013/11/28/shui-wen/">水汶</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2013-11-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>会说谎</p>
-
-<p>守时</p>
-
-<p>职责、职能、职权——分明</p>
-
-<p>人脉、信任</p>
-
-<p>经营者心态</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2013/11/28/shui-wen/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2013/10/14/yu-fa-2/">Markdown语法 2</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2013-10-14
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h4 id="首先表明此文转载自">首先表明，此文转载自</h4>
-<p><a href="http://www.zybuluo.com/mdeditor">作业部落旗下</a></p>
-<h4 id="东哥再次感谢作者">东哥再次感谢作者</h4>
-<h2 id="欢迎使用-cmd---在线-markdown-编辑阅读器">欢迎使用 Cmd - 在线 Markdown 编辑阅读器</h2>
-
-<hr />
-
-<p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，<strong>Cmd Markdown</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。</p>
-
-<p>您可以使用 <strong>Cmd Makrdown</strong>：</p>
-
-<ul>
-  <li>整理知识，学习笔记</li>
-  <li>撰写发布技术文稿（代码支持）</li>
-  <li>撰写发布学术论文（公式支持）</li>
-  <li>发布日记，杂文，所见所想</li>
-</ul>
-
-<p>这是一份 Cmd Markdown 的欢迎稿兼使用说明，请保留，如需撰写<strong>新稿件</strong>， 请在<strong>编辑-预览</strong>模式下，点击顶部工具栏右侧的<strong>新建文本</strong>图标或者使用快捷键 <strong>Ctrl+Alt+N</strong>。</p>
-
-<hr />
-
-<h3 id="什么是-markdown">什么是 Markdown</h3>
-
-<p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
-
-<ul>
-  <li>书写一个质能守恒公式：</li>
-</ul>
-
-<p>$E=mc^2$</p>
-
-<ul>
-  <li>或者高亮一段代码：</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
-    <span class="k">pass</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">'hello world'</span>
-</code></pre></div></div>
-<p>想要了解更详细的语法说明，可以参考我们准备的 <a href="http://www.zybuluo.com/mdeditor?url=http://www.zybuluo.com/static/editor/md-help.markdown">Markdown 语法简明手册</a></p>
-
-<p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：您只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 它目前已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
-
-<hr />
-
-<h3 id="什么是-cmd-markdown">什么是 Cmd Markdown</h3>
-
-<p>您可以使用很多工具书写 Markdown，但是 <strong>Cmd Markdown</strong> 是这个星球上我们已知的、最好的 Markdown 工具——没有之一 ：）因为深信文字的力量，所以我们和你一样，对流畅书写，分享思想和知识，以及阅读体验有极致的追求，我们把对于这些诉求的回应整合在 <strong>Cmd Markdown</strong>，并且一次，两次，三次，乃至无数次地提升这个工具的体验，最终将它演化成一个 <strong>编辑/发布/阅读</strong> Markdown 的在线平台——您可以在任何地方，任何系统/设备上管理这里的文字。</p>
-
-<h4 id="1-实时同步预览">1. 实时同步预览</h4>
-
-<p>我们将 Cmd Markdown 的主界面一分为二，左边为<strong>编辑区</strong>，右边为<strong>预览区</strong>，在编辑区的操作会实时地渲染到预览区方便查看最终的版面效果，并且如果你在其中一个区拖动滚动条，我们有一个巧妙的算法把另一个区的滚动条同步到等价的位置，超酷！</p>
-
-<h4 id="2-编辑工具栏">2. 编辑工具栏</h4>
-
-<p>也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 <strong>编辑区</strong> 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。</p>
-
-<p><img src="http://www.zybuluo.com/static/img/toolbar-editor.png" alt="tool-editor" /></p>
-
-<h4 id="3-编辑模式">3. 编辑模式</h4>
-
-<p>如果您还想以更加心无旁骛的方式编辑文字，可以点击 <strong>编辑工具栏</strong> 最右测的拉伸按钮或者按下 <strong>Ctrl + M</strong>，将 Cmd Markdown 切换到独立的编辑模式，这是一个极度简洁的写作环境，所有可能会引起分心的元素都已经被挪除，超清爽！</p>
-
-<h4 id="4-实时的云端文稿">4. 实时的云端文稿</h4>
-
-<p>为了保障数据安全，Cmd Markdown 会将您每一次击键的内容保存至云端，同时在 <strong>编辑工具栏</strong> 的最右侧提示 “已保存” 的字样。无需担心浏览器崩溃，机器掉电或者地震，海啸——在编辑的过程中随时关闭浏览器或者机器，下一次回到 Cmd Markdown 的时候继续写作。</p>
-
-<h4 id="5-管理工具栏">5. 管理工具栏</h4>
-
-<p>为了便于管理您的文稿，在 <strong>预览区</strong> 的顶部放置了如下所示的 <strong>管理工具栏</strong>：</p>
-
-<p><img src="http://www.zybuluo.com/static/img/toolbar-manager.png" alt="tool-manager" /></p>
-
-<p>工具栏上的四个图标依次为：</p>
-
-<ul>
-  <li><strong>立即发布</strong>：将当前的文稿生成到固定链接，在网络上发布这个链接，分享您的文稿</li>
-  <li><strong>新建文本</strong>：开始撰写一篇新的文稿</li>
-  <li><strong>删除文本</strong>：删除当前的文稿</li>
-  <li><strong>导出文本</strong>：将当前的文稿转化为 Markdown 文本或者 Html 格式，并导出到本地</li>
-</ul>
-
-<h4 id="6-阅读工具栏">6. 阅读工具栏</h4>
-
-<p><img src="http://www.zybuluo.com/static/img/toolbar-reader.png" alt="tool-manager" /></p>
-
-<p>通过在 <strong>预览区</strong> 顶部右侧的 <strong>阅读工具栏</strong>，可以查看文稿列表，增强阅读体验</p>
-
-<p>工具栏上的四个图标依次为：</p>
-
-<ul>
-  <li><strong>文稿列表</strong>：所有新增和过往的文稿都可以在这里查看、操作</li>
-  <li><strong>主题切换</strong>：内置了黑白两种模式的主题，试试 <strong>黑色主题</strong>，超炫！</li>
-  <li><strong>阅读模式</strong>：心无旁骛的阅读模式提供超一流的阅读体验</li>
-  <li><strong>全屏模式</strong>：简洁，简洁，再简洁，一个完全沉浸式的写作和阅读环境</li>
-</ul>
-
-<h4 id="7-阅读模式">7. 阅读模式</h4>
-
-<p>在 <strong>阅读工具栏</strong> 点击 <strong>阅读模式</strong> 图标或者按下 <strong>Ctrl+Alt+M</strong> 随即进入独立的阅读模式界面，我们在版面渲染上的每一个细节：字体，字号，行间距，前背景色都倾注了大量的时间，努力提升您阅读的体验和品质。尝试进入阅读模式，感受这份诚意。</p>
-
-<h4 id="8-文稿发布和分享">8. 文稿发布和分享</h4>
-
-<p>在您使用 Cmd Markdown 记录，创作，整理，阅读文稿的同时，我们不仅希望它是一个有力的工具，更希望您的思想和知识通过这个平台，连同优质的阅读体验，将他们分享给有相同志趣的人，进而鼓励更多的人来到这里记录分享他们的思想和知识，尝试点击 <strong>立即发布</strong> 图标发布这份文档给好友吧！</p>
-
-<hr />
-
-<p>再一次感谢您花费时间阅读这份欢迎稿，点击 <strong>新建文本(Ctrl+Alt+N)</strong> 开始撰写新的文稿吧！祝您在这里记录、阅读、分享愉快！</p>
-
-<p>作者 <a href="http://weibo.com/ghosert">@ghosert</a>   <br />
-于 2013 年 10月 3日  <br />
-上海</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2013/10/14/yu-fa-2/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -1038,10 +1110,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page40" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">41/42</span>
+          <span class="page_number ">41/43</span>
           
             <a href="/page42" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page42" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page43" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -1057,6 +1129,18 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                    
+                        <li><a href="/2024/02/17/day-109/">Day 109：过年期间遇到的让我不开心的人和事</a></li>
+                    
+                        <li><a href="/2024/02/16/day-108/">Day 108：篮球可以学到很多东西</a></li>
+                    
+                        <li><a href="/2024/02/11/day-107/">Day 107：处理冲突</a></li>
+                    
+                        <li><a href="/2024/02/10/day-106/">Day 106</a></li>
+                    
+                        <li><a href="/2024/02/06/day-105/">Day 105：终身事业</a></li>
                     
                         <li><a href="/2024/02/03/day-104/">Day 104</a></li>
                     
@@ -1106,18 +1190,6 @@
                     
                         <li><a href="/2023/12/30/day-83/">Day 83：修心修德</a></li>
                     
-                        <li><a href="/2023/12/28/plan-of-middle-age/">中年计划</a></li>
-                    
-                        <li><a href="/2023/12/27/day-82/">Day 82：一子错，满盘皆落索</a></li>
-                    
-                        <li><a href="/2023/12/25/day-81/">Day 81：自知，知足</a></li>
-                    
-                        <li><a href="/2023/12/23/day-80/">Day 80</a></li>
-                    
-                        <li><a href="/2023/12/22/day-79/">Day 79：二次成长</a></li>
-                    
-                        <li><a href="/2023/12/15/day-78/">Day 78：老实人赚不到钱</a></li>
-                    
                 </ul>
             </div>
 
@@ -1143,7 +1215,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">318</span>
+                            <span class="badge">324</span>
                         </a>
                     </li>
                     
@@ -1166,9 +1238,9 @@
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1196,7 +1268,45 @@
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -1204,6 +1314,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1211,6 +1325,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1218,6 +1336,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1225,6 +1347,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1232,6 +1358,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1239,6 +1369,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1246,6 +1380,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -1253,6 +1391,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1260,6 +1402,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1267,6 +1413,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1274,6 +1424,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1281,6 +1435,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1288,6 +1446,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1295,6 +1457,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1302,6 +1468,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1309,6 +1479,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1316,6 +1490,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
