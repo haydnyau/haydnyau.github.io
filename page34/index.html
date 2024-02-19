@@ -177,6 +177,84 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/19/screen-light/">屏幕亮度调节 Ubuntu13.04和16.04 screen light</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-19
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>参见另一篇博文</p>
+
+<pre><code>sudo gedit /etc/default/grub
+</code></pre>
+
+<p>更改为：(斜黑体部分)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"  
+</code></pre>
+
+<p>(东哥：13.04、16.04按Fn有效调节)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX="acpi_osi= acpi_backlight=vendor"        (东哥有效12.04，20.04，22.04)
+</code></pre>
+
+<pre><code>sudo update-grub
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/19/screen-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/19/ruby-version/">ruby version</a>
                 </h2>
                 <div class="label">
@@ -854,76 +932,6 @@ github_skip_forks: true</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/28/install-again/">install again</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>something new:  <br />
-install git:</p>
-
-<pre><code>sudo apt-get install git
-</code></pre>
-
-<p>don’t install from ppa anymore.  <br />
-install rvm: run the command from official website,the latest version,maybe not the stable version.  <br />
-install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.  <br />
-<code>rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/28/install-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -955,6 +963,8 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <ul class="content-ul" recent>
                     
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                    
+                        <li><a href="/2024/02/19/day-110/">Day 110：寒门再难出贵子</a></li>
                     
                         <li><a href="/2024/02/17/day-109/">Day 109：过年期间遇到的让我不开心的人和事</a></li>
                     
@@ -1012,8 +1022,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
                     
-                        <li><a href="/2023/12/30/day-83/">Day 83：修心修德</a></li>
-                    
                 </ul>
             </div>
 
@@ -1039,7 +1047,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">324</span>
+                            <span class="badge">325</span>
                         </a>
                     </li>
                     
