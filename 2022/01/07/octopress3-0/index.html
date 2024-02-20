@@ -229,10 +229,10 @@
         <h3 id="注意下面的有些步骤不适合">注意，下面的有些步骤不适合</h3>
 <h4 id="先到jekyll官网用它的方法安装好本地博客再看几个octopress30的教程比如官方github的和博文1octopress-3-arrives-to-make-blog-generation-crazy-simple--安装octopress用它来上传blog结合下面的前面几步gitrvmrubybundlerbundle-installor-bundle">先到jekyll官网，用它的方法安装好本地博客，再看几个octopress3.0的教程，比如官方github的和<a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a>  ，安装octopress，用它来上传blog，结合下面的前面几步，git，rvm，ruby，bundler，bundle install(or bundle)</h4>
 
-<p>重装octopress 2.0 博客失败<br />
-很多新旧的软件，依赖，都不兼容了<br />
-算了，世界在发展，有的旧事物必然被淘汰<br />
-毕竟连作者都不维护了<br />
+<p>重装octopress 2.0 博客失败  <br />
+很多新旧的软件，依赖，都不兼容了  <br />
+算了，世界在发展，有的旧事物必然被淘汰  <br />
+毕竟连作者都不维护了  <br />
 而且连3.0都不维护了</p>
 
 <p>============================</p>
@@ -243,46 +243,46 @@
 
 <!--more-->
 
-<p>安装git<br />
-设置好用户名，email等等，参见之前的blog<br />
-添加ssh钥匙到github<br />
-安装rvm<br />
-安装ruby 2.7.0,好像默认就是<br />
-<a href="https://blog.csdn.net/qq_41988167/article/details/106202868">修复安装2.2.6失败的教程</a><br />
+<p>安装git  <br />
+设置好用户名，email等等，参见之前的blog  <br />
+添加ssh钥匙到github  <br />
+安装rvm  <br />
+安装ruby 2.7.0,好像默认就是  <br />
+<a href="https://blog.csdn.net/qq_41988167/article/details/106202868">修复安装2.2.6失败的教程</a>  <br />
 安装octopress</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install octopress
-</code></pre></div></div>
+<pre><code>gem install octopress
+</code></pre>
 
 <p>创建博客的主文件夹</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new haydnyau #名字自取
-</code></pre></div></div>
+<pre><code>octopress new haydnyau #名字自取
+</code></pre>
 
 <p>新建一篇blog</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new post hello world
-</code></pre></div></div>
+<pre><code>octopress new post hello world
+</code></pre>
 
 <p>生成网页</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
-</code></pre></div></div>
+<pre><code>jekyll build
+</code></pre>
 
 <p>为避免下面的错误：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
-</code></pre></div></div>
+<pre><code>sudo bundle add webrick
+</code></pre>
 
 <p>本地预览</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
-</code></pre></div></div>
+<pre><code>jekyll serve
+</code></pre>
 
 <h3 id="可能会报错参见此blog"><a href="https://github.com/jekyll/jekyll/issues/8523">可能会报错,参见此blog</a></h3>
 <p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEOrm72ctF5gw0aqWv21aZeNSASWKMfjZMh4q6GkEqIeM78CkO7o4O*iqGXdxCboPoKIKO9drAx052jTS2quUV58!/r" alt="jekyll serve, cannot load such file -- webrick (LoadError)" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle exec jekyll serve
+<pre><code>dong@Ubuntu:~/haydnyau$ bundle exec jekyll serve
 Configuration file: /home/dong/haydnyau/_config.yml
             Source: /home/dong/haydnyau
        Destination: /home/dong/haydnyau/_site
@@ -315,7 +315,7 @@ Configuration file: /home/dong/haydnyau/_config.yml
 	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `eval'
 	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;'
 dong@Ubuntu:~/haydnyau$ 
-</code></pre></div></div>
+</code></pre>
 
 <p>原因：</p>
 <h3 id="回答1">回答1：</h3>
@@ -332,20 +332,20 @@ dong@Ubuntu:~/haydnyau$
   </ul>
 </blockquote>
 
-<p>Adding <code class="language-plaintext highlighter-rouge">gem "webrick"</code> to my Gemfile solves the problem, but Jekyll should include it in its gemspec.</p>
+<p>Adding <code>gem "webrick"</code> to my Gemfile solves the problem, but Jekyll should include it in its gemspec.</p>
 
 <h2 id="回答2">回答2：</h2>
 
-<p>I think you want run: <code class="language-plaintext highlighter-rouge">bundle add webrick</code>.</p>
+<p>I think you want run: <code>bundle add webrick</code>.</p>
 
 <p>我运行：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo bundle add webrick
-</code></pre></div></div>
+<pre><code>sudo bundle add webrick
+</code></pre>
 
 <p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEBN4rGxoHZRJvba1HYTQq27ffRKlLPwSuElBnQsx8myUeNz3PvYmrJfIi3*2TZPi9OuuBIJmyilHvC5IQwNqaYw!/r" alt="sudo bundle add webrick" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/haydnyau$ bundle add webrick
+<pre><code>dong@Ubuntu:~/haydnyau$ bundle add webrick
 Fetching gem metadata from https://rubygems.org/.........
 Resolving dependencies...
 Fetching gem metadata from https://rubygems.org/.........
@@ -383,91 +383,91 @@ Using jekyll-feed 0.16.0
 Using jekyll-seo-tag 2.7.1
 Using minima 2.5.1
 dong@Ubuntu:~/haydnyau$ 
-</code></pre></div></div>
+</code></pre>
 
 <p>问题解决</p>
 
-<p>解决前后的Gemfile文件：<br />
-<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEJRCIzYAaW3bXX8u6*IVJZ.XtCdPn6AvRrMkapg1VV.CqGful*eQepRFyH0ztMqVtAXon32yueiaIigulllP3VI!/r" alt="Genfile，前" /><br />
+<p>解决前后的Gemfile文件：  <br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEJRCIzYAaW3bXX8u6*IVJZ.XtCdPn6AvRrMkapg1VV.CqGful*eQepRFyH0ztMqVtAXon32yueiaIigulllP3VI!/r" alt="Genfile，前" />  <br />
 <img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrECtxM1XJmWMiuXm2sA41EdXEaIr2GF1uWWNzSBr7KU5QsmUQqXrNTxgBvdf2nvM66ZFdRT4*rwlgIb3LIswYiAo!/r" alt="Genfile，后" /></p>
 
 <p>生成发布配置文件</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
-</code></pre></div></div>
+<pre><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
+</code></pre>
 
 <p>发布</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy
-</code></pre></div></div>
+<pre><code>octopress deploy
+</code></pre>
 
 <p>git上传</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+<pre><code>git init
 git add .
-</code></pre></div></div>
+</code></pre>
 
-<p>还有的以后琢磨<br />
+<p>还有的以后琢磨  <br />
 买个早餐，吃饱，睡觉</p>
 
 <p>===================================================</p>
 <h1 id="下面的是详细一点但有点杂乱的若已经创建好不必要看">下面的是详细一点但有点杂乱的，若已经创建好，不必要看</h1>
 <p>===================================================</p>
 
-<p>欢迎来到octopress3.0<br />
-折腾两三天了<br />
-先简单说说吧，详细的自己再琢磨<br />
-安装以下的：<br />
-git，设置好用户名，email等等，参见之前的blog<br />
-添加ssh钥匙到github<br />
-安装rvm<br />
+<p>欢迎来到octopress3.0  <br />
+折腾两三天了  <br />
+先简单说说吧，详细的自己再琢磨  <br />
+安装以下的：  <br />
+git，设置好用户名，email等等，参见之前的blog  <br />
+添加ssh钥匙到github  <br />
+安装rvm  <br />
 安装ruby</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ rvm install 3.1.0
+<pre><code>dong@Ubuntu:~$ rvm install 3.1.0
 dong@Ubuntu:~$ rvm use 3.1.0
 dong@Ubuntu:~$ rvm rubygems latest
-</code></pre></div></div>
+</code></pre>
 
 <p>install the Octopress gem. From your terminal:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~$ gem install octopress
-</code></pre></div></div>
+<pre><code>dong@Ubuntu:~$ gem install octopress
+</code></pre>
 
-<p>And with that, you have Octopress installed!<br />
-Blog Creation<br />
+<p>And with that, you have Octopress installed!  <br />
+Blog Creation  <br />
 Getting up and running is easy with the new Octopress CLI commands. Navigate to your working directory and run the command below:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new haydnyau 
-</code></pre></div></div>
+<pre><code>octopress new haydnyau 
+</code></pre>
 
 <p>This will create a directory named <strong>haydnyau</strong> with scaffolding for the website. Replace “haydnyau” with whatever you want to call your blog. Navigate to the newly crewated directory and open up your text editor to see what you have.</p>
 
-<p>Creating a Post<br />
+<p>Creating a Post  <br />
 We can create a new post using one of the Octopress CLI commands:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress new post hello world
-</code></pre></div></div>
+<pre><code>octopress new post hello world
+</code></pre>
 
 <p>This command creates a new blog post with the title <strong>hello world</strong>. You can obviously use any title of your choice. The post is created in the <strong>_posts</strong> directory.</p>
 
-<p>Viewing the Site<br />
+<p>Viewing the Site  <br />
 Before the site can be viewed it has to be built. Since Octopress is a wrapper around Jekyll, we will use the command below to build:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
-</code></pre></div></div>
+<pre><code>jekyll build
+</code></pre>
 
 <p>That will build a static HTML website that can be found in the _site directory. This is built out of the markdown files for pages, posts, stylesheets, and config.</p>
 
 <p>To view the site run the command below from your terminal:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
-</code></pre></div></div>
+<pre><code>jekyll serve
+</code></pre>
 
-<p>Then, point your browser to the address <strong>localhost:4000</strong>.<br />
-Configuration<br />
+<p>Then, point your browser to the address <strong>localhost:4000</strong>.  <br />
+Configuration  <br />
 Octopress has a configuration file where you manage the settings for the website. This is the <strong>_config.yml</strong> file located in the home directory of the site. Here is an example of what it looks like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Site settings
+<pre><code># Site settings
 title: Your awesome title
 email: your-email@domain.com
 description: &gt; # this means to ignore newlines until "baseurl:"
@@ -481,23 +481,23 @@ github_username:  jekyll
 	
 # Build settings
 markdown: kramdown
-</code></pre></div></div>
+</code></pre>
 
 <p>From the configuration file, you can add your Twitter and Github usernames. They will show up at the bottom of your page, along with the description. Feel free to edit the settings as desired by adding the necessary information. You will have to restart your server for the configuration changes to show up in your browser. You can stop the server by pressing CTRL+C.</p>
 
-<p>Deploying to GitHub Pages<br />
+<p>Deploying to GitHub Pages  <br />
 We will be hosting our blog on GitHub. Create an account if you do not have one yet.</p>
 
 <p>Create a new repository, give it a name in this format; <strong>username.github.com</strong>, replacing <strong>username</strong> with your Github username. Mine looks like this <strong>haydnyau.github.com</strong>.</p>
 
 <p>Generate the deployment configuration file for our blog using octopress deploy init command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
-</code></pre></div></div>
+<pre><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
+</code></pre>
 
 <p>This generates a file called _deploy.yml, which contains the deployment configuration:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>method: git                               # How do you want to deploy? git, rsync or s3.
+<pre><code>method: git                               # How do you want to deploy? git, rsync or s3.
 site_dir: _site                           # Location of your static site files.
 
 git_url: git@github.com:kinsomicrote/kinsomicrote.github.io  # remote repository url, e.g. git@github.com:username/repo_name
@@ -510,12 +510,12 @@ git_branch: master                        # Git branch where static site files a
 
 
 # remote_path:                            # Destination directory
-</code></pre></div></div>
+</code></pre>
 
 <p>Now deploy!</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>octopress deploy
-</code></pre></div></div>
+<pre><code>octopress deploy
+</code></pre>
 
 
         </article>
@@ -529,7 +529,7 @@ git_branch: master                        # Git branch where static site files a
     <div class="nex">
 
         
-        <p><strong>下一篇</strong> <a href="/2022/01/07/change-templates-post-if-error/">更改了文件_templates/post，以后若出错改回来</a></p>
+        <p><strong>下一篇</strong> <a href="/2022/01/07/change-templates--post-if-error/">更改了文件_templates/post，以后若出错改回来</a></p>
         
     </div>
 </div>
@@ -551,6 +551,8 @@ git_branch: master                        # Git branch where static site files a
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/02/20/day-111/">Day 111：气度、情商</a></li>
                     
@@ -610,8 +612,6 @@ git_branch: master                        # Git branch where static site files a
                     
                         <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
                     
-                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
-                    
                 </ul>
             </div>
 
@@ -637,7 +637,7 @@ git_branch: master                        # Git branch where static site files a
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">325</span>
+                            <span class="badge">326</span>
                         </a>
                     </li>
                     
@@ -660,9 +660,9 @@ git_branch: master                        # Git branch where static site files a
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -690,7 +690,45 @@ git_branch: master                        # Git branch where static site files a
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -698,6 +736,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -705,6 +747,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -712,6 +758,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -719,6 +769,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -726,6 +780,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -733,6 +791,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -740,6 +802,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -747,6 +813,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -754,6 +824,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -761,6 +835,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -768,6 +846,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -775,6 +857,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -782,6 +868,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -789,6 +879,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -796,6 +890,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -803,6 +901,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -810,6 +912,10 @@ git_branch: master                        # Git branch where static site files a
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     

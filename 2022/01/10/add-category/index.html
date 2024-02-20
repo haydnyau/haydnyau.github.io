@@ -230,11 +230,11 @@
 
 <h2 id="step-1">Step 1</h2>
 
-<h3 id="添加-category_list-插件">添加 <code class="language-plaintext highlighter-rouge">category_list</code> 插件</h3>
+<h3 id="添加-category_list-插件">添加 <code>category_list</code> 插件</h3>
 
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
+<p>在 <code>octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code>category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Jekyll
+<pre><code>module Jekyll
   class CategoryListTag &lt; Liquid::Tag
     def render(context)
       html = ""
@@ -251,35 +251,35 @@
 end
 
 Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
-</code></pre></div></div>
+</code></pre>
 
-<p>这个插件会向<code class="language-plaintext highlighter-rouge">liquid</code>注册一个名为<code class="language-plaintext highlighter-rouge">category_list</code>的<code class="language-plaintext highlighter-rouge">tag</code>，该<code class="language-plaintext highlighter-rouge">tag</code>就是以<code class="language-plaintext highlighter-rouge">li</code>的形式将站点所有的<code class="language-plaintext highlighter-rouge">category</code>组织起来。如果要将<code class="language-plaintext highlighter-rouge">category</code>加入到侧边导航栏，需要增加一个<code class="language-plaintext highlighter-rouge">aside</code>。</p>
+<p>这个插件会向<code>liquid</code>注册一个名为<code>category_list</code>的<code>tag</code>，该<code>tag</code>就是以<code>li</code>的形式将站点所有的<code>category</code>组织起来。如果要将<code>category</code>加入到侧边导航栏，需要增加一个<code>aside</code>。</p>
 
 <h2 id="step-2">Step 2</h2>
 
-<h3 id="增加-aside">增加 <code class="language-plaintext highlighter-rouge">aside</code></h3>
+<h3 id="增加-aside">增加 <code>aside</code></h3>
 
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list.html</code> 。并粘贴下面的代码：</p>
+<p>在 <code>octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code>category_list.html</code> 。并粘贴下面的代码：</p>
 
-<p><strong>注意</strong>： 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的2个 <code class="language-plaintext highlighter-rouge">\</code><br />
-这里如果不加上<code class="language-plaintext highlighter-rouge">\</code>，markdown格式会显示<code class="language-plaintext highlighter-rouge">category_list</code>的内容。我是为了正确显示代码才加上的</p>
+<p><strong>注意</strong>： 去掉 <code>%</code> 前面的2个 <code>\</code>  <br />
+这里如果不加上<code>\</code>，markdown格式会显示<code>category_list</code>的内容。我是为了正确显示代码才加上的</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
+<pre><code>&lt;section&gt;
   &lt;h1&gt;Categories&lt;/h1&gt;
   &lt;ul id="categories"&gt;
     {\% category_list \%}
   &lt;/ul&gt;
 &lt;/section&gt;
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="step-3">Step 3</h2>
 
-<h3 id="_configyml-文件-修改-default_asides"><code class="language-plaintext highlighter-rouge">_config.yml</code> 文件 ，修改 <code class="language-plaintext highlighter-rouge">default_asides</code></h3>
+<h3 id="_configyml-文件-修改-default_asides"><code>_config.yml</code> 文件 ，修改 <code>default_asides</code></h3>
 
-<p>打开 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 文件，修改里面的 <code class="language-plaintext highlighter-rouge">default_asides</code> 这一行，将 <code class="language-plaintext highlighter-rouge">asides/category_list.html</code> 添加进去。</p>
+<p>打开 <code>octopress\_config.yml</code> 文件，修改里面的 <code>default_asides</code> 这一行，将 <code>asides/category_list.html</code> 添加进去。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [asides/category_list.html, ......]
-</code></pre></div></div>
+<pre><code>default_asides: [asides/category_list.html, ......]
+</code></pre>
 
 <p>这里可以修改侧边栏的顺序</p>
 
@@ -321,6 +321,8 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/02/20/day-111/">Day 111：气度、情商</a></li>
                     
@@ -380,8 +382,6 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     
                         <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
                     
-                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
-                    
                 </ul>
             </div>
 
@@ -407,7 +407,7 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">325</span>
+                            <span class="badge">326</span>
                         </a>
                     </li>
                     
@@ -430,9 +430,9 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -460,7 +460,45 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -468,6 +506,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -475,6 +517,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -482,6 +528,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -489,6 +539,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -496,6 +550,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -503,6 +561,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -510,6 +572,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -517,6 +583,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -524,6 +594,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -531,6 +605,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -538,6 +616,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -545,6 +627,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -552,6 +638,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -559,6 +649,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -566,6 +660,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -573,6 +671,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -580,6 +682,10 @@ Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Octopress2.0 自动打开文件 插入本地图片 程序</title>
-    <meta name="description" content="教程添加功能：自动打开文件编辑rake new_post["file name"] 后自动打开博客文件编辑Rakefile文件，上面位置，添加定义：	editor = "gedit"然后在new_post命令后面添加：if #{editor}  system "#{editor} #{filename}"end插...">
+    <meta name="description" content="教程添加功能：自动打开文件编辑rake new_post["file name"] 后自动打开博客文件  编辑Rakefile文件，上面位置，添加定义：	editor = "gedit"然后在new_post命令后面添加：if #{editor}  system "#{editor} #{filename}"en...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -226,18 +226,18 @@
         <p><a href="http://blog.lessfun.com/blog/2013/12/05/config-the-octopress-blog-after-deployed/">教程</a></p>
 
 <h3 id="添加功能自动打开文件编辑">添加功能：自动打开文件编辑</h3>
-<p><code class="language-plaintext highlighter-rouge">rake new_post["file name"]</code> 后自动打开博客文件<br />
-编辑<code class="language-plaintext highlighter-rouge">Rakefile</code>文件，上面位置，添加定义：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	editor = "gedit"
-</code></pre></div></div>
-<p>然后在<code class="language-plaintext highlighter-rouge">new_post</code>命令后面添加：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if #{editor}
+<p><code>rake new_post["file name"]</code> 后自动打开博客文件  <br />
+编辑<code>Rakefile</code>文件，上面位置，添加定义：</p>
+<pre><code>	editor = "gedit"
+</code></pre>
+<p>然后在<code>new_post</code>命令后面添加：</p>
+<pre><code>if #{editor}
   system "#{editor} #{filename}"
 end
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="插入本地图片">插入本地图片</h3>
-<p>将图片放到<code class="language-plaintext highlighter-rouge">octopress/source/images/</code>下，然后在Markdown文件中可直接引用，用法：</p>
+<p>将图片放到<code>octopress/source/images/</code>下，然后在Markdown文件中可直接引用，用法：</p>
 
 <p><img src="https://qiuhaidong.github.io/images/%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80-%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87-%E7%A8%8B%E5%BA%8F.png" alt="语法冲突，不能显示正确代码，看图片" /></p>
 
@@ -245,13 +245,13 @@ end
 
 <h4 id="前后行3个显示代码且有显示行数">前后行3个```显示代码，且有显示行数</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c++
+<pre><code>c++
 int main()
 {
 	cout&lt;&lt;"hello world"&lt;&lt;endl;
 };
 
-</code></pre></div></div>
+</code></pre>
 
 
         </article>
@@ -287,6 +287,8 @@ int main()
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/02/20/day-111/">Day 111：气度、情商</a></li>
                     
@@ -346,8 +348,6 @@ int main()
                     
                         <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
                     
-                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
-                    
                 </ul>
             </div>
 
@@ -373,7 +373,7 @@ int main()
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">325</span>
+                            <span class="badge">326</span>
                         </a>
                     </li>
                     
@@ -396,9 +396,9 @@ int main()
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -426,7 +426,45 @@ int main()
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -434,6 +472,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -441,6 +483,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -448,6 +494,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -455,6 +505,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -462,6 +516,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -469,6 +527,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -476,6 +538,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -483,6 +549,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -490,6 +560,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -497,6 +571,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -504,6 +582,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -511,6 +593,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -518,6 +604,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -525,6 +615,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -532,6 +626,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -539,6 +637,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -546,6 +648,10 @@ int main()
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     

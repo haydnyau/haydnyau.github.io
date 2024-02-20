@@ -177,6 +177,75 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2013/10/07/error-Could-not-find-syntax-1.0.0-in-any-of-the-sources/">Error: Could not find syntax-1.0.0 in any of the sources</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2013-10-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h4 id="if-cout">if cout«</h4>
+
+<pre><code>Could not find syntax-1.0.0 in any of the sources
+Run `bundle install` to install missing gems.
+</code></pre>
+
+<h4 id="run">run</h4>
+<pre><code>rvm use 1.9.3
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2013/10/07/error-Could-not-find-syntax-1.0.0-in-any-of-the-sources/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2013/06/06/markdown-yu-fa/">Markdown语法简明手册</a>
                 </h2>
                 <div class="label">
@@ -262,7 +331,7 @@
 
 <p>示例：</p>
 
-<p>第一行(此行最右有两个看不见的空格)<br />
+<p>第一行(此行最右有两个看不见的空格)  <br />
 第二行</p>
 
 <h3 id="5-使用---表示无序列表">5. 使用 *，+，- 表示无序列表</h3>
@@ -297,14 +366,14 @@
 
 <p>示例：</p>
 
-<p>让我们聊聊 <code class="language-plaintext highlighter-rouge">html</code></p>
+<p>让我们聊聊 <code>html</code></p>
 
 <h3 id="9--使用-四个缩进空格-表示代码块">9.  使用 四个缩进空格 表示代码块</h3>
 
 <p>示例：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>这是一个代码块，此行左侧有四个不可见的空格
-</code></pre></div></div>
+<pre><code>这是一个代码块，此行左侧有四个不可见的空格
+</code></pre>
 
 <h3 id="10--使用-描述图片链接地址-插入图像">10.  使用 ![描述](图片链接地址) 插入图像</h3>
 
@@ -317,6 +386,7 @@
 <p>示例：</p>
 
 <p><del>删除线</del></p>
+
 
                 </div>
                 <div class="read-all">
@@ -380,10 +450,10 @@
 
 <h3 id="install-git">Install Git</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>don't need anymore: sudo apt-add-repository ppa:git-core/ppa
+<pre><code>don't need anymore: sudo apt-add-repository ppa:git-core/ppa
 don't need anymore: sudo apt-get update
 sudo apt-get install git
-</code></pre></div></div>
+</code></pre>
 
 <p>然后就应该跳到后面的<strong>Before Deploying to Github Pages, Set Up Git</strong></p>
 
@@ -391,13 +461,13 @@ sudo apt-get install git
 
 <p><strong>Install RVM:</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>don't need anymore: curl -L https://get.rvm.io | bash -s stable --ruby
+<pre><code>don't need anymore: curl -L https://get.rvm.io | bash -s stable --ruby
 use this: 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
-</code></pre></div></div>
+</code></pre>
 
-<p>maybe there is some other command come out, and it may ask you to run it, follow it, run: <code class="language-plaintext highlighter-rouge">curl -sSL https://get.rvm.io | bash -s stable</code>again. then it should be successed.</p>
+<p>maybe there is some other command come out, and it may ask you to run it, follow it, run: <code>curl -sSL https://get.rvm.io | bash -s stable</code>again. then it should be successed.</p>
 
 <p><em>Be sure to <strong>follow</strong> any subsequent instructions as guided by the installation process.</em></p>
 
@@ -407,53 +477,53 @@ curl -sSL https://get.rvm.io | bash -s stable
 
 <p>check for the curent (latest) version on the official website</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.3.1
+<pre><code>rvm install 2.3.1
 rvm use 2.3.1
 rvm rubygems latest
-</code></pre></div></div>
+</code></pre>
 
-<p>Run<code class="language-plaintext highlighter-rouge">ruby --version</code>to be sure you’re using Ruby 2.3.1</p>
+<p>Run<code>ruby --version</code>to be sure you’re using Ruby 2.3.1</p>
 
 <h3 id="setup-octopress">Setup Octopress</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>no more:  git clone git://github.com/imathis/octopress.git octopress
+<pre><code>no more:  git clone git://github.com/imathis/octopress.git octopress
 git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
 cd octopress    # If you use RVM, You'll be asked if you trust the .rvmrc file (say yes).
 ruby --version  # Should report Ruby 1.9.3
-</code></pre></div></div>
+</code></pre>
 
 <p>git octopress</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
-</code></pre></div></div>
+<pre><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
+</code></pre>
 
 <p>if:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@Ubuntu:~/octopress$ git clone git@github.com:username/repositoryname.git _deploy
+<pre><code>dong@Ubuntu:~/octopress$ git clone git@github.com:username/repositoryname.git _deploy
 正克隆到 '_deploy'...
 ERROR: Repository not found.
 fatal: 无法读取远程仓库。
 
 请确认您有正确的访问权限并且仓库存在。
-</code></pre></div></div>
+</code></pre>
 <p><a href="https://qiuhaidong.github.io/blog/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">github官方访问权限认证方式更改ssh to https</a></p>
 
 <p>Next, install dependencies</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+<pre><code>gem install bundler
 sudo apt-get install rbenv
 rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
 bundle install
-</code></pre></div></div>
+</code></pre>
 
 <p>Install the default Octopress theme.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake install
-</code></pre></div></div>
+<pre><code>rake install
+</code></pre>
 
 <h3 id="next-steps">Next Steps</h3>
 
-<p><strong>1. Set up deployment</strong><br />
-<strong>2. Configure your blog</strong><br />
+<p><strong>1. Set up deployment</strong>  <br />
+<strong>2. Configure your blog</strong>  <br />
 <strong>3. Start blogging with Octopress</strong></p>
 
 <h2 id="deploying-to-github-pages">Deploying to Github Pages</h2>
@@ -464,27 +534,27 @@ bundle install
 
 <p>First you need to tell git your name, so that it can properly label the commits you make.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "Your Name Here"
+<pre><code>git config --global user.name "Your Name Here"
 我的就是：git config --global user.name "qiuhaidong"
 # Sets the default name for git to use when you commit
-</code></pre></div></div>
+</code></pre>
 
 <p><strong>Email</strong></p>
 
 <p>Git saves your email address into the commits you make. We use the email address to associate your commits with your GitHub account.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.email "your_email@example.com"
+<pre><code>git config --global user.email "your_email@example.com"
 我的就是：git config --global user.email "690982322@qq.com"
 # Sets the default email for git to use when you commit
-</code></pre></div></div>
+</code></pre>
 
 <p><strong>Password caching</strong></p>
 
 <p>To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global credential.helper cache
+<pre><code>git config --global credential.helper cache
 # Set git to use the credential memory cache
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="generating-ssh-keys">Generating SSH Keys</h2>
 
@@ -492,9 +562,9 @@ bundle install
 
 <p>First, we need to check for existing ssh keys on your computer. Open up Terminal and run:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.ssh
+<pre><code>cd ~/.ssh
 # Checks to see if there is a directory named ".ssh" in your user directory
-</code></pre></div></div>
+</code></pre>
 
 <p>If it says “No such file or directory” go to <strong>step 2</strong>. Otherwise, you already have an existing keypair, and you can skip to <strong>step 3</strong>.</p>
 
@@ -504,28 +574,28 @@ bundle install
 
 <p>To generate a new SSH key, enter the code below. We want the default settings so when asked to enter a file in which to save the key, just press enter.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -C "your_email@example.com"
+<pre><code>ssh-keygen -t rsa -C "your_email@example.com"
 我的就是：ssh-keygen -t rsa -C "690982322@qq.com"
-</code></pre></div></div>
+</code></pre>
 
 <p>Now you need to enter a passphrase.</p>
 
 <p>Which should give you something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your identification has been saved in /home/you/.ssh/id_rsa.
+<pre><code>Your identification has been saved in /home/you/.ssh/id_rsa.
 Your public key has been saved in /home/you/.ssh/id_rsa.pub.
 The key fingerprint is:
 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-</code></pre></div></div>
+</code></pre>
 
 <h3 id="step-3-add-your-ssh-key-to-github">Step 3: Add your SSH key to GitHub</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install xclip
+<pre><code>sudo apt-get install xclip
 # Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
 
 xclip -sel clip &lt; ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard
-</code></pre></div></div>
+</code></pre>
 
 <p><strong>Add your SSH key to GitHub</strong></p>
 
@@ -533,15 +603,15 @@ xclip -sel clip &lt; ~/.ssh/id_rsa.pub
 
 <h3 id="step-4-test-everything-out">Step 4: Test everything out</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
-</code></pre></div></div>
+<pre><code>ssh -T git@github.com
+</code></pre>
 
 <p>这里可能会还要按照提示做一下，不难，看英文做</p>
 
 <p>if cout«</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi username! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre></div></div>
+<pre><code>Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
 
 <p>If that username is correct, you’ve successfully set up your SSH key. Don’t worry about the shell access thing, you don’t want that anyway.</p>
 
@@ -549,25 +619,25 @@ xclip -sel clip &lt; ~/.ssh/id_rsa.pub
 
 <h2 id="now-go-back-todeploying-to-github-pages">Now Go Back to：Deploying to Github Pages</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake setup_github_pages
-</code></pre></div></div>
+<pre><code>rake setup_github_pages
+</code></pre>
 
 <p><strong><em>This will ask you for something</em></strong></p>
 
 <p>Next run:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate
+<pre><code>rake generate
 rake deploy
-</code></pre></div></div>
+</code></pre>
 
 <p>This will generate your blog, copy the generated files into _deploy/, add them to git, commit and push them up to the master branch. In a few seconds you should get an email from Github telling you that your commit has been received and will be published on your site.</p>
 
 <p><strong><em>Don’t forget</em></strong> to commit the source for your blog.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .           # don't forget the "."
+<pre><code>git add .           # don't forget the "."
 git commit -m 'your message'
 git push origin source
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="configuring-octopress">Configuring Octopress</h2>
 
@@ -575,7 +645,7 @@ git push origin source
 
 <h3 id="main-configs">Main Configs</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url:                # For rewriting urls for RSS, etc
+<pre><code>url:                # For rewriting urls for RSS, etc
 title:              # Used in the header and title tags
 subtitle:           # A description used in the header
 author:             # Your name, for RSS, Copyright, Metadata
@@ -586,33 +656,34 @@ subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
 subscribe_email:    # Url to subscribe by email (service required)
 category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
 email:              # Email address for the RSS feed if you want it.
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="blogging-basics">Blogging Basics</h2>
 
 <h3 id="new-blog">new blog：</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake new_post["title"]
-</code></pre></div></div>
+<pre><code>rake new_post["title"]
+</code></pre>
 
 <h3 id="generate--preview生成预览">Generate &amp; Preview(生成&amp;预览)</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake generate   # Generates posts and pages into the public directory
+<pre><code>rake generate   # Generates posts and pages into the public directory
 rake watch      # Watches source/ and sass/ for changes and regenerates
 rake preview    # Watches, and mounts a webserver at http://localhost:4000
-</code></pre></div></div>
+</code></pre>
 
-<p>If you want to work on posts without publishing them, you can add a <code class="language-plaintext highlighter-rouge">published: false</code> to your post’s YAML header. You can preview these posts with <code class="language-plaintext highlighter-rouge">rake preview</code> on your local server, but they won’t get published by <code class="language-plaintext highlighter-rouge">rake generate</code>.</p>
+<p>If you want to work on posts without publishing them, you can add a <code>published: false</code> to your post’s YAML header. You can preview these posts with <code>rake preview</code> on your local server, but they won’t get published by <code>rake generate</code>.</p>
 
 <h3 id="发布">发布：</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake deploy
-</code></pre></div></div>
+<pre><code>rake deploy
+</code></pre>
 
 <h3 id="okthats-it">OK！That’s it.</h3>
 
-<p>2015-8-28<br />
+<p>2015-8-28  <br />
 <a href="http://justcoding.iteye.com/blog/1954645">这篇博文</a>讲得很好，推荐看看</p>
+
 
                 </div>
                 <div class="read-all">
@@ -650,6 +721,8 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/02/20/day-111/">Day 111：气度、情商</a></li>
                     
@@ -709,8 +782,6 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                     
                         <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
                     
-                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
-                    
                 </ul>
             </div>
 
@@ -736,7 +807,7 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">325</span>
+                            <span class="badge">326</span>
                         </a>
                     </li>
                     
@@ -759,9 +830,9 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -789,7 +860,45 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -797,6 +906,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -804,6 +917,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -811,6 +928,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -818,6 +939,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -825,6 +950,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -832,6 +961,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -839,6 +972,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -846,6 +983,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -853,6 +994,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -860,6 +1005,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -867,6 +1016,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -874,6 +1027,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -881,6 +1038,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -888,6 +1049,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -895,6 +1060,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -902,6 +1071,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -909,6 +1082,10 @@ rake preview    # Watches, and mounts a webserver at http://localhost:4000
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
