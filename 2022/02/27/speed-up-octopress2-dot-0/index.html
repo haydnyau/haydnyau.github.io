@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>加速Octopress2.0，太慢了</title>
-    <meta name="description" content="原博清理没用的服务以下修改均修改_config.yml,以下可以根据自己的需要进行去除。去除Disqus评论  打开文件找到Disqus Comments，按照下面在每一行前面加#注释掉即可# Disqus Comments#disqus_short_name: #disqus_show_comment_coun...">
+    <meta name="description" content="原博清理没用的服务以下修改均修改_config.yml,以下可以根据自己的需要进行去除。去除Disqus评论打开文件找到Disqus Comments，按照下面在每一行前面加#注释掉即可# Disqus Comments#disqus_short_name: #disqus_show_comment_count:...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -228,64 +228,64 @@
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
 <h2 id="清理没用的服务">清理没用的服务</h2>
-<p>以下修改均修改<code>_config.yml</code>,以下可以根据自己的需要进行去除。</p>
+<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
 
-<p><strong>去除Disqus评论</strong>  <br />
-打开文件找到<code>Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
+<p><strong>去除Disqus评论</strong><br />
+打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
 
-<pre><code># Disqus Comments
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
 #disqus_short_name: 
 #disqus_show_comment_count: true
-</code></pre>
+</code></pre></div></div>
 
 <p><strong>去掉Github仓库展示</strong></p>
 
-<pre><code># Github repositories
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
 #github_user: 
 #github_repo_count: 
 #github_show_profile_link: true
 #github_skip_forks: true
-</code></pre>
+</code></pre></div></div>
 
-<p><strong>去除Twitter按钮</strong>  <br />
-<strong>去除Google+相关</strong>  <br />
-<strong>去除Pinboard服务</strong>  <br />
-<strong>去除Delicious评论，去除后可能没有评论系统</strong>  <br />
+<p><strong>去除Twitter按钮</strong><br />
+<strong>去除Google+相关</strong><br />
+<strong>去除Pinboard服务</strong><br />
+<strong>去除Delicious评论，去除后可能没有评论系统</strong><br />
 <strong>去除Facebook Like</strong></p>
 
 <h2 id="替换快速的请求资源">替换快速的请求资源</h2>
 <p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
 
 <h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
-<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。  <br />
-参考如下，修改<code>source/_includes/google_analytics.html</code></p>
+<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
+参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
 
-<pre><code class="language-html"> _gaq.push(['_trackPageview']);
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
 
  (function() {
  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
  ga.src='http://droidyue-tools.qiniudn.com/ga.js';
  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
  })();
-   &lt;/script&gt;
-</code></pre>
+   <span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
 
 <h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
-<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code>fonts.useso.com</code>替换<code>fonts.googleapis.com</code>。  <br />
-修改文件<code>/source/_includes/custom/head.html</code></p>
+<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
+修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
 
-<pre><code class="language-html"> &lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
-&lt;link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
-&lt;link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
 <h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
-<p>修改<code>source/_includes/head.html</code></p>
+<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
 
-<pre><code class="language-html">&lt;script src="//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))&lt;/script&gt;
-&lt;script src="/javascripts/octopress.js" type="text/javascript"&gt;&lt;/script&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">&amp;&amp;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">unescape</span><span class="p">(</span><span class="dl">'</span><span class="s1">%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E</span><span class="dl">'</span><span class="p">))</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/octopress.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
 
 <h3 id="總結">總結</h3>
 
@@ -324,8 +324,6 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
-                    
-                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2024/03/19/stock-market/">股市</a></li>
                     
@@ -385,6 +383,8 @@
                     
                         <li><a href="/2024/01/02/day-84/">Day 84</a></li>
                     
+                        <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
+                    
                 </ul>
             </div>
 
@@ -410,7 +410,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">327</span>
+                            <span class="badge">326</span>
                         </a>
                     </li>
                     
@@ -433,9 +433,9 @@
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -463,45 +463,7 @@
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -509,10 +471,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -520,10 +478,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -531,10 +485,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -542,10 +492,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -553,10 +499,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -564,10 +506,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -575,10 +513,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -586,10 +520,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -597,10 +527,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -608,10 +534,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -619,10 +541,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -630,10 +548,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -641,10 +555,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -652,10 +562,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -663,10 +569,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -674,10 +576,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -685,10 +583,6 @@
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
