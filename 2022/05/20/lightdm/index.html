@@ -229,18 +229,18 @@
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <p>转载于：<a href="https://www.cnblogs.com/SimbaBao/p/5791458.html">ubuntu中lightdm以及不能看到界面的一些解决方案</a></p>
 
-<p>在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：<br />
-（1）<code class="language-plaintext highlighter-rouge">/usr/share/lightdm/lightdm.conf.d/*.conf</code><br />
-（此为系统提供的配置文件，用户不可编辑）<br />
-（2）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf.d/*.conf</code><br />
-（3）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf</code><br />
-（2、3这两个配置文件，系统管理员可以覆写）<br />
-在此之后看到了一个关于解决不能看见界面的办法：<br />
-（1）使用<code class="language-plaintext highlighter-rouge">Ctrl+alt+F1</code>，进入文本终端<br />
-（2）<code class="language-plaintext highlighter-rouge">sudo stop lightdm</code> ，停止lightdm界面<br />
-（3）<code class="language-plaintext highlighter-rouge">sudo start lightdm</code> ，开始lightdm界面<br />
-（4）<code class="language-plaintext highlighter-rouge">sudo start gdm</code> ，登录gdm管理器<br />
-（5）<code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure lightdm</code> ，设置管理器的系统默认值<br />
+<p>在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：  <br />
+（1）<code>/usr/share/lightdm/lightdm.conf.d/*.conf</code>  <br />
+（此为系统提供的配置文件，用户不可编辑）  <br />
+（2）<code>/etc/lightdm/lightdm.conf.d/*.conf</code>  <br />
+（3）<code>/etc/lightdm/lightdm.conf</code>  <br />
+（2、3这两个配置文件，系统管理员可以覆写）  <br />
+在此之后看到了一个关于解决不能看见界面的办法：  <br />
+（1）使用<code>Ctrl+alt+F1</code>，进入文本终端  <br />
+（2）<code>sudo stop lightdm</code> ，停止lightdm界面  <br />
+（3）<code>sudo start lightdm</code> ，开始lightdm界面  <br />
+（4）<code>sudo start gdm</code> ，登录gdm管理器  <br />
+（5）<code>sudo dpkg-reconfigure lightdm</code> ，设置管理器的系统默认值  <br />
 注：本文部分资料参阅https://wiki.ubuntu.com/LightDM</p>
 
         </article>
@@ -276,6 +276,12 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                    
+                        <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/04/23/day-114/">Day 114：白手起家，改变自己</a></li>
                     
                         <li><a href="/2024/04/22/day-113/">Day 113：别熬夜</a></li>
                     
@@ -331,12 +337,6 @@
                     
                         <li><a href="/2024/01/09/day-88/">Day 88</a></li>
                     
-                        <li><a href="/2024/01/08/day-87/">Day 87</a></li>
-                    
-                        <li><a href="/2024/01/08/day-86/">Day 86</a></li>
-                    
-                        <li><a href="/2024/01/07/day-85/">Day 85</a></li>
-                    
                 </ul>
             </div>
 
@@ -362,7 +362,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">328</span>
+                            <span class="badge">331</span>
                         </a>
                     </li>
                     
@@ -385,9 +385,9 @@
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -415,7 +415,45 @@
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -423,6 +461,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -430,6 +472,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -437,6 +483,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -444,6 +494,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -451,6 +505,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -458,6 +516,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -465,6 +527,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -472,6 +538,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -479,6 +549,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -486,6 +560,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -493,6 +571,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -500,6 +582,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -507,6 +593,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -514,6 +604,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -521,6 +615,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -528,6 +626,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -535,6 +637,10 @@
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
