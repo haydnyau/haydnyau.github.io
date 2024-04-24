@@ -177,6 +177,113 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/10/add-category/">侧边栏增加分类 category</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="三步">三步</h3>
+
+<h2 id="step-1">Step 1</h2>
+
+<h3 id="添加-category_list-插件">添加 <code>category_list</code> 插件</h3>
+
+<p>在 <code>octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code>category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
+
+<pre><code>module Jekyll
+  class CategoryListTag &lt; Liquid::Tag
+    def render(context)
+      html = ""
+      categories = context.registers[:site].categories.keys
+      categories.sort.each do |category|
+        posts_in_category = context.registers[:site].categories[category].size
+ 	       category_dir = context.registers[:site].config['category_dir']
+        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
+    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
+      end
+      html
+    end
+  end
+end
+
+Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
+</code></pre>
+
+<p>这个插件会向<code>liquid</code>注册一个名为<code>category_list</code>的<code>tag</code>，该<code>tag</code>就是以<code>li</code>的形式将站点所有的<code>category</code>组织起来。如果要将<code>category</code>加入到侧边导航栏，需要增加一个<code>aside</code>。</p>
+
+<h2 id="step-2">Step 2</h2>
+
+<h3 id="增加-aside">增加 <code>aside</code></h3>
+
+<p>在 <code>octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code>category_list.html</code> 。并粘贴下面的代码：</p>
+
+<p><strong>注意</strong>： 去掉 <code>%</code> 前面的2个 <code>\</code>  <br />
+这里如果不加上<code>\</code>，markdown格式会显示<code>category_list</code>的内容。我是为了正确显示代码才加上的</p>
+
+<pre><code>&lt;section&gt;
+  &lt;h1&gt;Categories&lt;/h1&gt;
+  &lt;ul id="categories"&gt;
+    {\% category_list \%}
+  &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/10/add-category/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a>
                 </h2>
                 <div class="label">
@@ -1032,79 +1139,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/11/23/JD2/">我的耳鸣，我爸的腿伤——京东打工后续</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-11-23
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在我小的时候，爸工作受伤，被木头狠狠地撞到腿，<strong>直到现在，一条腿都是严重的静脉曲张，惨不忍睹.</strong>  <br />
-<strong>那时他是什么年纪？不到40岁吧。</strong>  <br />
-我那时还小，记不清了。那时我上小学了没？一二年级？  <br />
-<strong>记不清了，只记得有次我跟在他后面，到小学旁的山上路边挖草根，药材，熬药治疗。</strong>  <br />
-<strong>那时他应该和我现在耳鸣耳聋一样的彷徨无助吧？</strong>  <br />
-<strong>或者更无助。</strong>  <br />
-<strong>一个农村中年男人，没有知识，太多东西都不懂，还背负着一个家庭的担子。受了伤，没有人能给他支持，帮助，解答，得不到妥善的处理。</strong>  <br />
-我想这次我也会永远失去一部分的听力吧，如同爸爸再也没有那条完整的腿。这是我们的宿命吗？  <br />
-还是说这是我们的父子缘？  <br />
-无怨不成夫妇，无仇不成父子。我总是抱怨爸没有知识，脾气差，性格差，很多东西都不懂，很多事情处理得一塌糊涂，给我带来巨大的阻碍。  <br />
-唉，<strong>他那个时代，注定</strong>很多人就是没有知识的，有什么办法呢？  <br />
-<strong>他能成家，养大三个儿女，供书教学，已是他的能力极限了。现在我都做不到他能做到的，我没有资格抱怨他。</strong>  <br />
-<strong>人生苦短，好好把握吧，中年人。</strong></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/11/23/JD2/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1138,6 +1172,8 @@ git add .
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/04/25/day-116/">Day 116：术与道，偶然和必然</a></li>
                     
                         <li><a href="/2024/04/23/day-115/">Day 115：破局</a></li>
                     
@@ -1193,8 +1229,6 @@ git add .
                     
                         <li><a href="/2024/01/14/day-90/">Day 90：莫言</a></li>
                     
-                        <li><a href="/2024/01/10/day-89/">Day 89</a></li>
-                    
                 </ul>
             </div>
 
@@ -1220,7 +1254,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">332</span>
+                            <span class="badge">333</span>
                         </a>
                     </li>
                     
