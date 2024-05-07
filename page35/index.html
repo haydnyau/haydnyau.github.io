@@ -230,23 +230,22 @@
                 <div class="excerpt">
                     <p>参见另一篇博文</p>
 
-<pre><code>sudo gedit /etc/default/grub
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/grub
+</code></pre></div></div>
 
 <p>更改为：(斜黑体部分)</p>
 
-<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
 GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"  
-</code></pre>
+</code></pre></div></div>
 
 <p>(东哥：13.04、16.04按Fn有效调节)</p>
 
-<pre><code>GRUB_CMDLINE_LINUX="acpi_osi= acpi_backlight=vendor"        (东哥有效12.04，20.04，22.04)
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX="acpi_osi= acpi_backlight=vendor"        (东哥有效12.04，20.04，22.04)
+</code></pre></div></div>
 
-<pre><code>sudo update-grub
-</code></pre>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-grub
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
@@ -306,9 +305,8 @@ GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>2016-11-19  <br />
+                    <p>2016-11-19<br />
 ruby version:2.2.6</p>
-
 
                 </div>
                 <div class="read-all">
@@ -368,12 +366,11 @@ ruby version:2.2.6</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>ctrl+A，格式,更改大小写  <br />
-<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/halfwidth%20and%20fullwidth%20forms/1.jpg" alt="格式" />  <br />
- 全角or半角  <br />
-<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/halfwidth%20and%20fullwidth%20forms/2.jpg" alt="全角半角" />  <br />
+                    <p>ctrl+A，格式,更改大小写<br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/halfwidth%20and%20fullwidth%20forms/1.jpg" alt="格式" /><br />
+ 全角or半角<br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/halfwidth%20and%20fullwidth%20forms/2.jpg" alt="全角半角" /><br />
 <a href="https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms">维基百科关于全角半角的介绍</a></p>
-
 
                 </div>
                 <div class="read-all">
@@ -433,8 +430,8 @@ ruby version:2.2.6</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="https://zhidao.baidu.com/question/588254618.html">原帖</a>  <br />
-<strong>DG works：</strong>  <br />
+                    <p><a href="https://zhidao.baidu.com/question/588254618.html">原帖</a><br />
+<strong>DG works：</strong><br />
 <strong>打开系统组策略编辑器就是gpedit.msc，找到“用户配置”——“Windows设置”项——脚本（注销与登录）——登录（添加，将脚本路径改为Explorer.exe的路径，如：C:\windows\Explorer.exe）即可。这样在登录时系统会再加载一次Explorer.exe就可以显示出桌面了。但也有如我的状况，gpedit.msc打不开。</strong></p>
 
 
@@ -498,7 +495,6 @@ ruby version:2.2.6</p>
                 <div class="excerpt">
                     <p>工具，选项，SQL Server 对象资源管理器，命令……</p>
 
-
                 </div>
                 <div class="read-all">
                     <a  href="/2016/11/13/sql-edit-more-than-200-item/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -561,25 +557,24 @@ ruby version:2.2.6</p>
 
 <p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
 
-<pre><code>sudo gedit /etc/default/rcS
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
 utc=yes 改成 utc=no
-</code></pre>
+</code></pre></div></div>
 
-<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！  <br />
-后来谷歌了半天找到了一个完美解决办法：  <br />
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
+后来谷歌了半天找到了一个完美解决办法：<br />
 先在ubuntu下更新一下时间，确保时间无误：</p>
 
-<pre><code>sudo apt-get install ntpdate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
 sudo ntpdate time.windows.com
-</code></pre>
+</code></pre></div></div>
 
 <p>然后将时间更新到硬件上：</p>
 
-<pre><code>sudo hwclock --localtime --systohc
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
+</code></pre></div></div>
 
 <p>重新进入windows10，发现时间恢复正常了！</p>
-
 
                 </div>
                 <div class="read-all">
@@ -639,35 +634,34 @@ sudo ntpdate time.windows.com
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>MACHINE: fish hunting  <br />
-black pan: GND  <br />
-red pan:  <br />
+                    <p>MACHINE: fish hunting<br />
+black pan: GND<br />
+red pan:<br />
 A: co1</p>
 
-<pre><code>press 100
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press 100
 	voltage change from 3.36V to almost 0V,and then come back to 3.36V
   	PRESS 10
 	3.36V,0.9V,3.36V
-</code></pre>
+</code></pre></div></div>
 
 <p>B: HP</p>
 
-<pre><code>press coin return
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
 	3.2V, 1.8V,3.2V
-</code></pre>
+</code></pre></div></div>
 
 <p>C: SSR</p>
 
-<pre><code>press coin return
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
 	5.0V, 0.48V, 5.0V
-</code></pre>
+</code></pre></div></div>
 
 <p>D: TF</p>
 
-<pre><code>press coin return
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
 	3.2V, 0V, 3.2V
-</code></pre>
-
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
@@ -729,21 +723,20 @@ A: co1</p>
                 <div class="excerpt">
                     <p>运行</p>
 
-<pre><code>dong@ubuntu:~/octopress$ gem install therubyracer  
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ gem install therubyracer  
+</code></pre></div></div>
 
 <p>报错</p>
 
-<pre><code>ERROR:  Error installing therubyracer:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing therubyracer:
 	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
-</code></pre>
+</code></pre></div></div>
 
-<p>corrupt:broken  <br />
-the package is broken  <br />
-so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem  <br />
-then redownload and reinstall  <br />
+<p>corrupt:broken<br />
+the package is broken<br />
+so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem<br />
+then redownload and reinstall<br />
 successed.</p>
-
 
                 </div>
                 <div class="read-all">
@@ -803,10 +796,9 @@ successed.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>Got a lot of nightmares on those days.  <br />
-So many bad things,bad days.  <br />
+                    <p>Got a lot of nightmares on those days.<br />
+So many bad things,bad days.<br />
 Got to carry on.</p>
-
 
                 </div>
                 <div class="read-all">
@@ -854,76 +846,76 @@ Got to carry on.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>.# ———————– #  <br />
-.#      Main Configs       #  <br />
+                    <p>.# ———————– #<br />
+.#      Main Configs       #<br />
 .# ———————– #</p>
 
-<p>url: https://qiuhaidong.github.io  <br />
-title: Haydn Yau  <br />
-subtitle:  <br />
-author: 丘海东  <br />
-simple_search: https://www.google.com/search  <br />
+<p>url: https://qiuhaidong.github.io<br />
+title: Haydn Yau<br />
+subtitle:<br />
+author: 丘海东<br />
+simple_search: https://www.google.com/search<br />
 description:</p>
 
-<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)  <br />
-.# You can customize the format as defined in  <br />
-.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime  <br />
-.# Additionally, %o will give you the ordinal representation of the day  <br />
+<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)<br />
+.# You can customize the format as defined in<br />
+.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime<br />
+.# Additionally, %o will give you the ordinal representation of the day<br />
 date_format: “ordinal”</p>
 
-<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)  <br />
-subscribe_rss: /atom.xml  <br />
-subscribe_email:  <br />
-.# RSS feeds can list your email address if you like  <br />
+<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)<br />
+subscribe_rss: /atom.xml<br />
+subscribe_email:<br />
+.# RSS feeds can list your email address if you like<br />
 email:</p>
 
-<p>.# ———————– #  <br />
-.#    Jekyll &amp; Plugins     #  <br />
+<p>.# ———————– #<br />
+.#    Jekyll &amp; Plugins     #<br />
 .# ———————– #</p>
 
-<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’  <br />
-root: /  <br />
-permalink: /blog/:year/:month/:day/:title/  <br />
-source: source  <br />
-destination: public  <br />
-plugins: plugins  <br />
-code_dir: downloads/code  <br />
-category_dir: blog/categories  <br />
-markdown: rdiscount  <br />
-rdiscount:  <br />
-  extensions:  <br />
-    - autolink  <br />
-    - footnotes  <br />
-    - smart  <br />
+<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’<br />
+root: /<br />
+permalink: /blog/:year/:month/:day/:title/<br />
+source: source<br />
+destination: public<br />
+plugins: plugins<br />
+code_dir: downloads/code<br />
+category_dir: blog/categories<br />
+markdown: rdiscount<br />
+rdiscount:<br />
+  extensions:<br />
+    - autolink<br />
+    - footnotes<br />
+    - smart<br />
 highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
 
-<p>paginate: 5                     # Posts per page on the blog index  <br />
-paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/  <br />
-recent_posts: 5               # Posts in the sidebar Recent Posts section  <br />
-excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles  <br />
+<p>paginate: 5                     # Posts per page on the blog index<br />
+paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/<br />
+recent_posts: 5               # Posts in the sidebar Recent Posts section<br />
+excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles<br />
 excerpt_separator: “<!--more-->”</p>
 
 <p>titlecase: true       # Converts page and post titles to titlecase</p>
 
-<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.  <br />
-.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’  <br />
-default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]  <br />
+<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.<br />
+.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’<br />
+default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]<br />
 .#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
 
-<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below  <br />
-.# and add an array with the asides you want to use.  <br />
-.# blog_index_asides:  <br />
-.# post_asides:  <br />
+<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below<br />
+.# and add an array with the asides you want to use.<br />
+.# blog_index_asides:<br />
+.# post_asides:<br />
 .# page_asides:</p>
 
-<p>.# ———————– #  <br />
-.#   3rd Party Settings    #  <br />
+<p>.# ———————– #<br />
+.#   3rd Party Settings    #<br />
 .# ———————– #</p>
 
-<p>.# Github repositories  <br />
-github_user: qiuhaidong  <br />
-github_repo_count: 0  <br />
-github_show_profile_link: true  <br />
+<p>.# Github repositories<br />
+github_user: qiuhaidong<br />
+github_repo_count: 0<br />
+github_show_profile_link: true<br />
 github_skip_forks: true</p>
 
 
@@ -964,9 +956,9 @@ github_skip_forks: true</p>
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                        <li><a href="/2024/05/07/test-open/">test open</a></li>
                     
-                        <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                        <li><a href="/2024/05/07/test-23-dot-10/">test 23.10</a></li>
                     
                         <li><a href="/2024/05/03/xu-jie-nu-hou/">徐杰怒吼</a></li>
                     
@@ -1072,9 +1064,9 @@ github_skip_forks: true</p>
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1102,45 +1094,7 @@ github_skip_forks: true</p>
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -1148,10 +1102,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1159,10 +1109,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1170,10 +1116,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1181,10 +1123,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1192,10 +1130,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1203,10 +1137,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1214,10 +1144,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -1225,10 +1151,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1236,10 +1158,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1247,10 +1165,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1258,10 +1172,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1269,10 +1179,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1280,10 +1186,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1291,10 +1193,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1302,10 +1200,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1313,10 +1207,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1324,10 +1214,6 @@ github_skip_forks: true</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
