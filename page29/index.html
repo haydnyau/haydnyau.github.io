@@ -181,6 +181,107 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/11/ubuntu-wifi-do-not-work/">ubuntu 安装后wifi无法使用</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-11
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="原文件是ubuntu1604安装了octopress20升级到ubuntu1804新建此文件可以运行没报错然后改成这个内容">原文件是ubuntu16.04安装了octopress2.0，升级到ubuntu18.04，新建此文件，可以运行，没报错，然后改成这个内容</h3>
+<p>首先利用<code>rfkill</code>命令查看目前无线传输设备的状态，<code>rfkill</code>是一个命令行工具，可使用它查询和更改系统中启用了RFKill的设备。</p>
+
+<p>rfkill的常用方法为:</p>
+
+<pre><code>rfkill list all
+#  获得设备列表
+
+rfkill block [index|type]
+#  通过索引或类型禁用设备
+
+rfkill unblock [index|type]
+#  通过索引或类型启用设备
+</code></pre>
+
+<p>当前设备状态如下：</p>
+
+<pre><code>rfkill list all
+输出：
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: yes
+1: acer-wireless: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+</code></pre>
+
+<p>通过rfkill启用/禁用设备无法对硬件阻塞产生作用。</p>
+
+<p>由于笔记本只有一个无线网卡，这两个模块应该是有冲突</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>使用命令lsmod</td>
+      <td>grep acer可以看出系统启动了acer_wmi模块</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>通过查找资料后，解决方法为禁用acer_wmi模块。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/11/ubuntu-wifi-do-not-work/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a>
                 </h2>
                 <div class="label">
@@ -1319,81 +1420,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/12/07/grateful/">感恩</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-12-07
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>此一時彼一時，我又回京東上班了。  <br />
-總不能閒着不做事，沒有收入是不行的。  <br />
-不過我有保護自己，現在上日班，一天只需要工作6小時，活也不是很忙，挺好的。  <br />
-<strong>保護自己</strong>呀，一定要！</p>
-<h3 id="感恩">感恩</h3>
-<p>很多時候，挺多人，都對我很好的。很照顧我，甚至我不要臉地說，他們有時簡直是寵我。  <br />
-比如老大喻胡龍，人手足夠時，叫我不用幹活，讓別人做了我的那份工作，他會罵別人，但是不會說我我。還有他老婆，給東西我吃。  <br />
-比如潤峯大哥，旁邊的人工作比我更忙，但是他卻是幫我。  <br />
-比如？韋亦凡？（音譯，不知道是不是這個名字），其實不是很熟悉，但是京東發的小零食，他經常給我吃。  <br />
-還有大劉，老李，光頭大哥，光頭二哥，肥佬，肥仔老楊，胖子……還有很多我不知道名字的人。  <br />
-所以：  <br />
-<strong>越努力越幸運</strong>。  <br />
-我是個認真做事的人，別人看在眼裏，自然在條件允許時幫助我。  <br />
--別人幫我，是證明了別人是好人，自己<strong>別得瑟</strong>，<strong>得意不忘形</strong>。  <br />
-一直以來，都是很多人幫助我，加油吧，中年人，<strong>別辜負了那麼多的善意</strong>。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/12/07/grateful/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1427,6 +1453,8 @@ git add .
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/08/28/day-127/">Day 127：精神内守，集中注意力</a></li>
                     
                         <li><a href="/2024/08/27/day-126/">Day 126：去做，去犯错，去改正</a></li>
                     
@@ -1482,8 +1510,6 @@ git add .
                     
                         <li><a href="/2024/01/30/day-102/">Day 102：好好睡觉</a></li>
                     
-                        <li><a href="/2024/01/28/day-101/">Day 101：持久战</a></li>
-                    
                 </ul>
             </div>
 
@@ -1509,7 +1535,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">344</span>
+                            <span class="badge">345</span>
                         </a>
                     </li>
                     
