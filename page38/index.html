@@ -181,85 +181,6 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/08/24/dia-on-linux/">dia on linux</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-08-24
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>DIA,流程图绘制软件  <br />
-install:</p>
-
-<pre><code>sudo apt-get install dia
-</code></pre>
-
-<p>关于输入中文:</p>
-
-<pre><code>sudo vim /usr/bin/dia
-</code></pre>
-
-<p>把<code>dia-normal --integrated "$@"</code>注释掉，在前面加<code>#</code></p>
-
-<p>在下面添加:</p>
-
-<pre><code>dia-normal "$@"
-</code></pre>
-
-<p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/dia.png" alt="dia" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/08/24/dia-on-linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
                   <a class="post-link" href="/2016/08/23/system-about-ds/">德胜系统</a>
                 </h2>
                 <div class="label">
@@ -309,9 +230,8 @@ install:</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>E51:网络没连通，线路没接好  <br />
+                    <p>E51:网络没连通，线路没接好<br />
 安装windows server 2000时，若autorun或setup都失败，有可能是被tencent qq阻止了，在任务管理器里把tencent关了就行了</p>
-
 
                 </div>
                 <div class="read-all">
@@ -371,8 +291,8 @@ install:</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>感谢教我帮我的老总和黎先生  <br />
-要用到Windows Server的ISO文件  <br />
+                    <p>感谢教我帮我的老总和黎先生<br />
+要用到Windows Server的ISO文件<br />
 管理服务器，添加角色和功能</p>
 
 <p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/windows%20server%20net/%E6%B7%BB%E5%8A%A0%E8%A7%92%E8%89%B2%E5%92%8C%E5%8A%9F%E8%83%BD.png" alt="添加角色和功能" /></p>
@@ -391,9 +311,8 @@ install:</p>
 
 <p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/windows%20server%20net/%E6%8C%87%E5%AE%9A%E5%A4%87%E7%94%A8%E6%BA%90%E8%B7%AF%E5%BE%84.png" alt="指定备用源路径" /></p>
 
-<p>\…ISO…\sources\sxs  <br />
+<p>\…ISO…\sources\sxs<br />
 done.</p>
-
 
                 </div>
                 <div class="read-all">
@@ -453,24 +372,23 @@ done.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">SSH KEYS认证方式改动</a><br />
-关于<code>git pull origin source</code>or<code>git push origin source</code>,若出错：</p>
+                    <p><a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">SSH KEYS认证方式改动</a>
+关于<code class="language-plaintext highlighter-rouge">git pull origin source</code>or<code class="language-plaintext highlighter-rouge">git push origin source</code>,若出错：</p>
 
-<pre><code>fatal: Could not read from remote repository. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal: Could not read from remote repository. 
 Please make sure you have the correct access rights and the repository exists.
-</code></pre>
+</code></pre></div></div>
 
 <p>SSH keys不用动</p>
 
-<pre><code>gedit octopress/.git/config
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
+</code></pre></div></div>
 
-<p>把<code>url = git@github.com:qiuhaidong/qiuhaidong.github.com.git</code>  <br />
-改为<code>url = https://github.com/qiuhaidong/qiuhaidong.github.com.git</code>  <br />
-<a href="http://bbs.csdn.net/topics/390909877">参见此Blog，9楼</a>  <br />
-done.  <br />
-<code>pull</code>or<code>push</code>时或会报错，但不影响功能，多用几次就好了。</p>
-
+<p>把<code class="language-plaintext highlighter-rouge">url = git@github.com:qiuhaidong/qiuhaidong.github.com.git</code><br />
+改为<code class="language-plaintext highlighter-rouge">url = https://github.com/qiuhaidong/qiuhaidong.github.com.git</code><br />
+<a href="http://bbs.csdn.net/topics/390909877">参见此Blog，9楼</a><br />
+done.<br />
+<code class="language-plaintext highlighter-rouge">pull</code>or<code class="language-plaintext highlighter-rouge">push</code>时或会报错，但不影响功能，多用几次就好了。</p>
 
                 </div>
                 <div class="read-all">
@@ -481,7 +399,7 @@ done.  <br />
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/08/20/C%23-on-Linux/">C# on Linux</a>
+                  <a class="post-link" href="/2016/08/20/C-on-Linux/">C# on Linux</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
@@ -541,30 +459,29 @@ done.  <br />
 
 <p>install mono,(mono-complete and monodevelop):</p>
 
-<pre><code>sudo apt-get install mono-complete monodevelop
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install mono-complete monodevelop
+</code></pre></div></div>
 
 <p>edit:</p>
 
-<pre><code>vim helloworld.cs
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim helloworld.cs
+</code></pre></div></div>
 
 <p>build:</p>
 
-<pre><code>mcs helloworld.cd
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mcs helloworld.cd
+</code></pre></div></div>
 
 <p>run:</p>
 
-<pre><code>./helloworld.exe
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./helloworld.exe
+</code></pre></div></div>
 
 <p>done.</p>
 
-
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/08/20/C%23-on-Linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/08/20/C-on-Linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -620,13 +537,12 @@ done.  <br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>自动登录：  <br />
-win+r：Control UserPasswords2  <br />
-Administrator  <br />
-自启动：  <br />
-win+r：shell:startup<br />
+                    <p>自动登录：<br />
+win+r：Control UserPasswords2<br />
+Administrator<br />
+自启动：<br />
+win+r：shell:startup
 文件夹已打开，把软件的快捷方式添加进去即可</p>
-
 
                 </div>
                 <div class="read-all">
@@ -689,35 +605,34 @@ win+r：shell:startup<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><code>g++ --version</code></p>
+                    <p><code class="language-plaintext highlighter-rouge">g++ --version</code></p>
 
 <p>编译：</p>
 
-<pre><code>g++ -o hello hello.cpp
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ -o hello hello.cpp
+</code></pre></div></div>
 
 <p>或：</p>
 
-<pre><code>g++ hello.cpp -o hello
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ hello.cpp -o hello
+</code></pre></div></div>
 
 <p>或：</p>
 
-<pre><code>g++ hello.cpp
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ hello.cpp
+</code></pre></div></div>
 
 <p>生成hello或a.out</p>
 
 <p>运行：</p>
 
-<pre><code>./hello
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./hello
+</code></pre></div></div>
 
 <p>或：</p>
 
-<pre><code>./a.out
-</code></pre>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./a.out
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
@@ -780,38 +695,37 @@ win+r：shell:startup<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>linux下用gcc，系统自带有，用<code>gcc --version</code>查看一下即可，若没有，安装编译环境：</p>
+                    <p>linux下用gcc，系统自带有，用<code class="language-plaintext highlighter-rouge">gcc --version</code>查看一下即可，若没有，安装编译环境：</p>
 
-<pre><code>sudo apt-get install build-essential
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install build-essential
+</code></pre></div></div>
 
 <p>新建test.c文件：</p>
 
-<pre><code>sudo gedit /…/…/…/test.c
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /…/…/…/test.c
+</code></pre></div></div>
 
 <p>然后开始编程：</p>
 
-<pre><code>#include &lt;stdio.h&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;stdio.h&gt;
 int main()
 {
     printf("hello,world!\n");
     return 0;
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>保存后编译：</p>
 
-<pre><code>gcc -o test test.c
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcc -o test test.c
+</code></pre></div></div>
 
 <p>生产可执行文件test，运行：</p>
 
-<pre><code>./test
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./test
+</code></pre></div></div>
 
 <p>完成。</p>
-
 
                 </div>
                 <div class="read-all">
@@ -881,7 +795,6 @@ int main()
   <li>天哥V5</li>
 </ul>
 
-
                 </div>
                 <div class="read-all">
                     <a  href="/2016/06/21/zhong-ruan/"><i class="fa fa-newspaper-o"></i>Read All</a>
@@ -942,8 +855,8 @@ int main()
                 <div class="excerpt">
                     <h3 id="终端执行命令">终端执行命令：</h3>
 
-<pre><code>vimtutor
-</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vimtutor
+</code></pre></div></div>
 
 <p>查看《VIM教程》</p>
 
@@ -951,20 +864,20 @@ int main()
 
 <p>光标移动：</p>
 
-<p>h：左  <br />
-j：下  <br />
-k：上  <br />
+<p>h：左<br />
+j：下<br />
+k：上<br />
 l：右</p>
 
 <h3 id="正常模式输入模式">正常模式==&gt;输入模式：</h3>
 
-<p>i：左边输入  <br />
-I：行首输入（In the front）  <br />
-a：右边输入（after）  <br />
-A：行尾输入（After）  <br />
-o：下面输入一新行  <br />
-O：上面输入一新行  <br />
-s：删除字符再输入  <br />
+<p>i：左边输入<br />
+I：行首输入（In the front）<br />
+a：右边输入（after）<br />
+A：行尾输入（After）<br />
+o：下面输入一新行<br />
+O：上面输入一新行<br />
+s：删除字符再输入<br />
 S：删除行再输入</p>
 
 <h3 id="其他模式正常模式">其他模式==&gt;正常模式：</h3>
@@ -979,7 +892,7 @@ S：删除行再输入</p>
 
 <h3 id="正常模式可视模式">正常模式==&gt;可视模式：</h3>
 
-<p>v：可视模式  <br />
+<p>v：可视模式<br />
 V:可视块模式</p>
 
 <h3 id="常用命令">常用命令：</h3>
@@ -996,6 +909,116 @@ V:可视块模式</p>
                 </div>
                 <div class="read-all">
                     <a  href="/2016/05/24/vim/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/05/21/job-hunting/">job hunting</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-05-21
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>13年11月-16年4月，在广西一家服装店工作</p>
+
+<p>说说我对几个电子产品的看法</p>
+
+<p>iPhone：<br />
+优点：<br />
+     省心<br />
+     时尚轻奢品属性<br />
+缺点：<br />
+     丑<br />
+     低屏占比<br />
+     为了降低生产难度，增加良品率，耐摔，降低返修率，2.5D的屏幕需要空间）<br />
+     最近iOS频出bug，我认为是：<br />
+     1.外界关注度高，被放大<br />
+     2.iPhone产品线增多，功能增多，系统更复杂，臃肿<br />
+     3.苹果没有了乔布斯时代的严苛要求</p>
+
+<p>三星S7：无明显的短板，漂亮，设计、工艺无可挑剔<br />
+S7 Edge：弧形屏幕的误触问题</p>
+
+<p>魅族：漂亮但没变化没惊喜</p>
+
+<p>高中低端各出一款机子，将精品路线和机海路线结合</p>
+
+<p>华为：工程师思维太重，机身设计粗犷，直接点说是粗糙，系统界面，应用图标无美感，变异的圆角矩形显得四不象，适合粗线条大心脏的用户。</p>
+
+<p>小米：<br />
+      做得最漂亮的产品是电话卡<br />
+      手机给我的感觉一直很粗糙，红米3背部的三段式设计，割裂感非常强烈，这是设计？<br />
+      最好的是塑料一体机身的4C<br />
+      在街上看到有人用米5，真机出来的质感还不错<br />
+      由此引出来一点，看图片和真机是有差别的</p>
+
+<p>扁平化做得最好的：Windows<br />
+产品理念最好的：kindle oasis<br />
+    在看kindle（￥499款）拆解文章时我就想，机身里面大部分是空的，空间很足，为什么不做窄边框？便携，省料，省包装材料，省物流成本。<br />
+    拿到手我就明白了，宽边框是必须的。拿手机和拿kindle完全不同，拿手机时，虎口扣住手机一边，四个手指扣住另一边，拇指在上面不停地操作。拿kindle时，手掌四指托在背面，拇指按住边框以拿稳，偶尔移动拇指翻页。如果把kindle边框做窄了，反而不好用了。<br />
+    两个产品的使用方式迥异，所以对边框的处理就不同。</p>
+
+<p>Kindle很清楚自己是什么，要什么，并且很好地做到了。</p>
+
+<p>所以当kindle oasis出来时，我一下子就懂了它为什么这样设计外观，并“倒退”般地增加实体翻页键。</p>
+
+<p>就凭这点，可看出kindle团队的产品理念的高明</p>
+
+<p>现在的手机真的智能么？<br />
+“能”，但不“智”。<br />
+功能多了，强大了，但智慧并没有大的体现。<br />
+智慧是什么？自己获取信息，感知信息，并处理，作出相应的动作。<br />
+在同质化越来越严重的瓶颈期，做到真正的智，将引领下一个手机时代。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/05/21/job-hunting/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -1030,9 +1053,7 @@ V:可视块模式</p>
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
-                    
-                        <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                        <li><a href="/2024/08/30/day-129/">Day 129：没有情绪</a></li>
                     
                         <li><a href="/2024/08/29/day-128/">Day 128：物以类聚，人以群分</a></li>
                     
@@ -1090,6 +1111,8 @@ V:可视块模式</p>
                     
                         <li><a href="/2024/01/31/day-103/">Day 103</a></li>
                     
+                        <li><a href="/2024/01/30/day-102/">Day 102：好好睡觉</a></li>
+                    
                 </ul>
             </div>
 
@@ -1115,7 +1138,7 @@ V:可视块模式</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">346</span>
+                            <span class="badge">345</span>
                         </a>
                     </li>
                     
@@ -1138,9 +1161,9 @@ V:可视块模式</p>
                     </li>
                     
                     <li>
-                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
                             <span class="name">
-                                only-for-you
+                                Only-For-You
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -1168,45 +1191,7 @@ V:可视块模式</p>
                     
                     
                     
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
 
-                    
-                        
                     
 
                     
@@ -1214,10 +1199,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -1225,10 +1206,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -1236,10 +1213,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -1247,10 +1220,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -1258,10 +1227,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -1269,10 +1234,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -1280,10 +1241,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -1291,10 +1248,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -1302,10 +1255,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -1313,10 +1262,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -1324,10 +1269,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -1335,10 +1276,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -1346,10 +1283,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -1357,10 +1290,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -1368,10 +1297,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -1379,10 +1304,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -1390,10 +1311,6 @@ V:可视块模式</p>
                       
                       
                       
-                        
-                      
-                      
-                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
