@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>how to ‘git’ Octopress</title>
-    <meta name="description" content="如何为已经存在于Github上的Octopress搭建本地环境大部分步骤和全新搭建时差不多，这里只列出不同的那几步···安装其他···clone source 分支：git clone -b source git@github.com:username/repositoryname.git octopress换成...">
+    <meta name="description" content="如何为已经存在于Github上的Octopress搭建本地环境  大部分步骤和全新搭建时差不多，这里只列出不同的那几步  ···安装其他···  clone source 分支：git clone -b source git@github.com:username/repositoryname.git octop...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -227,56 +227,56 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>如何为已经存在于Github上的Octopress搭建本地环境<br />
-大部分步骤和全新搭建时差不多，这里只列出不同的那几步<br />
-···安装其他···<br />
-clone <code class="language-plaintext highlighter-rouge">source</code> 分支：</p>
+        <p>如何为已经存在于Github上的Octopress搭建本地环境  <br />
+大部分步骤和全新搭建时差不多，这里只列出不同的那几步  <br />
+···安装其他···  <br />
+clone <code>source</code> 分支：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:username/repositoryname.git octopress
-</code></pre></div></div>
+<pre><code>git clone -b source git@github.com:username/repositoryname.git octopress
+</code></pre>
 
 <p>换成我的具体命令就是:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
-</code></pre></div></div>
+<pre><code>git clone -b source git@github.com:qiuhaidong/qiuhaidong.github.com.git octopress
+</code></pre>
 
-<p>clone <code class="language-plaintext highlighter-rouge">master</code> 分支：<br />
-<code class="language-plaintext highlighter-rouge">master</code> 分支存放在 <code class="language-plaintext highlighter-rouge">_deploy</code>目录</p>
+<p>clone <code>master</code> 分支：  <br />
+<code>master</code> 分支存放在 <code>_deploy</code>目录</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+<pre><code>cd octopress
 git clone git@github.com:username/repositoryname.git _deploy
-</code></pre></div></div>
+</code></pre>
 
 <p>具体命令：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
-</code></pre></div></div>
+<pre><code>git clone git@github.com:qiuhaidong/qiuhaidong.github.com.git _deploy
+</code></pre>
 
-<p>if<br />
-<a href="https://qiuhaidong.github.io/blog/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull Push</a><br />
+<p>if  <br />
+<a href="https://qiuhaidong.github.io/blog/2016/08/22/SSL-cannot-push-pull-keys-https-issue/">路径权限错误，无法pull Push</a>  <br />
 fix it:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gedit octopress/.git/config
+<pre><code>gedit octopress/.git/config
 git https://github.com/qiuhaidong/qiuhaidong.github.com.git _deploy
-</code></pre></div></div>
+</code></pre>
 
-<p>···其他步骤···<br />
-另个重要命令：<br />
+<p>···其他步骤···  <br />
+另个重要命令：  <br />
 拉取：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+<pre><code>cd octopress
 git pull origin source
 cd _deploy
 git pull origin master
-</code></pre></div></div>
+</code></pre>
 
 <p>推送：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd octopress
+<pre><code>cd octopress
 git add .
 git commit -m 'my message'
 git push origin source
-</code></pre></div></div>
+</code></pre>
 
         </article>
         <hr>
@@ -311,6 +311,12 @@ git push origin source
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
+                    
+                        <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/09/12/day-130/">Day 130：判断是否适合做生意</a></li>
                     
                         <li><a href="/2024/08/30/day-129/">Day 129：没有情绪</a></li>
                     
@@ -366,12 +372,6 @@ git push origin source
                     
                         <li><a href="/2024/02/06/day-105/">Day 105：终身事业</a></li>
                     
-                        <li><a href="/2024/02/03/day-104/">Day 104</a></li>
-                    
-                        <li><a href="/2024/01/31/day-103/">Day 103</a></li>
-                    
-                        <li><a href="/2024/01/30/day-102/">Day 102：好好睡觉</a></li>
-                    
                 </ul>
             </div>
 
@@ -397,7 +397,7 @@ git push origin source
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">345</span>
+                            <span class="badge">348</span>
                         </a>
                     </li>
                     
@@ -420,9 +420,9 @@ git push origin source
                     </li>
                     
                     <li>
-                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                        <a href="/category/#only-for-you" class="categories-list-item" cate="only-for-you">
                             <span class="name">
-                                Only-For-You
+                                only-for-you
                             </span>
                             <span class="badge">1</span>
                         </a>
@@ -450,7 +450,45 @@ git push origin source
                     
                     
                     
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
 
+                    
+                        
                     
 
                     
@@ -458,6 +496,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
                     
@@ -465,6 +507,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
                     
@@ -472,6 +518,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
                     
@@ -479,6 +529,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
                     
@@ -486,6 +540,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
                     
@@ -493,6 +551,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
@@ -500,6 +562,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
                     
@@ -507,6 +573,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
                     
@@ -514,6 +584,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
                     
@@ -521,6 +595,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
@@ -528,6 +606,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
                     
@@ -535,6 +617,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
                     
@@ -542,6 +628,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
                     
@@ -549,6 +639,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
                     
@@ -556,6 +650,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
                     
@@ -563,6 +661,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
                     
@@ -570,6 +672,10 @@ git push origin source
                       
                       
                       
+                        
+                      
+                      
+                        
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
                     
