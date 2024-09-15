@@ -181,6 +181,100 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/">Octopress 3.0 脚本运行 build  preview  deploy  push-posts .sh文件</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>preview.sh代码</p>
+
+<pre><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build #生成
+jekyll serve
+</code></pre>
+
+<p>=================================</p>
+
+<p>deploy.sh代码</p>
+
+<pre><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+octopress deploy
+</code></pre>
+
+<p>=================================</p>
+
+<p>（不行，这个会造成有些blog页面头尾显示不全）发布，并上传/_posts/源文件，deploy.sh 代码</p>
+
+<pre><code>#!/bin/sh
+cd /home/dong/haydnyau
+jekyll build
+mv _posts/ _site/
+octopress deploy
+mv _site/_posts/ .
+</code></pre>
+
+<p>注意这个点 “.”<br />
+<code>.</code> 或者 <code>./</code> 表示当前目录</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress-3-preview-deploy-push-posts-sh/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/07/change-templates--post-if-error/">更改了文件_templates/post，以后若出错改回来</a>
                 </h2>
                 <div class="label">
@@ -1173,72 +1267,6 @@ git add .
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/06/02/crash/">崩溃</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-06-02
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>刚刚楼下，有个年轻人崩溃了。  <br />
-我听到一阵激烈的嘈杂声，到阳台一看，一个年轻男人向远处走去，情绪激动，动作夸张，锤着踢着路经的墙面，喊了一句：你可以穷，我不可以……一个女生在后面跟着。  <br />
-其实今天中午，我也是很接近边缘的情绪，我妈跟我说买房的事，呵呵，没有钱，我能怎么回应？！这两年我没有工作，之前那点积蓄也用了大半了。  <br />
-我很想把这些问题都告诉她。可是，这样能带给我什么？又会带给她什么？  <br />
-还好，我选择​了沉默。  <br />
-遇到这些事情，别说话，别做事，自己走开，一个人安静地待一会。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/06/02/crash/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1272,6 +1300,8 @@ git add .
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
                     
                         <li><a href="/2024/09/14/day-132/">Day 132：调整，做减法</a></li>
                     
@@ -1327,8 +1357,6 @@ git add .
                     
                         <li><a href="/2024/02/16/day-108/">Day 108：篮球可以学到很多东西</a></li>
                     
-                        <li><a href="/2024/02/11/day-107/">Day 107：处理冲突</a></li>
-                    
                 </ul>
             </div>
 
@@ -1354,7 +1382,7 @@ git add .
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">350</span>
+                            <span class="badge">351</span>
                         </a>
                     </li>
                     
