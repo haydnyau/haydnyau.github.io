@@ -183,6 +183,251 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/01/07/octopress3-0/">创建octopress3.0简单说明</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-01-07
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="注意下面的有些步骤不适合">注意，下面的有些步骤不适合</h3>
+<h4 id="先到jekyll官网用它的方法安装好本地博客再看几个octopress30的教程比如官方github的和博文1octopress-3-arrives-to-make-blog-generation-crazy-simple--安装octopress用它来上传blog结合下面的前面几步gitrvmrubybundlerbundle-installor-bundle">先到jekyll官网，用它的方法安装好本地博客，再看几个octopress3.0的教程，比如官方github的和<a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a>  ，安装octopress，用它来上传blog，结合下面的前面几步，git，rvm，ruby，bundler，bundle install(or bundle)</h4>
+
+<p>重装octopress 2.0 博客失败  <br />
+很多新旧的软件，依赖，都不兼容了  <br />
+算了，世界在发展，有的旧事物必然被淘汰  <br />
+毕竟连作者都不维护了  <br />
+而且连3.0都不维护了</p>
+
+<p>============================</p>
+
+<p><a href="https://www.sitepoint.com/octopress-3-arrives-to-make-blog-generation-crazy-simple/">博文1，Octopress 3 Arrives to Make Blog Generation Crazy Simple</a></p>
+
+<p><a href="https://jingsam.github.io/2015/10/21/blogging-with-octopress-3-0.html">博文2，Octopress 3.0博客搭建教程</a></p>
+
+<!--more-->
+
+<p>安装git  <br />
+设置好用户名，email等等，参见之前的blog  <br />
+添加ssh钥匙到github  <br />
+安装rvm  <br />
+安装ruby 2.7.0,好像默认就是  <br />
+<a href="https://blog.csdn.net/qq_41988167/article/details/106202868">修复安装2.2.6失败的教程</a>  <br />
+安装octopress</p>
+
+<pre><code>gem install octopress
+</code></pre>
+
+<p>创建博客的主文件夹</p>
+
+<pre><code>octopress new haydnyau #名字自取
+</code></pre>
+
+<p>新建一篇blog</p>
+
+<pre><code>octopress new post hello world
+</code></pre>
+
+<p>生成网页</p>
+
+<pre><code>jekyll build
+</code></pre>
+
+<p>为避免下面的错误：</p>
+
+<pre><code>sudo bundle add webrick
+</code></pre>
+
+<p>本地预览</p>
+
+<pre><code>jekyll serve
+</code></pre>
+
+<h3 id="可能会报错参见此blog"><a href="https://github.com/jekyll/jekyll/issues/8523">可能会报错,参见此blog</a></h3>
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEOrm72ctF5gw0aqWv21aZeNSASWKMfjZMh4q6GkEqIeM78CkO7o4O*iqGXdxCboPoKIKO9drAx052jTS2quUV58!/r" alt="jekyll serve, cannot load such file -- webrick (LoadError)" /></p>
+
+<pre><code>dong@Ubuntu:~/haydnyau$ bundle exec jekyll serve
+Configuration file: /home/dong/haydnyau/_config.yml
+            Source: /home/dong/haydnyau
+       Destination: /home/dong/haydnyau/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.398 seconds.
+ Auto-regeneration: enabled for '/home/dong/haydnyau'
+                    ------------------------------------------------
+      Jekyll 4.2.1   Please append `--trace` to the `serve` command 
+                     for any additional information or backtrace. 
+                    ------------------------------------------------
+/home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve/servlet.rb:3:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `require_relative'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:179:in `setup'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:100:in `process'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /home/dong/.rvm/gems/ruby-3.1.0/gems/jekyll-4.2.1/exe/jekyll:15:in `&lt;top (required)&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `load'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/jekyll:25:in `&lt;main&gt;'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `eval'
+	from /home/dong/.rvm/gems/ruby-3.1.0/bin/ruby_executable_hooks:22:in `&lt;main&gt;'
+dong@Ubuntu:~/haydnyau$ 
+</code></pre>
+
+<p>原因：</p>
+<h3 id="回答1">回答1：</h3>
+
+<p>This happens because webrick is no longer a bundled gem in Ruby 3.0. From https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/:</p>
+
+<blockquote>
+  <ul>
+    <li>The following libraries are no longer bundled gems or standard libraries. Install the corresponding gems to use these features.</li>
+    <li>sdbm</li>
+    <li>webrick</li>
+    <li>net-telnet</li>
+    <li>xmlrpc</li>
+  </ul>
+</blockquote>
+
+<p>Adding <code>gem "webrick"</code> to my Gemfile solves the problem, but Jekyll should include it in its gemspec.</p>
+
+<h2 id="回答2">回答2：</h2>
+
+<p>I think you want run: <code>bundle add webrick</code>.</p>
+
+<p>我运行：</p>
+
+<pre><code>sudo bundle add webrick
+</code></pre>
+
+<p><img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEBN4rGxoHZRJvba1HYTQq27ffRKlLPwSuElBnQsx8myUeNz3PvYmrJfIi3*2TZPi9OuuBIJmyilHvC5IQwNqaYw!/r" alt="sudo bundle add webrick" /></p>
+
+<pre><code>dong@Ubuntu:~/haydnyau$ bundle add webrick
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Using public_suffix 4.0.6
+Using bundler 2.3.4
+Using colorator 1.1.0
+Using concurrent-ruby 1.1.9
+Using eventmachine 1.2.7
+Using http_parser.rb 0.8.0
+Using ffi 1.15.4
+Using forwardable-extended 2.6.0
+Using rb-fsevent 0.11.0
+Using rexml 3.2.5
+Using liquid 4.0.3
+Using mercenary 0.4.0
+Using rouge 3.27.0
+Using safe_yaml 1.0.5
+Using unicode-display_width 1.8.0
+Using webrick 1.7.0
+Using addressable 2.8.0
+Using sassc 2.4.0
+Using rb-inotify 0.10.1
+Using kramdown 2.3.1
+Using terminal-table 2.0.0
+Using listen 3.7.0
+Using kramdown-parser-gfm 1.1.0
+Using jekyll-sass-converter 2.1.0
+Using pathutil 0.16.2
+Using em-websocket 0.5.3
+Using i18n 1.8.11
+Using jekyll-watch 2.2.1
+Using jekyll 4.2.1
+Using jekyll-feed 0.16.0
+Using jekyll-seo-tag 2.7.1
+Using minima 2.5.1
+dong@Ubuntu:~/haydnyau$ 
+</code></pre>
+
+<p>问题解决</p>
+
+<p>解决前后的Gemfile文件：  <br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrEJRCIzYAaW3bXX8u6*IVJZ.XtCdPn6AvRrMkapg1VV.CqGful*eQepRFyH0ztMqVtAXon32yueiaIigulllP3VI!/r" alt="Genfile，前" />  <br />
+<img src="https://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF23xXMs/TmEUgtj9EK6.7V8ajmQrECtxM1XJmWMiuXm2sA41EdXEaIr2GF1uWWNzSBr7KU5QsmUQqXrNTxgBvdf2nvM66ZFdRT4*rwlgIb3LIswYiAo!/r" alt="Genfile，后" /></p>
+
+<p>生成发布配置文件</p>
+
+<pre><code>octopress deploy init git git@github.com:haydnyau/haydnyau.github.com.git
+</code></pre>
+
+<p>发布</p>
+
+<pre><code>octopress deploy
+</code></pre>
+
+<p>git上传</p>
+
+<pre><code>git init
+git add .
+</code></pre>
+
+<p>还有的以后琢磨  <br />
+买个早餐，吃饱，睡觉</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/01/07/octopress3-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/01/02/basketball-in-the-zone/">篮球境界</a>
                 </h2>
                 <div class="label">
@@ -1004,68 +1249,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2021/04/25/bai-yuan-zhi-lian/">百元之恋</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2021-04-25
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>电影《百元之恋》，她并无意外地输了比赛，但是远离了一团糟糕的过往。  <br />
-<img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEON5QcnR6oa1tj8dsSMJSkHOr3mJXuFZwt6F2mgShK.9cw58OvXA624UgnAtTBhu4W1UgCi.aQ27o2OdKNMK0VM!/r" alt="百元之恋" /></p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2021/04/25/bai-yuan-zhi-lian/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1099,6 +1282,8 @@
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2024/11/11/day-141/">Day 141</a></li>
                     
                         <li><a href="/2024/11/05/day-140/">Day 140：懒，蠢，代价很大</a></li>
                     
@@ -1154,8 +1339,6 @@
                     
                         <li><a href="/2024/04/23/day-115/">Day 115：破局</a></li>
                     
-                        <li><a href="/2024/04/23/day-114/">Day 114：白手起家，改变自己</a></li>
-                    
                 </ul>
             </div>
 
@@ -1181,7 +1364,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">358</span>
+                            <span class="badge">359</span>
                         </a>
                     </li>
                     
