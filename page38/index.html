@@ -185,6 +185,152 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/20/uninstall-and-update-command/">uninstall and update command</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-20
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <pre><code>sudo apt-get purge ***
+sudo apt-get remove ***
+sudo apt-get autoremove
+sudo apt-get clean
+sudo apt-get update
+sudo apt list --upgradable
+sudo apt upgrade
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/20/uninstall-and-update-command/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/11/19/screen-light/">屏幕亮度调节 Ubuntu13.04和16.04 screen light</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-19
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>参见另一篇博文</p>
+
+<pre><code>sudo gedit /etc/default/grub
+</code></pre>
+
+<p>更改为：(斜黑体部分)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+GRUB_CMDLINE_LINUX="***acpi_osi=Linux***"  
+</code></pre>
+
+<p>(东哥：13.04、16.04按Fn有效调节)</p>
+
+<pre><code>GRUB_CMDLINE_LINUX="acpi_osi= acpi_backlight=vendor"        (东哥有效12.04，20.04，22.04)
+</code></pre>
+
+<pre><code>sudo update-grub
+</code></pre>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/19/screen-light/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/19/ruby-version/">ruby version</a>
                 </h2>
                 <div class="label">
@@ -743,195 +889,6 @@ Got to carry on.</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/29/config-dot-yml/">config.yml</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-29
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>.# ———————– #  <br />
-.#      Main Configs       #  <br />
-.# ———————– #</p>
-
-<p>url: https://qiuhaidong.github.io  <br />
-title: Haydn Yau  <br />
-subtitle:  <br />
-author: 丘海东  <br />
-simple_search: https://www.google.com/search  <br />
-description:</p>
-
-<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)  <br />
-.# You can customize the format as defined in  <br />
-.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime  <br />
-.# Additionally, %o will give you the ordinal representation of the day  <br />
-date_format: “ordinal”</p>
-
-<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)  <br />
-subscribe_rss: /atom.xml  <br />
-subscribe_email:  <br />
-.# RSS feeds can list your email address if you like  <br />
-email:</p>
-
-<p>.# ———————– #  <br />
-.#    Jekyll &amp; Plugins     #  <br />
-.# ———————– #</p>
-
-<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’  <br />
-root: /  <br />
-permalink: /blog/:year/:month/:day/:title/  <br />
-source: source  <br />
-destination: public  <br />
-plugins: plugins  <br />
-code_dir: downloads/code  <br />
-category_dir: blog/categories  <br />
-markdown: rdiscount  <br />
-rdiscount:  <br />
-  extensions:  <br />
-    - autolink  <br />
-    - footnotes  <br />
-    - smart  <br />
-highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
-
-<p>paginate: 5                     # Posts per page on the blog index  <br />
-paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/  <br />
-recent_posts: 5               # Posts in the sidebar Recent Posts section  <br />
-excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles  <br />
-excerpt_separator: “<!--more-->”</p>
-
-<p>titlecase: true       # Converts page and post titles to titlecase</p>
-
-<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.  <br />
-.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’  <br />
-default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]  <br />
-.#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
-
-<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below  <br />
-.# and add an array with the asides you want to use.  <br />
-.# blog_index_asides:  <br />
-.# post_asides:  <br />
-.# page_asides:</p>
-
-<p>.# ———————– #  <br />
-.#   3rd Party Settings    #  <br />
-.# ———————– #</p>
-
-<p>.# Github repositories  <br />
-github_user: qiuhaidong  <br />
-github_repo_count: 0  <br />
-github_show_profile_link: true  <br />
-github_skip_forks: true</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/29/config-dot-yml/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/28/install-again/">install again</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>something new:  <br />
-install git:</p>
-
-<pre><code>sudo apt-get install git
-</code></pre>
-
-<p>don’t install from ppa anymore.  <br />
-install rvm: run the command from official website,the latest version,maybe not the stable version.  <br />
-install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.  <br />
-<code>rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/10/28/install-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -965,6 +922,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                         <li><a href="/2223/12/21/day-79/">知自己，识世界</a></li>
                     
                         <li><a href="/2124/03/19/stock-market/">股市</a></li>
+                    
+                        <li><a href="/2025/01/27/day-148/">Day 148：很多世事都是悲哀和无奈</a></li>
+                    
+                        <li><a href="/2025/01/27/day-147/">Day 147：人与人的缘分，如此的浅薄</a></li>
                     
                         <li><a href="/2024/12/23/day-146/">Day 146：获利和被套的心态、处理能力</a></li>
                     
@@ -1018,10 +979,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2024/07/03/day-121/">Day 121：远离无用信息</a></li>
                     
-                        <li><a href="/2024/06/28/day-120/">Day 120</a></li>
-                    
-                        <li><a href="/2024/06/06/day-119/">Day 119：术、势</a></li>
-                    
                 </ul>
             </div>
 
@@ -1047,7 +1004,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">364</span>
+                            <span class="badge">366</span>
                         </a>
                     </li>
                     
