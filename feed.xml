@@ -5,9 +5,36 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Apr 2025 06:47:51 +0800</pubDate>
-    <lastBuildDate>Mon, 07 Apr 2025 06:47:51 +0800</lastBuildDate>
+    <pubDate>Mon, 07 Apr 2025 07:03:17 +0800</pubDate>
+    <lastBuildDate>Mon, 07 Apr 2025 07:03:17 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>windows11和Ubuntu24.04双系统，时间不对</title>
+        <description>&lt;a href=&quot;https://blog.csdn.net/weixin_42066135/article/details/144369653&quot;&gt;新博文&lt;/a&gt;
+
+先在ubuntu下更新一下时间，确保时间无误：
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo timedatectl set-local-rtc 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 07 Apr 2025 06:59:28 +0800</pubDate>
+        <link>/2025/04/07/time-stuff-between-windows11-and-ubuntu/</link>
+        <guid isPermaLink="true">/2025/04/07/time-stuff-between-windows11-and-ubuntu/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 148：又成功了</title>
@@ -199,23 +226,6 @@
         <pubDate>Sat, 23 Nov 2024 21:47:55 +0800</pubDate>
         <link>/2024/11/23/day-143/</link>
         <guid isPermaLink="true">/2024/11/23/day-143/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Day 142：对于“苦难”</title>
-        <description>人们以为苦难会让人更为强大。&lt;br /&gt;
-但实际上，大部分人被苦难折磨得不成样子，&lt;strong&gt;懦弱，保守，浑身充满奴性&lt;/strong&gt;。&lt;br /&gt;
-真正因苦难而变强大的人，从不认为自己经受过苦难。
-</description>
-        <pubDate>Wed, 20 Nov 2024 23:19:47 +0800</pubDate>
-        <link>/2024/11/20/day-142/</link>
-        <guid isPermaLink="true">/2024/11/20/day-142/</guid>
         
         <category>daily</category>
         
