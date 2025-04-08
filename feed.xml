@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Apr 2025 03:23:35 +0800</pubDate>
-    <lastBuildDate>Wed, 09 Apr 2025 03:23:35 +0800</lastBuildDate>
+    <pubDate>Wed, 09 Apr 2025 03:43:53 +0800</pubDate>
+    <lastBuildDate>Wed, 09 Apr 2025 03:43:53 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
       <item>
@@ -23,7 +23,8 @@ git --version
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;a href=&quot;https://qiuhaidong.github.io/blog/2025/04/08/how-to-install-python-2-dot-7-on-ubuntu-24-dot-04/&quot;&gt;安装Python 2&lt;/a&gt;
+&lt;a href=&quot;https://qiuhaidong.github.io/blog/2025/04/08/how-to-install-python-2-dot-7-on-ubuntu-24-dot-04/&quot;&gt;安装Python 2&lt;/a&gt;&lt;br /&gt;
+&lt;!--more--&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update 
 
@@ -191,7 +192,8 @@ rvm use 2.6.9 --default
 
 &lt;a href=&quot;https://linux.how2shout.com/how-to-install-python-2-7-on-ubuntu-24-04-noble-lts-linux/&quot;&gt;How to install Python 2.7 on Ubuntu 24.04&lt;/a&gt;
 
-Canonical 在长期 Ubuntu 20.04 Focal 之后放弃了对 Python 版本 2.x 的支持，以便为最新的 Python 3 版本腾出空间。这就是为什么我们没有使用其官方系统存储库在 Ubuntu 24.04 上安装 Python 2 的原因。此外，Python 开发人员也不再支持版本 2，但是，如果您的一些旧项目需要 Python 版本 2，那么在本文中，我们将学习如何在 Ubuntu 24.04上安装它来运行一些旧的应用程序。
+Canonical 在长期 Ubuntu 20.04 Focal 之后放弃了对 Python 版本 2.x 的支持，以便为最新的 Python 3 版本腾出空间。这就是为什么我们没有使用其官方系统存储库在 Ubuntu 24.04 上安装 Python 2 的原因。此外，Python 开发人员也不再支持版本 2，但是，如果您的一些旧项目需要 Python 版本 2，那么在本文中，我们将学习如何在 Ubuntu 24.04上安装它来运行一些旧的应用程序。&lt;br /&gt;
+&lt;!--more--&gt;
 
 第 1 步：打开命令终端&lt;br /&gt;
 第 2 步：安装依赖项&lt;br /&gt;
@@ -358,6 +360,7 @@ rm -rf ~/.cache/pip
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;!--more--&gt;
 安装 TLP：&lt;strong&gt;虽然我试过没什么作用&lt;/strong&gt;，&lt;strong&gt;&lt;em&gt;只能用来看看充电状态&lt;/em&gt;&lt;/strong&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install tlp
