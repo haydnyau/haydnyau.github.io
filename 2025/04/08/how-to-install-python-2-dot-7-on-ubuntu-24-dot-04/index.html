@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>How to install Python 2.7 on Ubuntu 24.04</title>
+    <meta name="description" content="机翻的文章，可能有错，建议看原文，链接：How to install Python 2.7 on Ubuntu 24.04Canonical 在长期 Ubuntu 20.04 Focal 之后放弃了对 Python 版本 2.x 的支持，以便为最新的 Python 3 版本腾出空间。这就是为什么我们没有使用其官方...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="/2025/04/08/how-to-install-python-2-dot-7-on-ubuntu-24-dot-04/">
+    <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">丘海东</a>
+        <small>Haydn Yau</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>How to install Python 2.7 on Ubuntu 24.04</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2025-04-08
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a-->
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+    
+  
+
+</span>
+
+
+
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <p>机翻的文章，可能有错，建议看原文，链接：</p>
+
+<p><a href="https://linux.how2shout.com/how-to-install-python-2-7-on-ubuntu-24-04-noble-lts-linux/">How to install Python 2.7 on Ubuntu 24.04</a></p>
+
+<p>Canonical 在长期 Ubuntu 20.04 Focal 之后放弃了对 Python 版本 2.x 的支持，以便为最新的 Python 3 版本腾出空间。这就是为什么我们没有使用其官方系统存储库在 Ubuntu 24.04 上安装 Python 2 的原因。此外，Python 开发人员也不再支持版本 2，但是，如果您的一些旧项目需要 Python 版本 2，那么在本文中，我们将学习如何在 Ubuntu 24.04上安装它来运行一些旧的应用程序。</p>
+
+<p>第 1 步：打开命令终端<br />
+第 2 步：安装依赖项<br />
+第 3 步：下载 Python 2.7 源代码<br />
+第 4 步：在 Ubuntu 2.7 上编译和安装 Python 24.04<br />
+第 5 步：验证安装<br />
+<del>第 6 步：为 Python 2.7 设置 pip</del><br />
+第 7 步：更改默认 Python 优先级<br />
+第 8 步：从 Ubuntu 2.7 卸载 Python 24.04</p>
+
+<h3 id="第-1-步打开命令终端">第 1 步：打开命令终端</h3>
+<p>在您的 Ubuntu 上访问终端，因为我们需要它来安装软件包，因此您应该对它以及命令行的工作原理有所了解。进入终端后，运行 system update 命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update 
+(dg不要后面这一步，以防新版本的ubuntu有问题，安装不了博客)sudo apt upgrade
+</code></pre></div></div>
+
+<h3 id="第-2-步安装依赖项">第 2 步：安装依赖项</h3>
+
+<p>众所周知，Python 2.7 不再通过 Ubuntu 的默认系统存储库甚至流行的 PPA Dead Snake 存储库获得，因此在本文中，我们将使用其源文件对其进行编译。但是，在此之前，请安装一些基本的开发人员工具。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install -y build-essential checkinstall libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
+</code></pre></div></div>
+
+<h3 id="第-3-步下载-python-27-源代码">第 3 步：下载 Python 2.7 源代码</h3>
+<p>现在，使用 wget 工具并从其官方网站下载 Python 2.7 的源代码，2.7 可用的最新版本是 2.7.18。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+</code></pre></div></div>
+
+<p>解压 ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -xvf Python-2.7.18.tgz
+</code></pre></div></div>
+
+<h3 id="第-4-步在-ubuntu-27-上编译和安装-python-2404">第 4 步：在 Ubuntu 2.7 上编译和安装 Python 24.04</h3>
+<p>解压后，首先切换到解压后的目录，然后按照给定的过程编译源码。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd Python-2.7.18
+
+./configure --enable-optimizations
+</code></pre></div></div>
+
+<p>编译安装 Python：</p>
+
+<p>编译过程需要一些时间，所以请坐下来，让它完成。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make -j16
+
+sudo make install
+</code></pre></div></div>
+
+<h3 id="第-5-步验证安装">第 5 步：验证安装</h3>
+<p>安装“make”文件后，您的 Ubuntu 24.04 系统将安装 Python 2.7。要确认，只需通过运行给定的命令来检查版本：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -V
+</code></pre></div></div>
+
+<h3 id="第-6-步为-python-27-设置-pip"><del>第 6 步：为 Python 2.7 设置 pip</del></h3>
+<p><del>在 Ubuntu 24.04 上安装 Python 2.7 后，您可能还需要 PIP 来管理库和包，因此要获取它，以下是命令：</del></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~~sudo apt install curl~~  
+
+~~curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py~~  
+
+~~sudo python2.7 get-pip.py~~  
+</code></pre></div></div>
+
+<p><del>验证 pip 安装：</del></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~~pip2.7 --version~~
+</code></pre></div></div>
+
+<h3 id="第-7-步更改默认-python-优先级">第 7 步：更改默认 Python 优先级</h3>
+<p>如果您的 Ubuntu 2.7 Linux 上同时有 Python 3 和 24.04，则默认情况下系统会优先考虑 Python3，这就是为什么当我们运行“命令时，它会给出错误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Command 'python' not found, did you mean:
+command 'python 3' from deb python3
+command 'python' from deb python-is-python3
+</code></pre></div></div>
+
+<p>因此，我们将更改优先级并将 Python2 设置在顶部，以便应用程序可以将其作为默认版本调用。而 Python3 将位居第二。</p>
+
+<p>设置替代方案：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-alternatives --install /usr/bin/python python /usr/local/lib/python2.7 1
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+</code></pre></div></div>
+
+<p>现在，检查默认版本：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -V
+</code></pre></div></div>
+
+<p>将来，如果您想将 Python 3 设置为优先级列表中的默认版本或第一个版本，只需使用以下命令更新替代列表：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-alternatives --config python
+</code></pre></div></div>
+
+<p>您将获得类似于以下屏幕截图的内容，并可选择将一个设置为优先级。要进行选择，请在 Selection 列下输入与每个版本路径对应的数字，然后按 Enter 键。</p>
+
+<p>将 Python 2.7 或 3 设置为 Ubuntu 24.04 上的默认值</p>
+
+<h3 id="第-8-步从-ubuntu-27-卸载-python-2404">第 8 步：从 Ubuntu 2.7 卸载 Python 24.04</h3>
+<p>如果您的系统上不需要 Python 2.7，那么以下是将其完全删除的命令：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm -rf /usr/local/bin/python2.7
+sudo rm -rf /usr/local/bin/python2.7-config
+sudo rm -rf /usr/local/lib/python2.7
+sudo rm -rf /usr/local/include/python2.7
+sudo rm -rf /usr/local/share/man/man1/python2.7.1
+</code></pre></div></div>
+
+<p>删除在安装过程中创建的符号链接：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm /usr/local/bin/python2
+sudo rm /usr/local/bin/python
+</code></pre></div></div>
+
+<p>更新 update-alternatives 系统</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-alternatives --remove python /usr/local/bin/python2.7
+</code></pre></div></div>
+
+<p>您可能希望将另一个 Python 版本设置为默认版本：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-alternatives --config python
+</code></pre></div></div>
+
+<p>删除 Python 2.7 pip 和其他相关工具</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm /usr/local/bin/pip2.7
+sudo rm -rf /usr/local/lib/python2.7/site-packages
+</code></pre></div></div>
+
+<p>清理剩余文件</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf ~/.local/lib/python2.7
+rm -rf ~/.local/bin/pip2
+rm -rf ~/.cache/pip
+</code></pre></div></div>
+
+
+        </article>
+        <hr>
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2025/04/08/ubuntu-charge-protect/">Ubuntu24.04 设置充电保护</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    
+    
+       
+    <div class="right">
+        <div class="wrap">
+
+            <div class="side">
+                <div>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    
+                    Recent Posts
+                </div>
+                <ul class="content-ul" recent>
+                    
+                        <li><a href="/2025/04/08/how-to-install-python-2-dot-7-on-ubuntu-24-dot-04/">How to install Python 2.7 on Ubuntu 24.04</a></li>
+                    
+                        <li><a href="/2025/04/08/ubuntu-charge-protect/">Ubuntu24.04 设置充电保护</a></li>
+                    
+                        <li><a href="/2025/04/08/day-150/">Day 150：但行好事，莫问前程</a></li>
+                    
+                        <li><a href="/2025/04/08/day-149/">Day 149：事物是复杂、多面的</a></li>
+                    
+                        <li><a href="/2025/04/07/boot-grub/">Ubuntu开机引导项</a></li>
+                    
+                        <li><a href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a></li>
+                    
+                        <li><a href="/2025/04/07/day-148/">Day 148：博客又成功了</a></li>
+                    
+                        <li><a href="/2025/04/03/maybe-call-it-the-end/">好好生活：这个博客不定时停更</a></li>
+                    
+                        <li><a href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a></li>
+                    
+                        <li><a href="/2025/01/27/henduoshishidushibeiaihewunai/">很多世事都是悲哀和无奈</a></li>
+                    
+                        <li><a href="/2025/01/23/renyurendeyuanfen-rucideqianbao/">人与人的缘分，如此的浅薄</a></li>
+                    
+                        <li><a href="/2024/12/23/day-146/">Day 146：获利和被套的心态、处理能力</a></li>
+                    
+                        <li><a href="/2024/12/19/day-145/">Day 145：第一性原理——本质</a></li>
+                    
+                        <li><a href="/2024/12/13/day-144/">Day 144：步步错，步步悟</a></li>
+                    
+                        <li><a href="/2024/11/23/day-143/">Day 143</a></li>
+                    
+                        <li><a href="/2024/11/20/day-142/">Day 142：对于“苦难”</a></li>
+                    
+                        <li><a href="/2024/11/11/day-141/">Day 141</a></li>
+                    
+                        <li><a href="/2024/11/05/day-140/">Day 140：懒，蠢，代价很大</a></li>
+                    
+                        <li><a href="/2024/10/30/day-139/">Day 139</a></li>
+                    
+                        <li><a href="/2024/10/18/day-138/">Day 138：盈亏同源，门外汉</a></li>
+                    
+                        <li><a href="/2024/10/13/day-137-gu-shi/">Day 137：短疯牛，股市一二浪</a></li>
+                    
+                        <li><a href="/2024/09/24/day-136/">Day 136</a></li>
+                    
+                        <li><a href="/2024/09/19/day-135/">Day 135：中秋节</a></li>
+                    
+                        <li><a href="/2024/09/16/day-134/">Day 134：生活</a></li>
+                    
+                        <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
+                    
+                        <li><a href="/2024/09/14/day-132/">Day 132：调整，做减法</a></li>
+                    
+                        <li><a href="/2024/09/12/day-131/">Day 131：睡觉误事</a></li>
+                    
+                        <li><a href="/2024/09/12/day-130/">Day 130：判断是否适合做生意</a></li>
+                    
+                        <li><a href="/2024/08/30/day-129/">Day 129：没有情绪</a></li>
+                    
+                        <li><a href="/2024/08/29/day-128/">Day 128：物以类聚，人以群分</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <div class="side ">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    Categories
+                </div>
+                <ul class="content-ul" cate>
+                    
+                    <li>
+                        <a href="/category/#tech" class="categories-list-item" cate="tech">
+                            <span class="name">
+                                tech
+                            </span>
+                            <span class="badge">65</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#personal" class="categories-list-item" cate="personal">
+                            <span class="name">
+                                personal
+                            </span>
+                            <span class="badge">373</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#tech-octopress" class="categories-list-item" cate="tech-octopress">
+                            <span class="name">
+                                tech-octopress
+                            </span>
+                            <span class="badge">26</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#excel" class="categories-list-item" cate="excel">
+                            <span class="name">
+                                excel
+                            </span>
+                            <span class="badge">2</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#Only-For-You" class="categories-list-item" cate="Only-For-You">
+                            <span class="name">
+                                Only-For-You
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#rvm" class="categories-list-item" cate="rvm">
+                            <span class="name">
+                                rvm
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <div class="side">
+                <div>
+                    <i class="fa fa-tags"></i>
+                    Tags
+                </div>
+                <div class="tags-cloud">
+                    
+                    
+                    
+                    
+
+                    
+
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#c" style="font-size: 9pt; color: #999;">c</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#c++" style="font-size: 9pt; color: #999;">c++</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#C#" style="font-size: 9pt; color: #999;">C#</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#windows" style="font-size: 9pt; color: #999;">windows</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ruby2.3.1" style="font-size: 9pt; color: #999;">ruby2.3.1</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#rvm" style="font-size: 9pt; color: #999;">rvm</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#daily" style="font-size: 18pt; color: #000;">daily</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#tech" style="font-size: 9pt; color: #999;">tech</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#cook" style="font-size: 9pt; color: #999;">cook</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#lightdm" style="font-size: 9pt; color: #999;">lightdm</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ubuntu-charge-protect" style="font-size: 9pt; color: #999;">ubuntu-charge-protect</a>
+                    
+                </div>
+            </div>
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa fa-external-link"></i>
+                    Links
+                </div>
+                <ul  class="content-ul">
+
+                </ul>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- <script src="/js/scroll.min.js " charset="utf-8"></script> -->
+<!-- <script src="/js/pageContent.js " charset="utf-8"></script> -->
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             行止由心 际遇随缘 
+        </p>
+        <p class="contact">
+             
+            <a href="https://github.com/haydnyau/haydnyau.github.io" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>         
+        </p>
+        <p>
+             
+        </p>
+        <p class="power">
+
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
