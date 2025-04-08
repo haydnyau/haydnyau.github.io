@@ -5,9 +5,9 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Apr 2025 23:42:18 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Apr 2025 23:42:18 +0800</lastBuildDate>
-    <generator>Jekyll v3.9.5</generator>
+    <pubDate>Wed, 09 Apr 2025 00:29:55 +0800</pubDate>
+    <lastBuildDate>Wed, 09 Apr 2025 00:29:55 +0800</lastBuildDate>
+    <generator>Jekyll v3.9.1</generator>
     
       <item>
         <title>How to install Python 2.7 on Ubuntu 24.04</title>
