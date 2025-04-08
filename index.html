@@ -185,6 +185,99 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2025/04/08/ubuntu-charge-protect/">Ubuntu24.04 设置充电保护</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2025-04-08
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ubuntu-charge-protect" title="Tag: ubuntu-charge-protect" rel="tag">ubuntu-charge-protect</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>参考：</p>
+
+<p><a href="https://cn.linux-terminal.com/?p=7554">如何在 Ubuntu 22.04 和 24.04 中设置电池充电限制</a><br />
+<a href="https://bbs.deepin.org/post/253376">笔记本充电阈值限制（以联想拯救者Y7000P2020H为例）</a></p>
+
+<p><strong>编辑这个文件，把数值0（关闭）改为1（开启充电保护模式），保存</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
+</code></pre></div></div>
+
+<p>安装 TLP：<strong>虽然我试过没什么作用</strong>，<strong><em>只能用来看看充电状态</em></strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install tlp
+sudo gedit /etc/tlp.conf
+</code></pre></div></div>
+
+<p>找到以下两行（Ctrl+F），取消注释（删除开头的#），然后根据需要更改数字(充电到百分之几)。<br />
+<strong>DG：改了也没什么作用</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>START_CHARGE_THRESH_BAT0=70
+STOP_CHARGE_THRESH_BAT0=80
+</code></pre></div></div>
+
+<p>保存<br />
+运行命令<strong>检查充电状态</strong> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo tlp-stat -b
+</code></pre></div></div>
+
+<p><img src="https://storage.deepin.org/thread/202303052303521160_image.png" alt="" /></p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2025/04/08/ubuntu-charge-protect/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2025/04/08/day-150/">Day 150：但行好事，莫问前程</a>
                 </h2>
                 <div class="label">
@@ -838,76 +931,6 @@ sudo ntpdate time.windows.com
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2024/12/23/day-146/">Day 146：获利和被套的心态、处理能力</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2024-12-23
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>淘股吧：<br />
-我最大一个的问题是心态：<br />
-被套后就感觉人生陷入了低谷，对什么事都提不起兴趣。<br />
-一个涨停后就好像看到了海景别墅在向我招手，非常的自信。<br />
-有的时候上午还津津乐道，下午就变得萎靡不振了。<br />
-太自信的时候往往就会亏钱，这时主观意识非常浓烈，从来不会质疑自己的看法，只想着快点买入股票，别错过赚钱的机会，在这种状态做出来的决定大部分都是错的。<br />
-亏钱后就由过度自信转为灰心丧气，然后操作就更加不上心，结果导致恶性循环。<br />
-这些是我要克服的问题，不管什么时候都不要失去理智。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2024/12/23/day-146/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -937,6 +960,8 @@ sudo ntpdate time.windows.com
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2025/04/08/ubuntu-charge-protect/">Ubuntu24.04 设置充电保护</a></li>
                     
                         <li><a href="/2025/04/08/day-150/">Day 150：但行好事，莫问前程</a></li>
                     
@@ -996,8 +1021,6 @@ sudo ntpdate time.windows.com
                     
                         <li><a href="/2024/08/28/day-127/">Day 127：精神内守，集中注意力</a></li>
                     
-                        <li><a href="/2024/08/27/day-126/">Day 126：去做，去犯错，去改正</a></li>
-                    
                 </ul>
             </div>
 
@@ -1023,7 +1046,7 @@ sudo ntpdate time.windows.com
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">371</span>
+                            <span class="badge">372</span>
                         </a>
                     </li>
                     
@@ -1198,6 +1221,13 @@ sudo ntpdate time.windows.com
                       
                       
                       <a href="/tag/#she" style="font-size: 9pt; color: #999;">she</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ubuntu-charge-protect" style="font-size: 9pt; color: #999;">ubuntu-charge-protect</a>
                     
                 </div>
             </div>
