@@ -684,27 +684,13 @@ rm -rf ~/.cache/pip
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 </code></pre></div></div>
 
-<!--more-->
-<p>安装 TLP：<strong>虽然我试过没什么作用</strong>，<strong><em>只能用来看看充电状态</em></strong></p>
+<p>编写一个battery-protect.sh脚本（名字随便），添加命令：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install tlp
-sudo gedit /etc/tlp.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 </code></pre></div></div>
 
-<p>找到以下两行（Ctrl+F），取消注释（删除开头的#），然后根据需要更改数字(充电到百分之几)。<br />
-<strong>DG：改了也没什么作用</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>START_CHARGE_THRESH_BAT0=70
-STOP_CHARGE_THRESH_BAT0=80
-</code></pre></div></div>
-
-<p>保存<br />
-运行命令<strong>检查充电状态</strong> ：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo tlp-stat -b
-</code></pre></div></div>
-
-<p><img src="https://storage.deepin.org/thread/202303052303521160_image.png" alt="" /></p>
+<p>把脚本添加到启动应用程序里（系统自带的，按win键找到），之后开机时，改数值为1<br />
+<!--more--></p>
 
 
                 </div>
