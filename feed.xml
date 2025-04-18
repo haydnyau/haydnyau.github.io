@@ -5,9 +5,34 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Apr 2025 01:01:26 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Apr 2025 01:01:26 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Apr 2025 03:30:45 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Apr 2025 03:30:45 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Day 152</title>
+        <description>守相，藏拙，凝神，扩型，藏锋，控语，修心，慎独，惜时&lt;br /&gt;
+&lt;!--more--&gt;
+守相，不要见人就笑&lt;br /&gt;
+藏拙，不要什么都说&lt;br /&gt;
+凝神，说话眼神坚定&lt;br /&gt;
+扩型，走路抬头挺胸&lt;br /&gt;
+藏锋，私事不对外说&lt;br /&gt;
+控语，说话前先思考&lt;br /&gt;
+修心，内心保持平和，不被外界打扰&lt;br /&gt;
+慎独，独处也要保持良好的行为习惯&lt;br /&gt;
+惜时，不把时间浪费在无意义的事上
+</description>
+        <pubDate>Sat, 19 Apr 2025 03:15:54 +0800</pubDate>
+        <link>/2025/04/19/day-152/</link>
+        <guid isPermaLink="true">/2025/04/19/day-152/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 151</title>
@@ -519,22 +544,6 @@ sudo ntpdate time.windows.com
         <pubDate>Mon, 07 Apr 2025 06:59:28 +0800</pubDate>
         <link>/2025/04/07/time-stuff-between-windows11-and-ubuntu/</link>
         <guid isPermaLink="true">/2025/04/07/time-stuff-between-windows11-and-ubuntu/</guid>
-        
-        <category>ubuntu</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Day 148：博客又成功了</title>
-        <description>心平气和，不急不躁。&lt;br /&gt;
-按照提示，搜索解决。
-</description>
-        <pubDate>Mon, 07 Apr 2025 05:28:17 +0800</pubDate>
-        <link>/2025/04/07/day-148/</link>
-        <guid isPermaLink="true">/2025/04/07/day-148/</guid>
         
         <category>ubuntu</category>
         
