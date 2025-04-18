@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Apr 2025 16:35:16 +0800</pubDate>
-    <lastBuildDate>Tue, 15 Apr 2025 16:35:16 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Apr 2025 00:09:23 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Apr 2025 00:09:23 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Day 151</title>
+        <description>别试图改变他人，人很难接受超出认知范围的观点。&lt;br /&gt;
+改变必然伴随着争吵，争吵的结果是内耗。&lt;br /&gt;
+不内耗自己。&lt;br /&gt;
+人的思维都会固化，接受这种事实。&lt;br /&gt;
+不争是慈悲，不辩是智慧，接受残缺是一种豁达。
+</description>
+        <pubDate>Sat, 19 Apr 2025 00:01:16 +0800</pubDate>
+        <link>/2025/04/19/day-151/</link>
+        <guid isPermaLink="true">/2025/04/19/day-151/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>股市，错过两个大机会</title>
@@ -518,24 +537,6 @@ sudo ntpdate time.windows.com
         <guid isPermaLink="true">/2025/04/07/day-148/</guid>
         
         <category>ubuntu</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>好好生活：这个博客不定时停更</title>
-        <description>每过一段时间，很多的依赖，库，软件包，等等，都会被删除，要花大量的时间去解决，但是又没有意义。&lt;br /&gt;
-不在无意义的事情上浪费时间，浪费生命。&lt;br /&gt;
-现在只剩acer这台老破的电脑还能写博客，等它不能用了，也就这样了。
-&lt;h3 id=&quot;好好生活人到中年人生已过半&quot;&gt;好好生活，人到中年，人生已过半&lt;/h3&gt;
-</description>
-        <pubDate>Thu, 03 Apr 2025 01:39:38 +0800</pubDate>
-        <link>/2025/04/03/maybe-call-it-the-end/</link>
-        <guid isPermaLink="true">/2025/04/03/maybe-call-it-the-end/</guid>
-        
-        <category>daily</category>
         
         
         <category>personal</category>
