@@ -5,9 +5,28 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Apr 2025 03:30:45 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Apr 2025 03:30:45 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Apr 2025 01:23:02 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Apr 2025 01:23:02 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Day 153：行动</title>
+        <description>为自己的欲望付诸行动。&lt;br /&gt;
+&lt;!--more--&gt;
+回想过去，工作和生活都犯了挺多错误，承认、反省，但不沉溺，放下，继续前行。&lt;br /&gt;
+世界是复杂多面的。&lt;br /&gt;
+确定自己的目标，做事。
+</description>
+        <pubDate>Mon, 21 Apr 2025 01:16:58 +0800</pubDate>
+        <link>/2025/04/21/day-153/</link>
+        <guid isPermaLink="true">/2025/04/21/day-153/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 152</title>
@@ -518,32 +537,6 @@ sudo apt-get install grub-customizer
         <pubDate>Mon, 07 Apr 2025 07:32:27 +0800</pubDate>
         <link>/2025/04/07/boot-grub/</link>
         <guid isPermaLink="true">/2025/04/07/boot-grub/</guid>
-        
-        <category>ubuntu</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>windows11和Ubuntu24.04双系统，时间不对</title>
-        <description>&lt;a href=&quot;https://blog.csdn.net/weixin_42066135/article/details/144369653&quot;&gt;新博文&lt;/a&gt;&lt;br /&gt;
-先在ubuntu下更新一下时间，确保时间无误：
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install ntpdate
-sudo ntpdate time.windows.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo timedatectl set-local-rtc 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Mon, 07 Apr 2025 06:59:28 +0800</pubDate>
-        <link>/2025/04/07/time-stuff-between-windows11-and-ubuntu/</link>
-        <guid isPermaLink="true">/2025/04/07/time-stuff-between-windows11-and-ubuntu/</guid>
         
         <category>ubuntu</category>
         

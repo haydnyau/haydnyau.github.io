@@ -187,6 +187,80 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2025-04-07
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ubuntu" title="Tag: ubuntu" rel="tag">ubuntu</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://blog.csdn.net/weixin_42066135/article/details/144369653">新博文</a><br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo timedatectl set-local-rtc 1
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2025/04/07/day-148/">Day 148：博客又成功了</a>
                 </h2>
                 <div class="label">
@@ -815,71 +889,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2024/11/20/day-142/">Day 142：对于“苦难”</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2024-11-20
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>人们以为苦难会让人更为强大。<br />
-但实际上，大部分人被苦难折磨得不成样子，<strong>懦弱，保守，浑身充满奴性</strong>。<br />
-真正因苦难而变强大的人，从不认为自己经受过苦难。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2024/11/20/day-142/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -909,6 +918,8 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2025/04/21/day-153/">Day 153：行动</a></li>
                     
                         <li><a href="/2025/04/19/day-152/">Day 152</a></li>
                     
@@ -968,8 +979,6 @@
                     
                         <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
                     
-                        <li><a href="/2024/09/14/day-132/">Day 132：调整，做减法</a></li>
-                    
                 </ul>
             </div>
 
@@ -995,7 +1004,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">377</span>
+                            <span class="badge">378</span>
                         </a>
                     </li>
                     
