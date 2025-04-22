@@ -5,17 +5,32 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Apr 2025 01:24:09 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Apr 2025 01:24:09 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Apr 2025 14:57:38 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Apr 2025 14:57:38 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Ubuntu25.04</title>
+        <description>BIOS启动很慢，没一次快的，不行
+</description>
+        <pubDate>Tue, 22 Apr 2025 14:52:44 +0800</pubDate>
+        <link>/2025/04/22/ubuntu-25-dot-04/</link>
+        <guid isPermaLink="true">/2025/04/22/ubuntu-25-dot-04/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Day 153：行动</title>
         <description>为自己的欲望付诸行动。&lt;br /&gt;
 &lt;!--more--&gt;
-回想过去，工作和生活都犯了挺多错误，承认、反省，但不沉溺，放下，继续前行。&lt;br /&gt;
-世界是复杂多面的。&lt;br /&gt;
-确定自己的目标，做事。
+回想过去，犯了挺多错误，承认、反省，但不沉溺懊恼，放下，前行。&lt;br /&gt;
+世界复杂多面。&lt;br /&gt;
+确定目标，做事。
 </description>
         <pubDate>Mon, 21 Apr 2025 01:16:58 +0800</pubDate>
         <link>/2025/04/21/day-153/</link>
@@ -32,15 +47,16 @@
         <title>Day 152</title>
         <description>守相，藏拙，凝神，扩型，藏锋，控语，修心，慎独，惜时&lt;br /&gt;
 &lt;!--more--&gt;
-守相，不要见人就笑&lt;br /&gt;
-藏拙，不要什么都说&lt;br /&gt;
-凝神，说话眼神坚定&lt;br /&gt;
-扩型，走路抬头挺胸&lt;br /&gt;
-藏锋，私事不对外说&lt;br /&gt;
-控语，说话前先思考&lt;br /&gt;
-修心，内心保持平和，不被外界打扰&lt;br /&gt;
-慎独，独处也要保持良好的行为习惯&lt;br /&gt;
-惜时，不把时间浪费在无意义的事上
+守相，不随便笑，表情管理&lt;br /&gt;
+藏拙&lt;br /&gt;
+藏锋，私事不说&lt;br /&gt;
+凝神，眼神坚定&lt;br /&gt;
+扩型，抬头挺胸&lt;br /&gt;
+控语，不乱说，先思考&lt;br /&gt;
+修心，内心平和，不被打扰&lt;br /&gt;
+慎独，独处也行为良好&lt;br /&gt;
+惜时
+
 </description>
         <pubDate>Sat, 19 Apr 2025 03:15:54 +0800</pubDate>
         <link>/2025/04/19/day-152/</link>
@@ -506,39 +522,6 @@ rm -rf ~/.cache/pip
         <guid isPermaLink="true">/2025/04/08/day-149/</guid>
         
         <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu开机引导项</title>
-        <description>&lt;a href=&quot;https://cn.linux-terminal.com/?p=8402&quot;&gt;配置 Ubuntu 24.04 中默认引导的操作系统或内核&lt;/a&gt;
-
-选项 2：使用图形工具&lt;br /&gt;
-对于那些不喜欢 Linux 命令的人，有一个流行的免费开放工具 Grub Customizer，它提供了完成这项工作的图形选项。&lt;br /&gt;
-&lt;!--more--&gt;
-许多 Linux（例如 Arch、Debian、Fedora 和 RHEL 9）在其系统存储库中包含 Grub 定制器。然而，由于脚本编写问题（尽管现已修复），Ubuntu 自 22.04 以来已将其从系统存储库中删除。
-
-要在 Ubuntu 中安装 Grub 定制器，请打开终端（Ctrl+Alt+T）并一一运行以下命令，从开发者的 PPA 中获取它。
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo apt-get update
-sudo apt-get install grub-customizer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-然后，启动该工具并导航到“常规设置”选项卡。接下来，选择预定义条目或先前启动的条目作为默认值。最后，单击“保存”按钮应用更改。
-
-&lt;strong&gt;&lt;em&gt;还可以设置等待的秒数&lt;/em&gt;&lt;/strong&gt;
-
-&lt;img src=&quot;https://linux-terminal.com/common-images/os-kernel-boot-default-ubuntu-linux/grubcustomizer-defaultos.webp&quot; alt=&quot;使用图形工具修改Ubuntu开机引导项&quot; /&gt;
-</description>
-        <pubDate>Mon, 07 Apr 2025 07:32:27 +0800</pubDate>
-        <link>/2025/04/07/boot-grub/</link>
-        <guid isPermaLink="true">/2025/04/07/boot-grub/</guid>
-        
-        <category>ubuntu</category>
         
         
         <category>personal</category>
