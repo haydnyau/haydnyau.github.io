@@ -5,22 +5,18 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Apr 2025 04:47:05 +0800</pubDate>
-    <lastBuildDate>Wed, 23 Apr 2025 04:47:05 +0800</lastBuildDate>
+    <pubDate>Wed, 23 Apr 2025 04:56:12 +0800</pubDate>
+    <lastBuildDate>Wed, 23 Apr 2025 04:56:12 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
       <item>
         <title>Ubuntu24.04 修复引导</title>
         <description>&lt;a href=&quot;https://shuyeidc.com/wp/75597.html&quot;&gt;原文：Ubuntu引导修复grub&lt;/a&gt;&lt;br /&gt;
 制作一个Ubuntu系统盘，try Ubuntu
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:yannubuntu/boot-repair
-
-sudo apt-get update
-
-sudo apt-get install boot-repair
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	sudo add-apt-repository ppa:yannubuntu/boot-repair
+	sudo apt-get update	
+	sudo apt-get install boot-repair
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 注意，添加软件源才能安装&lt;br /&gt;
 打开软件，选择“推荐修复”，等待完成&lt;br /&gt;
 好了，开机
@@ -148,7 +144,7 @@ sudo apt-get install boot-repair
       <item>
         <title>Ubuntu 24.04 安装 Octopress2.0和3.0</title>
         <description>软件源是：主服务器&lt;br /&gt;
-参考&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/04/05/octopress2-on-ubuntu-22-dot-04/&quot;&gt;Ubuntu22.04的安装&lt;/a&gt;&lt;br /&gt;
+参考&lt;a href=&quot;https://qiuhaidong.github.io/blog/2022/04/05/octopress2-and-3-on-ubuntu-22-04/&quot;&gt;Ubuntu22.04的安装&lt;/a&gt;&lt;br /&gt;
 把octopress、haydnyau、ssh2、ssh3文件夹、.gitconfig、及其他.sh脚本文件等，复制过来。&lt;br /&gt;
 依赖：python2，ruby2.6.9&lt;br /&gt;
 &lt;!--more--&gt;
