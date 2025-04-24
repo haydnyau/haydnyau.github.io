@@ -143,6 +143,73 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2025/04/24/ipaddress/">改hosts文件，指定IP</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2025-04-24
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ip" title="Tag: ip" rel="tag">ip</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>网站无法访问，则改hosts文件，指定IP<br />
+到：<a href="https://www.ipaddress.com/">https://www.ipaddress.com</a>，找到网站的IP</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/hosts
+</code></pre></div></div>
+<p>格式：IP (空格) 域名，如：<code class="language-plaintext highlighter-rouge">140.82.114.36      ssh.github.com</code></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2025/04/24/ipaddress/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2025/04/23/day-154/">Day 154：因为睡觉错过交易点</a>
                 </h2>
                 <div class="label">
@@ -238,7 +305,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -452,7 +519,7 @@ sudo apt-get install boot-repair
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -680,7 +747,7 @@ rvm use 2.6.9 --default
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -889,7 +956,7 @@ rm -rf ~/.cache/pip
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -1082,87 +1149,6 @@ rm -rf ~/.cache/pip
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2025/04/07/boot-grub/">Ubuntu开机引导项</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2025-04-07
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#ubuntu" title="Tag: ubuntu" rel="tag">ubuntu</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><a href="https://cn.linux-terminal.com/?p=8402">配置 Ubuntu 24.04 中默认引导的操作系统或内核</a></p>
-
-<p>选项 2：使用图形工具<br />
-对于那些不喜欢 Linux 命令的人，有一个流行的免费开放工具 Grub Customizer，它提供了完成这项工作的图形选项。<br />
-<!--more-->
-许多 Linux（例如 Arch、Debian、Fedora 和 RHEL 9）在其系统存储库中包含 Grub 定制器。然而，由于脚本编写问题（尽管现已修复），Ubuntu 自 22.04 以来已将其从系统存储库中删除。</p>
-
-<p>要在 Ubuntu 中安装 Grub 定制器，请打开终端（Ctrl+Alt+T）并一一运行以下命令，从开发者的 PPA 中获取它。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo apt-get update
-sudo apt-get install grub-customizer
-</code></pre></div></div>
-
-<p>然后，启动该工具并导航到“常规设置”选项卡。接下来，选择预定义条目或先前启动的条目作为默认值。最后，单击“保存”按钮应用更改。</p>
-
-<p><strong><em>还可以设置等待的秒数</em></strong></p>
-
-<p><img src="https://linux-terminal.com/common-images/os-kernel-boot-default-ubuntu-linux/grubcustomizer-defaultos.webp" alt="使用图形工具修改Ubuntu开机引导项" /></p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2025/04/07/boot-grub/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -1192,6 +1178,8 @@ sudo apt-get install grub-customizer
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2025/04/24/ipaddress/">改hosts文件，指定IP</a></li>
                     
                         <li><a href="/2025/04/23/day-154/">Day 154：因为睡觉错过交易点</a></li>
                     
@@ -1251,8 +1239,6 @@ sudo apt-get install grub-customizer
                     
                         <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
-                        <li><a href="/2023/11/28/day-63/">Day 63：篮球，库里，不放弃</a></li>
-                    
                 </ul>
             </div>
 
@@ -1269,7 +1255,7 @@ sudo apt-get install grub-customizer
                             <span class="name">
                                 tech
                             </span>
-                            <span class="badge">62</span>
+                            <span class="badge">69</span>
                         </a>
                     </li>
                     
@@ -1278,7 +1264,7 @@ sudo apt-get install grub-customizer
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">163</span>
+                            <span class="badge">157</span>
                         </a>
                     </li>
                     
@@ -1488,6 +1474,13 @@ sudo apt-get install grub-customizer
                       
                       
                       <a href="/tag/#ubuntu-boot-repair" style="font-size: 9pt; color: #999;">ubuntu-boot-repair</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#ip" style="font-size: 9pt; color: #999;">ip</a>
                     
                 </div>
             </div>
