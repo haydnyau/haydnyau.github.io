@@ -128,12 +128,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -149,323 +143,11 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/11/13/sql-edit-more-than-200-item/">SQL: edit more than 200 item</a>
+                  <a class="post-link" href="/2016/03/23/get-up/">寒门难出贵子</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-13
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>工具，选项，SQL Server 对象资源管理器，命令……</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/13/sql-edit-more-than-200-item/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">windows10和Ubuntu双系统，时间不对</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
-
-<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
-utc=yes 改成 utc=no
-</code></pre></div></div>
-
-<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
-后来谷歌了半天找到了一个完美解决办法：<br />
-先在ubuntu下更新一下时间，确保时间无误：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
-sudo ntpdate time.windows.com
-</code></pre></div></div>
-
-<p>然后将时间更新到硬件上：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
-</code></pre></div></div>
-
-<p>重新进入windows10，发现时间恢复正常了！</p>
-
-<p><a href="https://blog.csdn.net/weixin_42066135/article/details/144369653">新博文</a></p>
-
-<h3 id="但是在ubuntu2404中更新">但是在ubuntu24.04中，更新：</h3>
-
-<p>简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo timedatectl set-local-rtc 1
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/10/time-stuff-between-windows-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/11/10/Voltage-change/">voltage change</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>MACHINE: fish hunting<br />
-black pan: GND<br />
-red pan:<br />
-A: co1</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press 100
-	voltage change from 3.36V to almost 0V,and then come back to 3.36V
-  	PRESS 10
-	3.36V,0.9V,3.36V
-</code></pre></div></div>
-
-<p>B: HP</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
-	3.2V, 1.8V,3.2V
-</code></pre></div></div>
-
-<p>C: SSR</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
-	5.0V, 0.48V, 5.0V
-</code></pre></div></div>
-
-<p>D: TF</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
-	3.2V, 0V, 3.2V
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/10/Voltage-change/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/11/10/failed-when-gem-install-therubyracer/">failed when: gem install therubyracer</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-11-10
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>运行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ gem install therubyracer  
-</code></pre></div></div>
-
-<p>报错</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing therubyracer:
-	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
-</code></pre></div></div>
-
-<p>corrupt:broken<br />
-the package is broken<br />
-so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem<br />
-then redownload and reinstall<br />
-successed.</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/11/10/failed-when-gem-install-therubyracer/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/10/31/bad-night/">bad night</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-31
+                        <i class="fa fa-calendar"></i>2016-03-23
                     </div>
                     <div class="label-card">
                         
@@ -510,24 +192,36 @@ successed.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>Got a lot of nightmares on those days.<br />
-So many bad things,bad days.<br />
-Got to carry on.</p>
+                    <p><a href="http://bbs.tianya.cn/post-free-3560685-1.shtml">参见原文</a></p>
+
+<p>当然难。<br />
+家境出身决定成长环境，成长经历，决定你以后怎么看自己，看别人，看世界，看事情，想事情，做事情，决定你的思维，决定你是得到助力，还是得不到助力，还是得到阻力。<br />
+治国就因此眼界低，看低看轻看贱了自己。<br />
+人要有傲骨。对自己，骨子里要狂傲到上天，对别人，为人处世要低调谦逊到下地。<br />
+引以为戒。可以省，可以吝啬，可以小气，但绝不可占小便宜，绝不可低贱了自己。<br />
+原子是笨。<br />
+周周夫妇郎才女貌。要学习他们的待人接物，肢体动作，讲话语气，讲话方式等。他们有钱有权有势，而平易近人，相比之下，看看你自己，千万别拽，别有戾气。越有底气，越平和。<br />
+太高傲，眼睛里揉不得沙子，自己懂的道理，也要求别人懂，自己不会做的事不会说的话，也要求别人不，世界非如此，要注意，灵活应对各种事，各种处境。<br />
+师兄，你很好。你经受过那么久的黑暗冰冷。你离开。当机会降临，你能再次走进去，尽管依旧惧怕。<br />
+我很清楚自己。要做的，就是规划，接下来做什么。改变自己的思维，待人处事的方式。<br />
+寒门要出贵子，很难。<br />
+要自己尽量多地接触各种人各种事，各种思维，然后思考。想明白了，做。<br />
+思维还是可以改变的，人还是可以改变的。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/10/31/bad-night/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/03/23/get-up/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/10/29/config-dot-yml/">config.yml</a>
+                  <a class="post-link" href="/2016/03/23/make-a-good-conversatin/">如何聊天</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-29
+                        <i class="fa fa-calendar"></i>2016-03-23
                     </div>
                     <div class="label-card">
                         
@@ -539,6 +233,18 @@ Got to carry on.</p>
                     <div class="label-card">
                     
 
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
 
 
                     </div>
@@ -560,93 +266,327 @@ Got to carry on.</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>.# ———————– #<br />
-.#      Main Configs       #<br />
-.# ———————– #</p>
+                    <p><a href="http://weibo.com/1742566624/Dnxr5ho01?type=comment#_rnd14587044733760">参见这条微博</a></p>
 
-<p>url: https://qiuhaidong.github.io<br />
-title: Haydn Yau<br />
-subtitle:<br />
-author: 丘海东<br />
-simple_search: https://www.google.com/search<br />
-description:</p>
+<ol>
+  <li>
+    <p>话题</p>
 
-<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)<br />
-.# You can customize the format as defined in<br />
-.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime<br />
-.# Additionally, %o will give you the ordinal representation of the day<br />
-date_format: “ordinal”</p>
+    <p>大家都能参与的话题，观点别绝对（佛教就是迷信，日本人全部都坏）<br />
+   说编程bug不如说电脑小技巧<br />
+   说手机硬件不如说手机卡死后长按重启<br />
+   话题观点要有多角度，别绝对<br />
+   聊风土，人情，名人，影视歌，娇气，美食，幻想……</p>
+  </li>
+  <li>
+    <p>态度</p>
 
-<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)<br />
-subscribe_rss: /atom.xml<br />
-subscribe_email:<br />
-.# RSS feeds can list your email address if you like<br />
-email:</p>
+    <p>平和，微笑，身体动作要少，情绪要相符对应</p>
+  </li>
+  <li>
+    <p>声音</p>
 
-<p>.# ———————– #<br />
-.#    Jekyll &amp; Plugins     #<br />
-.# ———————– #</p>
+    <p>大小，高低，快慢，语调，语气</p>
+  </li>
+  <li>
+    <p>非线性对话</p>
 
-<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’<br />
-root: /<br />
-permalink: /blog/:year/:month/:day/:title/<br />
-source: source<br />
-destination: public<br />
-plugins: plugins<br />
-code_dir: downloads/code<br />
-category_dir: blog/categories<br />
-markdown: rdiscount<br />
-rdiscount:<br />
-  extensions:<br />
-    - autolink<br />
-    - footnotes<br />
-    - smart<br />
-highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
+    <p>思维别一根筋，别一直追问（你多大？28。哪里人？广东。广东哪里？茂名。茂名哪里？信宜。信宜哪里？……），别有压迫感<br />
+   要曲线，不要直线，多个话题结合，多路多线程</p>
+  </li>
+  <li>
+    <p>合理的短悬念</p>
 
-<p>paginate: 5                     # Posts per page on the blog index<br />
-paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/<br />
-recent_posts: 5               # Posts in the sidebar Recent Posts section<br />
-excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles<br />
-excerpt_separator: “<!--more-->”</p>
+    <p>别一股脑说结果<br />
+   别太长
+   重要的事别设悬念</p>
+  </li>
+  <li>
+    <p>不经意的幽默</p>
 
-<p>titlecase: true       # Converts page and post titles to titlecase</p>
-
-<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.<br />
-.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’<br />
-default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]<br />
-.#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
-
-<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below<br />
-.# and add an array with the asides you want to use.<br />
-.# blog_index_asides:<br />
-.# post_asides:<br />
-.# page_asides:</p>
-
-<p>.# ———————– #<br />
-.#   3rd Party Settings    #<br />
-.# ———————– #</p>
-
-<p>.# Github repositories<br />
-github_user: qiuhaidong<br />
-github_repo_count: 0<br />
-github_show_profile_link: true<br />
-github_skip_forks: true</p>
-
+    <p>别故意讲段子梗</p>
+  </li>
+  <li>
+    <p>重复别人的关键词</p>
+  </li>
+</ol>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/10/29/config-dot-yml/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/03/23/make-a-good-conversatin/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/10/28/install-again/">install again</a>
+                  <a class="post-link" href="/2016/03/21/good-temper-and-bad-temper/">脾气</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
+                        <i class="fa fa-calendar"></i>2016-03-21
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>不能没有脾气。但是：<br />
+好脾气不一定高尚，也不一定带来好运，但坏脾气肯定是瘟神，会把好运气赶跑。命运派来的贵人，未必一开始你就认得出，很多人因坏脾气把好运气赶跑了，然后运气就更坏，然后脾气也更坏，一个恶性循环就产生了。——水木丁<br />
+控制脾气。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/03/21/good-temper-and-bad-temper/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/03/20/foul-atmosphere/">戾气</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-03-20
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>因工作性质见过不少人，从一些人的眼角、嘴角可以感受到他们浓郁的戾气。<br />
+有的人带孩子来买衣服，用了几块钱（真的就是几块钱或十来块钱的衣服），然后骂骂咧咧的，孩子闭着嘴低着头，目光闪躲呆滞无神。我也只能在心里默默叹口气。<br />
+戾气并非绝对的贬义词，普通人甚至个别挺好的人都会有戾气。但戾气肯定不是好的东西，对自己对身边的人都不好。他们大多不如意，或者缺钱，或者做着不喜欢的工作，感受不到尊重和爱，彷徨迷茫。又没有足够的智慧和良好的心态去排解。<br />
+简单点说，底气和智慧不足。<br />
+而这两样东西都自能靠自己。<br />
+我也见过一些老人，衣着简朴，而眼神充盈着平和的善意和笑意。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/03/20/foul-atmosphere/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/03/16/qualities/">提升气质的一些方法</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-03-16
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>微笑<br />
+少说话<br />
+提升皮肤质感<br />
+不断学习<br />
+经常鼓励自己<br />
+运动<br />
+树立积极信念<br />
+别再无精打采<br />
+告诉自己还年轻</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/03/16/qualities/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/03/05/excel-da-gou-x/">Excel表格设置可选择输入√或×</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-03-05
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#excel" title="Category: excel" rel="category">excel</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://jingyan.baidu.com/article/5d6edee210ba8099eadeecb5.html">图文版</a></p>
+
+<p>WPS：<br />
+选中1个单元格，菜单栏选择：插入，特殊符号，数字符号，选择“√”，打上英文逗号，再选择“×”，然后复制。<br />
+数据，有效性，（允许）序列，（来源）粘贴，完成。<br />
+Excel：<br />
+（来源步骤处）可以选择插入，符号。<br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/%E5%A6%82%E4%BD%95%E5%9C%A8Excel%202003%E9%87%8C%E8%AE%BE%E7%BD%AE%E4%B8%80%E5%88%97%E5%8F%AF%E9%80%89%E6%8B%A9%E8%BE%93%E5%85%A5%E5%8B%BE%E6%88%96%E5%8F%89.png" alt="Excel" /></p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/03/05/excel-da-gou-x/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/03/02/commands-about-linux/">Commands about Linux</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-03-02
                     </div>
                     <div class="label-card">
                         
@@ -691,31 +631,58 @@ github_skip_forks: true</p>
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>something new:<br />
-install git:</p>
+                    <p>2016-03-02 21:26<br />
+shell: 命令行解释器<br />
+Linux<strong>命令格式</strong>: 命令名 [选项] [参数1] [参数2] …… <br />
+命令与参数之间，参数与参数之间用空格隔开<br />
+立即<strong>关机</strong>:  <code class="language-plaintext highlighter-rouge">sudo shutdown-h now</code> 或者 <code class="language-plaintext highlighter-rouge">sudo halt</code> （Ubuntu不行，在最后画面不动,停机但不关电源）或者<code class="language-plaintext highlighter-rouge">sudo poweroff</code><br />
+立即<strong>重启</strong>:  <code class="language-plaintext highlighter-rouge">sudo shutdown-r now</code> (Ubuntu不行)或者 <code class="language-plaintext highlighter-rouge">sudo reboot</code>（行）<br />
+<code class="language-plaintext highlighter-rouge">ls</code><br />
+<code class="language-plaintext highlighter-rouge">cd  dir</code><br />
+<strong>复制</strong>: <code class="language-plaintext highlighter-rouge">cp /.../.../sourcefile /.../.../targetfile</code> 有重命名的功能<br />
+<code class="language-plaintext highlighter-rouge">cp file1 file2</code> #在当前目录为file1创建一个副本file2<br />
+<code class="language-plaintext highlighter-rouge">cp file ~/target/</code> #复制当前目录下的file到主目录下的target目录中，保持原文件名<br />
+<code class="language-plaintext highlighter-rouge">cp file1 file2 ~/target/</code> #把file1、file2俩个文件复制到target目录，保持原文件名<br />
+-p: 保持文件属性 <code class="language-plaintext highlighter-rouge">cp -p file ~/target/</code><br />
+-R: 若被复制对象有目录，则把该目录下的子目录和子目录下的文件都复制<br />
+<strong>移动</strong>: <code class="language-plaintext highlighter-rouge">mv</code> #有重命名的功能<br />
+<code class="language-plaintext highlighter-rouge">mv file1 file2</code> #把file1重命名为file2<br />
+<code class="language-plaintext highlighter-rouge">mv file1 file2 ~/target/</code> 把这两个文件都移动到…… #最后一个参数（/target/）必须是目录<br />
+<strong>创建目录</strong>: <code class="language-plaintext highlighter-rouge">mkdir dir</code><br />
+<strong>删除目录</strong>: <code class="language-plaintext highlighter-rouge">rmdir dir</code>  (空目录)<br />
+<strong>删除文件</strong>: <code class="language-plaintext highlighter-rouge">rm file</code><br />
+<code class="language-plaintext highlighter-rouge">rm</code>用于删除文件，若使用参数<code class="language-plaintext highlighter-rouge">-r</code>或<code class="language-plaintext highlighter-rouge">-R</code>，则可删除目录<br />
+<code class="language-plaintext highlighter-rouge">-r</code>,<code class="language-plaintext highlighter-rouge">-R</code>:递归删除，无论目录下是否有东西<br />
+<code class="language-plaintext highlighter-rouge">-i</code>: 删除前先询问<br />
+<code class="language-plaintext highlighter-rouge">-f</code>: 强制删除<br />
+<code class="language-plaintext highlighter-rouge">rm -i test*</code>: 删除所有文件名以test开头的文件<br />
+<code class="language-plaintext highlighter-rouge">rm -rf test/</code>: 删除目录test,无论是否是空目录<br />
+<strong>超级用户</strong>:<code class="language-plaintext highlighter-rouge">sudo su -</code><br />
+统计文件信息: <code class="language-plaintext highlighter-rouge">wc [-l] [-w] [-c] filename</code> (行数，单词数，字符数)<br />
+<code class="language-plaintext highlighter-rouge">--version</code><br />
+<code class="language-plaintext highlighter-rouge">--help</code><br />
+<code class="language-plaintext highlighter-rouge">man</code><br />
+Linux中，一个文件是一组数据的集合，可理解为一个字符流或字节流，Linux并不为文件设计内部结构，而是把文件都理解为无结构的数据集合。<br />
+所以:新建并打开文件可直接说编辑该文件即可（test.c文件之前并未存在）:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit test.c
 </code></pre></div></div>
 
-<p>don’t install from ppa anymore.<br />
-install rvm: run the command from official website,the latest version,maybe not the stable version.<br />
-install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.<br />
-<code class="language-plaintext highlighter-rouge">rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/10/28/install-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/03/02/commands-about-linux/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/10/28/zai-lai-liu-pan-shui/">又出差六盘水</a>
+                  <a class="post-link" href="/2016/03/01/wheat-field-with-crows/">麦田群鸦</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-10-28
+                        <i class="fa fa-calendar"></i>2016-03-01
                     </div>
                     <div class="label-card">
                         
@@ -760,83 +727,22 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>世事难料。<br />
-坚守本心。</p>
+                    <p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/wheat_field_with_crows.png" alt="麦田群鸦" /></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/10/28/zai-lai-liu-pan-shui/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/03/01/wheat-field-with-crows/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2016/09/05/display-icon-error/">icon display error</a>
+                  <a class="post-link" href="/2016/02/26/pain/">两代人，城乡之间的矛盾</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-05
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>控制面板，显示，更改大小，应用，注销，再把大小改回来。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/09/05/display-icon-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/09/04/business-trip-to-liupanshui/">出差六盘水</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-09-04
+                        <i class="fa fa-calendar"></i>2016-02-26
                     </div>
                     <div class="label-card">
                         
@@ -881,16 +787,77 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>8月1号出发，9月7号回来。<br />
-第一次出差。<br />
-第一次坐火车超过24小时。<br />
-第一次住宾馆超过一个月。<br />
-第一次可以说是真正意义上的去外省。<br />
-我以前在广西工作，但离广东不到10公里，当然如果你说广西不是外省，中国移动会坚决反对！</p>
+                    <p>我认为我母亲这一代人和我这一代人是相当矛盾的。<br />
+母亲是61年，我是89年。她经历了文革、饥荒这些国家非常动乱艰难的时期。而我成长时是国家改革开放，与西方国家接触的时期。我们都处在老旧传统与新世界新思维的夹缝中。同时我是农村的，现在是我们国家农村城镇化的过程。<br />
+一个新旧思维，一个城乡差距，把我们掐得够呛。<br />
+比如我，我是能接受西方思维观念的，关于晚婚，不结婚，丁克，性开放，同性恋这些，我都是司空见惯的了。而我母亲这一代人，能接受么？我不认为。<br />
+农村城镇化这一点，也是压着我们这一代的许多人，说白了，就是在城市买房。这几年的房价的飞涨……<br />
+希望下一代人，不必承受这些。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2016/09/04/business-trip-to-liupanshui/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/02/26/pain/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2016/02/26/for-someone/">for someone</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-02-26
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>我们都会想许多东西，把一部分写下了，有一些公开，有一些只给自己看。因为我们知道，这些文字充满了稚嫩与羞涩。<br />
+而其实我们希望，有一天，有一个人说：我看完了你写的文字，我觉得你还有一些没有公开。我想看。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/02/26/for-someone/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -905,10 +872,10 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page20" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">21/29</span>
+          <span class="page_number ">21/26</span>
           
             <a href="/page22" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page29" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page26" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -961,8 +928,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2024/10/13/day-137-gu-shi/">Day 137：短疯牛，股市一二浪</a></li>
                     
-                        <li><a href="/2024/09/24/day-136/">Day 136</a></li>
-                    
                         <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
                     
                         <li><a href="/2024/09/12/day-131/">Day 131：睡觉误事</a></li>
@@ -985,6 +950,8 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
+                        <li><a href="/2023/11/28/day-63/">Day 63：篮球，库里，不放弃</a></li>
+                    
                 </ul>
             </div>
 
@@ -1001,7 +968,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 tech
                             </span>
-                            <span class="badge">65</span>
+                            <span class="badge">62</span>
                         </a>
                     </li>
                     
@@ -1010,7 +977,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">191</span>
+                            <span class="badge">163</span>
                         </a>
                     </li>
                     
@@ -1093,7 +1060,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 12pt; color: #666;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 11.5pt; color: #666;">octopress3.0</a>
                     
                       
                       
@@ -1114,7 +1081,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 10pt; color: #888;">rough</a>
                     
                       
                       
