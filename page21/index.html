@@ -134,44 +134,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -187,14 +149,13 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/07/02/daily/">Daily</a>
+                  <a class="post-link" href="/2016/11/13/sql-edit-more-than-200-item/">SQL: edit more than 200 item</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-07-02
+                        <i class="fa fa-calendar"></i>2016-11-13
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -210,7 +171,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -227,8 +188,6 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -239,25 +198,24 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>嘿，深圳的7通道安卓，本来以为要明天才有可能搞定的，没想到今天就搞好回来了。</p>
+                    <p>工具，选项，SQL Server 对象资源管理器，命令……</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/07/02/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/11/13/sql-edit-more-than-200-item/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/07/01/daily/">Daily，春有百花秋有月</a>
+                  <a class="post-link" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">windows10和Ubuntu双系统，时间不对</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-07-01
+                        <i class="fa fa-calendar"></i>2016-11-10
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -273,7 +231,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -290,8 +248,6 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -302,33 +258,54 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>南宋僧人，慧开<br />
-春有百花秋有月<br />
-夏有凉风冬有雪<br />
-如无闲事挂心头<br />
-便是人间好时节</p>
+                    <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
 
-<p>工作都是挺烦的，没办法<br />
-放开胸怀大胆干<br />
-早点睡觉</p>
+<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+utc=yes 改成 utc=no
+</code></pre></div></div>
+
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
+后来谷歌了半天找到了一个完美解决办法：<br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>然后将时间更新到硬件上：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
+</code></pre></div></div>
+
+<p>重新进入windows10，发现时间恢复正常了！</p>
+
+<p><a href="https://blog.csdn.net/weixin_42066135/article/details/144369653">新博文</a></p>
+
+<h3 id="但是在ubuntu2404中更新">但是在ubuntu24.04中，更新：</h3>
+
+<p>简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo timedatectl set-local-rtc 1
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/07/01/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/11/10/time-stuff-between-windows-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/29/poetry/">商山早行</a>
+                  <a class="post-link" href="/2016/11/10/Voltage-change/">voltage change</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-29
+                        <i class="fa fa-calendar"></i>2016-11-10
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -344,7 +321,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -361,8 +338,6 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -373,41 +348,51 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>——温庭筠<br />
-晨起动征铎，客行悲故乡。<br />
-鸡声茅店月，人迹板桥霜。<br />
-槲叶落山路，枳花明驿墙。<br />
-因思杜陵梦，凫雁满回塘。<br />
-<!--more--><br />
-商山早行<br />
-唐·温庭筠<br />
-chén qǐ dòng zhēng duó kè xíng bēi gù xīang<br />
-晨 起 动 征 铎 ,客 行 悲 故 乡.<br />
-jī shēng máo dian yuè rén jì bǎn qiáo shuāng<br />
-鸡 声 茅 店 月 ,人 迹 板 桥 霜.<br />
-hú yè luò shān lù zhǐ huā míng yì qiáng<br />
-槲 叶 落 山 路 ,枳 花 明 驿 墙.<br />
-yīn sī dù líng mèng fú yàn mǎn huí táng<br />
-因 思 杜 陵 梦 ,凫 雁 满 回 塘.<br />
-温庭筠（812—870）原名岐,字飞卿,太原人.政治上一生不得意,官仅国子助教.少负才名,然屡试不第.又好讥讽权贵,多犯忌讳,因而长期抑郁,终生不得志.他精通音律,熟悉词调,在词的格律形式上,起了规范化的作用.艺术成就远在晚唐其他词人之上.其词题材较狭窄,多红香翠软,开“花间词”派香艳之风.有些词在意境的创造上,表现了他杰出的才能.他善于选择富有特征的景物构成艺术境界,表现人物情思,文笔含蓄,耐人寻味.其诗辞藻华丽有《温庭筠诗集》,《金奁集》,存词70余首.注：部分版本为枳花照驿墙,现查大部分教科书已改为“明”：明,使…明艳.这句说：枳花鲜艳地开放在驿站墙边 .</p>
+                    <p>MACHINE: fish hunting<br />
+black pan: GND<br />
+red pan:<br />
+A: co1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press 100
+	voltage change from 3.36V to almost 0V,and then come back to 3.36V
+  	PRESS 10
+	3.36V,0.9V,3.36V
+</code></pre></div></div>
+
+<p>B: HP</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	3.2V, 1.8V,3.2V
+</code></pre></div></div>
+
+<p>C: SSR</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	5.0V, 0.48V, 5.0V
+</code></pre></div></div>
+
+<p>D: TF</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>press coin return
+	3.2V, 0V, 3.2V
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/29/poetry/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/11/10/Voltage-change/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/29/daily02/">Daily 02</a>
+                  <a class="post-link" href="/2016/11/10/failed-when-gem-install-therubyracer/">failed when: gem install therubyracer</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-29
+                        <i class="fa fa-calendar"></i>2016-11-10
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -423,7 +408,7 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -440,8 +425,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -452,28 +435,39 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>江湖路远，总有可能再见，不是万不得已，别撕破脸，别掀桌子。<br />
-眼光毒，胆子大，脑子活，嘴巴甜，脸皮厚，手段狠，心肠硬，城府深。<br />
-别分享自己的状况，你好，招人妒忌，你不好，招人鄙视。<br />
-以上自己考虑考虑，适时适当使用。</p>
+                    <p>运行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@ubuntu:~/octopress$ gem install therubyracer  
+</code></pre></div></div>
+
+<p>报错</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing therubyracer:
+	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem
+</code></pre></div></div>
+
+<p>corrupt:broken<br />
+the package is broken<br />
+so remove /home/dong/.rvm/gems/ruby-2.3.1/cache/libv8-3.16.14.15-x86_64-linux.gem<br />
+then redownload and reinstall<br />
+successed.</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/29/daily02/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/11/10/failed-when-gem-install-therubyracer/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/29/daily/">Daily</a>
+                  <a class="post-link" href="/2016/10/31/bad-night/">bad night</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-29
+                        <i class="fa fa-calendar"></i>2016-10-31
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -506,8 +500,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -518,26 +510,26 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>人在江湖，到处是江湖，烦事避不了的。<br />
-熬得住无人问津的寂寞，才配得上诗和远方。</p>
+                    <p>Got a lot of nightmares on those days.<br />
+So many bad things,bad days.<br />
+Got to carry on.</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/29/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/10/31/bad-night/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/27/daily/">Daily,2023-06-27</a>
+                  <a class="post-link" href="/2016/10/29/config-dot-yml/">config.yml</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-27
+                        <i class="fa fa-calendar"></i>2016-10-29
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -547,18 +539,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     <div class="label-card">
                     
 
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
 
 
                     </div>
@@ -570,8 +550,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -582,29 +560,95 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>因为龙舟节时段下雨和工作经常加班，有大半个月没打球没运动了，今天终于天晴，下班了赶紧跑，去打球，但是只打了3个球，就明显脚软，跑不起来，节奏慢半拍，打了三四场，有点喘气不上来。<br />
-所以，真的要每天运动健身，就算10分钟也行。上年纪了，必须每天花时间和汗水，保持体能。<br />
-另外，每天打字，写点东西，不然脑袋也荒废得利害。<br />
-我买了个樱桃青轴的机械键盘，打字感觉很舒服的，手感很好，声音就和老式打字机一样好听。每天都写点东西，物尽其用嘛。<br />
-读书，写字。</p>
+                    <p>.# ———————– #<br />
+.#      Main Configs       #<br />
+.# ———————– #</p>
+
+<p>url: https://qiuhaidong.github.io<br />
+title: Haydn Yau<br />
+subtitle:<br />
+author: 丘海东<br />
+simple_search: https://www.google.com/search<br />
+description:</p>
+
+<p>.# Default date format is “ordinal” (resulting in “July 22nd 2007”)<br />
+.# You can customize the format as defined in<br />
+.# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime<br />
+.# Additionally, %o will give you the ordinal representation of the day<br />
+date_format: “ordinal”</p>
+
+<p>.# RSS / Email (optional) subscription links (change if using something like Feedburner)<br />
+subscribe_rss: /atom.xml<br />
+subscribe_email:<br />
+.# RSS feeds can list your email address if you like<br />
+email:</p>
+
+<p>.# ———————– #<br />
+.#    Jekyll &amp; Plugins     #<br />
+.# ———————– #</p>
+
+<p>.# If publishing to a subdirectory as in http://site.com/project set ‘root: /project’<br />
+root: /<br />
+permalink: /blog/:year/:month/:day/:title/<br />
+source: source<br />
+destination: public<br />
+plugins: plugins<br />
+code_dir: downloads/code<br />
+category_dir: blog/categories<br />
+markdown: rdiscount<br />
+rdiscount:<br />
+  extensions:<br />
+    - autolink<br />
+    - footnotes<br />
+    - smart<br />
+highlighter: pygments # default python pygments have been replaced by pygments.rb</p>
+
+<p>paginate: 5                     # Posts per page on the blog index<br />
+paginate_path: “posts/:num”     # Directory base for pagination URLs eg. /posts/2/<br />
+recent_posts: 5               # Posts in the sidebar Recent Posts section<br />
+excerpt_link: “Read on →”  # “Continue reading” link text at the bottom of excerpted articles<br />
+excerpt_separator: “<!--more-->”</p>
+
+<p>titlecase: true       # Converts page and post titles to titlecase</p>
+
+<p>.# list each of the sidebar modules you want to include, in the order you want them to appear.<br />
+.# To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like ‘custom/asides/custom_aside_name.html’<br />
+default_asides: [asides/recent_posts.html, asides/category_list.html, asides/github.html]<br />
+.#default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]</p>
+
+<p>.# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below<br />
+.# and add an array with the asides you want to use.<br />
+.# blog_index_asides:<br />
+.# post_asides:<br />
+.# page_asides:</p>
+
+<p>.# ———————– #<br />
+.#   3rd Party Settings    #<br />
+.# ———————– #</p>
+
+<p>.# Github repositories<br />
+github_user: qiuhaidong<br />
+github_repo_count: 0<br />
+github_show_profile_link: true<br />
+github_skip_forks: true</p>
+
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/27/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/10/29/config-dot-yml/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/25/daily/">daily，2023-06-25</a>
+                  <a class="post-link" href="/2016/10/28/install-again/">install again</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-25
+                        <i class="fa fa-calendar"></i>2016-10-28
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -620,7 +664,7 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -637,8 +681,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -649,32 +691,33 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>烦躁的时候千万不要说话<br />
-也不要做任何决定<br />
-安静地待会<br />
-你已经长大了<br />
-一些难过的情绪<br />
-要学会自己消化<br />
-<img src="https://wx4.sinaimg.cn/large/780bc50fgy1hfav91cf0dj23k02cyhdt.jpg" alt="" /><br />
-<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/master/images/control.jpg" alt="" /></p>
+                    <p>something new:<br />
+install git:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install git
+</code></pre></div></div>
+
+<p>don’t install from ppa anymore.<br />
+install rvm: run the command from official website,the latest version,maybe not the stable version.<br />
+install ruby:we don’t use version 1.9.3 anymore，search the official website，the latest version,for exemple:2.3.1  the old version may got some problem when install the gem package.<br />
+<code class="language-plaintext highlighter-rouge">rubygems bundle install</code>its address has change,the latest version is<a href="https://gems.ruby-china.org">Ruby China</a>，we could check it out from the origin official website.</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/25/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/10/28/install-again/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/24/kaiqiao/">开窍</a>
+                  <a class="post-link" href="/2016/10/28/zai-lai-liu-pan-shui/">又出差六盘水</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-24
+                        <i class="fa fa-calendar"></i>2016-10-28
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -707,8 +750,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -719,36 +760,25 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>世事相通，一理通，百理融。<br />
-开悟了，思想和行动都很积极。<br />
-开悟了，静，思维缜密，所有的情况先在脑子里过一遍，细节，成败的关键点。<br />
-不怕得罪人，不再唯唯诺诺，不再害怕表达自己的想法和意见，不是风风火火去闯祸，而是平静地表达。<br />
-不再执着于反驳，你说你的，但我不受影响。<br />
-格局，海纳百川，不斤斤计较，不纠结鸡毛蒜皮。<br />
-隐忍，不过多解释，一笑而过，毫无波澜。<br />
-强执行力，能做到90分的，不会在80分的时候就停下。看透本质，不被表象迷惑。<br />
-自省，反思不足。</p>
-
-<p>威不足则多怒，信不足则多言，智不足则多虑。<br />
-吃苦不是忍受贫穷，不是单纯的体力劳动，是长时间为了目标而聚焦的能力，放弃娱乐，无效社交，无意义的消费，承受不被理解的孤独，本质是自控力，自制力，坚持和深度思考的能力。</p>
+                    <p>世事难料。<br />
+坚守本心。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/24/kaiqiao/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/10/28/zai-lai-liu-pan-shui/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/24/daily/">Daily，2023-06-24</a>
+                  <a class="post-link" href="/2016/09/05/display-icon-error/">icon display error</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-24
+                        <i class="fa fa-calendar"></i>2016-09-05
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -764,7 +794,7 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
     
   
 
@@ -781,8 +811,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -793,28 +821,24 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>黄金十年，控制情欲。<br />
-清醒，目标，行动，坚持。<br />
-目标明确，效率至上，遇水架桥，逢山开路，控制情绪，极致理性。<br />
-思考全面，做好准备但不忧虑没发生的事情。</p>
+                    <p>控制面板，显示，更改大小，应用，注销，再把大小改回来。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/24/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/09/05/display-icon-error/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/06/22/daily/">Daily，2023-06-22</a>
+                  <a class="post-link" href="/2016/09/04/business-trip-to-liupanshui/">出差六盘水</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-06-22
+                        <i class="fa fa-calendar"></i>2016-09-04
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -847,8 +871,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -859,14 +881,16 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>前提环境：公司又意调我去处理业务前期定方案、展厅、协助开发做测试,且还要兼顾生产部的工作<br />
-做好职场，是否先要承担额外的责任<br />
-如何面对、处理琐事、麻烦事<br />
-不管如何，提升自己的能力</p>
+                    <p>8月1号出发，9月7号回来。<br />
+第一次出差。<br />
+第一次坐火车超过24小时。<br />
+第一次住宾馆超过一个月。<br />
+第一次可以说是真正意义上的去外省。<br />
+我以前在广西工作，但离广东不到10公里，当然如果你说广西不是外省，中国移动会坚决反对！</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/06/22/daily/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2016/09/04/business-trip-to-liupanshui/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -881,10 +905,10 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page20" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">21/48</span>
+          <span class="page_number ">21/29</span>
           
             <a href="/page22" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page48" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page29" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -903,17 +927,9 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     
                         <li><a href="/2025/04/23/day-154/">Day 154：因为睡觉错过交易点</a></li>
                     
-                        <li><a href="/2025/04/23/mans-status/">男人的状态</a></li>
-                    
                         <li><a href="/2025/04/23/ubuntu-24-04-boot-repair/">Ubuntu24.04 修复引导</a></li>
                     
-                        <li><a href="/2025/04/22/ubuntu-25-dot-04/">Ubuntu25.04</a></li>
-                    
                         <li><a href="/2025/04/21/day-153/">Day 153：行动</a></li>
-                    
-                        <li><a href="/2025/04/19/day-152/">Day 152</a></li>
-                    
-                        <li><a href="/2025/04/19/day-151/">Day 151</a></li>
                     
                         <li><a href="/2025/04/14/lost-two-chances/">股市，错过两个大机会</a></li>
                     
@@ -931,10 +947,6 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     
                         <li><a href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a></li>
                     
-                        <li><a href="/2025/04/07/day-148/">Day 148：博客又成功了</a></li>
-                    
-                        <li><a href="/2025/04/03/maybe-call-it-the-end/">好好生活：这个博客不定时停更</a></li>
-                    
                         <li><a href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a></li>
                     
                         <li><a href="/2025/01/27/henduoshishidushibeiaihewunai/">很多世事都是悲哀和无奈</a></li>
@@ -943,23 +955,35 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                     
                         <li><a href="/2024/12/23/day-146/">Day 146：获利和被套的心态、处理能力</a></li>
                     
-                        <li><a href="/2024/12/19/day-145/">Day 145：第一性原理——本质</a></li>
-                    
-                        <li><a href="/2024/12/13/day-144/">Day 144：步步错，步步悟</a></li>
-                    
-                        <li><a href="/2024/11/23/day-143/">Day 143</a></li>
-                    
-                        <li><a href="/2024/11/20/day-142/">Day 142：对于“苦难”</a></li>
-                    
-                        <li><a href="/2024/11/11/day-141/">Day 141</a></li>
-                    
                         <li><a href="/2024/11/05/day-140/">Day 140：懒，蠢，代价很大</a></li>
-                    
-                        <li><a href="/2024/10/30/day-139/">Day 139</a></li>
                     
                         <li><a href="/2024/10/18/day-138/">Day 138：盈亏同源，门外汉</a></li>
                     
                         <li><a href="/2024/10/13/day-137-gu-shi/">Day 137：短疯牛，股市一二浪</a></li>
+                    
+                        <li><a href="/2024/09/24/day-136/">Day 136</a></li>
+                    
+                        <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
+                    
+                        <li><a href="/2024/09/12/day-131/">Day 131：睡觉误事</a></li>
+                    
+                        <li><a href="/2024/08/22/day-125/">Day 125：为什么锻炼身体后还是弱不禁风？</a></li>
+                    
+                        <li><a href="/2024/04/25/day-116/">Day 116：术与道，偶然和必然</a></li>
+                    
+                        <li><a href="/2024/01/16/day-93/">Day 93</a></li>
+                    
+                        <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
+                    
+                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
+                    
+                        <li><a href="/2023/12/28/plan-of-middle-age/">中年计划</a></li>
+                    
+                        <li><a href="/2023/12/25/day-81/">Day 81：自知，知足</a></li>
+                    
+                        <li><a href="/2023/12/13/day-77/">Day 77：普通父母、子女的悲哀</a></li>
+                    
+                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                 </ul>
             </div>
@@ -986,7 +1010,7 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">382</span>
+                            <span class="badge">191</span>
                         </a>
                     </li>
                     
@@ -1069,35 +1093,35 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 12pt; color: #666;">octopress3.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
+                      <a href="/tag/#octopress" style="font-size: 9.5pt; color: #999;">octopress</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
+                      <a href="/tag/#ubuntu" style="font-size: 9.5pt; color: #999;">ubuntu</a>
                     
                       
                       
@@ -1111,7 +1135,7 @@ yīn sī dù líng mèng fú yàn mǎn huí táng<br />
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
                     
                       
                       

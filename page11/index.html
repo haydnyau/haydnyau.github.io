@@ -134,44 +134,6 @@
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
             </ul>
         </nav>
     </div>
@@ -187,11 +149,11 @@
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a>
+                  <a class="post-link" href="/2022/02/27/add-tags/">添加tags，導航欄，側邊欄</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-05
+                        <i class="fa fa-calendar"></i>2022-02-27
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -210,7 +172,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -227,8 +189,6 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
   
 
 </span>
@@ -239,25 +199,112 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>张卫健版《西游记》，虽是以现代人的方式来演绎，港风浓郁，但其内核忠于原著，犹如散文，形散而神不散，而且这种形式更能让人接受，进而思考，黄金年代的香港影视人，对文学和影视的处理，实在是高且妙。</p>
+                    <p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-tag-cloud-to-site-sidebar/">参考1</a></p>
+
+<h3 id="下载">下载</h3>
+
+<p>首先到 https://github.com/robbyedwards/octopress-tag-pages 和 https://github.com/robbyedwards/octopress-tag-cloud 下载这两个项目的代码。</p>
+
+<h3 id="octopress-tag-pages">octopress-tag-pages</h3>
+
+<p>把里面的文件复制到相应位置，之前已有的文件，看代码，把需要的代码加上去，<code class="language-plaintext highlighter-rouge">.md</code>文件先不用管</p>
+
+<h3 id="octopress-tag-cloud">octopress-tag-cloud</h3>
+
+<p><strong>1 .</strong> 将 <code class="language-plaintext highlighter-rouge">octopress-tag-cloud\plugins</code>  路径里面的 <code class="language-plaintext highlighter-rouge">tag_cloud.rb</code>  文件复制到 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code>  文件夹里面。</p>
+
+<p><strong>2 .</strong> 将下面的代码复制到 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\asides\tags.html</code>。（这个文件需要自己新建。）
+<strong>注意：</strong> 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的反斜杠<code class="language-plaintext highlighter-rouge">\</code>。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Tags<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"tag-cloud"</span><span class="nt">&gt;</span>
+    {\% tag_cloud font-size: 120-160%, limit: 20 \%}
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>解释：</p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_cloud</code> 的参数中， <code class="language-plaintext highlighter-rouge">font-size</code> 指定 <code class="language-plaintext highlighter-rouge">tag</code> 的大小范围；<code class="language-plaintext highlighter-rouge">limit</code> 限定 <code class="language-plaintext highlighter-rouge">20</code> 个 <code class="language-plaintext highlighter-rouge">tag</code> 。</p>
+
+<p><strong>3 .</strong> 在 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">default_asides</code> 中添加 <code class="language-plaintext highlighter-rouge">custom/asides/tags.html</code>，注意相应的位置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [custom/asides/tags.html, .....]
+</code></pre></div></div>
+
+<p>博文写标签：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tags: [tag1, tag2, tag3]
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> 出现问题：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEBdI0C.SIjWT7xp6kxk44HtNtPC263DeEkNHJxhmSxZADk0hrbMx8wpKHzK5e5i3chf0lcEBpbc6HvuMur2Yj2M!/r" alt="Alt text" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Liquid Exception: comparison of Array with Array failed in _layouts/page.html
+</code></pre></div></div>
+
+<h3 id="解决">解决</h3>
+
+<p><code class="language-plaintext highlighter-rouge">octopress\plugins\tag_cloud.rb</code> 第74行:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span>
+    <span class="c1"># sort the tag pairs by frequency in descending order</span>
+    <span class="n">weighted</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}</span>
+    <span class="c1"># then slice off the top @limit tag pairs</span>
+    <span class="n">weighted</span> <span class="o">=</span> <span class="n">weighted</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="vi">@limit</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">weighted = weighted[0,@limit]</code> 应该是取指定数目的标签。如果标签数量少于 <code class="language-plaintext highlighter-rouge">@limit</code> ，会报错。</p>
+
+<p>修改第74行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@sort</span> <span class="o">!=</span> <span class="s1">'rand'</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p>修改第95行为:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">if</span> <span class="vi">@limit</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">and</span> <span class="vi">@limit</span> <span class="o">&lt;</span> <span class="n">weighted</span><span class="p">.</span><span class="nf">length</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rake generate</code> ，不再出现错误</p>
+
+<p>出现另一警告：</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEEVv9L5qdjCrWDNsdaae1gecrl4Dk5DfGovwzPBz4NGxy2YEcsjFTGZk9HPnZ4pdOW3MLz5JmXZtaeKeBaKa9YY!/r" alt="Alt text" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">rake preview</code> ，标签云成功添加:</p>
+
+<p><img src="http://r.photo.store.qq.com/psc?/V53xBhKC4JFvE03uTNAL1QWxNF3K6JJT/TmEUgtj9EK6.7V8ajmQrEMkifW2gJW9D*DOdH8mhfQXdNtXOdqE9gQNJ5cLGRw3mEOzZJ.eR*6x07lmQqrmSHEFlbcBrFrU*4FcTQePqHV0!/r" alt="Alt text" /></p>
+
+<h3 id="解决--build-warning-layout-nil-requested-in-tags标签名atomxml-does-not-exist-警告问题">解决 ` Build Warning: Layout ‘nil’ requested in tags/标签名/atom.xml does not exist.` 警告问题</h3>
+
+<p>将 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\custom\tag_feed.xml</code> 文件里面 <code class="language-plaintext highlighter-rouge">nil</code> 改为 <code class="language-plaintext highlighter-rouge">null</code> ：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: null
+---
+</code></pre></div></div>
+
+<h2 id="搞定">搞定</h2>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/05/day-71-xi-you-ji/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/27/add-tags/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/05/day-70/">Day 70：管理者，最重要的能力</a>
+                  <a class="post-link" href="/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0，太慢了</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-05
+                        <i class="fa fa-calendar"></i>2022-02-27
                     </div>
                     <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
                         
                     </div>
                     <div class="label-card">
@@ -273,7 +320,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -290,7 +337,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
     
   
 
@@ -302,33 +349,85 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <ol>
-  <li>逆向力<br />
- 面对难题能及时转换思路，思维灵活不墨守成规，积极协调更多资源。</li>
-  <li>结构力<br />
- 在处理一件事情的时候，能从全局、长远、整体、根本上来把握问题。不成体系、思维不缜密，都无法把管理做好。</li>
-  <li>前瞻力<br />
- 具有开阔的视野和超前的眼光，看清行业的发展方向，主动规划团队的中期策略和长期愿景。</li>
-  <li>决断力<br />
- 遇事能准确分析判断，确定想法后果断处理。决断一般包括策略决断、人事决断和危机决断。</li>
-  <li>控制力<br />
- 把合适的人放在合适的岗位上，合理分配工作任务，并充分调动下属积极性，从而保证各种任务能够高效完成，确保目标实现。</li>
-</ol>
+                    <h2 id="原博"><a href="https://droidyue.com/blog/2014/06/22/fix-octopress-slow-loading-speed-issue-in-china-mainland/">原博</a></h2>
+<h2 id="清理没用的服务">清理没用的服务</h2>
+<p>以下修改均修改<code class="language-plaintext highlighter-rouge">_config.yml</code>,以下可以根据自己的需要进行去除。</p>
+
+<p><strong>去除Disqus评论</strong><br />
+打开文件找到<code class="language-plaintext highlighter-rouge">Disqus Comments</code>，按照下面在每一行前面加#注释掉即可</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disqus Comments
+#disqus_short_name: 
+#disqus_show_comment_count: true
+</code></pre></div></div>
+
+<p><strong>去掉Github仓库展示</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github repositories
+#github_user: 
+#github_repo_count: 
+#github_show_profile_link: true
+#github_skip_forks: true
+</code></pre></div></div>
+
+<p><strong>去除Twitter按钮</strong><br />
+<strong>去除Google+相关</strong><br />
+<strong>去除Pinboard服务</strong><br />
+<strong>去除Delicious评论，去除后可能没有评论系统</strong><br />
+<strong>去除Facebook Like</strong></p>
+
+<h2 id="替换快速的请求资源">替换快速的请求资源</h2>
+<p>其实，真正解决加速的重要环节可能是这里，因为Octopress很多依赖于Google的库和资源。</p>
+
+<h3 id="解决google-analytics巨慢的问题">解决Google Analytics巨慢的问题</h3>
+<p>对于使用Google Analytics来说，加在ga.js这个文件简直是要命的慢，这里我使用自己存放在七牛CDN上的js.  http://droidyue-tools.qiniudn.com/ga.js 已验证，完全可以正常收集数据。<br />
+参考如下，修改<code class="language-plaintext highlighter-rouge">source/_includes/google_analytics.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> _gaq.push(['_trackPageview']);
+
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src='http://droidyue-tools.qiniudn.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+   <span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="解决fontsgoogleapiscom蜗牛慢">解决fonts.googleapis.com蜗牛慢</h3>
+<p>这里我们使用数字公司提供的Google Fonts大陆解决方案，使用<code class="language-plaintext highlighter-rouge">fonts.useso.com</code>替换<code class="language-plaintext highlighter-rouge">fonts.googleapis.com</code>。<br />
+修改文件<code class="language-plaintext highlighter-rouge">/source/_includes/custom/head.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="解决ajaxgoogleapiscom慢的问题">解决ajax.googleapis.com慢的问题</h3>
+<p>修改<code class="language-plaintext highlighter-rouge">source/_includes/head.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">&amp;&amp;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">unescape</span><span class="p">(</span><span class="dl">'</span><span class="s1">%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E</span><span class="dl">'</span><span class="p">))</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/javascripts/octopress.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h3 id="總結">總結</h3>
+
+<p>导致网站慢的原因其实是加载Google的资源，当然我们不能怨Google.经过测试，使用数字公司的解决方法之后，国内国外访问速度都是可以的。这里还是推荐以下数字公司的这个解决方案http://libs.useso.com/</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/05/day-70/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/27/speed-up-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/05/day-69/">Day 69</a>
+                  <a class="post-link" href="/2022/02/26/python2-ubuntu20-dot-04-octopress2-dot-0/">python2 ubuntu20.04 octopress2.0</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-05
+                        <i class="fa fa-calendar"></i>2022-02-26
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -347,7 +446,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -364,7 +463,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -376,29 +475,26 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>越冷血、果断、不拖泥带水，越有人欣赏。<br />
-与步伐一致的人同行，如果没有，那就独行。<br />
-生活就是哄自己，把自己劝明白，什么都解决了。<br />
-不必讨人喜欢，更需要被讨厌的勇气。<br />
-穷人家老实本分高学历孩子的束缚：<br />
-法家锁喉，儒家捏肋，道家困心，官家抽骨，墨家灭欲，佛家化缘。<br />
-但有破局之法：<br />
-<strong>法底，儒表，佛心，道骨</strong></p>
+                    <p>有時候報錯，記得把<code class="language-plaintext highlighter-rouge">Gemfile.lock</code>文件刪除<br />
+Ubuntu20.04自帶3版本的python，不兼容Octopress2.0的依賴。故安裝2版本</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.2.6
+sudo apt install python2
+</code></pre></div></div>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/05/day-69/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/26/python2-ubuntu20-dot-04-octopress2-dot-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/05/day-68-education/">Day 68：教育观</a>
+                  <a class="post-link" href="/2022/02/26/be-a-good-man/">男人要有比欲望更高級的興趣愛好，和作為</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-05
+                        <i class="fa fa-calendar"></i>2022-02-26
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -434,7 +530,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -446,22 +542,34 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>大多数孩子都是只能当普通人的，不要强把他们当伟人来教育，否则他们既当不了伟人，又做不回普通人，可悲。</p>
+                    <p>過年在家期間，每天醒了吃，吃了玩手機電腦，玩累了睡。<br />
+24號中午買車票，然後各種收拾，沒睡午覺，晚上12點1點多才睡着。4點半卻醒了，然後一直沒再睡着。6點半從家出發，9點大巴發車，下午2點到燕塘地鐵站，下車。<br />
+這個時候已經開始頭痛了。<br />
+到了租房，收拾，蒸熱2條<a href="https://baike.baidu.com/item/%E5%8F%A4%E7%B2%BD">古粽</a>吃了。<br />
+<img src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/baike/g=0;w=268/sign=e56602fba786c91718035732be0042f9/0df3d7ca7bcb0a4682b36d3a6b63f6246b60af24.jpg" alt="古粽" /><br />
+然後玩玩手機電腦。也沒有睡覺。<br />
+晚上8點半，騎車拿古粽過去給梅。小坐20分鐘就回來。<br />
+很累，頭很痛，但是卻睡不着覺，一直到兩三點，頭沒那麼痛了，才睡着。<br />
+不到8點卻醒了。之後在床上翻來覆去，也沒能再睡着。<br />
+玩手機，刷抖音，看到一句話：</p>
+<h3 id="男人要有比欲望更高級的興趣愛好"><strong>男人要有比欲望更高級的興趣愛好</strong></h3>
+<p>把自己的生活調整好。好好做人呀。<br />
+每個人都有他的優缺點，要懂得，要放下，和自己和解。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/05/day-68-education/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/26/be-a-good-man/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/05/day-67/">Day 67：内敛不懦弱</a>
+                  <a class="post-link" href="/2022/02/24/octopress-3-0-is-faster-than-2-0/">Octopress3.0訪問速度比2.0快太多了</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-05
+                        <i class="fa fa-calendar"></i>2022-02-24
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -480,7 +588,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -497,7 +605,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -509,23 +617,23 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>君子可内敛不可懦弱<br />
-面不公可起而论之</p>
+                    <p>真是快太多了，完全不是一個級別的，2.0有時候根本就訪問不了<br />
+<a href="https://qiuhaidong.github.io/blog/2022/02/27/speed-up-octopress2-dot-0/">加速Octopress2.0</a></p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/05/day-67/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/24/octopress-3-0-is-faster-than-2-0/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/03/day-66/">Day 66：别懒</a>
+                  <a class="post-link" href="/2022/02/24/cat-catch/">被貓抓了一下</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-03
+                        <i class="fa fa-calendar"></i>2022-02-24
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -561,7 +669,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -573,24 +681,27 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>洗冷水澡。<br />
-只要你<strong>迈出第一步，顶住第一下</strong>，肾上腺素会为你搞定之后的所有困难。<br />
-人生其他的事情，也是。</p>
+                    <p>前幾天晚上，有一隻貓，據父親說是野貓、流浪貓，都會來我家討食，我們餵了它兩天。<br />
+昨晚我想和它玩玩，把手伸到它面前，它抓了我一下，一道1厘米多點的抓痕，過了兩三分鐘，滲出一下血。<br />
+我用熱水器的熱水沖洗了幾分鐘，擦洗了傷口。<br />
+希望沒事。<br />
+雖然愛貓，但因貓的性子，如若不熟悉，還是別逗它。<br />
+有風險。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/03/day-66/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/24/cat-catch/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/02/day-65/">Day 65：决策疲劳</a>
+                  <a class="post-link" href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-02
+                        <i class="fa fa-calendar"></i>2022-02-24
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -609,7 +720,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -626,7 +737,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -638,22 +749,62 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>决策成本，精简生活。</p>
+                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
+
+<h2 id="问题描述">问题描述</h2>
+
+<p>我们每次使用命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
+</code></pre></div></div>
+
+<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="language-plaintext highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
+
+<p><img src="https://ooo.0o0.ooo/2016/07/07/577e349ab42ed.png" alt="7f07c8f6deef169ef6be5103bbd3e932f8676bb1.png" /></p>
+
+<h2 id="解决方法">解决方法</h2>
+
+<p>直接使用命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -r #查看远程分支
+</code></pre></div></div>
+<p>或</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -a #查看所有分支
+</code></pre></div></div>
+
+<p>会显示</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin/HEAD -&gt; origin/master
+origin/daily/1.2.2
+origin/daily/1.3.0
+origin/daily/1.4.1
+origin/develop
+origin/feature/daily-1.0.0
+origin/master
+</code></pre></div></div>
+
+<p>然后直接</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout origin/daily/1.4.1
+</code></pre></div></div>
+
+<p>就好了。。。</p>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/02/day-65/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/24/git-clone-not-master-branch/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/12/01/day-64/">Day 64：戒抖音</a>
+                  <a class="post-link" href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-12-01
+                        <i class="fa fa-calendar"></i>2022-02-24
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -672,7 +823,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -689,7 +840,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -701,22 +852,50 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>抖音的算法，让人上瘾，戒了。</p>
+                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
+
+<h2 id="jekyll-paginate-依赖缺失">jekyll-paginate 依赖缺失</h2>
+
+<p>因为 jekyll 3 中默认安装已经没有这个分页组件了，官方把这个分页组件插件化了，因此要独立安装。详情见 <a href="https://jekyllrb.com/docs/pagination/">https://jekyllrb.com/docs/pagination/</a>。</p>
+
+<h3 id="错误呈现">错误呈现</h3>
+
+<p>在启动 jekyll 服务的时候出现以下错误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
+  Dependency Error: Yikes! It looks like you don't have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-paginate' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
+jekyll 3.1.2 | Error:  jekyll-paginate
+</code></pre></div></div>
+
+<h3 id="解决方法">解决方法</h3>
+
+<p>我们安装这个插件到本地即可。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll-paginate
+Fetching: jekyll-paginate-1.1.0.gem (100%)
+Successfully installed jekyll-paginate-1.1.0
+Parsing documentation for jekyll-paginate-1.1.0
+Installing ri documentation for jekyll-paginate-1.1.0
+Done installing documentation for jekyll-paginate after 3 seconds
+1 gem installed
+</code></pre></div></div>
+
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/12/01/day-64/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/24/error-jekyll-paginate/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/11/28/day-63/">Day 63：篮球，库里，不放弃</a>
+                  <a class="post-link" href="/2022/02/24/what-really-matter/">什麼才是重要的</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-11-28
+                        <i class="fa fa-calendar"></i>2022-02-24
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -752,7 +931,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -764,26 +943,26 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p>今晚打球，面对高手，内心<strong>怯场</strong>，没发挥出<strong>应有的水平</strong>。<br />
-回来看库里的纪录片，他高中时，打的也不好，有时投篮很糟糕，还有失误。但是，他不放弃，不认输，继续比赛，也因此获得大学教练的赏识，得到大学的招募。<br />
-有个采访，众球星心中的最佳防守人，是无论对手打得多好，他都一如既往地继续防守，<strong>从不气馁</strong>。<br />
-球没打好，可以骂一声艹，但<strong>不能唉声叹气</strong>。<br />
-<strong>不放弃，不怀疑，意志和身体技术同样重要。</strong></p>
+                    <p>專注內容<br />
+專注技術<br />
+Octopress2.0、3.0、jekyll官方、其他主題，都不重要<br />
+博文才重要</p>
+
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/11/28/day-63/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/24/what-really-matter/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
             
               <li>
                 <h2>
-                  <a class="post-link" href="/2023/11/25/day-62/">Day 62：贫穷的本质</a>
+                  <a class="post-link" href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2023-11-25
+                        <i class="fa fa-calendar"></i>2022-02-21
                     </div>
                     <div class="label-card">
                         <i class="fa fa-user"></i>丘海东
@@ -802,7 +981,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
     
   
 
@@ -819,7 +998,7 @@
   <i class="fa fa-tags"></i>
   
     
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
     
   
 
@@ -831,16 +1010,18 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <p><strong>笨</strong>，<strong>贪婪</strong>。</p>
-<ol>
-  <li>父母穷，父母的阶级、性格、为人处世、个人经历，对我们的人格、动机、思维方式，产生一生的影响。</li>
-  <li><strong>不做长期规划</strong>，<strong>未来的预期</strong>往往<strong>悲观</strong>，常<strong>经不住诱惑</strong>，去<strong>投机取巧</strong>，<strong>接连失败</strong>。</li>
-  <li><strong>贫穷的死循环</strong>，不学习→贫穷、认知能力低下→没有学习意识→不学习……</li>
-</ol>
+                    <p>博客根目录，文件<code class="language-plaintext highlighter-rouge">index.html</code>，找到<code class="language-plaintext highlighter-rouge">Recent Posts</code>这一大段内容，复制，打开<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>，找到：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="right"&gt;
+        &lt;div class="wrap"&gt;
+</code></pre></div></div>
+<p>复制到其后面。</p>
+
+<p>因为只复制一段老是有错，现在我是把<code class="language-plaintext highlighter-rouge">index.html</code>的<code class="language-plaintext highlighter-rouge">&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>右边栏一直到最后的内容。</p>
+<h1>🤪😀</h1>
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2023/11/25/day-62/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2022/02/21/post-html-add-sidebar-about-recent-posts/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
@@ -855,10 +1036,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page10" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">11/48</span>
+          <span class="page_number ">11/29</span>
           
             <a href="/page12" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page48" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page29" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -877,17 +1058,9 @@
                     
                         <li><a href="/2025/04/23/day-154/">Day 154：因为睡觉错过交易点</a></li>
                     
-                        <li><a href="/2025/04/23/mans-status/">男人的状态</a></li>
-                    
                         <li><a href="/2025/04/23/ubuntu-24-04-boot-repair/">Ubuntu24.04 修复引导</a></li>
                     
-                        <li><a href="/2025/04/22/ubuntu-25-dot-04/">Ubuntu25.04</a></li>
-                    
                         <li><a href="/2025/04/21/day-153/">Day 153：行动</a></li>
-                    
-                        <li><a href="/2025/04/19/day-152/">Day 152</a></li>
-                    
-                        <li><a href="/2025/04/19/day-151/">Day 151</a></li>
                     
                         <li><a href="/2025/04/14/lost-two-chances/">股市，错过两个大机会</a></li>
                     
@@ -905,10 +1078,6 @@
                     
                         <li><a href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a></li>
                     
-                        <li><a href="/2025/04/07/day-148/">Day 148：博客又成功了</a></li>
-                    
-                        <li><a href="/2025/04/03/maybe-call-it-the-end/">好好生活：这个博客不定时停更</a></li>
-                    
                         <li><a href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a></li>
                     
                         <li><a href="/2025/01/27/henduoshishidushibeiaihewunai/">很多世事都是悲哀和无奈</a></li>
@@ -917,23 +1086,35 @@
                     
                         <li><a href="/2024/12/23/day-146/">Day 146：获利和被套的心态、处理能力</a></li>
                     
-                        <li><a href="/2024/12/19/day-145/">Day 145：第一性原理——本质</a></li>
-                    
-                        <li><a href="/2024/12/13/day-144/">Day 144：步步错，步步悟</a></li>
-                    
-                        <li><a href="/2024/11/23/day-143/">Day 143</a></li>
-                    
-                        <li><a href="/2024/11/20/day-142/">Day 142：对于“苦难”</a></li>
-                    
-                        <li><a href="/2024/11/11/day-141/">Day 141</a></li>
-                    
                         <li><a href="/2024/11/05/day-140/">Day 140：懒，蠢，代价很大</a></li>
-                    
-                        <li><a href="/2024/10/30/day-139/">Day 139</a></li>
                     
                         <li><a href="/2024/10/18/day-138/">Day 138：盈亏同源，门外汉</a></li>
                     
                         <li><a href="/2024/10/13/day-137-gu-shi/">Day 137：短疯牛，股市一二浪</a></li>
+                    
+                        <li><a href="/2024/09/24/day-136/">Day 136</a></li>
+                    
+                        <li><a href="/2024/09/15/day-133/">Day 133：中秋</a></li>
+                    
+                        <li><a href="/2024/09/12/day-131/">Day 131：睡觉误事</a></li>
+                    
+                        <li><a href="/2024/08/22/day-125/">Day 125：为什么锻炼身体后还是弱不禁风？</a></li>
+                    
+                        <li><a href="/2024/04/25/day-116/">Day 116：术与道，偶然和必然</a></li>
+                    
+                        <li><a href="/2024/01/16/day-93/">Day 93</a></li>
+                    
+                        <li><a href="/2024/01/01/2024/">2024，废土重生</a></li>
+                    
+                        <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
+                    
+                        <li><a href="/2023/12/28/plan-of-middle-age/">中年计划</a></li>
+                    
+                        <li><a href="/2023/12/25/day-81/">Day 81：自知，知足</a></li>
+                    
+                        <li><a href="/2023/12/13/day-77/">Day 77：普通父母、子女的悲哀</a></li>
+                    
+                        <li><a href="/2023/12/05/day-71-xi-you-ji/">Day 71：张卫健版《西游记》</a></li>
                     
                 </ul>
             </div>
@@ -960,7 +1141,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">382</span>
+                            <span class="badge">191</span>
                         </a>
                     </li>
                     
@@ -1043,35 +1224,35 @@
                       
                       
                       
-                      <a href="/tag/#octopress3.0" style="font-size: 10pt; color: #888;">octopress3.0</a>
+                      <a href="/tag/#octopress3.0" style="font-size: 12pt; color: #666;">octopress3.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9pt; color: #999;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
+                      <a href="/tag/#octopress" style="font-size: 9.5pt; color: #999;">octopress</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#rough" style="font-size: 9.5pt; color: #888;">rough</a>
+                      <a href="/tag/#rough" style="font-size: 11pt; color: #777;">rough</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#ubuntu" style="font-size: 9pt; color: #999;">ubuntu</a>
+                      <a href="/tag/#ubuntu" style="font-size: 9.5pt; color: #999;">ubuntu</a>
                     
                       
                       
@@ -1085,7 +1266,7 @@
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
                     
                       
                       
