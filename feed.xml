@@ -5,9 +5,26 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Apr 2025 03:01:37 +0800</pubDate>
-    <lastBuildDate>Tue, 29 Apr 2025 03:01:37 +0800</lastBuildDate>
+    <pubDate>Thu, 01 May 2025 01:09:59 +0800</pubDate>
+    <lastBuildDate>Thu, 01 May 2025 01:09:59 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>去年和今年的股票操作差异</title>
+        <description>去年我大部分时间是挣钱的，年末到现在，我却大多是亏钱。&lt;br /&gt;
+去年我耐得住，大部分时间空仓，等股灾，果断进场。还有立讯拉升后，我进了德赛，持仓4个月，下跌10个点也拿着，最终等到。&lt;br /&gt;
+但是，今年，我的耐心很差，股灾不敢进，行情启动不敢追，计较一两个点的芝麻，买了拿不住，风吹草动，惊弓之鸟。
+</description>
+        <pubDate>Thu, 01 May 2025 01:02:01 +0800</pubDate>
+        <link>/2025/05/01/qu-nian-he-jin-nian-de-gu-piao-cao-zuo-chai-yi/</link>
+        <guid isPermaLink="true">/2025/05/01/qu-nian-he-jin-nian-de-gu-piao-cao-zuo-chai-yi/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>天道</title>
@@ -503,29 +520,6 @@ rm -rf ~/.cache/pip
         
         
         <category>tech</category>
-        
-      </item>
-    
-      <item>
-        <title>Day 150：但行好事，莫问前程</title>
-        <description>过年时，我们和大坡队打篮球赛，学生先打第一节，落后十几分，在总得分才四十来分的情况下，大概率都是追不回来了。&lt;br /&gt;
-但是，之后我们这几个人上场，第二第三节，就追回来了，而且最后还赢了。
-
-&lt;img src=&quot;https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/refs/heads/source/source/images/%E4%BD%86%E8%A1%8C%E5%A5%BD%E4%BA%8B%EF%BC%8C%E8%8E%AB%E9%97%AE%E5%89%8D%E7%A8%8B.jpg&quot; alt=&quot;但行好事，莫问前程&quot; /&gt;
-
-我也是常常觉得我的家境，看不到希望。&lt;br /&gt;
-确实也是。&lt;br /&gt;
-我妈，就什么结果也不想，该怎么做就怎么做。&lt;br /&gt;
-那么，我也应以无所谓的心态，去面对，去做事，无心插柳，坦然面对一切结果。
-</description>
-        <pubDate>Tue, 08 Apr 2025 02:03:26 +0800</pubDate>
-        <link>/2025/04/08/day-150/</link>
-        <guid isPermaLink="true">/2025/04/08/day-150/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
         
       </item>
     
