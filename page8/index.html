@@ -145,6 +145,83 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/05/20/lightdm/">lightdm  ubuntu 桌面显示管理器</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-05-20
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#lightdm" title="Tag: lightdm" rel="tag">lightdm</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>转载于：<a href="https://www.cnblogs.com/SimbaBao/p/5791458.html">ubuntu中lightdm以及不能看到界面的一些解决方案</a></p>
+
+<p>在解决了我的ubuntu界面密码登录无限循环的问题后，终于可以用google深入的了解一下了，从之前的了解得知，ubuntu在X版本后使用了lightDM一个全新的linux桌面显示管理器，在wiki中对LightDM的描述中，LightDM配置在以下文件夹中：<br />
+（1）<code class="language-plaintext highlighter-rouge">/usr/share/lightdm/lightdm.conf.d/*.conf</code><br />
+（此为系统提供的配置文件，用户不可编辑）<br />
+（2）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf.d/*.conf</code><br />
+（3）<code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf</code><br />
+（2、3这两个配置文件，系统管理员可以覆写）<br />
+在此之后看到了一个关于解决不能看见界面的办法：<br />
+（1）使用<code class="language-plaintext highlighter-rouge">Ctrl+alt+F1</code>，进入文本终端<br />
+（2）<code class="language-plaintext highlighter-rouge">sudo stop lightdm</code> ，停止lightdm界面<br />
+（3）<code class="language-plaintext highlighter-rouge">sudo start lightdm</code> ，开始lightdm界面<br />
+（4）<code class="language-plaintext highlighter-rouge">sudo start gdm</code> ，登录gdm管理器<br />
+（5）<code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure lightdm</code> ，设置管理器的系统默认值<br />
+注：本文部分资料参阅https://wiki.ubuntu.com/LightDM</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/05/20/lightdm/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/05/19/daily/">daily，2022-05-19，活着時才能說說話聊聊天</a>
                 </h2>
                 <div class="label">
@@ -800,84 +877,6 @@ User git
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/">安装Ruby2.6.9，Error running '__rvm_make -j4'</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-04-05
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm install 2.6.9
-</code></pre></div></div>
-<p>提示错误：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error running '__rvm_make -j4',
-please read /home/dong/.rvm/log/1649165570_ruby-2.6.9/make.log
-
-There has been an error while running make. Halting the installation.
-......
-</code></pre></div></div>
-<p><a href="https://github.com/rvm/rvm/issues/4370">Error running ‘__rvm_make -j4’ ruby 2.6.9 Ubuntu 22.04 </a><br />
-<strong>解决：</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm pkg install openssl
-rvm remove 2.6.9
-rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
-</code></pre></div></div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/04/05/install-ruby2.6.9-error-running-rvm-make-j4/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -907,6 +906,8 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2025/05/07/dont-be-stupid/">别做蠢人，别做蠢事</a></li>
                     
                         <li><a href="/2025/05/06/duan-qi-mu-biao/">短期目标</a></li>
                     
@@ -966,8 +967,6 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
                     
                         <li><a href="/2023/12/30/happy-birthday/">生日快乐</a></li>
                     
-                        <li><a href="/2023/12/28/plan-of-middle-age/">中年计划</a></li>
-                    
                 </ul>
             </div>
 
@@ -993,7 +992,7 @@ rvm install 2.6.9 -C --with-openssl-dir=$HOME/.rvm/usr
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">160</span>
+                            <span class="badge">161</span>
                         </a>
                     </li>
                     
