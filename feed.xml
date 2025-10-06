@@ -5,9 +5,33 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Sep 2025 10:25:35 +0800</pubDate>
-    <lastBuildDate>Tue, 30 Sep 2025 10:25:35 +0800</lastBuildDate>
+    <pubDate>Tue, 07 Oct 2025 05:21:29 +0800</pubDate>
+    <lastBuildDate>Tue, 07 Oct 2025 05:21:29 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>远离烂人烂事，不作恶，少为“善”</title>
+        <description>别去铲不平路、论不平事。&lt;br /&gt;
+太傲慢了。&lt;br /&gt;
+我一定对？即使对，别人凭什么听我的？&lt;br /&gt;
+人微言轻！&lt;br /&gt;
+无力的正义感，只会浪费时间精力，吃力不讨好，陷入泥沼。&lt;br /&gt;
+专注自己，远离他人因果，屏蔽、过滤干扰。&lt;br /&gt;
+向球友老邓学习为人处世。&lt;br /&gt;
+接受世人的复杂多样，接受世事的不公。&lt;br /&gt;
+别想着改变世界，当包公。&lt;br /&gt;
+先适应这个世界。
+</description>
+        <pubDate>Tue, 07 Oct 2025 04:55:14 +0800</pubDate>
+        <link>/2025/10/07/yuan-chi-lan-ren-lan-shi/</link>
+        <guid isPermaLink="true">/2025/10/07/yuan-chi-lan-ren-lan-shi/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>看书-经济学</title>
@@ -189,32 +213,6 @@
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu24.04 修复引导</title>
-        <description>&lt;a href=&quot;https://shuyeidc.com/wp/75597.html&quot;&gt;原文：Ubuntu引导修复grub&lt;/a&gt;&lt;br /&gt;
-制作一个Ubuntu系统盘，try Ubuntu
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:yannubuntu/boot-repair
-sudo apt-get update	
-sudo apt-get install boot-repair
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-注意，添加软件源才能安装&lt;br /&gt;
-打开软件，选择“推荐修复”，等待完成&lt;br /&gt;
-好了，开机
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo update-grub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-用grub customizer，调整一下
-</description>
-        <pubDate>Wed, 23 Apr 2025 04:26:33 +0800</pubDate>
-        <link>/2025/04/23/ubuntu-24-04-boot-repair/</link>
-        <guid isPermaLink="true">/2025/04/23/ubuntu-24-04-boot-repair/</guid>
-        
-        <category>ubuntu-boot-repair</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
