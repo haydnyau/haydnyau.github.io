@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>侧边栏增加分类 category</title>
-    <meta name="description" content="三步Step 1添加 category_list 插件在 octopress\plugins\ 文件夹里面，新建一个文件，名为：category_list_tag.rb。并将下面的代码粘贴到里面。module Jekyll  class CategoryListTag &lt; Liquid::Tag    de...">
+    <title>除锈</title>
+    <meta name="description" content="丢弃：道德感、高大上全、面子、外界评价">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="/2022/01/10/add-category/">
+    <link rel="canonical" href="/2025/10/08/chu-xiu/">
     <link rel="alternate" type="application/rss+xml" title="丘海东" href="/feed.xml ">
 
 
@@ -138,14 +138,15 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>侧边栏增加分类 category</h1>
+        <h1>除锈</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2022-01-10
+                <i class="fa fa-calendar"></i>2025-10-08
             </div>
 
             <div class="label-card">
+                <i class="fa fa-user"></i>丘海东
                 
             </div>
 
@@ -162,7 +163,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
     
   
 
@@ -179,8 +180,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a-->
-        <a href="/tag/#octopress2.0" title="Tag: octopress2.0" rel="tag">octopress2.0</a>
+        <!--a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a-->
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
     
   
 
@@ -194,80 +195,18 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h3 id="三步">三步</h3>
-
-<h2 id="step-1">Step 1</h2>
-
-<h3 id="添加-category_list-插件">添加 <code class="language-plaintext highlighter-rouge">category_list</code> 插件</h3>
-
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\plugins\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list_tag.rb</code>。并将下面的代码粘贴到里面。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module Jekyll
-  class CategoryListTag &lt; Liquid::Tag
-    def render(context)
-      html = ""
-      categories = context.registers[:site].categories.keys
-      categories.sort.each do |category|
-        posts_in_category = context.registers[:site].categories[category].size
- 	       category_dir = context.registers[:site].config['category_dir']
-        category_url = File.join(category_dir, category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase)
-    	html &lt;&lt; "&lt;li class='category'&gt;&lt;a href='/#{category_url}/'&gt;#{category} (#{posts_in_category})&lt;/a&gt;&lt;/li&gt;\n"
-      end
-      html
-    end
-  end
-end
-
-Liquid::Template.register_tag('category_list', Jekyll::CategoryListTag)
-</code></pre></div></div>
-
-<p>这个插件会向<code class="language-plaintext highlighter-rouge">liquid</code>注册一个名为<code class="language-plaintext highlighter-rouge">category_list</code>的<code class="language-plaintext highlighter-rouge">tag</code>，该<code class="language-plaintext highlighter-rouge">tag</code>就是以<code class="language-plaintext highlighter-rouge">li</code>的形式将站点所有的<code class="language-plaintext highlighter-rouge">category</code>组织起来。如果要将<code class="language-plaintext highlighter-rouge">category</code>加入到侧边导航栏，需要增加一个<code class="language-plaintext highlighter-rouge">aside</code>。</p>
-
-<h2 id="step-2">Step 2</h2>
-
-<h3 id="增加-aside">增加 <code class="language-plaintext highlighter-rouge">aside</code></h3>
-
-<p>在 <code class="language-plaintext highlighter-rouge">octopress\source\_includes\asides\</code> 文件夹里面，新建一个文件，名为：<code class="language-plaintext highlighter-rouge">category_list.html</code> 。并粘贴下面的代码：</p>
-
-<p><strong>注意</strong>： 去掉 <code class="language-plaintext highlighter-rouge">%</code> 前面的2个 <code class="language-plaintext highlighter-rouge">\</code><br />
-这里如果不加上<code class="language-plaintext highlighter-rouge">\</code>，markdown格式会显示<code class="language-plaintext highlighter-rouge">category_list</code>的内容。我是为了正确显示代码才加上的</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section&gt;
-  &lt;h1&gt;Categories&lt;/h1&gt;
-  &lt;ul id="categories"&gt;
-    {\% category_list \%}
-  &lt;/ul&gt;
-&lt;/section&gt;
-</code></pre></div></div>
-
-<h2 id="step-3">Step 3</h2>
-
-<h3 id="_configyml-文件-修改-default_asides"><code class="language-plaintext highlighter-rouge">_config.yml</code> 文件 ，修改 <code class="language-plaintext highlighter-rouge">default_asides</code></h3>
-
-<p>打开 <code class="language-plaintext highlighter-rouge">octopress\_config.yml</code> 文件，修改里面的 <code class="language-plaintext highlighter-rouge">default_asides</code> 这一行，将 <code class="language-plaintext highlighter-rouge">asides/category_list.html</code> 添加进去。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default_asides: [asides/category_list.html, ......]
-</code></pre></div></div>
-
-<p>这里可以修改侧边栏的顺序</p>
-
-<h2 id="ok">ok</h2>
-
-<p><a href="http://www.aobosir.com/blog/2016/10/12/octopress-build-static-blog-site-add-categories-list-for-site-sidebar/">原博</a></p>
-
+        <p>丢弃：道德感、高大上全、面子、外界评价</p>
 
         </article>
         <hr>
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2022/01/10/can-not-push/">没有正确路径或权限上传，push</a></p>
+        <p><strong>上一篇</strong> <a href="/2025/10/07/yuan-chi-lan-ren-lan-shi/">远离烂人烂事，不作恶，少为“善”</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2022/01/11/ubuntu-16.04-install-octopress-2.0/">ubuntu 16.04 install octopress 2.0</a></p>
         
     </div>
 </div>
