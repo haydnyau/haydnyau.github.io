@@ -5,9 +5,84 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Oct 2025 04:18:03 +0800</pubDate>
-    <lastBuildDate>Wed, 08 Oct 2025 04:18:03 +0800</lastBuildDate>
+    <pubDate>Thu, 09 Oct 2025 01:20:26 +0800</pubDate>
+    <lastBuildDate>Thu, 09 Oct 2025 01:20:26 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>好为人师</title>
+        <description>实为以一种&lt;strong&gt;高姿态&lt;/strong&gt;，&lt;strong&gt;俯视&lt;/strong&gt;他人，故只会&lt;strong&gt;&lt;em&gt;树敌&lt;/em&gt;&lt;/strong&gt;。&lt;br /&gt;
+允许至亲撞南墙&lt;br /&gt;
+​目送挚爱走弯路&lt;br /&gt;
+​静观知己踩深坑&lt;br /&gt;
+&lt;!--more--&gt;&lt;br /&gt;
+​人这辈子，&lt;br /&gt;
+最难的修行，&lt;br /&gt;
+​是含着泪光，&lt;br /&gt;
+​看重要的人重蹈覆辙，&lt;br /&gt;
+​疼痛才是灵魂的刻刀，&lt;br /&gt;
+​而说教，&lt;br /&gt;
+​只是裹着糖衣的毒药，&lt;br /&gt;
+​道德经有言，&lt;br /&gt;
+善者不辩，&lt;br /&gt;
+​辩者不善，&lt;br /&gt;
+​那些拼死不听劝的倔犟，&lt;br /&gt;
+其实不是倔犟，&lt;br /&gt;
+​不是糊涂，&lt;br /&gt;
+​而是宿命，&lt;br /&gt;
+​
+​该走的弯路，&lt;br /&gt;
+​一里都不会少，&lt;br /&gt;
+​该撞的南墙，&lt;br /&gt;
+​半寸都不能缺，&lt;br /&gt;
+​世间的真相，&lt;br /&gt;
+​残酷却通透，&lt;br /&gt;
+​良言点不醒装睡的魂，&lt;br /&gt;
+​慈悲度不了不觉的人，
+
+​再真的道理，&lt;br /&gt;
+​也敌不过头破血流的领悟，&lt;br /&gt;
+​再深的智慧，&lt;br /&gt;
+​也替不了怯夫食谷的成长，&lt;br /&gt;
+​所谓的机缘造化，&lt;br /&gt;
+​从来都强求不得，
+
+​&lt;strong&gt;天雨倾盆&lt;/strong&gt;，&lt;br /&gt;
+&lt;strong&gt;润不活无根草&lt;/strong&gt;，&lt;br /&gt;
+&lt;strong&gt;​道法​纵宽&lt;/strong&gt;，&lt;br /&gt;
+&lt;strong&gt;度不了无缘人&lt;/strong&gt;，
+
+​&lt;strong&gt;当一个人执意往深渊里跳&lt;/strong&gt;，&lt;br /&gt;
+&lt;strong&gt;​伸手阻拦&lt;/strong&gt;，&lt;br /&gt;
+​&lt;strong&gt;反成阻碍觉醒的罪&lt;/strong&gt;，
+
+​有些课业，&lt;br /&gt;
+​终须独行，&lt;br /&gt;
+​有些顿悟，&lt;br /&gt;
+​必见血色，&lt;br /&gt;
+​我们唯一能做的，&lt;br /&gt;
+​是在对方碰得鼻青脸肿时，&lt;br /&gt;
+​递上敷伤的良药，&lt;br /&gt;
+​而非指责的刀刃，&lt;br /&gt;
+​痛到极致，&lt;br /&gt;
+​方知收敛，&lt;br /&gt;
+​栽进坑底，&lt;br /&gt;
+​才懂仰望，&lt;br /&gt;
+​真正的成全，&lt;br /&gt;
+​是融他在你的泪光里，&lt;br /&gt;
+​把跟头摔成台阶，&lt;br /&gt;
+​将教训熬成铠甲。
+</description>
+        <pubDate>Thu, 09 Oct 2025 01:01:38 +0800</pubDate>
+        <link>/2025/10/09/hao-wei-ren-shi/</link>
+        <guid isPermaLink="true">/2025/10/09/hao-wei-ren-shi/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>除锈</title>
@@ -184,25 +259,6 @@
         
         
         <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>改hosts文件，指定IP</title>
-        <description>网站无法访问，则改hosts文件，指定IP&lt;br /&gt;
-到：&lt;a href=&quot;https://www.ipaddress.com/&quot;&gt;https://www.ipaddress.com&lt;/a&gt;，找到网站的IP
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gedit /etc/hosts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-格式：IP (空格) 域名，如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;140.82.114.36      ssh.github.com&lt;/code&gt;
-</description>
-        <pubDate>Thu, 24 Apr 2025 23:47:10 +0800</pubDate>
-        <link>/2025/04/24/ipaddress/</link>
-        <guid isPermaLink="true">/2025/04/24/ipaddress/</guid>
-        
-        <category>ip</category>
-        
-        
-        <category>tech</category>
         
       </item>
     
