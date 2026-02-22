@@ -147,6 +147,96 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/10/time-stuff-between-windows-and-ubuntu/">windows10和Ubuntu双系统，时间不对</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-10
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="http://www.cnblogs.com/qf19910623/p/5559514.html">原博文</a></p>
+
+<p>windows10和ubuntu16.04双系统，仍然出现了喜闻乐见的老问题，装完后，在windows下时区不对，之前的老办法是：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gedit /etc/default/rcS
+utc=yes 改成 utc=no
+</code></pre></div></div>
+
+<p>然而并没有什么效果，ubuntu16.04里面根本就没有utc这一项！<br />
+后来谷歌了半天找到了一个完美解决办法：<br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>然后将时间更新到硬件上：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hwclock --localtime --systohc
+</code></pre></div></div>
+
+<p>重新进入windows10，发现时间恢复正常了！</p>
+
+<p><a href="https://blog.csdn.net/weixin_42066135/article/details/144369653">新博文</a></p>
+
+<h3 id="但是在ubuntu2404中更新">但是在ubuntu24.04中，更新：</h3>
+
+<p>简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo timedatectl set-local-rtc 1
+</code></pre></div></div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/10/time-stuff-between-windows-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/10/Voltage-change/">voltage change</a>
                 </h2>
                 <div class="label">
@@ -808,67 +898,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2016/08/28/system-link/">Alien system</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2016-08-28
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p><img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/source/source/images/%E7%B3%BB%E7%BB%9F%E6%8E%A5%E7%BA%BF%E5%9B%BE.jpg" alt="系统接线图" /><br />
-三辊闸，淘气堡，后台终端管理，扣费由场地决定，投币数设置为1即可。若扣费50，投币50，会导致三辊闸打开时间过长，比如连续20秒～～～</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2016/08/28/system-link/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -898,6 +927,8 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2026/02/22/day-156/">Day 156</a></li>
                     
                         <li><a href="/2026/02/13/heal-yourself/">治愈自己</a></li>
                     
@@ -957,8 +988,6 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                     
                         <li><a href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a></li>
                     
-                        <li><a href="/2025/01/27/henduoshishidushibeiaihewunai/">很多世事都是悲哀和无奈</a></li>
-                    
                 </ul>
             </div>
 
@@ -984,7 +1013,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">173</span>
+                            <span class="badge">174</span>
                         </a>
                     </li>
                     
@@ -1074,14 +1103,14 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress" style="font-size: 9.5pt; color: #999;">octopress</a>
+                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
                       
                       
@@ -1109,7 +1138,7 @@ install ruby:we don’t use version 1.9.3 anymore，search the official website�
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                       
                       

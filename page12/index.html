@@ -147,6 +147,109 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/24/git-clone-not-master-branch/">Git 如何 clone 非 master 分支的代码</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-24
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="原博"><a href="https://gaohaoyang.github.io/">原博：</a></h2>
+
+<h2 id="问题描述">问题描述</h2>
+
+<p>我们每次使用命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@gitlab.xxx.com:xxxxx.git
+</code></pre></div></div>
+
+<p>默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在<code class="language-plaintext highlighter-rouge">daily/1.4.1</code>分支上，我们希望拿到这个分支上的代码。</p>
+
+<p><img src="https://ooo.0o0.ooo/2016/07/07/577e349ab42ed.png" alt="7f07c8f6deef169ef6be5103bbd3e932f8676bb1.png" /></p>
+
+<h2 id="解决方法">解决方法</h2>
+
+<p>直接使用命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -r #查看远程分支
+</code></pre></div></div>
+<p>或</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -a #查看所有分支
+</code></pre></div></div>
+
+<p>会显示</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>origin/HEAD -&gt; origin/master
+origin/daily/1.2.2
+origin/daily/1.3.0
+origin/daily/1.4.1
+origin/develop
+origin/feature/daily-1.0.0
+origin/master
+</code></pre></div></div>
+
+<p>然后直接</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout origin/daily/1.4.1
+</code></pre></div></div>
+
+<p>就好了。。。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/24/git-clone-not-master-branch/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/24/error-jekyll-paginate/">Error: Jekyll-paginate 分頁功能錯誤，依赖缺失</a>
                 </h2>
                 <div class="label">
@@ -845,75 +948,6 @@ Ocotpress：2.0  3.0  ， jekyll：theme<br />
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/13/jekyll-theme-config/">jekyll theme octopress 博客的具体配置</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-13
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm use 2.7.0  
-</code></pre></div></div>
-<p>_config.yml<br />
-gemfile<br />
-gemfile.lock</p>
-
-<p>一些问题看手机图片,在空间</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/13/jekyll-theme-config/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -943,6 +977,8 @@ gemfile.lock</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2026/02/22/day-156/">Day 156</a></li>
                     
                         <li><a href="/2026/02/13/heal-yourself/">治愈自己</a></li>
                     
@@ -1002,8 +1038,6 @@ gemfile.lock</p>
                     
                         <li><a href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a></li>
                     
-                        <li><a href="/2025/01/27/henduoshishidushibeiaihewunai/">很多世事都是悲哀和无奈</a></li>
-                    
                 </ul>
             </div>
 
@@ -1029,7 +1063,7 @@ gemfile.lock</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">173</span>
+                            <span class="badge">174</span>
                         </a>
                     </li>
                     
@@ -1119,14 +1153,14 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #888;">octopress2.0</a>
+                      <a href="/tag/#octopress2.0" style="font-size: 9.5pt; color: #999;">octopress2.0</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#octopress" style="font-size: 9.5pt; color: #999;">octopress</a>
+                      <a href="/tag/#octopress" style="font-size: 9pt; color: #999;">octopress</a>
                     
                       
                       
@@ -1154,7 +1188,7 @@ gemfile.lock</p>
                       
                       
                       
-                      <a href="/tag/#ssh" style="font-size: 9.5pt; color: #999;">ssh</a>
+                      <a href="/tag/#ssh" style="font-size: 9pt; color: #999;">ssh</a>
                     
                       
                       
