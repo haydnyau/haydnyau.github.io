@@ -147,6 +147,80 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2025-04-07
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech" title="Category: tech" rel="category">tech</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#ubuntu" title="Tag: ubuntu" rel="tag">ubuntu</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p><a href="https://blog.csdn.net/weixin_42066135/article/details/144369653">新博文</a><br />
+先在ubuntu下更新一下时间，确保时间无误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+</code></pre></div></div>
+
+<p>简单来说，在Ubuntu24.04中，hwclock已经被淘汰了，并采用了timedatectl去代替它。 因此我们可以在联网状态中使用下列代码实现Ubuntu与Windows的时间同步。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo timedatectl set-local-rtc 1
+</code></pre></div></div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2025/03/17/day-147/">Day 147：这三个月节奏都错了</a>
                 </h2>
                 <div class="label">
@@ -781,75 +855,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2024/08/22/day-125/">Day 125：为什么锻炼身体后还是弱不禁风？</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2024-08-22
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>先把健身跑步都停了。<br />
-每晚10点多爬上床，然后别碰手机，11点之前睡觉，早上7点之前起床，拉伸锻炼半小时，然后吃早餐，坚持一个月，你的精气神就完全不同了。<br />
-睡眠足够了，早睡早起，三餐准点，比什么都强。<br />
-坚持一个月之后，你整个人明显就不一样，不会犯困，精神抖擞。<br />
-接着，进入第二阶段，此时才跑步和健身。<br />
-跑步以一天6公里内为佳，健身为2小时以内，<strong>轻重量，多组数</strong>。跑多了，练多了,就内耗了，亏精气神亏气血。我们不是专业健身人员，运动员，营养跟休息跟不上的运动锻炼，都是亏气血耗精气。<br />
-很多人第一阶段的早睡早起就做不到。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2024/08/22/day-125/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -879,6 +884,8 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2026/02/27/day-157/">见世面的7个阶段</a></li>
                     
                         <li><a href="/2026/02/24/day-156/">Day 156</a></li>
                     
@@ -938,8 +945,6 @@
                     
                         <li><a href="/2025/04/07/boot-grub/">Ubuntu开机引导项</a></li>
                     
-                        <li><a href="/2025/04/07/time-stuff-between-windows11-and-ubuntu/">windows11和Ubuntu24.04双系统，时间不对</a></li>
-                    
                 </ul>
             </div>
 
@@ -965,7 +970,7 @@
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">175</span>
+                            <span class="badge">176</span>
                         </a>
                     </li>
                     
