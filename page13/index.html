@@ -149,6 +149,76 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2022/02/21/post-html-add-sidebar-about-recent-posts/">博文页增加Recent Posts等侧边栏</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2022-02-21
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#tech-octopress" title="Category: tech-octopress" rel="category">tech-octopress</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>博客根目录，文件<code class="language-plaintext highlighter-rouge">index.html</code>，找到<code class="language-plaintext highlighter-rouge">Recent Posts</code>这一大段内容，复制，打开<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>，找到：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="right"&gt;
+        &lt;div class="wrap"&gt;
+</code></pre></div></div>
+<p>复制到其后面。</p>
+
+<p>因为只复制一段老是有错，现在我是把<code class="language-plaintext highlighter-rouge">index.html</code>的<code class="language-plaintext highlighter-rouge">&lt;div class="right"&gt;</code>右边栏一直到最后的内容，代替了<code class="language-plaintext highlighter-rouge">_layouts/post.html</code>右边栏一直到最后的内容。</p>
+<h1>🤪😀</h1>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2022/02/21/post-html-add-sidebar-about-recent-posts/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2022/02/21/template-of-new-post/">新建post文件的“头文件”</a>
                 </h2>
                 <div class="label">
@@ -853,68 +923,6 @@ gemfile.lock</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2022/01/12/write-them-all/">好记性不如烂笔头</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2022-01-12
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#octopress3.0" title="Tag: octopress3.0" rel="tag">octopress3.0</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>很多以前做过的事，细节步骤都不记得了，多写字吧，详细地记录下来，以后也有个回忆。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2022/01/12/write-them-all/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -944,6 +952,8 @@ gemfile.lock</p>
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2026/03/22/get-up/">向上攀爬，离开底层</a></li>
                     
                         <li><a href="/2026/03/17/sport-health/">运动健康</a></li>
                     
@@ -1003,8 +1013,6 @@ gemfile.lock</p>
                     
                         <li><a href="/2025/04/09/ubuntu24-dot-04-install-octopress-2-and-3/">Ubuntu 24.04 安装 Octopress2.0和3.0</a></li>
                     
-                        <li><a href="/2025/04/08/how-to-install-python-2-dot-7-on-ubuntu-24-dot-04/">How to install Python 2.7 on Ubuntu 24.04</a></li>
-                    
                 </ul>
             </div>
 
@@ -1030,7 +1038,7 @@ gemfile.lock</p>
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">180</span>
+                            <span class="badge">181</span>
                         </a>
                     </li>
                     
