@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Apr 2026 11:25:26 +0800</pubDate>
-    <lastBuildDate>Tue, 28 Apr 2026 11:25:26 +0800</lastBuildDate>
+    <pubDate>Thu, 30 Apr 2026 19:52:07 +0800</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 19:52:07 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>test2510</title>
+        <description>
+</description>
+        <pubDate>Thu, 30 Apr 2026 19:51:07 +0800</pubDate>
+        <link>/2026/04/30/test2510/</link>
+        <guid isPermaLink="true">/2026/04/30/test2510/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily 159</title>
@@ -190,22 +205,6 @@
         <pubDate>Wed, 15 Apr 2026 02:14:10 +0800</pubDate>
         <link>/2026/04/15/jian-fei-dao-ji-shi-day30/</link>
         <guid isPermaLink="true">/2026/04/15/jian-fei-dao-ji-shi-day30/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Day 157</title>
-        <description>认真做好每一件事。&lt;br /&gt;
-比如打球，作出改变，改进打法
-</description>
-        <pubDate>Wed, 15 Apr 2026 02:12:52 +0800</pubDate>
-        <link>/2026/04/15/day-157/</link>
-        <guid isPermaLink="true">/2026/04/15/day-157/</guid>
         
         <category>daily</category>
         
