@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 May 2026 04:57:32 +0800</pubDate>
-    <lastBuildDate>Mon, 04 May 2026 04:57:32 +0800</lastBuildDate>
+    <pubDate>Mon, 04 May 2026 05:02:27 +0800</pubDate>
+    <lastBuildDate>Mon, 04 May 2026 05:02:27 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
       <item>
@@ -21,8 +21,11 @@
 (gedit:8630): libgedit-gtksourceview-WARNING **: 04:11:11.081: Failed to load style scheme file '/usr/share/libgedit-gtksourceview-300/styles/Yaru-dark.xml': 第 3 行第 1 个字符出错： attribute 'version' invalid for element 'style-scheme'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-找到这两个文件，先备份（到阿里云盘），然后把第二行的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version=&quot;1.0&quot;&lt;/code&gt;删除。&lt;br /&gt;
-&lt;img src=&quot;https://wx3.sinaimg.cn/large/780bc50fgy1icsyi44l0gj213w0hmqch.jpg&quot; alt=&quot;Yaru.xml, Yaru-dark.xml&quot; /&gt;
+找到这两个文件，先备份（到阿里云盘），然后把第二行的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version=&quot;1.0&quot;&lt;/code&gt;删除。
+
+&lt;img src=&quot;https://wx3.sinaimg.cn/large/780bc50fgy1icsyi44l0gj213w0hmqch.jpg&quot; alt=&quot;Yaru.xml, Yaru-dark.xml&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/refs/heads/source/source/images/libgedit-gtksourceview-WARNING%20.png&quot; alt=&quot;in source&quot; /&gt;
+
 就不再提示错误了。&lt;br /&gt;
 如果以后出现其他问题，把它们改回来。
 
