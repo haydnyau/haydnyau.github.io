@@ -5,9 +5,33 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Apr 2026 23:47:04 +0800</pubDate>
-    <lastBuildDate>Thu, 30 Apr 2026 23:47:04 +0800</lastBuildDate>
+    <pubDate>Mon, 04 May 2026 04:17:43 +0800</pubDate>
+    <lastBuildDate>Mon, 04 May 2026 04:17:43 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Daily 160</title>
+        <description>你崇拜的人身上，藏着你的品位和志趣。&lt;br /&gt;
+你厌恶的人身上，藏着你的底线和原则。&lt;br /&gt;
+在高认知的环境中，多表达你的真诚。&lt;br /&gt;
+在低认知的环境中，多展示你的强大。&lt;br /&gt;
+在崇拜与厌恶中照见自我，以人为镜，以己为尺，可明得失。
+
+如果你能在别人身上，看到非凡勇气和魄力，那么在你的内心深处,一定也有同样的东西，否则你是看不出来的。&lt;br /&gt;
+不要只仰望别人的光，你能认出光，证明你本身也有光。&lt;br /&gt;
+你心里有光，你内心深处的力量其实并未缺席，只是需要你去勇敢的唤醒，大胆的去做，你远比自己想象中更厉害。
+
+</description>
+        <pubDate>Mon, 04 May 2026 04:11:10 +0800</pubDate>
+        <link>/2026/05/04/daily-160/</link>
+        <guid isPermaLink="true">/2026/05/04/daily-160/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>用命令行升级到Ubuntu 26.04</title>
@@ -224,24 +248,6 @@ sudo apt upgrade
         <pubDate>Fri, 17 Apr 2026 02:32:40 +0800</pubDate>
         <link>/2026/04/17/jian-fei-day30-1/</link>
         <guid isPermaLink="true">/2026/04/17/jian-fei-day30-1/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>减肥倒计时day30</title>
-        <description>做好饮食管理，作息管理，运动管理。&lt;br /&gt;
-今天计划，跑步5km。&lt;br /&gt;
-打球看情况另作决定。  比如打完球，再去跑步。
-
-</description>
-        <pubDate>Wed, 15 Apr 2026 02:14:10 +0800</pubDate>
-        <link>/2026/04/15/jian-fei-dao-ji-shi-day30/</link>
-        <guid isPermaLink="true">/2026/04/15/jian-fei-dao-ji-shi-day30/</guid>
         
         <category>daily</category>
         
