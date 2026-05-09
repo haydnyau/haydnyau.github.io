@@ -5,9 +5,24 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 May 2026 03:05:45 +0800</pubDate>
-    <lastBuildDate>Sat, 09 May 2026 03:05:45 +0800</lastBuildDate>
+    <pubDate>Sat, 09 May 2026 19:48:52 +0800</pubDate>
+    <lastBuildDate>Sat, 09 May 2026 19:48:52 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>Daily 163：放过以前的自己</title>
+        <description>错了就错了，别总欺负以前的自己。他当时一个人，站在迷雾里也很迷茫。
+</description>
+        <pubDate>Sat, 09 May 2026 19:35:35 +0800</pubDate>
+        <link>/2026/05/09/daily-163/</link>
+        <guid isPermaLink="true">/2026/05/09/daily-163/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily 162</title>
@@ -217,27 +232,6 @@ sudo apt upgrade
         <pubDate>Wed, 22 Apr 2026 17:25:11 +0800</pubDate>
         <link>/2026/04/22/mei-tian-xu-2200qia/</link>
         <guid isPermaLink="true">/2026/04/22/mei-tian-xu-2200qia/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>减肥Day 29</title>
-        <description>靠，半夜饿到睡不着，起来吃了一包康师傅3+2饼干：630卡&lt;br /&gt;
-中午：&lt;br /&gt;
-0.9杯米：400卡&lt;br /&gt;
-200g水煮青菜：200卡&lt;br /&gt;
-200g瘦肉：500卡&lt;br /&gt;
-晚上不吃或者水煮青菜吧。
-共：1730卡
-</description>
-        <pubDate>Wed, 22 Apr 2026 17:15:43 +0800</pubDate>
-        <link>/2026/04/22/jian-fei-day-29/</link>
-        <guid isPermaLink="true">/2026/04/22/jian-fei-day-29/</guid>
         
         <category>daily</category>
         
