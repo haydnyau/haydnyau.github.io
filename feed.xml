@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 May 2026 07:55:02 +0800</pubDate>
-    <lastBuildDate>Wed, 20 May 2026 07:55:02 +0800</lastBuildDate>
+    <pubDate>Wed, 20 May 2026 08:11:50 +0800</pubDate>
+    <lastBuildDate>Wed, 20 May 2026 08:11:50 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
       <item>
@@ -140,6 +140,25 @@ Caring too much about others’ judgments is bullying yourself.
       </item>
     
       <item>
+        <title>Ubuntu 26.04 开机引导项</title>
+        <description>命令行升级（不是说这里有因果关系），Ubuntu26.04，之后想更改默认启动项，用下面的图形工具，报错。&lt;br /&gt;
+&lt;a href=&quot;https://qiuhaidong.github.io/blog/2025/04/07/boot-grub/&quot;&gt;Grub Customizer&lt;/a&gt;&lt;br /&gt;
+尝试改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/default/grub&lt;/code&gt;，应用：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo update-grub&lt;/code&gt;，还是报错。&lt;br /&gt;
+再回到图形工具，点击“还原”，（忘了要不要先保存一下），再重新改，&lt;br /&gt;
+&lt;strong&gt;行了&lt;/strong&gt;。
+</description>
+        <pubDate>Thu, 30 Apr 2026 22:02:57 +0800</pubDate>
+        <link>/2026/04/30/ubuntu-26-boot-grub/</link>
+        <guid isPermaLink="true">/2026/04/30/ubuntu-26-boot-grub/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
+    
+      <item>
         <title>用命令行升级到Ubuntu 26.04</title>
         <description>参考：&lt;a href=&quot;https://www.bilibili.com/opus/1194724902391775251&quot;&gt;如何优雅地升级到 Ubuntu 26.04 LTS&lt;/a&gt;&lt;br /&gt;
 Ubuntu 25.10系统可以立即升级（有时要等待几天，分批推送），而Ubuntu 24.04 LTS系统将在Ubuntu 26.04.1发布后获得标准升级路径。
@@ -222,27 +241,6 @@ sudo apt upgrade
         <pubDate>Fri, 24 Apr 2026 01:08:12 +0800</pubDate>
         <link>/2026/04/24/she-hui-hua-cheng-du-ti-sheng/</link>
         <guid isPermaLink="true">/2026/04/24/she-hui-hua-cheng-du-ti-sheng/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily 158</title>
-        <description>别 &lt;strong&gt;&lt;em&gt;&lt;del&gt;过分&lt;/del&gt;&lt;/em&gt;&lt;/strong&gt; 介入他人因果，点到为止。&lt;br /&gt;
-点醒，是福报，点不醒，是命运。&lt;br /&gt;
-三种人：&lt;br /&gt;
-天生会悟，遇事才悟，一生不悟。&lt;br /&gt;
-心怀慈悲，世间尽是可怜人。&lt;br /&gt;
-思考因果，世间无一可怜人。
-
-</description>
-        <pubDate>Wed, 22 Apr 2026 23:45:37 +0800</pubDate>
-        <link>/2026/04/22/daily-158/</link>
-        <guid isPermaLink="true">/2026/04/22/daily-158/</guid>
         
         <category>daily</category>
         
