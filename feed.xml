@@ -5,9 +5,30 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 May 2026 03:36:14 +0800</pubDate>
-    <lastBuildDate>Thu, 21 May 2026 03:36:14 +0800</lastBuildDate>
+    <pubDate>Sun, 31 May 2026 01:04:30 +0800</pubDate>
+    <lastBuildDate>Sun, 31 May 2026 01:04:30 +0800</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>本质：竞争、争夺</title>
+        <description>社会（人性）的本质，是争夺。&lt;br /&gt;
+掠夺，明争暗斗，阳谋阴谋，各种手段。&lt;br /&gt;
+不存在划分地盘，永不越界的理想情形。&lt;br /&gt;
+蓝海期很短暂，漫长的红海期刺刀见红。&lt;br /&gt;
+越早认清、接受，才能提高认知。&lt;br /&gt;
+选择躺平、退让，就是把机会、资源拱手相让，那，就地接受庸碌，穷困，无能。&lt;br /&gt;
+这，就是理想和现实。
+</description>
+        <pubDate>Sun, 31 May 2026 00:34:32 +0800</pubDate>
+        <link>/2026/05/31/ben-zhi-jing-zheng/</link>
+        <guid isPermaLink="true">/2026/05/31/ben-zhi-jing-zheng/</guid>
+        
+        <category>daily</category>
+        
+        
+        <category>personal</category>
+        
+      </item>
     
       <item>
         <title>Daily 165：谈谈国乒</title>
@@ -240,23 +261,6 @@ sudo apt upgrade
         <pubDate>Thu, 30 Apr 2026 21:34:30 +0800</pubDate>
         <link>/2026/04/30/update-to-ubuntu-26-dot-04/</link>
         <guid isPermaLink="true">/2026/04/30/update-to-ubuntu-26-dot-04/</guid>
-        
-        <category>daily</category>
-        
-        
-        <category>personal</category>
-        
-      </item>
-    
-      <item>
-        <title>Daily 159</title>
-        <description>走出困境，就问：&lt;br /&gt;
-眼下，我还能做些什么？&lt;br /&gt;
-做小事，一点，一点，一小步，一小步，走出来。
-</description>
-        <pubDate>Tue, 28 Apr 2026 11:20:44 +0800</pubDate>
-        <link>/2026/04/28/daily-159/</link>
-        <guid isPermaLink="true">/2026/04/28/daily-159/</guid>
         
         <category>daily</category>
         
