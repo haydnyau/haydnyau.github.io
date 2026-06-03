@@ -153,6 +153,86 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2026/05/04/newpost-libgedit-gtksourceview-warning-failed-to-load-style-scheme-file/">newpost error: libgedit-gtksourceview-WARNING, Failed to load style scheme file</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2026-05-04
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>丘海东
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
+    
+  
+
+</span>
+
+
+
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <p>Ubuntu 26.04，新建blog提示错误：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dong@dong-Ubuntu:~$ ./newpost.sh 
+*********************
+
+(gedit:8630): libgedit-gtksourceview-WARNING **: 04:11:11.080: Failed to load style scheme file '/usr/share/libgedit-gtksourceview-300/styles/Yaru.xml': 第 3 行第 1 个字符出错： attribute 'version' invalid for element 'style-scheme'
+
+(gedit:8630): libgedit-gtksourceview-WARNING **: 04:11:11.081: Failed to load style scheme file '/usr/share/libgedit-gtksourceview-300/styles/Yaru-dark.xml': 第 3 行第 1 个字符出错： attribute 'version' invalid for element 'style-scheme'
+</code></pre></div></div>
+
+<p>找到这两个文件，先备份（到阿里云盘），然后把第二行的<code class="language-plaintext highlighter-rouge">version="1.0"</code>删除。</p>
+
+<p><img src="https://wx3.sinaimg.cn/large/780bc50fgy1icsyi44l0gj213w0hmqch.jpg" alt="Yaru.xml, Yaru-dark.xml" /><br />
+<img src="https://raw.githubusercontent.com/qiuhaidong/qiuhaidong.github.com/refs/heads/source/source/images/libgedit-gtksourceview-WARNING%20.png" alt="in source" /></p>
+
+<p>就不再提示错误了。<br />
+如果以后出现其他问题，把它们改回来。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2026/05/04/newpost-libgedit-gtksourceview-warning-failed-to-load-style-scheme-file/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2026/05/04/daily-160/">Daily 160</a>
                 </h2>
                 <div class="label">
@@ -799,83 +879,6 @@ sudo apt upgrade
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2026/04/21/jian-fei-day30/">减肥day30，作计划</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2026-04-21
-                    </div>
-                    <div class="label-card">
-                        <i class="fa fa-user"></i>丘海东
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#personal" title="Category: personal" rel="category">personal</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#daily" title="Tag: daily" rel="tag">daily</a>
-    
-  
-
-</span>
-
-
-
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <p>在本子上，<strong>写每日计划</strong><br />
-减脂：<strong>每天1两（450大卡）</strong>，1个月3斤，最终减到<strong>115斤</strong>。<br />
-1天只吃1杯米，肉类不超过半斤，每天吃蔬菜。<br />
-要能挨饿。<br />
-隔天交替，创造<strong>热量缺口</strong>，<strong>耐心，坚持，有效</strong>。<br />
-减掉<strong>内脏脂肪</strong>，腰围回到<strong>30寸</strong>。<br />
-不点肥的<strong>外卖</strong>。<br />
-不喝可乐<strong>饮料</strong>。<br />
-不吃<strong>饼干</strong>。<br />
-以上的<strong>偶尔</strong>能吃一点，比如<strong>半个月1次</strong>。<br />
-控制好<strong>量</strong>。<br />
-今天删除了美团、京东、淘宝的外卖订单，<strong>这几年真的吃了很多的外卖，不行呀</strong>。<br />
-又<strong>贵</strong>。<br />
-跑步5KM，打球，交替进行。</p>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2026/04/21/jian-fei-day30/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -905,6 +908,8 @@ sudo apt upgrade
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2026/06/03/daily-166/">Daily 166：执行力，耐心</a></li>
                     
                         <li><a href="/2026/06/02/lao-chen-ai-auto-trade/">老陈 - AI自动交易系统</a></li>
                     
@@ -964,8 +969,6 @@ sudo apt upgrade
                     
                         <li><a href="/2026/03/09/5-good-habit/">5个好习惯</a></li>
                     
-                        <li><a href="/2026/03/06/kan-po-di-yu-xiang/">勘破地狱相</a></li>
-                    
                 </ul>
             </div>
 
@@ -991,7 +994,7 @@ sudo apt upgrade
                             <span class="name">
                                 personal
                             </span>
-                            <span class="badge">204</span>
+                            <span class="badge">205</span>
                         </a>
                     </li>
                     
